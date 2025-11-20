@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PID_CONTROL</title>
+</head>
+<body>
+    <p><strong>地址 = 指针</strong>
+变量的地址指的是变量所占字节的起始地址
+*是将地址转化为存的变量的符号 &amp;是将变量转化为变量的地址的符号
+在定义是，<strong>p被*转化后被定义为int变量</strong>，顺着思路理解，<strong>p就应当是指针</strong></p>
+<h1 id="-">地址的应用</h1>
+<p>用int * 来定义一个专门放某个变量的指针的变量</p>
+<pre><code class="lang-C">   <span class="hljs-built_in"> int </span>* p1 = &amp;a; //定义一个指针变量 , 叫p1 , 存&amp;a (这里的*和int绑定，不和p1绑定)
+   <span class="hljs-built_in"> int </span>* p2 = &amp;b;
+    *p2 = *p1 + *p2; //等价于 b = a + b (这里的*就作用于p身上了)
+</code></pre>
+<p>* 后面跟指针，整个的意思就是指针所指向的变量，也代表指针指向的变量
+==在p++后，他的变量值会直接+4 ( 结构体似乎是直接加更多，总之++就能遍历数组了)，因为一个地址默认4bit==</p>
+<h1 id="-">数组的地址</h1>
+<pre><code class="lang-C">    arr[<span class="hljs-number">10</span>] = {};
+    *arr = 【arr[<span class="hljs-number">0</span>]的地址】;
+    *arr+<span class="hljs-number">1</span> = 【arr[<span class="hljs-number">1</span>]的地址】;
+
+    <span class="hljs-comment">//所以在赋值时也可以这样</span>
+
+    scanf(<span class="hljs-string">"%d"</span>,arr+i) <span class="hljs-comment">//arr没有取地址的时候默认取地址</span>
+    for(p = arr;...) <span class="hljs-comment">//p = arr相当于p现在存储的是arr[0]的地址</span>
+        sum += *p;
+</code></pre>
+<p>指针在一维数组比较飞舞
+但是你要知道二维数组的存储方式和其表示方式不一样！二维数组的存取方式是一维的！
+另外，可以尝试对二维数组的本质进行理解，实际上就是数组套数组，数组也算一个元素
+==以及，都别忘了在取值的时候-1!==</p>
+<pre><code class="lang-C">    arr<span class="hljs-string">[10]</span><span class="hljs-string">[10]</span> = {};
+</code></pre>
+<blockquote>
+<p>[!attention]
+注意，二维数组的数组名和一位数组不一样，不直接表示其开始地址
+arr表示的是<code>arr[0]</code>的地址，而此时<code>arr[0]</code>是一个数组，而我们要的是<code>arr[0]</code>的第一个元素的地址
+所以,用<code>*arr</code>表示<code>arr[0]</code></p>
+</blockquote>
+<pre><code class="lang-C">    int * p = arr[<span class="hljs-number">0</span>]<span class="hljs-comment">;</span>
+    int * p = *arr<span class="hljs-comment">;</span>
+</code></pre>
+<blockquote>
+<p>[!attention]
+又要注意，此时arr中每一行都为一个数组，其第n行的数组名为<code>arr[n-1]</code>，名称作用效果和一维一样
+例如<code>arr[0]</code>就代表<code>arr[0][0]</code>,<code>(arr[1]+1)</code>就代表<code>arr[1][1]</code>
+接下来是三种指针的表示方法</p>
+</blockquote>
+<pre><code class="lang-C">    *(arr + i)+j / *(*(arr + i)+j) 表示该地址元素的值
+    //解析一下加括号的必要性，arr+i表示的是第i-<span class="hljs-number">1</span>行的数组，加了*后就指向了这个数组，等价于arr<span class="hljs-string">[i-1]</span>，这也就和下面一种表示方式一样了
+
+    arr<span class="hljs-string">[i]</span>+j //前面提到过arr<span class="hljs-string">[i]</span>在二维数组中表示其中一个作为元素的数组的名字,所以这里的arr<span class="hljs-string">[i]</span>实际为arr<span class="hljs-string">[i]</span>的地址
+
+    &amp;a<span class="hljs-string">[i]</span><span class="hljs-string">[j]</span> //最简单的方法
+</code></pre>
+<p>这里还是进行一下区分，两种指针：</p>
+<pre><code class="lang-C">    <span class="hljs-selector-tag">int</span> (*p[<span class="hljs-number">5</span>]) <span class="hljs-comment">//这是定义一个数组，其中每一个值都应当存指针 也可写为int * p[5]</span>
+    <span class="hljs-comment">//指针数组</span>
+    <span class="hljs-selector-tag">int</span> (*p)<span class="hljs-selector-attr">[5]</span> <span class="hljs-comment">//这是一个数组指针(一个变量！)，其指向了一个长度为5的数组(int)</span>
+    <span class="hljs-comment">//数组指针——即指向数组的指针！</span>
+</code></pre>
+<p>也就是说，p实际上还是一个函数名，直接在他后面跟[5]就是创建数组
+在()外面跟[5]就是指定类型了</p>
+<h1 id="-1">实际运用#1</h1>
+<pre><code class="lang-C">    <span class="hljs-keyword">int</span> sum_two_dimensional_array(<span class="hljs-keyword">int</span> arr[][<span class="hljs-number">3</span>],<span class="hljs-keyword">int</span> * p,<span class="hljs-keyword">int</span> row){
+        <span class="hljs-keyword">int</span> * p = *arr; <span class="hljs-comment">//这里*arr表示arr[0]，而arr[0]是一个数组，所以表示为这个数组开始的地址，也就是这个二维数组开始的地址</span>
+        <span class="hljs-keyword">int</span> <span class="hljs-keyword">sum</span> = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(;p &lt;= *(arr+row<span class="hljs-number">-1</span>)+length<span class="hljs-number">-1</span>;p++)<span class="hljs-comment">//*(arr+row-1)+length-1表示最后元素的地址</span>
+            <span class="hljs-keyword">sum</span> += *p;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">sum</span>;
+    }
+    <span class="hljs-keyword">int</span> main(){
+        arr[<span class="hljs-number">3</span>][<span class="hljs-number">3</span>]={};
+        sum_two_dimensional_array(arr,...) 
+    }
+</code></pre>
+<p>会发现，如果你想要往函数里导一个多个维度都未定义长度的数组，编译器会报错，提示你&quot;只有第一个维度才能不限长度的输入函数&quot;，这就是为什么我函数定义里写的是&quot;arr[][3]&quot;</p>
+<h1 id="-1-1">实际运用#1.1</h1>
+<pre><code class="lang-C">    //为了解决实际运用<span class="hljs-comment">#1中的煞笔问题（多个未被定义长度的数组导入函数），指针就派上用场了</span>
+    //真不知道那个数组指针有什么用= =
+    <span class="hljs-built_in">int</span> sum_two_dimensional_array(<span class="hljs-built_in">int</span> * p,<span class="hljs-built_in">int</span> row,<span class="hljs-built_in">int</span> length){
+        <span class="hljs-built_in">int</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i &lt; row * length;i++){
+            sum += *p;
+            p++;
+        }
+        <span class="hljs-keyword">return</span> sum;
+    }
+    <span class="hljs-built_in">int</span> main(){
+        <span class="hljs-built_in">int</span> arr[n][m] = <span class="hljs-meta">{...}</span>;
+        sum = sum_two_dimensional_array(*arr,n.m) //此时p导入的就是arr[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]的地址
+    }
+</code></pre>
+<p>这样就可以完美解决，我暂时想不到这个方法的劣势在哪里，简直完美！</p>
+<pre><code class="lang-C">    <span class="hljs-comment">//说句题外的，更高维度的数组用这个方法就不好整了，可以这样</span>
+    int <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(int axis1,int axis2, <span class="hljs-rest_arg">... ,int</span> arr[axis1][axis2][<span class="hljs-rest_arg">...]){}
+    //先定义每个维度的长度，再定义数组</span></span></span>
+</code></pre>
+<p>其实写到这里了也可以顺便讲一下另外两个指针定义</p>
+<h1 id="-2">实际运用#2</h1>
+<pre><code class="lang-C">    <span class="hljs-built_in">int</span> sum_of_array(<span class="hljs-built_in">int</span> *p,<span class="hljs-built_in">int</span> length){
+        <span class="hljs-built_in">int</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-built_in">int</span> *p_temp = p; //用于记录数组开头的地址
+        <span class="hljs-keyword">for</span>(;p &lt; p_temp + length;p++) sum += *p;
+        <span class="hljs-keyword">return</span> sum;
+        //这一块也可以向我上面那样定义一个i，这样就可以直接用length做结束判定，不用另设变量
+    }
+    <span class="hljs-built_in">int</span> main(){
+        arr[len]=<span class="hljs-meta">{...}</span>
+        total = sum_of_array(arr,len);//直接输数组名，即数组的地址
+    }
+</code></pre>
+<h1 id="-2-1">实际运用#2.1</h1>
+<pre><code class="lang-C">    <span class="hljs-built_in">int</span> sum_of_array(<span class="hljs-built_in">int</span> arr[],<span class="hljs-built_in">int</span> length)<span class="hljs-meta">{...}</span>
+    <span class="hljs-built_in">int</span> main(){
+        arr[len]=<span class="hljs-meta">{...}</span>;
+        total = sum_of_array(arr,len);
+        //这里的arr传的直接是地址，但somehow,虽然函数明确规定需要输入一个一维数组，但它还是知道我们想传的是arr,以后有思路了来补
+    }
+</code></pre>
+<h1 id="-">指针函数</h1>
+<pre><code class="lang-C">    <span class="hljs-comment">//和数组指针和指针数组类似</span>
+    <span class="hljs-function"><span class="hljs-keyword">int</span> * <span class="hljs-title">p</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a,<span class="hljs-keyword">int</span> b...)</span></span>{}
+    <span class="hljs-comment">//指针函数，如你所见，这是个函数，只不过返回值是一个指针</span>
+</code></pre>
+<h1 id="-1">例1</h1>
+<p>一个指针函数返回一个指针，赋值到指针变量上，再把指针变量所指的变量输出，很合理吧</p>
+<pre><code class="lang-C">    <span class="hljs-function"><span class="hljs-keyword">int</span> *<span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>{ 
+        <span class="hljs-keyword">if</span> (a &gt; b) <span class="hljs-keyword">return</span> &amp;a;
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> &amp;b;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">int</span> a, b;
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;a, &amp;b);
+        <span class="hljs-keyword">int</span> *num = max(a, b);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d"</span>,*num);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+</code></pre>
+<p>出来之后发现是错的！num的值为0！为什么呢，在我问了deepseek后，找到了我一直以来的思维误区</p>
+<h1 id="-1-1">例1.1</h1>
+<p>在将变量输入函数后，==函数实际上是将这些变量的值赋值到临时变量上，再进行计算的==</p>
+<p>也就是说，例1之所以错，是因为在将我输入的a,b输入变量后，==C语言又给临时变量a和临时变量b开了两个新空间，把值赋值了进去（要区分a和临时a）==，而我们返回的是这个临时a的地址</p>
+<p>而在函数结束的一瞬间，这两个临时变量也就消失了，指针也就成了悬空指针(=0)，所以返回一个临时变量地址是没有意义的。因为他会在return前的一瞬间把临时变量清理掉，也就不知道指针指的是哪里了。</p>
+<p>所以，我们需要返回的值本身就应该是个地址，这样它的地址就不会在return前一秒变为0了</p>
+<pre><code class="lang-C">    <span class="hljs-function"><span class="hljs-keyword">int</span> *<span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *a, <span class="hljs-keyword">int</span> *b)</span> </span>{ <span class="hljs-comment">//定义两个指针</span>
+        <span class="hljs-keyword">if</span> (*a &gt; *b) <span class="hljs-keyword">return</span> a; <span class="hljs-comment">//返回指针</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> b;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">int</span> a, b;
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>, &amp;a, &amp;b);
+        <span class="hljs-keyword">int</span> *num = max(&amp;a, &amp;b);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d"</span>, *num);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+</code></pre>
+<h1 id="-2-">例2 (课程)</h1>
+<p>给到了一个swap函数的定义，一般来说我会这样写</p>
+<pre><code class="lang-C">    <span class="hljs-keyword">int</span> a,b;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">int</span> t=a;
+        a=b;
+        b=t;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>,&amp;a,&amp;b);
+        swap(a,b);
+    }
+</code></pre>
+<p>这样就避免了函数无法直接对外部变量修改的问题，但毫无疑问，这有很多弊端。
+所以指针就排上用场了</p>
+<pre><code class="lang-C">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *x,<span class="hljs-keyword">int</span> *y)</span></span>{
+        <span class="hljs-keyword">int</span> t=*x;
+        *x=*y;
+        *y=t;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">int</span> a,b;
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d%d"</span>,&amp;a,&amp;b);
+        swap(&amp;a,&amp;b);
+    }
+</code></pre>
+<p>这样，我们在调用函数的时候输入的是外部变量的坐标，虽然函数建立的是临时变量，但这个临时指针变量指向的依然是外面的变量的地址，所以可以直接对外部变量进行修改。</p>
+<p>这也就是为啥像swap,sort那些头文件的函数定义里全是*的原因
+[[C - 4 字符串#Strcat]]里我举了个例子，可以看看</p>
+<h1 id="-">函数指针</h1>
+<p>函数指针是一个指针，但是指向的是函数</p>
+<pre><code class="lang-C">    <span class="hljs-built_in">int</span> max(<span class="hljs-built_in">int</span> a,<span class="hljs-built_in">int</span> b)<span class="hljs-meta">{...}</span>
+    <span class="hljs-built_in">int</span> (*p)(<span class="hljs-built_in">int</span> ,<span class="hljs-built_in">int</span> ) = max;
+</code></pre>
+<p>运用例子见[[C - 0 常见函数#include <stdlib.h>]]</p>
+<h1 id="-">不同类型的指针</h1>
+<p>[[C - 4 字符串#字符指针]][[C - 6 结构体#结构体指针]]
+指针要指向什么类型的变量，你就得用什么类型来定义指针</p>
+<h1 id="int-a-int-a-">int a[] 和 int *a 有什么区别？</h1>
+<p>int a[]中的 a 是一个指针常量！
+他大概是这样定义的 : const int * a;</p>
+<p>int <em> a 是一个指针<em>*变量</em></em>，虽然他们确实都可以用来存数组，但是显然，和我上面提到过的一样，下面这种方法并不安全</p>
+<p>![[C - 5.png]]</p>
+</body>
+</html>
