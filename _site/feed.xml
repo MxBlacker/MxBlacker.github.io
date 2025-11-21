@@ -1,246 +1,1174 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-11-20T22:33:09+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">麦香包の超平坦世界</title><subtitle></subtitle><entry><title type="html">幸会！</title><link href="http://localhost:4000/jekyll/update/2025/11/20/WELCOME.html" rel="alternate" type="text/html" title="幸会！" /><published>2025-11-20T21:28:14+08:00</published><updated>2025-11-20T21:28:14+08:00</updated><id>http://localhost:4000/jekyll/update/2025/11/20/WELCOME</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/11/20/WELCOME.html"><![CDATA[<p>欢迎来到麦香包的超平坦世界！这是使用Jekyll搭建的静态网站，专门上传麦香包的笔记。
-用Jekyll很大一部分原因是因为懒，赫赫。然后就是Jekyll能够直接识别markdown文件，这就很好，所以它能很好的构建一个静态网站，显然我传笔记是不需要动态网站的。</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[欢迎来到麦香包的超平坦世界！这是使用Jekyll搭建的静态网站，专门上传麦香包的笔记。 用Jekyll很大一部分原因是因为懒，赫赫。然后就是Jekyll能够直接识别markdown文件，这就很好，所以它能很好的构建一个静态网站，显然我传笔记是不需要动态网站的。]]></summary></entry><entry><title type="html">C - 指针与地址</title><link href="http://localhost:4000/c/2025/09/16/C-%E5%9C%B0%E5%9D%80-&-%E6%8C%87%E9%92%88.html" rel="alternate" type="text/html" title="C - 指针与地址" /><published>2025-09-16T00:00:00+08:00</published><updated>2025-09-16T00:00:00+08:00</updated><id>http://localhost:4000/c/2025/09/16/C%20-%20%E5%9C%B0%E5%9D%80%20&amp;%20%E6%8C%87%E9%92%88</id><content type="html" xml:base="http://localhost:4000/c/2025/09/16/C-%E5%9C%B0%E5%9D%80-&amp;-%E6%8C%87%E9%92%88.html"><![CDATA[<p><strong>地址 = 指针</strong>
-变量的地址指的是变量所占字节的起始地址
-*是将地址转化为存的变量的符号 &amp;是将变量转化为变量的地址的符号
-在定义是，<strong>p被*转化后被定义为int变量</strong>，顺着思路理解，<strong>p就应当是指针</strong></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-11-21T11:56:41+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">麦香包の超平坦世界</title><subtitle></subtitle><entry><title type="html">幸会！</title><link href="http://localhost:4000/jekyll/update/2025/11/20/WELCOME.html" rel="alternate" type="text/html" title="幸会！" /><published>2025-11-20T21:28:14+08:00</published><updated>2025-11-20T21:28:14+08:00</updated><id>http://localhost:4000/jekyll/update/2025/11/20/WELCOME</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/11/20/WELCOME.html"><![CDATA[<h1 id="欢迎来到麦香包的超平坦世界">欢迎来到麦香包的超平坦世界！</h1>
+<p>这是使用Jekyll搭建的静态网站，专门上传麦香包的笔记。</p>
+<ul>
+  <li>用Jekyll很大一部分原因是因为懒，赫赫。</li>
+  <li>然后就是Jekyll能够直接识别markdown文件，这就很好，所以它能很好的构建一个静态网站，显然我传笔记是不需要动态网站的。</li>
+</ul>
 
-<h1 id="地址的应用">地址的应用</h1>
+<p><strong>对于进一步的图片和文档链接处理，我近期可能不会去完善，因为事情比较多。</strong></p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[欢迎来到麦香包的超平坦世界！ 这是使用Jekyll搭建的静态网站，专门上传麦香包的笔记。 用Jekyll很大一部分原因是因为懒，赫赫。 然后就是Jekyll能够直接识别markdown文件，这就很好，所以它能很好的构建一个静态网站，显然我传笔记是不需要动态网站的。]]></summary></entry><entry><title type="html">Tkinter - GUI设计概述</title><link href="http://localhost:4000/2025/10/10/Tkinter-0-GUI%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0.html" rel="alternate" type="text/html" title="Tkinter - GUI设计概述" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%200%20GUI%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-0-GUI%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0.html"><![CDATA[<p>#tkinter
+<strong>GUI</strong> 全程 Graphic User Interface
+<strong>Tkinter</strong>作为Python请儿子，是内置的GUI开发模块，也是最简单，最方便的开发模块，可以快速上手</p>
 
-<p>用int * 来定义一个专门放某个变量的指针的变量</p>
+<p>想要更加高级的，可以用PySide或者PyQt</p>
 
-<pre><code class="language-C">	int * p1 = &amp;a; //定义一个指针变量 , 叫p1 , 存&amp;a (这里的*和int绑定，不和p1绑定)
-	int * p2 = &amp;b;
-	*p2 = *p1 + *p2; //等价于 b = a + b (这里的*就作用于p身上了)
+<p>[[Tkinter - 1 基本操作、类继承关系与部分组件]]</p>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[#tkinter GUI 全程 Graphic User Interface Tkinter作为Python请儿子，是内置的GUI开发模块，也是最简单，最方便的开发模块，可以快速上手]]></summary></entry><entry><title type="html">Tkinter - Python作业实战</title><link href="http://localhost:4000/2025/10/10/Tkinter-6-Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98.html" rel="alternate" type="text/html" title="Tkinter - Python作业实战" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%206%20Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-6-Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98.html"><![CDATA[<h2 id="2048游戏">2048游戏</h2>
+<p>这里先说一下2048的逻辑处理</p>
+
+<blockquote>
+  <p>对于每一个格子，往<strong>dir</strong>方向移动时，如果该方向没有格子，<strong>则一直前进</strong>，<strong>直到遇见格子或者碰壁</strong>
+若情况为前者，这额外判断是否与当前格子相等，相等则合并
+注意，<strong>这里不需要管合并过后的格子是否需要继续前进</strong>，因为结果是必然的，一旦合并，其格子<strong>必将在之后的循环</strong>中被检测到，并继续移动</p>
+</blockquote>
+
+<p>我们的格子实质上使用<strong>设定好长宽和背景颜色的Label</strong>做成的，wasd用的<strong>keyboard</strong>模块进行判定
+最后，<strong>grid_value</strong>和<strong>cells</strong>分开来记录，前者是<strong>对游戏的实际模拟</strong>，后者是<strong>记录格子的位置</strong>，用于显示<strong>grid_value</strong></p>
+
+<h4 id="2048游戏格的绘制">2048游戏格的绘制</h4>
+<p>我们直接用一个列表去存<strong>每一个格子组件</strong>，毕竟列表啥都能存
+排列我们用<strong>grid</strong>，但请注意，这里的父级是<strong>grid_frame</strong>，我们专门创建了一块frame给到游戏格</p>
+<pre><code class="language-Python">        self.cells = []                         #格子，这里直接用Label
+        for i in range(4):
+            row = []
+            for j in range(4):
+                cell = tk.Label(
+                    self.grid_frame,
+                    text="",
+                    font=("Arial", 20, "bold"),
+                    width=4,
+                    height=2,
+                    relief="raised",
+                    borderwidth=3
+                )
+                cell.grid(row=i, column=j, padx=5, pady=5)
+                row.append(cell)
+            self.cells.append(row)
 </code></pre>
 
-<p>* 后面跟指针，整个的意思就是指针所指向的变量，也代表指针指向的变量
-==在p++后，他的变量值会直接+4 ( 结构体似乎是直接加更多，总之++就能遍历数组了)，因为一个地址默认4bit==</p>
+<h4 id="移动判定--结束判定">移动判定 / 结束判定</h4>
+<p>其实这一块不关Tkinter什么事，但我还是放上来参考一下</p>
 
-<h1 id="数组的地址">数组的地址</h1>
+<p>```Python    
+def move(self, direction):
+        moved = False                   #用于判断这次移动是否成功，到时候传到其他地方用于判断
+        if direction == “up”:
+            for j in range(4):
+                for i in range(1, 4):
+                    if self.grid[i][j] != 0:    #按顺序判断每一个格子
+                        row = i
+                        while row &gt; 0 and self.grid[row-1][j] == 0:         #空格子移动
+                            self.grid[row-1][j] = self.grid[row][j]
+                            self.grid[row][j] = 0
+                            row -= 1
+                            moved = True
+                        if row &gt; 0 and self.grid[row-1][j] == self.grid[row][j]:        #合并的情况
+                            self.grid[row-1][j] *= 2
+                            self.score += self.grid[row-1][j]
+                            self.grid[row][j] = 0
+                            moved = True
+           ……</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+其他三个方向的情况略了。
+- 可以看到循环的时候忽略了i = 0的情况，这是因为这些格子本身就在最上面，没有移动的必要
+- 移动完之后，将移动标记设为**True**，好**置一个标志位**，用于**提示更新界面**
+- 最后再来判断可不可以移动
 
-<pre><code class="language-C">	arr[10] = {};
-	*arr = 【arr[0]的地址】;
-	*arr+1 = 【arr[1]的地址】;
-	
-	//所以在赋值时也可以这样
-	
-	scanf("%d",arr+i) //arr没有取地址的时候默认取地址
-	for(p = arr;...) //p = arr相当于p现在存储的是arr[0]的地址
-		sum += *p;
+```Python
+    def is_game_over(self):
+        #这一部分是游戏结束的判断：分两块 -&gt; 一是无空格子，二是无可合并相邻数字
+        for i in range(4):
+            for j in range(4):
+                if self.grid[i][j] == 0:
+                    return False
+
+        for i in range(4):
+            for j in range(4):
+                if j &lt; 3 and self.grid[i][j] == self.grid[i][j+1]:
+                    return False
+                if i &lt; 3 and self.grid[i][j] == self.grid[i+1][j]:
+                    return False
+
+        return True
+</code></pre></div></div>
+
+<h4 id="重新开始">重新开始</h4>
+<p>重新开始的初始化是比较好理解的，重点要学习的是下面<strong>Game Over</strong>框的去除</p>
+
+<pre><code class="language-Python">    def restart_game(self):
+        self.grid = [[0 for _ in range(4)] for _ in range(4)]
+        self.score = 0
+        self.add_new_tile()
+        self.update_grid()
+
+        for widget in self.window.winfo_children():
+            if isinstance(widget, tk.Label) and widget.cget("text") == "Game Over!":
+                widget.destroy()
 </code></pre>
 
-<p>指针在一维数组比较飞舞
-但是你要知道二维数组的存储方式和其表示方式不一样！二维数组的存取方式是一维的！
-另外，可以尝试对二维数组的本质进行理解，实际上就是数组套数组，数组也算一个元素
-==以及，都别忘了在取值的时候-1!==</p>
+<ul>
+  <li><strong>winfo_children</strong>：这个方法可以知道当前父窗口下的子组件有哪些，输出一个列表</li>
+  <li><strong>cget</strong>：<strong>获取这个组件的信息</strong>，这里我们获取了”text”，用于判断是否是GameOver</li>
+  <li><strong>destroy</strong>：同样的，组件也可以用于destroy</li>
+</ul>
 
-<pre><code class="language-C">	arr[10][10] = {};
+<h2 id="计算器-calculator">计算器 Calculator</h2>
+<p>这一个的主要问题在于我自己给我自己设计的挑战——像windows计算器一样显示流程</p>
+<h4 id="基本功能实现">基本功能实现</h4>
+<p>这里的显示框我们用一个<strong>输入框 Entry</strong>来代替，<strong>result_var</strong>就是它绑定的变量。</p>
+<ul>
+  <li><strong>cur_input</strong>代表这一轮数字输入的值</li>
+  <li><strong>previous_input</strong>的作用在于计算，等下我们深入解析一下Calculate函数就知道什么用了</li>
+  <li><strong>Operator</strong>用于记录运算符</li>
+</ul>
+
+<pre><code class="language-Python">        self.current_input = ""
+        self.result_var = tk.StringVar()
+        self.result_var.set("0")
+        self.operator = ""
+        self.previous_input = ""
+        self.new_input = True
+</code></pre>
+
+<p>输入数字有四种情况：</p>
+<ul>
+  <li>当前不在一个运算中，输入的数字的算式的开头 (此时cur_input = ‘0’)</li>
+  <li>点完运算符，已经显示一个结果了，接着输入新的数字 (此时cur_input = ‘上一轮计算结果’)</li>
+  <li>还在当前轮的数字输入</li>
+</ul>
+
+<p>首先，我们要判断使用者点了哪个按钮，<strong>按钮排版我们不再赘述</strong></p>
+<pre><code class="language-Python">	if value.isdigit() or value == '.':
+            self.input_number(value)
+            self.flow_var.set(self.operate_flow + self.current_input)
+
+        elif value in ['+', '-', '×', '÷']:
+            self.operate_flow += self.current_input
+            self.operate_flow += value
+            self.input_operator(value)
+            self.flow_var.set(self.operate_flow)
+
+        elif value in ['√','x²']:
+            self.instant_operator(value)
+
+        elif value == '=':
+            self.calculate()
+            self.operate_flow = ''
+            self.flow_var.set(self.current_input)
+            return
+
+        elif value == 'C':
+            self.clear()
+
+        elif value == '←':
+            self.backspace()
+            self.flow_var.set(self.operate_flow + self.current_input)
+
+        elif value == '±':
+            self.negate()
+
+        elif value == 'e':
+            self.e()
+            self.flow_var.set(self.operate_flow + self.current_input)
+
+        elif value == 'π':
+            self.pi()
+            self.flow_var.set(self.operate_flow + self.current_input)
+</code></pre>
+
+<p>第一个if判断是否是数字，是的话就会去判断现在是什么状况
+这里的<strong>new_input</strong>为布尔变量，用于判断这时候该不该清除current_input里的数字</p>
+
+<p>显然，在输入了一个数字后，无论前面是什么情况，之后都应该是<strong>情况三</strong>，所以<strong>new_input</strong>理所当然为False，直到触发前两个情况的条件</p>
+
+<pre><code class="language-Python">    def input_number(self, num):
+        if self.new_input:
+            self.current_input = num
+            self.new_input = False
+
+        else:
+            # 防止输入多个小数点
+            if num == '.' and '.' in self.current_input:
+                return
+
+            self.current_input += num
+        self.result_var.set(self.current_input)
+</code></pre>
+
+<p>运算符成立的条件是<strong>cur_input</strong>里有实际合法的值，者可以用<strong>new_input == False</strong>来判断
+我们注意到，计算器在你输入下一个运算符之前，都会显示你当前轮的输入。按下后才会显示上一轮和上上轮的运算结果，所以这里我们需要一个<strong>prev_input</strong>来记录上上轮的结果。</p>
+
+<blockquote>
+  <p>[!attention] <strong>current_input</strong>在你点下运算符后已经成为上一轮输入，直到你</p>
+</blockquote>
+
+<pre><code class="language-Python">    def input_operator(self, op):                       #输入计算符
+        if self.current_input:
+            if self.operator and not self.new_input:
+                self.calculate()
+
+            self.previous_input = self.current_input
+            self.operator = op
+            self.new_input = True
+</code></pre>
+
+<p>下面给出运算函数
+计算完成后，当前显示的应该是<strong>result</strong>，但是注意这里属于情况二，所以<strong>new_input</strong>要设为True</p>
+
+<pre><code class="language-Python">            prev = float(self.previous_input)
+            curr = float(self.current_input)
+            if self.operator == '+':
+                result = prev + curr
+            elif self.operator == '-':
+                result = prev - curr
+            elif self.operator == '×':
+                result = prev * curr
+            elif self.operator == '÷':
+                if curr == 0:
+                    messagebox.showerror("错误", "除数不能为零！")
+                    self.clear()
+                    return
+                result = prev / curr
+
+            if result == int(result): #处理精度，否则整数后面会跟一个.0
+                result = int(result)
+
+            self.result_var.set(str(result))
+            self.current_input = str(result)
+            self.operator = ""
+            self.previous_input = ""
+            self.new_input = True
+</code></pre>
+
+<h4 id="新增功能-即时运算符">新增功能 即时运算符</h4>
+<p>这个还是很好理解的，<strong>new_input</strong>我故意设置为<strong>False</strong>的，正常应该是<strong>True</strong></p>
+<pre><code class="language-Python">    def sqrt(self):
+        self.current_input = str(f"{math.pi:.7f}")  #保留七位小数
+        self.result_var.set(self.current_input)
+        self.new_input = False
+</code></pre>
+
+<h4 id="计算流显示-calculate-flow">计算流显示 Calculate flow</h4>
+<p>你会发现我上面写的识别符号的代码里有很多带有<strong>flow</strong>的变量，那就是专门用于显示计算全过程的。只需要识别你每一次的输入的合法性，然后加到一个专门的字符串上就行了。
+这里引入<strong>纯运算输入 Raw Input</strong>，按键里我设置为<strong>Pr</strong>，点一下会变红</p>
+
+<pre><code class="language-Python">        if value == 'Pr':
+            self.mode = 'Normal_cal' if self.mode == 'Pure' else 'Pure'
+
+            for widget in self.button_frame.winfo_children():
+                if isinstance(widget, tk.Button) and widget.cget("text") == "Pr":
+                    if self.mode == 'Normal_cal':
+                        widget.config(bg = '#F0F0F0')
+                    else:
+                        widget.config(bg = 'red')
+                        
+            self.clear()
+            return
+
+        if self.mode == 'Pure':
+            if value == '=':
+                result = eval(self.operate_flow)
+                self.current_input = result
+                self.result_var.set(result)
+                self.operate_flow = ''
+                self.flow_var.set(self.operate_flow)
+
+            elif value == '←':
+                self.operate_flow = self.operate_flow[:-1]
+
+            elif value == '×':
+                self.operate_flow += '*'
+                
+            elif value == '÷':
+                self.operate_flow += '/'
+
+            else:
+                self.operate_flow += value
+                self.flow_var.set(self.operate_flow)
+
+            return
+</code></pre>
+
+<p>这一串就是专门用来纯输入的，最终输出的结果会是按照加减乘除的优先级运算的结果，因为使用了<strong>eval</strong>，指的注意的一点是颜色的改变，和上面2048识别GameOver的方法如出一辙。</p>
+
+<h2 id="图片4x4华容道">图片4x4华容道</h2>
+<p>梦回Win7！这个代码量也出奇的少，只有165行，还包括了许多注释
+这个游戏的原理是，在点击一个块后，如果这个块四周有空白块，他就会移动到这个块去。说是移动，实际上可以理解为<strong>和空白块交换</strong>。</p>
+
+<h4 id="鼠标点击事件绑定">鼠标点击事件绑定</h4>
+<pre><code class="language-Python">        self.canvas.bind("&lt;Button-1&gt;", self.on_click)
+</code></pre>
+
+<p>这里的鼠标判定相当麻烦，你只能判定鼠标点击了画布，并获取鼠标的具体位置，也就是说，具体点了哪一块是根据鼠标的位置去判定的！</p>
+
+<pre><code class="language-Python">    def on_click(self, event):  #鼠标事件
+        col = event.x // (self.tile_size + self.margin)
+        row = event.y // (self.tile_size + self.margin)
+
+        #检查点击是否在有效范围内
+        if 0 &lt;= row &lt; self.grid_size and 0 &lt;= col &lt; self.grid_size:
+        
+            #检查点击的方块是否与空白块相邻
+            if self.is_adjacent((row, col), self.empty_pos):
+            
+                #交换方块
+                self.swap_tiles((row, col), self.empty_pos)
+                self.empty_pos = (row, col)
+                self.draw_board()
+
+                #检查是否完成
+                if self.is_solved():
+                    messagebox.showinfo("Congrats", "！！有点强！！")
+</code></pre>
+
+<h4 id="版面存储--获胜判断--打乱">版面存储 / 获胜判断 / 打乱</h4>
+<p>这里我采用了一维数组进行存储</p>
+<pre><code class="language-Python">    def init_game(self): #初始化游戏板
+        self.board = []
+        for i in range(self.grid_size * self.grid_size - 1):
+            self.board.append(i + 1)
+        self.board.append(0)  #0表示空白块
+        self.empty_pos = (self.grid_size-1, self.grid_size-1)
+        self.draw_board()
+</code></pre>
+
+<p>要判断是否获胜很简单，只需要检查索引对不对的上就行了</p>
+
+<pre><code class="language-Python">    def is_solved(self): #检查拼图是否完成
+        for i in range(self.grid_size * self.grid_size - 1):
+            if self.board[i] != i + 1:
+                return False
+                
+        return self.board[-1] == 0  #最后一块应该是空白
+</code></pre>
+
+<p>打乱的思路比较有趣，为了确保有解性，我们可以进行倒推</p>
+
+<pre><code class="language-Python">    def shuffle(self):
+        '''
+        这里有一个很有趣的思路，我们操作的对象实际上是空白格！因为要确保有解，所以只能靠一点点移动来打乱，这时候如果操作和空白格相邻的图片格会显得非常麻烦
+        但是换个思考角度，操作实质上是格子的交换，我们也可以把目光聚焦在空白格上，这样就完美解决了问题
+        '''
+
+        moves = 100
+        directions = [(0, -1), (0, 1), (-1, 0), (1, 0)] # 上下左右四个方向
+        for i in range(moves):
+            dx, dy = random.choice(directions)
+            new_row, new_col = self.empty_pos[0] + dx, self.empty_pos[1] + dy
+            if 0 &lt;= new_row &lt; self.grid_size and 0 &lt;= new_col &lt; self.grid_size:
+                self.swap_tiles(self.empty_pos, (new_row, new_col))
+                self.empty_pos = (new_row, new_col)
+</code></pre>
+
+<h4 id="图片分割">图片分割</h4>
+<p>嗯嗯，这里用到了<strong>Pillow</strong>模块，所以以后有机会再讲讲</p>
+<pre><code class="language-Python">    def load_and_split_image(self):
+        try:
+            image_path = "miku.jpg" #我并没有考虑图片不存在的情况，要是出问题了，自己来这里改一下路径
+            #加载并调整图片大小
+            original_image = Image.open(image_path)
+            image_size = self.grid_size * self.tile_size
+            resized_image = original_image.resize((image_size, image_size), Image.Resampling.LANCZOS)
+
+            #分割图片
+            self.tile_images = []
+            for row in range(self.grid_size):
+                for col in range(self.grid_size):
+                #确认需要裁剪的四个边界
+                    left = col * self.tile_size
+                    upper = row * self.tile_size
+                    right = left + self.tile_size
+                    lower = upper + self.tile_size
+                    
+                    tile_image = resized_image.crop((left, upper, right, lower))
+                    self.tile_images.append(ImageTk.PhotoImage(tile_image))
+
+        except Exception as e:
+            print(f"加载图片失败: {e}")
+            self.create_color_tiles()
+</code></pre>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[2048游戏 这里先说一下2048的逻辑处理]]></summary></entry><entry><title type="html">Tkinter - Canvas 画布</title><link href="http://localhost:4000/2025/10/10/Tkinter-5-Canvas-%E7%94%BB%E5%B8%83.html" rel="alternate" type="text/html" title="Tkinter - Canvas 画布" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%205%20Canvas%20%E7%94%BB%E5%B8%83</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-5-Canvas-%E7%94%BB%E5%B8%83.html"><![CDATA[<p>Python Tkinter 画布（Canvas）组件和 <strong>html5</strong> 中的画布一样，都是用来绘图的。您可以将图形，文本，小部件或框架放置在画布上。</p>
+
+<h2 id="画布-canvas-的定义">画布 Canvas 的定义</h2>
+
+<pre><code class="language-Python">Canvas_w = tk.Canvas( master , option-value ...)
+</code></pre>
+
+<p><strong>其option有以下选项</strong>：</p>
+<ul>
+  <li>bd : 边框宽度</li>
+  <li>bg : 背景色</li>
+  <li>confine : 默认为True , 画布不可滚动到可滑动区域外</li>
+  <li>cursor : 光标形状 ( arrow , circle , cross , plus )</li>
+  <li>height: 画布高度</li>
+  <li>highlightcolor : 高光色</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>relief : 见[[Tkinter - 1 基本操作、类继承关系与部分组件#标签组件 Label</td>
+          <td>Label的Relief]]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><strong>scrollregion</strong>：一个元组 tuple (w, n, e, s) ，定义了画布可滚动的最大区域，w 为左边，n 为头部，e 为右边，s 为底部</li>
+  <li><strong>width</strong>：画布在 X 坐标轴上的大小</li>
+</ul>
+
+<h2 id="类方法">类方法</h2>
+<pre><code class="language-Python">Canvas_w.create_rectangle( x0 , y0 , x1 , y1 , start = 0 , extent = ... , fill = 'color' )
+Canvas_w.create_arc( x0 , y0 , x1 , y1 , start = 0 , extent = ... , fill = 'color' )
+Canvas_w.create_line(x0 , y0 , x1 , y1 , ... , xn , yn , options = '...')
+Canvas_w.create_oval(x0, y0, x1, y1, options = '...')
+Canvas_w.create_polygon(x0, y0, x1, y1,...xn, yn, options = '...')
+Canvas_w.create_text(x0, y0, text = '...' , font = ('...' , x))
+
+image = tk.PhotoImage(file = 'path')
+Canvas_w.create_image(x0 , y0 , image = image)
+</code></pre>
+
+<p>这里的坐标似乎可以用元组表示</p>
+<ul>
+  <li><strong>create_rectangle</strong>：给定左上角和右下角的点</li>
+  <li><strong>create_arc</strong>：创建扇形。注意，<strong>这里的圆弧是椭圆圆弧，坐标依旧是矩形坐标</strong>，且圆弧是围着椭圆中心从十二点方向开始转的。<strong>角度为弧度制</strong>。（同pygame）</li>
+  <li><strong>create_line</strong>：画线，option可以是color和width…</li>
+  <li><strong>create_oval</strong>：画椭圆，$x_0 , y_0 , x_1 , y_1$ 代表一个矩形，椭圆被框定在其中</li>
+  <li><strong>create_text</strong>：直接画文本</li>
+  <li><strong>create_image</strong>：顾名思义</li>
+</ul>
+
+<h2 id="事件">事件</h2>
+<p>点击画板发生的事情和触发的函数，这里event的实参是”&lt;Button-1&gt;”</p>
+<pre><code class="language-Python"> def on_click(event):
+	 mouse_x = event.x
+	 mouse_y = event.y 
+
+ self.canvas.bind("&lt;Button-1&gt;", on_click)
+</code></pre>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[Python Tkinter 画布（Canvas）组件和 html5 中的画布一样，都是用来绘图的。您可以将图形，文本，小部件或框架放置在画布上。]]></summary></entry><entry><title type="html">Tkinter - 更多组件，更多操作和更多窗口</title><link href="http://localhost:4000/2025/10/10/Tkinter-4-%E6%9B%B4%E5%A4%9A%E7%BB%84%E4%BB%B6-%E6%9B%B4%E5%A4%9A%E6%93%8D%E4%BD%9C%E5%92%8C%E6%9B%B4%E5%A4%9A%E7%AA%97%E5%8F%A3.html" rel="alternate" type="text/html" title="Tkinter - 更多组件，更多操作和更多窗口" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%204%20%E6%9B%B4%E5%A4%9A%E7%BB%84%E4%BB%B6%EF%BC%8C%E6%9B%B4%E5%A4%9A%E6%93%8D%E4%BD%9C%E5%92%8C%E6%9B%B4%E5%A4%9A%E7%AA%97%E5%8F%A3</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-4-%E6%9B%B4%E5%A4%9A%E7%BB%84%E4%BB%B6-%E6%9B%B4%E5%A4%9A%E6%93%8D%E4%BD%9C%E5%92%8C%E6%9B%B4%E5%A4%9A%E7%AA%97%E5%8F%A3.html"><![CDATA[<h2 id="tk窗口进阶配置">Tk窗口进阶配置</h2>
+<h4 id="configure--config">configure / config</h4>
+<p>设置方法如下，有多种不同参数</p>
+<pre><code class="language-Python">root.configure(bg='color' , ...)
+</code></pre>
+
+<p><strong>这允许你动态的修改已经设定好的值</strong></p>
+
+<h4 id="attributes">attributes</h4>
+<p>设置方法如下，有多种不同参数</p>
+<pre><code class="language-Python">root.attributes('-alpha',value)
+</code></pre>
+
+<ul>
+  <li><strong>-alpha</strong> 不透明度</li>
+  <li><strong>-topmost</strong> 是否指定 (True / False )</li>
+  <li><strong>-transparentcolor</strong> 后面跟#RGB的十六进制码，由于tkinter读颜色只支持6为，透明度的码不读，所以专门搞了一个属性来指定一个颜色，设定为透明色</li>
+</ul>
+
+<h4 id="protocol">protocol</h4>
+<p>顾名思义，协议指的是你对窗口进行一些特定操作时发送的协议，这里举一个点击<strong>x</strong>的例子</p>
+
+<pre><code class="language-Python">root.protocol('WM_DELETE_WINDOW',function_name)
+</code></pre>
+
+<p>这个函数默认为<code class="language-plaintext highlighter-rouge">root.destroy</code>，即销毁程序，当然你也可以弹出一个确认窗口</p>
+
+<h6 id="例1-确认关闭窗口">例1 确认关闭窗口</h6>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_destroy</span><span class="p">():</span>
+	<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebox</span><span class="p">.</span><span class="nf">askokcancel</span><span class="p">(</span><span class="sh">'</span><span class="s">是否关闭</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">确认关闭吗</span><span class="sh">'</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">d1</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+		<span class="n">root</span><span class="p">.</span><span class="nf">destroy</span><span class="p">()</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="k">pass</span>
+<span class="n">root</span><span class="p">.</span><span class="nf">protocol</span><span class="p">(</span><span class="sh">'</span><span class="s">WM_DELETE_WINDOW</span><span class="sh">'</span><span class="p">,</span><span class="n">check_destroy</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="顶层窗口-toplevel">顶层窗口 Toplevel</h2>
+<p>官方叫法叫顶层窗口，实际上就是<strong>嵌套菜单</strong>，即在根窗口打开的子级窗口</p>
+<ul>
+  <li>它的用法和属性和<strong>Tk</strong>一样，只不过名字换成了<strong>Toplevel</strong></li>
+  <li>要在<strong>Toplevel</strong>里添加组件，只需要将组件里的<strong>第一个值</strong>改成<strong>Toplevel</strong>的名字就行了</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">root_window</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Tk</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">sign_up</span><span class="p">():</span>
+	<span class="n">sub_window</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Toplevel</span><span class="p">()</span>
+	<span class="n">sub_window</span><span class="p">.</span><span class="nf">resizeable</span><span class="p">(</span><span class="bp">True</span><span class="p">,</span><span class="bp">True</span><span class="p">)</span>
+	
+	<span class="n">Sub_window_label_1</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Label</span><span class="p">(</span><span class="n">sub_window</span> <span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="sh">'</span><span class="s">...</span><span class="sh">'</span><span class="p">)</span>
+	<span class="bp">...</span>
+	
+<span class="n">button_sign_up</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Button</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="sh">'</span><span class="s">注册</span><span class="sh">'</span> <span class="p">,</span> <span class="n">command</span> <span class="o">=</span> <span class="n">sign_up</span><span class="p">).</span><span class="nf">place</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>[!attention] 在弹出顶层窗口之后，焦点一般不在这个窗口上，这时候需要使用</p>
+  <pre><code class="language-Python">sub_window.focus_set()
+</code></pre>
+  <p>来设置焦点（按自然语言来说，这是倒装语句）</p>
+</blockquote>
+
+<h2 id="单选框-radiobutton">单选框 radiobutton</h2>
+<p><strong>单选框</strong>是圆形的，也需要一个变量来读取</p>
+
+<pre><code class="language-Python">s2 = tk.StringVar()
+tk.Radiobutton(window , text = '1' , variable = s2 , value = 'value_1')
+tk.Radiobutton(window , text = '2' , variable = s2 , value = 'value_2')
+
+s2.set('value_1')
+</code></pre>
+
+<p>上面一段程序就是默认选取value_1的<strong>两个互斥的单选框</strong>，和HTML较为相像</p>
+
+<h2 id="多选框-checkbutton">多选框 checkbutton</h2>
+<p><strong>多选框 / 复选框</strong>是方形的，非常形象，这里的check就像check清单一样，有一项打一个勾</p>
+
+<pre><code class="language-Python">intvar_1 = tk.IntVar()
+intvar_2 = tk.IntVar()
+tk.Checkbutton(window , text = '1' , variable = intvar_1 , onvalue = 1 , off_value = -1)
+tk.Checkbutton(window , text = '2' , variable = intvar_2 , onvalue = 2 , off_value = -2)
+</code></pre>
+
+<p>因为onvalue和offvalue的同时存在，<strong>Checkbutton不能将绑定对象设定为同一个变量</strong></p>
+
+<h2 id="下拉列表">下拉列表</h2>
+<p>下拉列表规定了你可以选择哪些选项，但是其实质还是一个输入框</p>
+<pre><code class="language-Python">#没有tk.
+s3 = tk.StringVar()
+Combobox_1 = Combobox(window , textvariable = s3 , values = ['1','2','3'] , state = "readonly")
+
+Combobox_1.current(index)
+</code></pre>
+
+<p>记得把模式调为只读，否则它的作用和输入框差不多</p>
+<ul>
+  <li><strong>current</strong>：默认的值，index是后面列表里的index</li>
+</ul>
+
+<h2 id="菜单-menu">菜单 Menu</h2>
+<p>菜单需要与窗口<strong>双向绑定</strong></p>
+<ul>
+  <li>若<strong>菜单长度超出窗口大小</strong>，则会另起一行，类似于<strong>表格布局 grid</strong></li>
+</ul>
+
+<blockquote>
+  <p>[!attention] 在创建了第一级菜单之后，如果想要继续创建<strong>下拉菜单</strong>，则需要菜单的嵌套</p>
+</blockquote>
+
+<pre><code class="language-Python">Root_Menu = tk.Menu(root) #双向绑定
+Root_Menu.add_cascade(label = '下拉选项' , tear-off = False , menu = Sub_Menu) #双向绑定
+
+Sub_Menu = tk.Menu(Root_Menu) #双向绑定
+Sub_Menu.add_cascade(label = 'plus one' , command = ...)
+Sub_Menu.add_radiobutton(label = '')
+
+root.config(menu = Root_Menu) #双向绑定
+</code></pre>
+
+<ul>
+  <li><strong>add_cascade</strong>：顾名思义，添加级联，也就是<strong>下拉栏显示的名称</strong></li>
+  <li><strong>config</strong>：双向绑定</li>
+  <li><strong>tear-off</strong>：早期窗口是可以和主窗口分离开了，这里就关闭这个功能里</li>
+</ul>
+
+<h2 id="列表框">列表框</h2>
+<p>这个列表其实很简单，就是每一行显示一个字符串</p>
+<pre><code class="language-Python">ListBox_1 = tk.Listbox(window , width = ... , height = ...)
+
+ListBox_1.insert(END , '追加内容')
+ListBox_1.delete(startpos , endpos) #如果只有一个值就是那个索引上的值
+ListBox_1.get(startpos , endpos) #如果只有一个值就是那个索引上的值
+</code></pre>
+
+<ul>
+  <li><strong>insert</strong>：插入内容，END表示添加到<strong>列表尾部</strong></li>
+</ul>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[Tk窗口进阶配置 configure / config 设置方法如下，有多种不同参数 root.configure(bg='color' , ...)]]></summary></entry><entry><title type="html">Tkinter - OOP化的GUI界面设计</title><link href="http://localhost:4000/2025/10/10/Tkinter-3-OOP%E5%8C%96%E7%9A%84GUI%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1.html" rel="alternate" type="text/html" title="Tkinter - OOP化的GUI界面设计" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%203%20OOP%E5%8C%96%E7%9A%84GUI%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-3-OOP%E5%8C%96%E7%9A%84GUI%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1.html"><![CDATA[<p>#tkinter</p>
+<h2 id="application---frame类">Application &lt;- Frame类</h2>
+<p>一般我们通过<strong>Application</strong>类来组织整个GUI，它继承了<strong>Frame</strong>类
+<strong>Frame</strong>类是一个容器组件，可以容纳更多的组件，也就是说，此时<strong>Application</strong>类似于我们自定义的一个组件</p>
+
+<p>在创建窗口后，我们创建的<strong>Application</strong>此时就相当于一个容器，能够容纳其他组建</p>
+
+<h4 id="实例-1">实例 #1</h4>
+<p>这里以官方HELLOWORLD为例</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">tkinter</span> <span class="k">as</span> <span class="n">tk</span>
+
+<span class="k">class</span> <span class="nc">Application</span><span class="p">(</span><span class="n">tk</span><span class="p">.</span><span class="n">Frame</span><span class="p">):</span><span class="c1">#创建了一个Application类
+</span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span> <span class="c1">#声明
+</span>        <span class="nf">super</span><span class="p">().</span><span class="nf">__init__</span><span class="p">(</span><span class="n">master</span><span class="p">)</span><span class="c1">#继承了父类的信息，并传master的参数，这里的master是master_window
+</span>        <span class="n">self</span><span class="p">.</span><span class="n">master</span> <span class="o">=</span> <span class="n">master</span>
+        <span class="n">self</span><span class="p">.</span><span class="nf">pack</span><span class="p">()</span> <span class="c1">#继承父类
+</span>        <span class="n">self</span><span class="p">.</span><span class="nf">create_widgets</span><span class="p">()</span><span class="c1">#创建基本布局，具体在下main定义了
+</span>		
+    <span class="k">def</span> <span class="nf">create_widgets</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">hi_there</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Button</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="c1">#这里的hi_there实例就是一个Button类型了
+</span>        <span class="n">self</span><span class="p">.</span><span class="n">hi_there</span><span class="p">[</span><span class="sh">"</span><span class="s">text</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Hello World</span><span class="se">\n</span><span class="s">(click me)</span><span class="sh">"</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">hi_there</span><span class="p">[</span><span class="sh">"</span><span class="s">command</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">say_hi</span> <span class="c1">#调用
+</span>        <span class="n">self</span><span class="p">.</span><span class="n">hi_there</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="sh">"</span><span class="s">top</span><span class="sh">"</span><span class="p">)</span>
+
+        <span class="n">self</span><span class="p">.</span><span class="n">quit</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Button</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sh">"</span><span class="s">QUIT</span><span class="sh">"</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="sh">"</span><span class="s">red</span><span class="sh">"</span><span class="p">,</span>
+                              <span class="n">command</span><span class="o">=</span><span class="n">self</span><span class="p">.</span><span class="n">master</span><span class="p">.</span><span class="n">destroy</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">quit</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="sh">"</span><span class="s">bottom</span><span class="sh">"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">say_hi</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">hi there, everyone!</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Tk</span><span class="p">()</span><span class="c1">#根窗口
+</span><span class="n">app</span> <span class="o">=</span> <span class="nc">Application</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">root</span><span class="p">)</span>
+<span class="n">app</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
+</code></pre></div></div>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[#tkinter Application &lt;- Frame类 一般我们通过Application类来组织整个GUI，它继承了Frame类 Frame类是一个容器组件，可以容纳更多的组件，也就是说，此时Application类似于我们自定义的一个组件]]></summary></entry><entry><title type="html">Tkinter - 组件放置</title><link href="http://localhost:4000/2025/10/10/Tkinter-2-%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE.html" rel="alternate" type="text/html" title="Tkinter - 组件放置" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%202%20%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-2-%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE.html"><![CDATA[<h1 id="组件放置--widget-placement">组件放置  Widget Placement</h1>
+<p>配置好组件后需要放置，否则不会显示，但是先明确一下<strong>势力范围的概念</strong></p>
+<blockquote>
+  <p>[!attention] 你可以直接<code class="language-plaintext highlighter-rouge">Label_1 = Label().place(...)</code></p>
+  <h6 id="势力范围--拓展范围">势力范围 / 拓展范围</h6>
+  <p>在你决定将组件放在哪个side之后，势力范围就决定了，这里我们以top举例</p>
+</blockquote>
+
+<p>![[Tkinter 势力范围与拓展范围.png]]</p>
+
+<p>如果你不把expand打开，那么上面的作用效果仅局限于<strong>势力范围</strong>内，填充也就只能<strong>填充 fill</strong>一小部分屏幕，打开之后才能<strong>填充 fill</strong>全屏</p>
+
+<h4 id="pack-相对放置--填充布局">pack 相对放置 / 填充布局</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lable_1</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="n">side</span> <span class="o">=</span> <span class="sh">'</span><span class="s">...</span><span class="sh">'</span> <span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="sh">'</span><span class="s">...</span><span class="sh">'</span> <span class="p">,</span> <span class="n">padx</span> <span class="o">/</span> <span class="n">pady</span> <span class="p">,</span> <span class="n">ipadx</span> <span class="o">/</span> <span class="n">ipady</span> <span class="p">,</span> <span class="n">anchor</span> <span class="p">,</span> <span class="n">expand</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>side</strong> : ‘left , right , top , bottom’ 决定组件停靠的方向，默认为top</li>
+  <li><strong>fill</strong> : ‘x , y , both , none’ 是否填充。不同于图片的填充拉伸，这里的意思是类似于背景之类的可填重项的填充</li>
+  <li><strong>padx / pady</strong> : 组件与<strong>临近组件</strong>或<strong>窗口边界</strong>的距离（如果这里没有组件就是里窗口边界，有就是临近组件），<strong>否则每个标签都是紧贴在一起的</strong>
+    <ul>
+      <li>支持<strong>元组</strong>指定每一个<strong>间隔像素数</strong></li>
+    </ul>
+  </li>
+  <li><strong>ipadx / ipady</strong> : 组件内，组件文件跟组件边界间的距离
+    <ul>
+      <li>支持<strong>元组</strong>指定每一个<strong>间隔像素数</strong></li>
+    </ul>
+  </li>
+  <li><strong>anchor</strong> : “n , nw , ne , s , nw , ne , center” 默认居中显示</li>
+  <li><strong>expand</strong> : 决定组件的“<strong>势力范围</strong>”是否扩大到“<strong>扩展范围</strong>” (见下)</li>
+</ul>
+
+<blockquote>
+  <p>[!attention] 组件的放置会自适应
+如果组建的作用范围冲突了，<strong>后放置的组件</strong>会自动为<strong>先放置的组件</strong>让道，不会造成遮挡</p>
+  <h4 id="place-绝对放置--自定义布局">place 绝对放置 / 自定义布局</h4>
+  <p>给一个绝对的坐标位置，左上角为$(0,0)$</p>
+  <pre><code class="language-Python">label_1.place(x=value , y=value) #不超过窗口范围即可
+</code></pre>
+</blockquote>
+
+<h4 id="grid-网格放置--表格布局">grid 网格放置 / 表格布局</h4>
+<p>类似于excel表格，你也可以在HTML里见到类似的布局</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Label_1</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="n">row</span> <span class="o">=</span> <span class="n">value</span> <span class="p">,</span> <span class="n">column</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>[!attention] 它也符合填充原则，如果<strong>row</strong>和<strong>column</strong>前有空的位置，就会自动移到空的位置去</p>
+</blockquote>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[组件放置 Widget Placement 配置好组件后需要放置，否则不会显示，但是先明确一下势力范围的概念 [!attention] 你可以直接Label_1 = Label().place(...) 势力范围 / 拓展范围 在你决定将组件放在哪个side之后，势力范围就决定了，这里我们以top举例]]></summary></entry><entry><title type="html">Tkinter - 基本操作、类继承关系与部分组件</title><link href="http://localhost:4000/2025/10/10/Tkinter-1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E4%B8%8E%E9%83%A8%E5%88%86%E7%BB%84%E4%BB%B6.html" rel="alternate" type="text/html" title="Tkinter - 基本操作、类继承关系与部分组件" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%201%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E3%80%81%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E4%B8%8E%E9%83%A8%E5%88%86%E7%BB%84%E4%BB%B6</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E4%B8%8E%E9%83%A8%E5%88%86%E7%BB%84%E4%BB%B6.html"><![CDATA[<p>#tkinter</p>
+<h2 id="头文件-header">头文件 Header</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">tkinter</span> <span class="k">as</span> <span class="n">tk</span>
+</code></pre></div></div>
+
+<h1 id="tkinter类继承关系">Tkinter类继承关系</h1>
+<p>这边给到一个tkinter类的继承关系图</p>
+
+<p>![[Tkinter 组件类继承图.png]]</p>
+
+<ul>
+  <li><strong>Tk</strong>同时属于<strong>Wm</strong>与<strong>Misc</strong>类</li>
+  <li><strong>Toplevel</strong> 顶级窗口，永远置于最顶层</li>
+  <li><strong>Wm</strong> 负责窗口间的通信</li>
+  <li><strong>Misc</strong> 杂项，所有组件的根父类</li>
+  <li><strong>Pack / Place / Grid</strong> 布局管理器，<strong>所继承的东西</strong>的布局都要用这些东西</li>
+</ul>
+
+<h4 id="值的修改">值的修改</h4>
+<p><strong>Object</strong>都支持__getitem__和__setitem__的做法！(.config()应该也都有)
+这样就可以修改Object里面有关的值了</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">object</span><span class="p">[</span><span class="sh">'</span><span class="s">item</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="sh">'</span><span class="s">value</span><span class="sh">'</span>
+<span class="nb">object</span><span class="p">.</span><span class="nf">config</span><span class="p">(...)</span>
+</code></pre></div></div>
+
+<h1 id="窗口-window">窗口 window</h1>
+<p>窗口作为一个对象存在，我们用 <strong>Tk()</strong> 来创建</p>
+<blockquote>
+  <p>[!attention] 一个对象 (Object) 定义时，函数首字母均为大写
+```python
+window = tk.Tk();
+window.title(‘window’) #窗口定义
+window.resizeable(True,True)
+window.geometry(‘200x100’) #用x代表*，这表示界面尺寸，（长，宽）
+window.iconbitmap(‘…/.ico’)</p>
+</blockquote>
+
+<p>window.configure(bg = “…”)
+window.attributes(‘-alpha’ , 0.9)
+…</p>
+
+<p>window.mainloop() #循环
+#window.destroy()</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **Tk** : 创建窗口对象
+- **title** 窗口名称
+- **resizeable** 是否可以调整窗口大小
+- **geometry** 给定一个string，里面包含了窗口大小和窗口位置
+	- "*width*x*height*±*distance_from_left*±*distance_from_ceiling*"
+	- 四个参数分别为**窗口宽度**，**窗口高度**，**距屏幕左边的宽**，**距离屏幕顶部的高**
+	- 如果输入值为**None**，则会返回此刻的四个数值
+- **iconbitmap** 图标
+
+- **configure** 里面可以设置基本设置 更多请见[[Tkinter - 4 更多组件，更多操作和更多窗口]]
+- **attributes** 里面可以设置属性 更多请见[[Tkinter - 4 更多组件，更多操作和更多窗口]]
+	- **-alpha** 不透明度
+	- **-topmost** 是否指定 (True / False)
+
+- **mainloop** 主循环
+
+- **destroy** 破坏程序，即退出
+
+# 组件
+**组件的概念需要搞清楚**，它相当于一个封装好的模块，你可以直接创建一个组件对象，然后放到屏幕上去
+
+## 标签组件 Label
+标签作为一个**组件**存在，我们用 **Label()** 来创建，实际上是用来显示文本的hh
+```python
+label_1 = tk.Label(window , text = 'Hello World' , bg='green' , font = ('Arial' , 12) , width = 15 , height = 2);
+</code></pre></div></div>
+
+<ul>
+  <li><strong>window</strong>：该组件属于的窗口</li>
+  <li><strong>text</strong>：该组件显示的文本</li>
+  <li><strong>background / bg (option参数)</strong>：该组件的背景
+    <ul>
+      <li>相应的还有foreground / fg</li>
+    </ul>
+  </li>
+  <li><strong>font (option参数)</strong>：字体，字号</li>
+  <li><strong>width (option参数)</strong>：标签字符宽度（以字符为单位，下同）</li>
+  <li><strong>height (option参数)</strong>：标签字符高读</li>
+  <li><strong>relief</strong>：边框样式
+    <ul>
+      <li>
+        <ol>
+          <li><strong>FLAT</strong>：平坦的边框，没有任何效果。</li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li><strong>RAISED</strong>：凸起的边框，给人一种立体感。</li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li><strong>SUNKEN</strong>：凹陷的边框，呈现出凹下去的效果。</li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li><strong>GROOVE</strong>：凹槽边框，具有凹槽的视觉效果。</li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li><strong>RIDGE</strong>：脊状边框，类似于凸起的边框，但更为复杂。</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="按钮组件--button">按钮组件  Button</h2>
+<p>按钮作为一个<strong>组件</strong>存在，我们用 <strong>Botton()</strong> 来创建，用于创建一个按钮</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">button_1</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Botton</span><span class="p">(</span><span class="n">window</span> <span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="sh">'</span><span class="s">Switch window size</span><span class="sh">'</span> <span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">15</span> <span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">2</span> <span class="p">,</span> <span class="n">command</span> <span class="o">=</span> <span class="n">function_name</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>window</strong>：该组件属于的窗口</li>
+  <li>(option参数略)</li>
+  <li><strong>command</strong> : 与一个函数绑定，作为点击按钮后执行的函数
+    <ul>
+      <li>也可以通过<code class="language-plaintext highlighter-rouge">button_1.bind(function_name)</code>来绑定</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="输入框组件-entry--字符串变量-stringvar--整数变量-intvar">输入框组件 Entry / 字符串变量 StringVar / 整数变量 IntVar</h2>
+<p>输入款作为一个<strong>组件</strong>存在，我们用 <strong>Entry()</strong> 来创建，用于创建一个输入框
+字符串变量与Entry搭配使用，用于读取Entry的值</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s1</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">StringVar</span><span class="p">()</span>
+<span class="n">tk</span><span class="p">.</span><span class="nc">Entry</span><span class="p">(</span><span class="n">root</span> <span class="p">,</span> <span class="o">**</span><span class="n">option</span> <span class="p">,</span> <span class="n">textvariable</span> <span class="o">=</span> <span class="n">s1</span> <span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="sh">''</span><span class="p">).</span><span class="nf">place</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="c1">#s1.set('请输入文本')
+#s1.get()
+</span></code></pre></div></div>
+
+<ul>
+  <li><strong>textvariable</strong>：传参到的地方，需要专门对应<strong>Stringvar</strong>类型</li>
+  <li><strong>state</strong>：默认为空，可以是<strong>readonly (只读)</strong>、<strong>dis / disabled  (禁用)</strong></li>
+  <li><strong>.set方式</strong>：对于<strong>Stringvar</strong>来说，此时他就代表了<strong>Entry</strong>里的内容，所以对<strong>s1的设置</strong>相当于对<strong>Entry里文本</strong>的设置</li>
+  <li><strong>.get方式</strong>：返回一个字符串类型的数据，即目前<strong>所绑定的Entry</strong>里的值</li>
+</ul>
+
+<p><strong>整数变量</strong>相对于字符串变量，在填入的时候需要多加一个<strong>onvalue / offvalue</strong>的值，表示返回的<strong>int值大小</strong>
+当然，<strong>Entry</strong>肯定干不了这事，后面提到的[[Tkinter - 4 更多组件，更多操作和更多窗口#单选框 radiobutton|单选框和复选框]]可以做到</p>
+
+<pre><code class="language-Python">intvar_1 = tk.IntVar()
+intvar_2 = tk.IntVar()
+tk.Radiobutton(window , text = '1' , variable = intvar_1 , onvalue = 1 , off_value = -1)
+tk.Radiobutton(window , text = '2' , variable = intvar_2 , onvalue = 2 , off_value = -2)
 </code></pre>
 
 <blockquote>
-  <p>[!attention]
-注意，二维数组的数组名和一位数组不一样，不直接表示其开始地址
-arr表示的是<code class="language-plaintext highlighter-rouge">arr[0]</code>的地址，而此时<code class="language-plaintext highlighter-rouge">arr[0]</code>是一个数组，而我们要的是<code class="language-plaintext highlighter-rouge">arr[0]</code>的第一个元素的地址
-所以,用<code class="language-plaintext highlighter-rouge">*arr</code>表示<code class="language-plaintext highlighter-rouge">arr[0]</code></p>
+  <p>[!attention] 一定要注意，输入值的获取需要用<code class="language-plaintext highlighter-rouge">.get</code>方法</p>
 </blockquote>
 
-<pre><code class="language-C">	int * p = arr[0];
-	int * p = *arr;
-</code></pre>
+<h1 id="信息框">信息框</h1>
+<p><strong>信息框 MessageBox</strong>即弹窗信息，通过不同方法可以发送不同类型的弹窗，具体见下</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">tkinter</span> <span class="kn">import</span> <span class="n">messagebox</span>
+<span class="c1">#你当然可以直接tkinter.messagebox
+</span>
+<span class="n">messagebox</span><span class="p">.</span><span class="nf">showinfo</span><span class="p">(</span><span class="sh">'</span><span class="s">TITLE_INFO</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">messagebox</span><span class="p">.</span><span class="nf">showwarning</span><span class="p">(</span><span class="sh">'</span><span class="s">TITLE_WARNING</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">messagebox</span><span class="p">.</span><span class="nf">showerror</span><span class="p">(</span><span class="sh">'</span><span class="s">TITLE_ERROR</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebox</span><span class="p">.</span><span class="nf">askquestion</span><span class="p">(</span><span class="sh">'</span><span class="s">YES_OR_NO</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebox</span><span class="p">.</span><span class="nf">askokcancel</span><span class="p">(</span><span class="sh">'</span><span class="s">OK_OR_CANCEL</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebox</span><span class="p">.</span><span class="nf">askretrycancel</span><span class="p">(</span><span class="sh">'</span><span class="s">RETRY_OR_CANCEL</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebox</span><span class="p">.</span><span class="nf">askyesno</span><span class="p">(</span><span class="sh">'</span><span class="s">YES_OR_NO</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebpx</span><span class="p">.</span><span class="nf">askyesnocancel</span><span class="p">(</span><span class="sh">'</span><span class="s">YES_NO_OR_CANCEL</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>一些方法可以有多个参数</p>
+<ul>
+  <li><strong>title</strong> 标题</li>
+  <li><strong>text</strong> 信息</li>
+  <li><strong>icon</strong> 设置窗口图标 ( INFO、ERROR、 QUESTION、WARNING )</li>
+  <li><strong>default</strong> 设置默认按钮布局</li>
+  <li><strong>parent</strong> 关闭窗口后焦点返回到指定窗口，这里填的就是<strong>对象名</strong></li>
+</ul>
+
+<p>部分函数有返回值，基本就是True和False，看着办</p>
+
+<h1 id="option-参数">**OPTION 参数</h1>
+<p>函数定义是给到了**option参数，定义方法见[[Python 6 函数#可变关键字参数]]
+以下列出常用的<strong>option</strong>参数</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>anchor</td>
+      <td>如果空间大于所需时，控制消息的位置，默认是CENTER</td>
+    </tr>
+    <tr>
+      <td>aspect</td>
+      <td>控件宽度与高度比，默认是150%</td>
+    </tr>
+    <tr>
+      <td>bd</td>
+      <td>边界宽度，默认是两个像素</td>
+    </tr>
+    <tr>
+      <td>background或者bg</td>
+      <td>背景色彩</td>
+    </tr>
+    <tr>
+      <td>bitmap</td>
+      <td>使用默认位图当做Message内容</td>
+    </tr>
+    <tr>
+      <td>cursor</td>
+      <td>当鼠标光标移至按钮上时的形状</td>
+    </tr>
+    <tr>
+      <td>foreground 或者 fg</td>
+      <td>前景色彩，即字体颜色</td>
+    </tr>
+    <tr>
+      <td>font</td>
+      <td>字形、字形样式与大小</td>
+    </tr>
+    <tr>
+      <td>heigth</td>
+      <td>高，单位是字符高</td>
+    </tr>
+    <tr>
+      <td>image</td>
+      <td>Message 以图像方式呈现</td>
+    </tr>
+    <tr>
+      <td>justify</td>
+      <td>当有多行文字时，最后一行文字的对齐方式  <br />取值为LEFT/CENTER/RIGHT(靠左/居中/靠右)  <br />默认是居中对齐</td>
+    </tr>
+    <tr>
+      <td>padx/pady</td>
+      <td>Message 文字与边框的间距，单位是像素</td>
+    </tr>
+    <tr>
+      <td>relief</td>
+      <td>可由此控制文字外框  <br />默认是relief=FLAT</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>Message 内容，如果有”\n”则可以输入当行文字</td>
+    </tr>
+    <tr>
+      <td>textvariable</td>
+      <td>文字变量</td>
+    </tr>
+    <tr>
+      <td>underline</td>
+      <td>可以设置第几个文字有下划线，从0开始算起  <br />默认是-1，表示无下划线</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>宽，单位是字符宽</td>
+    </tr>
+    <tr>
+      <td>wraplength</td>
+      <td>文本在多少宽度后换行，单位是像素</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>[[Tkinter - 3 OOP化的GUI界面设计]]</p>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[#tkinter 头文件 Header import tkinter as tk]]></summary></entry><entry><title type="html">STM32 - TIM中断概述</title><link href="http://localhost:4000/2025/09/16/STM32-4-TIM%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0.html" rel="alternate" type="text/html" title="STM32 - TIM中断概述" /><published>2025-09-16T00:00:00+08:00</published><updated>2025-09-16T00:00:00+08:00</updated><id>http://localhost:4000/2025/09/16/STM32%20-%204%20TIM%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0</id><content type="html" xml:base="http://localhost:4000/2025/09/16/STM32-4-TIM%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0.html"><![CDATA[<p>#嵌入式</p>
+<h1 id="tim-timer">TIM Timer</h1>
+<ul>
+  <li><strong>定时器</strong>可以对输入的时钟计数，并在达到设定值时触发中断
+  例如$72MHz$每秒输入$72M$次，每输入一次，内部的Counter就会++
+  而我设定为Counter到达$72K$的时候，触发一次中断，这样一秒就会触发1000次中断
+  也就是一次中断的间隔为$1ms$
+  即:
+\(计时长度 = {1 \over {输入频率 \over 触发阈值}}s = {触发阈值 \over 输入频率}s\)</li>
+  <li><strong>定时器</strong>具备定时中断功能，还能<strong>选择输入的时钟源</strong>，<strong>输入捕获</strong>，<strong>输出比较</strong>，<strong>编码器接口</strong>，<strong>主从触发模式</strong>等等</li>
+  <li>定时器分为<strong>基本定时器</strong>，<strong>通用定时器</strong>，<strong>高级定时器</strong></li>
+</ul>
+
+<p>TIM1，TIM8被规定位<strong>高级计时器</strong>
+TIM6，TIM7被规定为<strong>基本定时器</strong>
+TIM2~TIM5被规定为<strong>通用计时器</strong></p>
+
+<p>我们用的STM32有的资源是<strong>TIM1~TIM4</strong></p>
 
 <blockquote>
   <p>[!attention]
-又要注意，此时arr中每一行都为一个数组，其第n行的数组名为<code class="language-plaintext highlighter-rouge">arr[n-1]</code>，名称作用效果和一维一样
-例如<code class="language-plaintext highlighter-rouge">arr[0]</code>就代表<code class="language-plaintext highlighter-rouge">arr[0][0]</code>,<code class="language-plaintext highlighter-rouge">(arr[1]+1)</code>就代表<code class="language-plaintext highlighter-rouge">arr[1][1]</code>
-接下来是三种指针的表示方法</p>
+高级定时器对速度有一定要求，所以总线连接在<strong>APB2</strong>上
+通用计时器和基本定时器，则连接在<strong>APB1</strong>上，初始化时需要注意</p>
 </blockquote>
 
-<pre><code class="language-C">	*(arr + i)+j / *(*(arr + i)+j) 表示该地址元素的值
-	//解析一下加括号的必要性，arr+i表示的是第i-1行的数组，加了*后就指向了这个数组，等价于arr[i-1]，这也就和下面一种表示方式一样了
+<h2 id="时基单元">时基单元</h2>
+<ul>
+  <li>我们STM32采用的时<strong>16位时基单元</strong>，最大可以实现$59.65s$的定时
+  其中包含<strong>计数器 ( Counter ) , 预分频器 ( Prescaler ) , 自动重装寄存器 ( Auto Reload Register ARR )</strong>，他们构成了最基础的时基单元，可以完成最基础的计时功能</li>
+</ul>
+
+<h4 id="预分频器-prescaler">预分频器 Prescaler</h4>
+<p>用于接受经过<strong>触发控制器</strong>后的时钟信号，他会将这种<strong>方波型号</strong>分频，可以理解为将信号的周期除以x</p>
+<ul>
+  <li>加入预分频器存的是1，那么输入什么就输出什么</li>
+  <li>加入预分频器存的是n，那么一秒输入$72MHz$，他就输出${72 \over n}MHz$</li>
+</ul>
+
+<h4 id="计数器-counter">计数器 Counter</h4>
+<p>用于接受来自预分频器的信号，来一次计数器就加一
+同时你也可以配置其计数模式（基本计时器没有这个功能）</p>
+<ul>
+  <li>向上计数，从0开始计</li>
+  <li>向下计数，从阈值开始计</li>
+  <li>中央对其，先向上，后向下，一个周期变个方向</li>
+</ul>
+
+<h4 id="自动重装寄存器-arr">自动重装寄存器 ARR</h4>
+<p>检测计数器的数值和自己存的数值，即<strong>触发阈值</strong>，一旦达到阈值，就<strong>触发中断</strong>，并清空Counter</p>
+
+<p>每一个都是16位的寄存器，而默认输入频率位72MHz
+所以:
+\(\left(2^{16} \over \left({7.2\cdot10^6 \over 2^{16}}\right)\right)s \approx 59.65s\)</p>
+
+<h2 id="基本定时器及其框图分析">基本定时器及其框图分析</h2>
+<p>基本定时器就只有单纯的计时并发送中断的功能，但其他定时器是建立在其基础上的
+![[STM32 基本定时器框图.png]]</p>
+
+<ul>
+  <li>基本定时器只能读RCC的TIMxCLK，也就是那个<strong>72MHz的时钟</strong></li>
+  <li>经过<strong>触发控制器</strong>来到<strong>预分频器</strong>，分频后的信号来到CNT，达到阈值后输出<strong>UI（Update Interrupt）</strong>，通往NVIC排队</li>
+</ul>
+
+<p>下面那个U是更新事件，暂时不管</p>
+
+<ul>
+  <li><strong>TRGO ( Trigger Out ) 触发输出</strong>这里是通过定时器来触发DAC专门做的口，本来需要定时器触发中断，然后再在中断函数里触发DAC，但是太麻烦了，而且会频繁中断主程序，所以专门做了这个口</li>
+</ul>
+
+<h2 id="通用定时器及其框图分析">通用定时器及其框图分析</h2>
+<p>通用计时器能<strong>选择输入的时钟源</strong>，<strong>输入捕获</strong>，<strong>输出比较</strong>，<strong>编码器接口</strong>，<strong>主从触发模式</strong>等等
+![[STM32 通用计时器.png]]</p>
+
+<ul>
+  <li>中间偏上的部分依然是<strong>时基单元</strong></li>
+  <li>
+    <p>上半部分实现的功能是<strong>内外时钟源选择</strong>和<strong>主从触发模式</strong></p>
+
+    <p><strong>内部时钟</strong>已经说了，是RCC的72MHz的
+  <strong>外部时钟</strong>有</p>
+    <ul>
+      <li><strong>外部时钟模式2</strong> : TIMx_ETR ( External ) / _CH1~CH4 好像是PA0~PA4的复用功能</li>
+      <li><strong>外部时钟模式1</strong> : TRGI ( Trigger in ) 触发输入，可以将另一个时钟调为更新事件输出，将事件<strong>映射</strong>到TRGO上( 这就是主模式输出的功能 )，然后将当前时钟作为TRGI输入，这样就可以时钟套时钟，达到延长计时的效果，这我们称之为<strong>级联</strong>。
+  ETR时钟的信号好像也能走这一路，只不过如果走这一条路会占用TRGI通道。TIMx_CH1的上升沿下降沿也可以作为输入。TIMx_CH1，TIMx_CH2的引脚也可以作为输入。</li>
+    </ul>
+  </li>
+  <li>右下是<strong>输出比较</strong>电路，四个通道对应四个引脚，可以输出PWM波形
+    <ul>
+      <li><strong>捕获/比较寄存器</strong>，<strong>CCR ( Capture / Compare Register )</strong>，具体用法见[[STM32 - 4.2 TIM输出比较]]</li>
+    </ul>
+  </li>
+  <li>左下时<strong>输入捕获</strong>电路，可以读取方波的频率</li>
+  <li>中下时输入输出时共用的寄存器</li>
+</ul>
+
+<h2 id="高级定时器及其框图分析">高级定时器及其框图分析</h2>
+<p>不多赘述，就加了一个重复次数计数器，就是可以实现每隔几个周期再中断一次
+新增了死区生成电路，输出比较可以输出互补的方波了</p>
+
+<h1 id="定时中断流程图">定时中断流程图</h1>
+
+<p>![[STM32 定时中断流程图.png]]</p>
+
+<h1 id="预分频器时序">预分频器时序</h1>
+
+<p><strong>CK_PSC</strong>是输入频率
+<strong>CK_EN</strong>是预分频器的开启状态
+<strong>CK_CNT</strong>是预分频器输出频率</p>
+
+<p>![[STM32 预分频器时序.png]]</p>
+
+<p>由此可以看见，在周期中间改变寄存器里的分频值，其作用效果会在下一个周期启用</p>
+
+<h1 id="计数器时序">计数器时序</h1>
+
+<p>![[STM32 计数器时序图.png]]</p>
+
+<p>有一个APRE参数</p>
+<ul>
+  <li>APRE = 1时，若阈值在周期中被改变，则其作用效果会在下一周期启用</li>
+  <li>APRE = 0时，若阈值在周期中被改变，则其作用效果立即生效</li>
+</ul>
+
+<h1 id="rcc时钟树及其框图">RCC时钟树及其框图</h1>
+<p>外设都接在被称为<strong>总线</strong>的东西上，例如（AHB，APB1，APB2）
+不同外设接在不同<strong>总线</strong>上，而像GPIO，ADC这种大部分都接在<strong>APB2</strong>上，<strong>APB2是高速外设总线</strong>!</p>
+
+<p>而在使用外设前，我们需要<strong>启动这条总线的时钟</strong>
+<strong>所有的数字电路</strong>（包括GPIO控制器）都需要一个<strong>时钟信号来同步工作</strong>。没有时钟，电路就无法执行任何操作，就像没有了心跳。</p>
+
+<p><strong>时钟是所有外设运行的基础</strong>，所以它总是最先需要配置好的东西
+在主函数之前，还会执行一个<strong>SystemInit</strong>函数，这个函数就是用来配置时钟树的</p>
+
+<p>![[STM32 RCC时钟树.png]]</p>
+
+<ul>
+  <li>左边是用来生成72MHz的，有<strong>四个振荡源</strong>，分别为
+    <ul>
+      <li>内部8MHz高速RC振荡器</li>
+      <li>外部4-16MHz高速石英晶体振荡器，即晶振
+  以上这两个是用来<strong>提供系统时钟</strong>的，<strong>AHB，APBx</strong>都源于这两个</li>
+      <li>外部32.768KHz低速晶振，<strong>一般给RTC提供时钟</strong></li>
+      <li>内部40KHz低速RC振荡器，<strong>给看门狗用的</strong>
+<strong>8MHz</strong>被PLL倍环9倍后就成了<strong>72MHz</strong></li>
+    </ul>
+  </li>
+  <li>
+    <p>CSS ( Clock Security System ) 用于检测时钟是否失效，防止程序卡死，这在高级定时器的死区电路那一块也有体现</p>
+  </li>
+  <li>
+    <p>通往<strong>APB1</strong>的线原先是经过预分频器（默认为2）变为<strong>36MHz</strong>，但是其支路指明了操作，又<strong>翻倍回去</strong>了，所以时钟依旧是<strong>72MHz</strong>，通向TIMXCLK</p>
+  </li>
+  <li>
+    <p><strong>APB2</strong>预分频器默认为1，故就是72MHz</p>
+  </li>
+  <li>可以看见APBx每一个与门下面都有一个<strong>外设时钟使能</strong>，这就是我们写<strong>RCC_APBxPeriphClockCmd</strong>作用的地方，由此也可见<strong>Cmd</strong>的意思就是<strong>使能 ( Command )</strong></li>
+</ul>
+
+<p>[[STM32 - 4.1 TIM中断的初始化和使用]]
+[[STM32 - 4.2 TIM输出比较]]
+[[STM32 - 4.1 EX 非阻塞式电路]]
+[[STM32 - 4.3 TIM输入捕获]]
+[[STM32 - 4.4 TIM编码器接口]]
+[[STM32 - 5 USART串口协议]]</p>]]></content><author><name></name></author><category term="#嵌入式" /><summary type="html"><![CDATA[#嵌入式 TIM Timer 定时器可以对输入的时钟计数，并在达到设定值时触发中断 例如$72MHz$每秒输入$72M$次，每输入一次，内部的Counter就会++ 而我设定为Counter到达$72K$的时候，触发一次中断，这样一秒就会触发1000次中断 也就是一次中断的间隔为$1ms$ 即: \(计时长度 = {1 \over {输入频率 \over 触发阈值}}s = {触发阈值 \over 输入频率}s\) 定时器具备定时中断功能，还能选择输入的时钟源，输入捕获，输出比较，编码器接口，主从触发模式等等 定时器分为基本定时器，通用定时器，高级定时器]]></summary></entry><entry><title type="html">STM32 - EX 非阻塞式电路</title><link href="http://localhost:4000/2025/09/16/STM32-4.1-EX-%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%BC%8F%E7%94%B5%E8%B7%AF.html" rel="alternate" type="text/html" title="STM32 - EX 非阻塞式电路" /><published>2025-09-16T00:00:00+08:00</published><updated>2025-09-16T00:00:00+08:00</updated><id>http://localhost:4000/2025/09/16/STM32%20-%204.1%20EX%20%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%BC%8F%E7%94%B5%E8%B7%AF</id><content type="html" xml:base="http://localhost:4000/2025/09/16/STM32-4.1-EX-%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%BC%8F%E7%94%B5%E8%B7%AF.html"><![CDATA[<p>#嵌入式</p>
+<h1 id="非阻塞式电路">非阻塞式电路</h1>
+<p>在按钮的检测中，我们尝试了用EXTI来检测按钮是否按下，但效果极差，而且为了消抖而Delay的20ms会导致整个系统的阻塞，我们急需一个<strong>非阻塞式电路</strong>！</p>
+
+<p><strong>非阻塞式电路</strong>，也就是任意一个电路不会影响整体的运行，全程畅通无阻</p>
+
+<p>回想Hyp家园，为了时刻检测玩家的数值，我们运用了一个中毒循环，每秒检测一次
+这里我们用到的是TIM中断，这样也可以每<strong>隔一段时间就检测一次</strong></p>
+
+<p>同时，<strong>用TIM来消除按钮的抖动</strong>，也是非常好的选择，这样就避免了Delay造成的阻塞</p>
+
+<h2 id="定时中断函数的基本格式">定时中断函数的基本格式</h2>
+
+<pre><code class="language-C">void TIM2_IRQHandler(void){
+	if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
+    {
+		LED_flow();
+		button_check();
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    }
+}
+</code></pre>
+
+<p>一定要记得清除标志位！</p>
+
+<h2 id="led函数示例">LED函数示例</h2>
+
+<pre><code class="language-C">void LED_flow(){
 	
-	arr[i]+j //前面提到过arr[i]在二维数组中表示其中一个作为元素的数组的名字,所以这里的arr[i]实际为arr[i]的地址
+	LED_counter++;
 	
-	&amp;a[i][j] //最简单的方法
-</code></pre>
-
-<p>这里还是进行一下区分，两种指针：</p>
-
-<pre><code class="language-C">	int (*p[5]) //这是定义一个数组，其中每一个值都应当存指针 也可写为int * p[5]
-	//指针数组
-	int (*p)[5] //这是一个数组指针(一个变量！)，其指向了一个长度为5的数组(int)
-	//数组指针——即指向数组的指针！
-</code></pre>
-
-<p>也就是说，p实际上还是一个函数名，直接在他后面跟[5]就是创建数组
-在()外面跟[5]就是指定类型了</p>
-
-<h1 id="实际运用1">实际运用#1</h1>
-
-<pre><code class="language-C">	int sum_two_dimensional_array(int arr[][3],int * p,int row){
-		int * p = *arr; //这里*arr表示arr[0]，而arr[0]是一个数组，所以表示为这个数组开始的地址，也就是这个二维数组开始的地址
-		int sum = 0;
-		for(;p &lt;= *(arr+row-1)+length-1;p++)//*(arr+row-1)+length-1表示最后元素的地址
-			sum += *p;
-		return sum;
+	short speed_tier = get_value(MENU_LED,0);
+	short dir = get_value(MENU_LED,1);
+	
+	int speed = 500;
+	switch(speed_tier){
+		case 0:
+			speed = 500;
+			break;
+		case 1:
+			speed = 1000;
+			break;
+		case 2:
+			speed = 200;
+			break;
 	}
-	int main(){
-		arr[3][3]={};
-		sum_two_dimensional_array(arr,...) 
-	}
-</code></pre>
-<p>会发现，如果你想要往函数里导一个多个维度都未定义长度的数组，编译器会报错，提示你”只有第一个维度才能不限长度的输入函数”，这就是为什么我函数定义里写的是”arr[][3]”</p>
-
-<h1 id="实际运用11">实际运用#1.1</h1>
-
-<pre><code class="language-C">	//为了解决实际运用#1中的煞笔问题（多个未被定义长度的数组导入函数），指针就派上用场了
-	//真不知道那个数组指针有什么用= =
-	int sum_two_dimensional_array(int * p,int row,int length){
-		int sum = 0;
-		for(int i=0;i &lt; row * length;i++){
-			sum += *p;
-			p++;
+	
+	if(LED_counter &gt;= speed){
+		LED_counter = 0;
+		
+		if(dir == 0) LED_lit_pin = (LED_lit_pin + 1) % 4;
+		else LED_lit_pin = ((LED_lit_pin - 1) + 4) % 4;
+		
+		reset_LED();
+		switch(LED_lit_pin){
+			case 0:
+				GPIO_ResetBits(GPIOB,GPIO_Pin_12);
+				break;
+			case 1:
+				GPIO_ResetBits(GPIOB,GPIO_Pin_13);
+				break;
+			case 2:
+				GPIO_ResetBits(GPIOB,GPIO_Pin_14);
+				break;			
+			case 3:
+				GPIO_ResetBits(GPIOB,GPIO_Pin_15);
+				break;
 		}
-		return sum;
+		
 	}
-	int main(){
-		int arr[n][m] = {...};
-		sum = sum_two_dimensional_array(*arr,n.m) //此时p导入的就是arr[0][0]的地址
-	}
+}
 </code></pre>
 
-<p>这样就可以完美解决，我暂时想不到这个方法的劣势在哪里，简直完美！</p>
-
-<pre><code class="language-C">	//说句题外的，更高维度的数组用这个方法就不好整了，可以这样
-	int function(int axis1,int axis2, ... ,int arr[axis1][axis2][...]){}
-	//先定义每个维度的长度，再定义数组
-</code></pre>
-
-<p>其实写到这里了也可以顺便讲一下另外两个指针定义</p>
-
-<h1 id="实际运用2">实际运用#2</h1>
-
-<pre><code class="language-C">	int sum_of_array(int *p,int length){
-		int sum = 0;
-		int *p_temp = p; //用于记录数组开头的地址
-		for(;p &lt; p_temp + length;p++) sum += *p;
-		return sum;
-		//这一块也可以向我上面那样定义一个i，这样就可以直接用length做结束判定，不用另设变量
-	}
-	int main(){
-		arr[len]={...}
-		total = sum_of_array(arr,len);//直接输数组名，即数组的地址
-	}
-</code></pre>
-
-<h1 id="实际运用21">实际运用#2.1</h1>
-
-<pre><code class="language-C">	int sum_of_array(int arr[],int length){...}
-	int main(){
-		arr[len]={...};
-		total = sum_of_array(arr,len);
-		//这里的arr传的直接是地址，但somehow,虽然函数明确规定需要输入一个一维数组，但它还是知道我们想传的是arr,以后有思路了来补
-	}
-</code></pre>
-<h1 id="指针函数">指针函数</h1>
-
-<pre><code class="language-C">	//和数组指针和指针数组类似
-	int * p(int a,int b...){}
-	//指针函数，如你所见，这是个函数，只不过返回值是一个指针
-</code></pre>
-<h1 id="例1">例1</h1>
-
-<p>一个指针函数返回一个指针，赋值到指针变量上，再把指针变量所指的变量输出，很合理吧</p>
-
-<pre><code class="language-C">	int *max(int a, int b) { 
-	    if (a &gt; b) return &amp;a;
-	    else return &amp;b;
-	}
-	int main() {
-	    int a, b;
-	    scanf("%d%d", &amp;a, &amp;b);
-	    int *num = max(a, b);
-	    printf("%d",*num);
-	    return 0;
-	}
-</code></pre>
-<p>出来之后发现是错的！num的值为0！为什么呢，在我问了deepseek后，找到了我一直以来的思维误区</p>
-<h1 id="例11">例1.1</h1>
-<p>在将变量输入函数后，==函数实际上是将这些变量的值赋值到临时变量上，再进行计算的==</p>
-
-<p>也就是说，例1之所以错，是因为在将我输入的a,b输入变量后，==C语言又给临时变量a和临时变量b开了两个新空间，把值赋值了进去（要区分a和临时a）==，而我们返回的是这个临时a的地址</p>
-
-<p>而在函数结束的一瞬间，这两个临时变量也就消失了，指针也就成了悬空指针(=0)，所以返回一个临时变量地址是没有意义的。因为他会在return前的一瞬间把临时变量清理掉，也就不知道指针指的是哪里了。</p>
-
-<p>所以，我们需要返回的值本身就应该是个地址，这样它的地址就不会在return前一秒变为0了</p>
-
-<pre><code class="language-C">	int *max(int *a, int *b) { //定义两个指针
-	    if (*a &gt; *b) return a; //返回指针
-	    else return b;
-	}
-	int main() {
-	    int a, b;
-	    scanf("%d%d", &amp;a, &amp;b);
-	    int *num = max(&amp;a, &amp;b);
-	    printf("%d", *num);
-	    return 0;
-	}
-</code></pre>
-
-<h1 id="例2-课程">例2 (课程)</h1>
-
-<p>给到了一个swap函数的定义，一般来说我会这样写</p>
-
-<pre><code class="language-C">	int a,b;
-	void swap(){
-		int t=a;
-		a=b;
-		b=t;
-	}
-	int main(){
-		scanf("%d%d",&amp;a,&amp;b);
-		swap(a,b);
-	}
-</code></pre>
-
-<p>这样就避免了函数无法直接对外部变量修改的问题，但毫无疑问，这有很多弊端。
-所以指针就排上用场了</p>
-
-<pre><code class="language-C">	void swap(int *x,int *y){
-		int t=*x;
-		*x=*y;
-		*y=t;
-	}
-	int main(){
-		int a,b;
-		scanf("%d%d",&amp;a,&amp;b);
-		swap(&amp;a,&amp;b);
-	}
-</code></pre>
-<p>这样，我们在调用函数的时候输入的是外部变量的坐标，虽然函数建立的是临时变量，但这个临时指针变量指向的依然是外面的变量的地址，所以可以直接对外部变量进行修改。</p>
-
-<p>这也就是为啥像swap,sort那些头文件的函数定义里全是*的原因
-[[C - 4 字符串#Strcat]]里我举了个例子，可以看看</p>
-
-<h1 id="函数指针">函数指针</h1>
-
-<p>函数指针是一个指针，但是指向的是函数</p>
-
-<pre><code class="language-C">	int max(int a,int b){...}
-	int (*p)(int ,int ) = max;
-</code></pre>
-
-<p>运用例子见[[C - 0 常见函数#include <stdlib.h>]]</stdlib.h></p>
-
-<h1 id="不同类型的指针">不同类型的指针</h1>
-
-<p>[[C - 4 字符串#字符指针]][[C - 6 结构体#结构体指针]]
-指针要指向什么类型的变量，你就得用什么类型来定义指针</p>
-
-<h1 id="int-a-和-int-a-有什么区别">int a[] 和 int *a 有什么区别？</h1>
-
-<p>int a[]中的 a 是一个指针常量！
-他大概是这样定义的 : const int * a;</p>
-
-<p>int * a 是一个指针<strong>变量</strong>，虽然他们确实都可以用来存数组，但是显然，和我上面提到过的一样，下面这种方法并不安全</p>
-
-<p>![[C - 5.png]]</p>]]></content><author><name></name></author><category term="C" /><summary type="html"><![CDATA[地址 = 指针 变量的地址指的是变量所占字节的起始地址 *是将地址转化为存的变量的符号 &amp;是将变量转化为变量的地址的符号 在定义是，p被*转化后被定义为int变量，顺着思路理解，p就应当是指针]]></summary></entry></feed>
+<p>可以看到，这里我们用的是<code class="language-plaintext highlighter-rouge">LED_Counter</code>来计时，中断函数是1ms触发一次，这里的Counter也是1ms加1，这样就可以分别计时了</p>]]></content><author><name></name></author><category term="#嵌入式" /><summary type="html"><![CDATA[#嵌入式 非阻塞式电路 在按钮的检测中，我们尝试了用EXTI来检测按钮是否按下，但效果极差，而且为了消抖而Delay的20ms会导致整个系统的阻塞，我们急需一个非阻塞式电路！]]></summary></entry></feed>

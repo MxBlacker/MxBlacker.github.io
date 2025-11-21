@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>STM32 - USART数据及数据包的发送，接收与处理 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="STM32 - USART数据及数据包的发送，接收与处理" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="#嵌入式 初始化流程 开启时钟 GPIO初始化 配置USART 配置中断 使能" />
+<meta property="og:description" content="#嵌入式 初始化流程 开启时钟 GPIO初始化 配置USART 配置中断 使能" />
+<link rel="canonical" href="http://localhost:4000/2025/09/16/STM32-5.1-USART%E6%95%B0%E6%8D%AE%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%8C%85%E7%9A%84%E5%8F%91%E9%80%81-%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%A4%84%E7%90%86.html" />
+<meta property="og:url" content="http://localhost:4000/2025/09/16/STM32-5.1-USART%E6%95%B0%E6%8D%AE%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%8C%85%E7%9A%84%E5%8F%91%E9%80%81-%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%A4%84%E7%90%86.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="STM32 - USART数据及数据包的发送，接收与处理" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-16T00:00:00+08:00","datePublished":"2025-09-16T00:00:00+08:00","description":"#嵌入式 初始化流程 开启时钟 GPIO初始化 配置USART 配置中断 使能","headline":"STM32 - USART数据及数据包的发送，接收与处理","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/09/16/STM32-5.1-USART%E6%95%B0%E6%8D%AE%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%8C%85%E7%9A%84%E5%8F%91%E9%80%81-%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%A4%84%E7%90%86.html"},"url":"http://localhost:4000/2025/09/16/STM32-5.1-USART%E6%95%B0%E6%8D%AE%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%8C%85%E7%9A%84%E5%8F%91%E9%80%81-%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%A4%84%E7%90%86.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">STM32 - USART数据及数据包的发送，接收与处理</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-09-16T00:00:00+08:00" itemprop="datePublished">Sep 16, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>#嵌入式</p>
+<h1 id="初始化流程">初始化流程</h1>
+<ol>
+  <li>开启时钟</li>
+  <li>GPIO初始化</li>
+  <li>配置USART</li>
+  <li>配置中断</li>
+  <li>使能</li>
+</ol>
+
+<h4 id="常用库函数">常用库函数</h4>
+<pre><code class="language-C">USART_DeInit(USARTx); //复位USART
+USART_Init(USARTx , USART_InitStruct); //eee
+USART_StructInit(...); //eee
+
+USART_ClockInit(USARTx , USART_ClockInitStruct); //开启同步时钟，不常用
+USART_ClockStructInit(USART_CLockInitStruct);
+
+USART_Cmd(USARTx , NewState); //使能
+USART_ITConfig(USARTx , USART_IT , NewState); //使能中断，这样才能输出中断
+
+USART_SendData(USARTx ,uint16_t Data);
+uint16_t USART_ReceiveData(USARTx );
+</code></pre>
+
+<h4 id="初始化">初始化</h4>
+<pre><code class="language-C">RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+
+AutoInitGPIO(GPIO_Mode_AF_PP); //我们用的是复用功能，用复用推挽
+AutoInitGPIO(GPIO_Mode_AF_PP); //一个输入，一个输出
+
+USART_InitTypeDef USART_InitStructure;
+USART_InitStructure.USART_BaudRate = 9600; //波特率
+USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None; //流控
+USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx; //模式
+USART_InitStructure.USART_Parity = USART_Parity_No; //校验
+USART_InitStructure.USART_StopBits = USART_StopBits_1; //停止位
+USART_InitStructure.USART_WordLength = USART_WordLength_8b;  //数据位
+USART_Init(USART1 , &amp;USART_InitStructure);
+
+USART_Cmd(USART1 , ENABLE);
+</code></pre>
+
+<h1 id="数据的发送">数据的发送</h1>
+<h4 id="一些函数">一些函数</h4>
+<pre><code class="language-C">void Serial_SendData(uint8_t Data){ //uint8_t 就是 char
+	USART_SendData(USARTx, Data); //写操作的时候，标志位会被自动清零，所以这里不需要手动清理
+	while(USART_GetFlagStatus(USARTx , USART_FLAG_TXE) == RESET); //判断标志位为1后再进行下一次传输
+}
+
+void Serial_SendString(uint8_t * String){ //字符串的发送
+	for(int i = 0;String[i] != '\0';i++){
+		Serial_SendData(String[i])
+	}
+}
+
+void Serial_SendArray(uint8_t * Array , uint16_t Length){
+	发送数组，略
+}
+//发送数字的代码略，得自己写一个pow函数
+</code></pre>
+
+<h4 id="printf的移植">printf的移植</h4>
+<p>我们printf的标准输出是在cmd里，但是显然单片机没有cmd，所以我们要重定向到串口
+显然，我们得重新定义一下stdio.h里的函数了</p>
+
+<pre><code class="language-C">int fputc(int ch, FILE *f){
+	Seiral_SendByte(ch);
+	return ch;
+}
+</code></pre>
+
+<p><strong>printf</strong>是通过不断调用<strong>fputc</strong>实现的，这里的重定向相当于printf的重定向</p>
+
+<pre><code class="language-C">printf("%d,666",666);
+</code></pre>
+
+<p>这样就可以直接输出内容了，不用上面乱七八糟的函数</p>
+
+<p><strong>这里隆重介绍sprintf !!!</strong>，实际上这在OJ里也是挺好用的，可以把格式化字符输出到一个字符串里</p>
+
+<pre><code class="language-C">char string[100];
+sprintf(string , "...");
+Serial_SendString(string);
+</code></pre>
+
+<p><strong>当然，我们也可以封装sprintf</strong></p>
+
+<pre><code class="language-C">#include &lt;stdarg.h&gt;
+#include &lt;stdio.h&gt;
+void Serial_Printf(char *format, ...){
+	char String[100];
+	va_list arg;
+	va_start(arg, format);
+	vsprintf(String , format , arg);
+	va_end(arg);
+	Serial_SendString(String);
+}
+</code></pre>
+
+<p>这样直接用Serial_Printf就可以和Printf一样输出了</p>
+
+<h1 id="数据的接收">数据的接收</h1>
+<p>检查数据的接收有两种办法，一种是在主函数里循环判断标志位是否为1，一种是中断，这里直接用中断方法了</p>
+
+<pre><code class="language-C">USART_ITConfig(USART1 , USART_IT_RXNE , ENABLE);
+
+NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+
+NVIC初始化略
+USART1_IRQn;
+
+uint8_t Serial_RxData;
+uint8_t Seria_RxFlag;
+
+void USART1_IRQHandler(void){
+	if(USART_GetITStatus(USARTx , USART_IT_RXNE) == SET){
+		Serial_RxData = USART_ReceiveData(USART1);
+		Serial_RxFlag = 1;
+		USART_ClearITPendingBit(USART1 , USART_IT_RXNE);
+	}
+}
+
+uint8_t Serial_GetRxFlag(void){
+	if(Serial_RxFlag == 1){
+		Serial_RxFlag = 0;
+		return 1;
+	}
+	return 0;
+}
+
+uint8_t Serial_GetRxData(void){
+	return Serial_RxData;
+}
+</code></pre>
+
+<h1 id="数据包概述--发送接收与处理">数据包概述 / 发送、接收与处理</h1>
+<p><strong>数据包</strong>类似于一个信，里面装着一堆数据，方便后续处理，其包含以下几个内容</p>
+
+<p>| 数据包组成部分     | 说明                              |
+| ———– | ——————————- |
+| <strong>帧头</strong>      | 数据包的开始标志，用于接收方识别一个新数据包的开始。      |
+| <strong>设备地址/ID</strong> | 在多设备通信中，用于区分数据包是发给哪个设备的。        |
+| <strong>数据长度</strong>    | 指明后面跟着的有效数据有多少个字节，防止接收多或少。      |
+| <strong>命令/指令字</strong>  | 告诉接收方这个数据包是干什么的（例如：读取温度、控制继电器）。 |
+| <strong>有效数据</strong>    | 实际要传输的信息（例如：温度值、开关状态）。          |
+| <strong>校验和/CRC</strong> | 用于验证数据在传输过程中是否出错（如比特跳变、丢失）。     |
+| <strong>帧尾</strong>      | 数据包的结束标志。                       |
+接收端通过处理<strong>数据包的数据</strong>来执行相应的操作
+当然，上面不用全都有。</p>
+
+<h4 id="数据包发送">数据包发送</h4>
+<p>这里我们以 <strong>$</strong> 为包头, <strong>@</strong> 为包尾</p>
+
+<pre><code class="language-C">//发送数据数字包
+Serial_SendData('$');
+Serial_SendArray(...);
+Serial_SendData('#');
+
+//发送文本数字包
+Serial_SendData('$');
+Serial_SendString(...);
+Serial_SendData('#');
+</code></pre>
+
+<h4 id="数据包的接收和处理">数据包的接收和处理</h4>
+<p>这是数据包收发的难点，我们采用<strong>状态机</strong></p>
+
+<p>![[STM32 定长包发送状态机流程图.png]]</p>
+
+<p>接下来我们来进行实际的代码实现，假设包定长为4</p>
+
+<pre><code class="language-C">uint8_t Serial_RxPacket[4];
+uint8_t Serial_TxPacket[4];
+
+void Serial_SendPacket(void){
+	Serial_SendData('$');
+	Serial_SendArray(Serial_TxPacket);
+	Serial_SendData('$');
+}
+
+uint8_t Serial_GetRxFlag(void){
+	if(Serial_RxFlag == 1){
+		Serial_RxFlag = 0;
+		return 1;
+	}
+	return 0;
+}
+
+void USART1_IRQHandler(void){
+	static uint8_t Rx_State = 0; //静态变量见Python的OOP教程
+	static uint8_t index = 0;
+	if(USART_GetITStatus(USART1 , USART_IT_RXNE) == SET){
+		uint8_t RxData = USART_ReceiveData(USART1);
+		
+		if(Rx_State == 0){ //等待包头
+			if(Rx_Data == '$'){
+				Rx_State = 1;
+				index = 0;
+			}
+		}else if(Rx_State == 1){ //读取数据
+			Serial_RxPacket[index] = RxData;
+			index ++;
+			if(index &gt;= 4){
+				Rx_State = 2;
+			}
+		}else if(Rx_State == 2){ //等待包尾
+			if(RxData == '@'){
+				Rx_State = 0;
+				Serial_RxFlag = 1;
+			}
+		}
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+	}
+}
+
+//主函数
+int main(void){
+	if(Serial_GetRxFlag() == 1){
+		...  
+	}
+}
+
+</code></pre>
+
+<p>其他的函数判断略</p>
+
+  </div><a class="u-url" href="/2025/09/16/STM32-5.1-USART%E6%95%B0%E6%8D%AE%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%8C%85%E7%9A%84%E5%8F%91%E9%80%81-%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%A4%84%E7%90%86.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

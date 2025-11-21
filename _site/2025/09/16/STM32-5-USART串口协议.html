@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>STM32 - USART串口协议 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="STM32 - USART串口协议" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="#嵌入式 通信接口 正常我们只能输出高低电平，显然这没办法表示更复杂的数据。通信协议制定了通信的规则，通信双方按规则进行数据收发。因为有些功能STM32无法完成，所以需要外挂模块，这就需要通信了。这也就需要通信规则(通信协议)了。" />
+<meta property="og:description" content="#嵌入式 通信接口 正常我们只能输出高低电平，显然这没办法表示更复杂的数据。通信协议制定了通信的规则，通信双方按规则进行数据收发。因为有些功能STM32无法完成，所以需要外挂模块，这就需要通信了。这也就需要通信规则(通信协议)了。" />
+<link rel="canonical" href="http://localhost:4000/2025/09/16/STM32-5-USART%E4%B8%B2%E5%8F%A3%E5%8D%8F%E8%AE%AE.html" />
+<meta property="og:url" content="http://localhost:4000/2025/09/16/STM32-5-USART%E4%B8%B2%E5%8F%A3%E5%8D%8F%E8%AE%AE.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="STM32 - USART串口协议" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-16T00:00:00+08:00","datePublished":"2025-09-16T00:00:00+08:00","description":"#嵌入式 通信接口 正常我们只能输出高低电平，显然这没办法表示更复杂的数据。通信协议制定了通信的规则，通信双方按规则进行数据收发。因为有些功能STM32无法完成，所以需要外挂模块，这就需要通信了。这也就需要通信规则(通信协议)了。","headline":"STM32 - USART串口协议","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/09/16/STM32-5-USART%E4%B8%B2%E5%8F%A3%E5%8D%8F%E8%AE%AE.html"},"url":"http://localhost:4000/2025/09/16/STM32-5-USART%E4%B8%B2%E5%8F%A3%E5%8D%8F%E8%AE%AE.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">STM32 - USART串口协议</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-09-16T00:00:00+08:00" itemprop="datePublished">Sep 16, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>#嵌入式</p>
+<h1 id="通信接口">通信接口</h1>
+<p>正常我们只能输出高低电平，显然这没办法表示<strong>更复杂的数据</strong>。通信协议制定了通信的规则，通信双方按规则进行数据收发。因为有些功能<strong>STM32</strong>无法完成，所以需要<strong>外挂模块</strong>，这就需要通信了。这也就需要通信规则(通信协议)了。</p>
+
+<p>| 名称    | 引脚                                                                                                         | 双工  | 时钟  | 电平  | 设备  |
+| —– | ———————————————————————————————————- | — | — | — | — |
+| USART | TX (Transmit Exchange)、RX (Receive Exchange)、GND                                                           | 全双工 | 异步  | 单端  | 点对点 |
+| I2C   | SCL (Serial Clock)、SDA (Serial Data)、GND                                                                   | 半双工 | 同步  | 单端  | 多设备 |
+| SPI   | SCLK (Serial Clock)、MOSI (Master Output Slave Input)、MISO (Master Input Slave Output)、CS (Chip Select)、GND | 全双工 | 同步  | 单端  | 多设备 |
+| CAN   | CAN_H、CAN_L                                                                                                | 半双工 | 异步  | 差分  | 多设备 |
+| USB   | DP (Data Positive)、DM (Data Minus)                                                                         | 半双工 | 异步  | 差分  | 点对点 |</p>
+<h4 id="全双工--半双工--单工">全双工 / 半双工 / 单工</h4>
+<ul>
+  <li><strong>全双工</strong>一般有两条线，一条线负责A-&gt;B的数据传输，另一条负责B-&gt;A的传输，这也就实现了可以<strong>同时</strong>存在的<strong>双向通信</strong>，我们称为全双工
+    <ul>
+      <li>TX发送、RX接受</li>
+      <li>MOSI发送，MISO接受</li>
+      <li>
+        <blockquote>
+          <p>[!attention] 这也就是说通信双方的TX，RX是相互交叉接的</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li><strong>半双工</strong>指的是可以双向通信，但是一次只能一端到另一端
+    <ul>
+      <li>SDA负责传输数据</li>
+    </ul>
+  </li>
+  <li><strong>单工</strong>指的是单向的数据传输</li>
+</ul>
+
+<h4 id="同步--异步">同步 / 异步</h4>
+<p>这主要是针对<strong>时钟</strong>而言的</p>
+<ul>
+  <li><strong>同步</strong>指的是接收方可以在时钟信号的引导下进行采样
+    <ul>
+      <li>I2C / SPL中的<strong>SCL</strong>线就是时钟线</li>
+    </ul>
+  </li>
+  <li><strong>异步</strong>即没有时钟线，需要约定一个频率
+    <ul>
+      <li>USART和CAN就是<strong>异步 Asynchronous</strong>的</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="单端--差分">单端 / 差分</h4>
+<ul>
+  <li><strong>单端</strong>指的是双方引脚电平都是对GND的电压差，所以双方必须<strong>共地 (共同一个地)</strong></li>
+  <li><strong>差分</strong>是靠两个引脚的<strong>电压差</strong>来通讯的，所以不需要共地</li>
+</ul>
+
+<h4 id="点对点--多设备">点对点 / 多设备</h4>
+<ul>
+  <li>顾名思义，就是允许<strong>一对一</strong>和<strong>一对多</strong></li>
+</ul>
+
+<h1 id="串口通信">串口通信</h1>
+<p><strong>串口</strong>是一种应用十分广泛的通讯接口，串口成本低、容易使用、通信线路简单，可实现两个设备的互相通信。单片机的串口可以使<strong>单片机与单片机、单片机与电脑、单片机与各式各样的模块</strong>互相通信，极大地扩展了单片机的应用范围，增强了单片机系统的硬件实力。</p>
+
+<h4 id="电平标准">电平标准</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>种类</th>
+      <th>高电平</th>
+      <th>低电平</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TTL</td>
+      <td>+3.3V / +5V</td>
+      <td>0V</td>
+    </tr>
+    <tr>
+      <td>RS232</td>
+      <td>-3V ~ -15V</td>
+      <td>+3 ~ +15V</td>
+    </tr>
+    <tr>
+      <td>RS485 (差分信号)</td>
+      <td>两线压差+2~+6</td>
+      <td>两线压差-2~-6V</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="串口参数及时序">串口参数及时序</h4>
+<p>串口中，<strong>每一个字节</strong>被装载在一个<strong>数据帧</strong>中，由<strong>起始位</strong>，<strong>数据位</strong>和<strong>停止位</strong>，有时会有<strong>校验位</strong>
+所以就会有8+2(+1)位，即10(11)位为一帧</p>
+
+<ul>
+  <li><strong>波特率</strong> (在<strong>二进制调制</strong>中等效为比特率)：串口通信的速率，即读取的速率</li>
+  <li><strong>起始位</strong>：固定为低电平，串口默认为高电平</li>
+  <li><strong>数据位</strong>：<strong>低位先行</strong></li>
+</ul>
+
+<blockquote>
+  <p>[!danger] 低位先行
+假设我要发送的是$0000\ 1111$
+那么在发送时即发送$1111\ 0000$</p>
+</blockquote>
+
+<ul>
+  <li><strong>校验位</strong>：用于数据验证，根据数据位计算得来（奇偶校验），出错概率极低，两位同时出错概率更低，所以可以采用以下的校验方式。
+    <ul>
+      <li>无校验：不需要校验位</li>
+      <li>奇校验：保证<strong>数据位+校验位</strong>里一共有<strong>奇数个高电平</strong></li>
+      <li>偶校验：保证<strong>数据位+校验位</strong>里一共有<strong>偶数个高电平</strong></li>
+    </ul>
+  </li>
+  <li><strong>停止位</strong>：用于数据帧间隔，固定为高电平</li>
+</ul>
+
+<h1 id="通用同步--异步收发器">通用同步 / 异步收发器</h1>
+<p><strong>通用同步 / 异步收发器 Universal Synchronous / Asynchronous Receiver / Transmitteer</strong>
+<strong>USART</strong>可根据数据寄存器的一个字节数据自动生成数据帧时序，从<strong>TX</strong>引脚发送出去，也可自动接收<strong>RX</strong>引脚的数据帧时序，拼接为一个字节数据，存放在数据寄存器里</p>
+
+<ul>
+  <li>自带波特率发生器，最高达4.5Mbits/s</li>
+  <li>可配置数据位长度（8/9）、停止位长度（0.5/1/1.5/2）</li>
+  <li>可选校验位（无校验/奇校验/偶校验）</li>
+  <li>支持同步模式、硬件流控制、DMA、智能卡、IrDA、LIN</li>
+  <li>STM32F103C8T6 USART资源： USART1(APB2)、 USART2(APB1)、 USART3(APB1)
+以上这些直接用<strong>库函数</strong>就能配置</li>
+</ul>
+
+<h1 id="usart框图">USART框图</h1>
+
+<p>![[STM32 USART框图.png]]</p>
+
+<ul>
+  <li><strong>TX、RX</strong>是输出，输入引脚，下面三个不用管，我们不用</li>
+  <li><strong>TX</strong>从<strong>发送移位寄存器</strong>发送，<strong>RX</strong>接收到<strong>接受移位寄存器</strong></li>
+  <li>
+    <p><strong>发送数据寄存器 TDR和接受数据寄存器 RDR</strong>地址一样，但享有不同空间，TDR只写，RDR只读</p>
+
+    <ul>
+      <li>在向TDR写入数据后，若<strong>发送移位寄存器</strong>为空，则将寄存器内数据写入，准备发送。TDR会置一个标志位<strong>TXE (TX Empty) 发送寄存器空</strong>，置一即为空，即可写入下一个数据。（类似于双重缓存）</li>
+      <li>
+        <p><strong>发送移位寄存器</strong>在<strong>发送器控制</strong>的作用下<strong>一位一位</strong>的发送 (向右移位)</p>
+      </li>
+      <li><strong>接受移位寄存器</strong>接受数据是从高位往低位移动，完成后整体转移到<strong>RDR</strong>。转移过程中置标志位<strong>RXNE (RX Not Empty) 接收数据寄存器非空</strong>，置一即可读走<strong>RDR</strong>的数据</li>
+    </ul>
+  </li>
+  <li><strong>硬件数据流控</strong>连着 <strong>nRTS（输出）</strong> 和 <strong>nCTS（输入）</strong>
+    <ul>
+      <li><strong>nRTS</strong>用于告诉其他支持流控的设备<strong>本设备能否接受数据的状态</strong></li>
+      <li><strong>nCTS</strong>用于接受别的设备传来的nRTS数据</li>
+    </ul>
+  </li>
+  <li><strong>SCLK控制</strong>连着<strong>SCLK</strong>输出口，这样既可以传递<strong>同步信号</strong>了，用来转协议的（SPI）。</li>
+  <li><strong>唤醒单元</strong>支持挂载<strong>多设备</strong>，可以给当前设备分配一个<strong>USART地址</strong>存在<strong>CR2中</strong>，当接收到地址信息后，唤醒单元唤醒设备，即实现多设备互联</li>
+  <li><strong>USART中断控制</strong>用于看<strong>TXE和RXNE</strong>的状态，上面提到过，中断通向<strong>NVIC</strong></li>
+</ul>
+
+<h1 id="usart-数据采样">USART 数据采样</h1>
+<ul>
+  <li>USART对<strong>一位</strong>进行<strong>16倍</strong>波特率的采样，用于消除噪声和保证准确度</li>
+  <li><strong>波特率发生器</strong>就是搞时钟的，可以接APB2（72MHz）或者APB1（36MHz）的时钟，然后分频
+\(波特率={f_{PCLK2/1}\over(16\cdot{DIV})}\)
+这里的$f_{PCLK2/1}$是APBx的时钟频率，16就是上文提到的，DIV是分频</li>
+</ul>
+
+<p>[[STM32 - 5.1 USART数据及数据包的发送，接收与处理]]</p>
+
+  </div><a class="u-url" href="/2025/09/16/STM32-5-USART%E4%B8%B2%E5%8F%A3%E5%8D%8F%E8%AE%AE.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

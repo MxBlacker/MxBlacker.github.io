@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>STM32 - 外部中断概述及EXTI中断概述 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="STM32 - 外部中断概述及EXTI中断概述" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="#嵌入式 中断 中断指的是CPU暂停当前运行的程序，转而运行中断程序，中断程序运行完毕后再回来运行主程序 中断分为外部中断和内部异常" />
+<meta property="og:description" content="#嵌入式 中断 中断指的是CPU暂停当前运行的程序，转而运行中断程序，中断程序运行完毕后再回来运行主程序 中断分为外部中断和内部异常" />
+<link rel="canonical" href="http://localhost:4000/2025/09/16/STM32-3-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0%E5%8F%8AEXTI%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0.html" />
+<meta property="og:url" content="http://localhost:4000/2025/09/16/STM32-3-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0%E5%8F%8AEXTI%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="STM32 - 外部中断概述及EXTI中断概述" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-16T00:00:00+08:00","datePublished":"2025-09-16T00:00:00+08:00","description":"#嵌入式 中断 中断指的是CPU暂停当前运行的程序，转而运行中断程序，中断程序运行完毕后再回来运行主程序 中断分为外部中断和内部异常","headline":"STM32 - 外部中断概述及EXTI中断概述","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/09/16/STM32-3-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0%E5%8F%8AEXTI%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0.html"},"url":"http://localhost:4000/2025/09/16/STM32-3-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0%E5%8F%8AEXTI%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">STM32 - 外部中断概述及EXTI中断概述</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-09-16T00:00:00+08:00" itemprop="datePublished">Sep 16, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>#嵌入式</p>
+<h1 id="中断">中断</h1>
+<p><strong>中断</strong>指的是CPU暂停当前运行的程序，转而运行中断程序，中断程序运行完毕后再回来运行主程序
+中断分为<strong>外部中断</strong>和<strong>内部异常</strong></p>
+
+<p>实际上，<strong>中断就是异常</strong>，<strong>异常就是中断</strong>，因为他们的处理方式都是传入NVIC然后由CPU决定判断</p>
+
+<h2 id="中断优先级">中断优先级</h2>
+<p><strong>中断优先级</strong>指的是在有两个中断同时发生时，中断程序的执行顺序，CPU会响应更加紧急的中断源。
+这是由==NVIC==进行判断的！</p>
+<ul>
+  <li>中断优先级由<strong>优先级寄存器</strong>的4bit控制，可以切分，分为<strong>响应优先级(Subpriority)</strong> 和 <strong>抢占优先级(Pre-emption Priority)</strong></li>
+  <li>即，有(0,4) (1,3) (2,2) (3,1) (4,0)五种切分方式</li>
+  <li>每种优先级<strong>取值越小，优先级越高</strong>！</li>
+  <li><strong>响应优先级</strong>仅可以优先排队，它仍需要等待上一个中断程序执行完毕</li>
+  <li><strong>抢占优先级</strong>可以直接插队，就是下面的中断嵌套发生的事</li>
+  <li>如果优先级一样，就按下表的位置顺序来执行</li>
+</ul>
+
+<h2 id="中断嵌套">中断嵌套</h2>
+<p><strong>中断嵌套</strong>指的是当一个中断程序运行时，另一个中断优先级更高的中断源申请中断，转而去处理新的中断源 ( 类比栈 )</p>
+
+<h2 id="中断的函数实现">中断的函数实现</h2>
+<p>会有一个专门的函数，当中断条件满足时，主函数自动暂停，直接跳转到中断函数，不需要再主函数内调用！</p>
+
+<p>中断条件触发时，外设会给相应的寄存器置一个<strong>标志位</strong>，这个<strong>标志位</strong>通过中断输出控制，到NVIC申请中断</p>
+
+<h1 id="中断通道">中断通道</h1>
+<p>![[STM32 中断类型表1.png]]
+![[STM32 中断类型表2.png]]![[STM32 中断类型表3.png]]![[STM32 中断类型表4.png]]</p>
+<ul>
+  <li>一共有68个可屏蔽中断通道，包括<strong>EXTI，TIM，ADC，USART，SPI，I2C，RTC</strong>等</li>
+  <li><strong>中断通道</strong>也就是中断源，指的是那些可以发送中断请求的设备</li>
+  <li>
+    <p>中断源发送中断请求后传输到<strong>NVIC</strong>，<strong>NVIC</strong>通过优先级来判断应当进行的中断程序</p>
+  </li>
+  <li>图中灰色部分是内核中断，一般用不到</li>
+  <li>
+    <p>白色的就是外设的中断</p>
+  </li>
+  <li>中断地址是用于确定中断函数的地址的，因为编译器在为<strong>中断函数</strong>分配位置的时候是<strong>不确定</strong>的，而<strong>中断条件</strong>满足后需要跳转到<strong>中断函数</strong>，这过程需要<strong>中断函数的地址</strong>。所以我们需要建一个中断跳转表，专门存各种中断函数的地址，这样就能通过访问这个表来跳转到对应的中断函数了。这个表叫<strong>中断向量表</strong>. ( 这里是汇编语言需要这个表，C语言都帮我们搞好了 )</li>
+</ul>
+
+<p><strong>EXTI0 ~ EXTI4 , EXTI9_5 , EXTI15_10 就是EXTI外部中断了</strong></p>
+
+<blockquote>
+  <p>[!attention]
+这里注意一下，EXTI9_5 , EXTI15_10共用一个中断通道，所以在检测时我们需要额外判断</p>
+</blockquote>
+
+<h1 id="nvic-提供终端控制器">NVIC 提供终端控制器</h1>
+<p><strong>NVIC ( Nested Vectored Interrupt Controller )</strong>
+上面提到了，EXTI有多个中断源，准确来说是16个，即EXTI0~EXTI15
+TIM，ADC，USART也有很多….</p>
+
+<p>如果这些同时发送中断信息到NVIC，那么NVIC就会通过优先级排序，把中断程序按照一定顺序给到CPU进行运算</p>
+
+<p><strong>下面介绍NVIC中可供操作的寄存器</strong></p>
+<h4 id="nvic_iserx--interrupt-set-enable-registers-">NVIC_ISERx ( Interrupt Set-Enable Registers )</h4>
+<p>中断设置使能寄存器</p>
+
+<h4 id="nvic_icerx--interrupt-clear-enable-registers-">NVIC_ICERx ( Interrupt Clear-Enable Registers )</h4>
+<p>中断清除使能寄存器</p>
+
+<h4 id="nvic_isprx--interrupt-set-pending-registers-">NVIC_ISPRx ( Interrupt Set-Pending Registers )</h4>
+<p>中断设置挂起寄存器</p>
+
+<h4 id="nvic_icprx--interrupt-clear-pending-registers-">NVIC_ICPRx ( Interrupt Clear-Pending Registers )</h4>
+<p>中断清除挂起寄存器</p>
+
+<h4 id="nvic_iabrx--interrupt-active-bit-registers-">NVIC_IABRx ( Interrupt Active Bit Registers )</h4>
+<p>中断活动为寄存器</p>
+
+<h4 id="nvic_iprx--interrupt-priority-registers-">NVIC_IPRx ( Interrupt Priority Registers )</h4>
+<p>中断优先级寄存器，就是用来设置每个中断的优先级的
+但是我们不直接用寄存器来配置优先级，我们用<strong>库函数</strong></p>
+
+<h4 id="nvic_stir--software-trigger-interrupt-register-">NVIC_STIR ( Software Trigger Interrupt Register )</h4>
+<p>软件触发中断寄存器</p>
+
+<h3 id="scb_aircr--application-and-reset-control-register-">SCB_AIRCR ( Application and Reset Control Register )</h3>
+<p>这个不是NVIC的，但是是由它来调整优先级切片的
+由这个寄存器的8~10位来调整模式</p>
+
+<h1 id="exti-外部中断">EXTI 外部中断</h1>
+<p>进入正题！
+<strong>EXTI ( Extern Interrupt ) 外部中断</strong>
+这种中断源检测的是<strong>GPIO口的电平信号</strong>，可以检测</p>
+<ol>
+  <li>上升沿</li>
+  <li>下降沿</li>
+  <li>双边沿（上升沿+下降沿）</li>
+  <li>软件触发 ( 程序里执行代码即可 )
+EXTI支持所有GPIO口，但<strong>不行的是PAx和PBx同时触发中断</strong></li>
+</ol>
+
+<p>EXTI有20个中断线路，包括上面提到的<strong>16个和PVD输出，RTC闹钟，USB唤醒，以太网唤醒</strong>
+后四个就是蹭网的，依赖EXTI来完成自身的功能</p>
+
+<p>在检测到中断条件后，有两种触发响应方式</p>
+<ul>
+  <li><strong>中断响应</strong> : 正常的触发中断函数</li>
+  <li><strong>事件响应</strong> : 外部中断的信号不会到NVIC再到CPU，而是通向外部设备，触发其他事件</li>
+</ul>
+
+<p>![[STM32 EXTI框图.png]]</p>
+
+<ol>
+  <li>我们从输入线开始看，第一个或门下面的输入是判断<strong>上升沿下降沿</strong>的，上面是判断<strong>软件触发</strong>的</li>
+  <li>触发后输出高电平，下面是<strong>事件响应</strong>的路，如果读取到<strong>事件屏蔽寄存器</strong>为<strong>屏蔽状态</strong>，则与门下路为0，输出0，即被屏蔽了，否则为1.</li>
+  <li>请求挂起寄存器将寄存器挂起，准备中断主程序。后面的与门和中断屏蔽寄存器原理同上。信号最后给到NVIC</li>
+</ol>
+
+<p><strong>下面介绍EXTI中可供操作的寄存器</strong> ( 就是上图那些 )</p>
+<h4 id="exti_imr--interrupt-mask-register-">EXTI_IMR ( Interrupt Mask Register )</h4>
+<p>中断屏蔽寄存器</p>
+<h4 id="exti_emr--event-mask-register-">EXTI_EMR ( Event Mask Register )</h4>
+<p>事件屏蔽寄存器</p>
+<h4 id="exti_rtsr--raise-trigger-select-register-">EXTI_RTSR ( Raise Trigger Select Register )</h4>
+<p>上升沿触发选择寄存器，31-19位保留
+18-0 :</p>
+<ul>
+  <li>0禁止输入线x上升沿触发</li>
+  <li>1允许输入线x上升沿触发
+    <h4 id="exti_ftsr--fall-trigger-select-register-">EXTI_FTSR ( Fall Trigger Select Register )</h4>
+    <p>下降沿触发选择寄存器，同上</p>
+    <h4 id="exti_swier--software-interrupt-event-register-">EXTI_SWIER ( Software interrupt event register )</h4>
+    <p>软件中断事件寄存器 / 软件触发寄存器</p>
+    <h4 id="exti_pr">EXTI_PR</h4>
+    <p>挂机寄存器</p>
+  </li>
+</ul>
+
+<h1 id="afio-中断引脚选择">AFIO 中断引脚选择</h1>
+<p>EXTI可以链接到PA0~PA15 , PB0~PB15 , PC0~PC15的<strong>48个引脚</strong>，而我们上面说了，<strong>EXTI就只有16个正常输出的引脚</strong>，所以这就需要<strong>AFIO</strong>来进行引脚选择</p>
+
+<p><strong>AFIO ( Alternate Function I/O ) 中断引脚选择</strong></p>
+
+<p>PAx , PBx , PCx会从第x个通道送入AFIO选择，在选出一个后再给到EXTI检测是否中断
+另外，AFIO还用于<strong>引脚复用功能的选择和重定义</strong></p>
+
+<p>[[STM32 - 3.1 EXTI的初始化和具体使用]]
+[[STM32 - 4 TIM中断概述]]</p>
+
+  </div><a class="u-url" href="/2025/09/16/STM32-3-%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0%E5%8F%8AEXTI%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

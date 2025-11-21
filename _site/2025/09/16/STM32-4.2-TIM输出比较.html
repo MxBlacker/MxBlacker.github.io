@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>STM32 - TIM输出比较 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="STM32 - TIM输出比较" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="#嵌入式 输出比较是一个相当重要的功能，它用于输出PWM波形，是驱动电机的必要条件" />
+<meta property="og:description" content="#嵌入式 输出比较是一个相当重要的功能，它用于输出PWM波形，是驱动电机的必要条件" />
+<link rel="canonical" href="http://localhost:4000/2025/09/16/STM32-4.2-TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83.html" />
+<meta property="og:url" content="http://localhost:4000/2025/09/16/STM32-4.2-TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="STM32 - TIM输出比较" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-16T00:00:00+08:00","datePublished":"2025-09-16T00:00:00+08:00","description":"#嵌入式 输出比较是一个相当重要的功能，它用于输出PWM波形，是驱动电机的必要条件","headline":"STM32 - TIM输出比较","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/09/16/STM32-4.2-TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83.html"},"url":"http://localhost:4000/2025/09/16/STM32-4.2-TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">STM32 - TIM输出比较</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-09-16T00:00:00+08:00" itemprop="datePublished">Sep 16, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>#嵌入式 
+输出比较是一个相当重要的功能，它用于输出<strong>PWM波形</strong>，是驱动电机的必要条件</p>
+
+<blockquote>
+  <p>[!danger] 非常注意
+在配置好<strong>输出比较 OC</strong>或者<strong>输入捕获 IC</strong>后，<strong>定时中断</strong>是依然可以实现的
+只是<strong>编码器</strong>需要占用时基电路的CNT，所以定时中断干不了了</p>
+</blockquote>
+
+<h1 id="输出比较-oc-output-compare">输出比较 OC Output Compare</h1>
+<p>输出比较通过比较CNT与CCR寄存器值得关系，<strong>来对输出电平进行置1、置0得翻转得操作</strong>，用于输出<strong>一定频率</strong>和<strong>占空比</strong>得PWM波形，对，就是你想的那样。又对！这个PWM也是你想的那样！</p>
+
+<h1 id="脉冲宽度调制-pwm-pulse-width-modulation">脉冲宽度调制 PWM Pulse Width Modulation</h1>
+<p>通过输出一定频率，一定占空比的方波电流，用<strong>数字信号</strong>来模拟<strong>模拟信号</strong>
+就打个比方，一个周期内我一半输出高电平，一半输出低电平，那么就是输出${1\over2}V_{cc}$</p>
+
+<h1 id="输出比较通道框图--通用定时器-">输出比较通道框图 ( 通用定时器 )</h1>
+
+<p>![[STM32输出比较通道框图.png]]</p>
+
+<p><strong>ocxref</strong>负责输出，<strong>TIMx_CCER</strong>有两种选择，即<strong>取反</strong>或者<strong>不取反</strong>，这就是所谓<strong>极性 ( Polarity )</strong> 的选择，最后从<strong>OC1</strong>口接到<strong>GPIO</strong>输出
+这里流程图就略了</p>
+
+<p><strong>高级定时器不做赘述</strong>，主要是加了<strong>死区</strong>和一个<strong>互补输出</strong> ( OC4没有 )</p>
+
+<h1 id="输出比较模式">输出比较模式</h1>
+<p>|                                     |                                                                                          |
+| ———————————– | —————————————————————————————- |
+| 模式                                  | 描述                                                                                       |
+| 冻结 Timing                           | CNT=CCR时，REF保持为原状态                                                                       |
+| 匹配时置有效电平 Active                     | CNT=CCR时，REF置有效电平                                                                        |
+| 匹配时置无效电平 Inactive                   | CNT=CCR时，REF置无效电平                                                                        |
+| 匹配时电平翻转 Toggle                      | CNT=CCR时，REF电平翻转                                                                         |
+| 强制为无效电平 ( 低电平 ) ForcedAction_Active | CNT与CCR无效，REF强制为无效电平                                                                     |
+| 强制为有效电平 ( 高电平 )ForcedAction_Inctive | CNT与CCR无效，REF强制为有效电平                                                                     |
+| PWM模式1 PWM1                         | 向上计数：CNT&lt;CCR时，REF置有效电平，CNT≥CCR时，REF置无效电平<br /><br />向下计数：CNT&gt;CCR时，REF置无效电平，CNT≤CCR时，REF置有效电平 |
+| PWM模式2 PWM2                         | 向上计数：CNT&lt;CCR时，REF置无效电平，CNT≥CCR时，REF置有效电平<br /><br />向下计数：CNT&gt;CCR时，REF置有效电平，CNT≤CCR时，REF置无效电平 |</p>
+
+<p>显然，<strong>PWM1</strong>和<strong>PWM2</strong>模式的区别在于<strong>极性(Polarity)不同</strong></p>
+
+<h1 id="输出比较的配置">输出比较的配置</h1>
+<p><strong>先来介绍一下相关库函数</strong></p>
+
+<pre><code class="language-C">TIM_OCxInit(TIMx , TIM_OCInitStruct); //初始化
+TIM_OCStructInit(TIM_OCInitStruct); //结构体初始化
+
+//下面是单独修改某些配置的
+TIM_OCxPreloadConfig(TIMx , TIM_OCPreload_value); //重新写入CCR的值，更新事件后才生效
+
+TIM_OCxPolarityConfig(TIMx , TIM_OCPolarity); //主通道的极性配置
+TIM_OCxNPolarityConfig(TIMx , TIM_OCPolarity); //高级计时器中互补通道的极性配置
+
+TIM_CCxCmd(TIMx , TIM_Channel , TIM_CCx); //这里的x就是x，不是数字，这是用来修改输出使能参数的
+TIM_CCxNCmd(TIMx , TIM_Channel , TIM_CCxN);
+
+TIM_SelectOCxM(TIMx , TIM_Channel , TIM_OCMode); //输出比较模式
+
+TIM_SetComparex(TIMx , Comparex_value); //修改CCR寄存器的函数
+
+TIM_CtrilPWMOutputs(TIMx , NewState); //高级定时器输出PWM时需要用这个使能主输出
+</code></pre>
+
+<p>同时需要注意，不同的比较口对应的输出<strong>GPIO通道</strong>不一样，<strong>OC1</strong>对应<strong>AP0</strong>，以此类推
+<strong>快速过一遍TIM的初始化，NVIC无需配置</strong></p>
+
+<pre><code class="language-C">AutoInitGPIO(...) //我们这里初始GPIOA的PA0引脚 
+//但是要注意，我们模式应该用复用推挽输出，因为信号不来自CPU，而是片上外设，即TIM，GPIO_Mode_AF_PP
+
+RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2 , ENABLE);
+
+TIM_InternalClockConfig(TIM2);
+
+TIM_TimeBaseInitTypeDef ...
+//用你屁股想一下，我们Counter和分频分别写100和720可以获得100的分辨率，也就是分为100份数
+//而这100份是被平均分配在1/1000秒内的，所以CCR设50就可以获得50%的占空比
+TIM_TimeBaseInit(TIM2 , &amp;...)
+
+//接下来是OC的初始化
+
+TIM_OCInitTypeDef TIM_OCInitStructure;
+TIM_OCStructInit(&amp;TIM_OCInitStructure); //因为有很多通用计时器用不到的，所以这里都给个默认值，不然值不确定
+TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1; //输出比较模式
+TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
+TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+TIM_OCInitStructure.TIM_Pulse = ; //设置CCR (16位) 的值
+TIM_OC1Init(TIM2 , &amp;TIM_OCInitStructure)
+</code></pre>
+
+<p><strong>这里拓展一下引脚重映射的方法</strong>
+因为TIM2有可能和其他复用引脚功能占用同一个口，为了解决这个问题，可以把TIMCHx口重映射到其他口上，通过AFIO来实现</p>
+
+<pre><code class="language-C">RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);  
+GPIO_PinRemapConfig(GPIO_PartialRemap1_TIM2 , ENABLE);
+//这里注意一一下有三种模式
+//PartialRemap1是吧OC1,OC2重映射到PA14和PA15上
+//PartialRemap2是重映射OC3和OC4
+//FullRemap就是全部重映射了
+
+//还要注意，PA15默认为JTDI的调试端口，我们需要取消这种模式
+GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable,ENABLE);
+</code></pre>
+
+<h4 id="呼吸灯">呼吸灯</h4>
+<pre><code class="language-C">for(int i = 0;i &lt; 100;i++){
+	TIM_SetComparex(TIM2, i); 
+}
+for(int i = 99;i &gt;= 0;i--){
+	TIM_SetComparex(TIM2, i); 
+}
+</code></pre>
+
+<h4 id="驱动舵机">驱动舵机</h4>
+<p>舵机要求50Hz的频率，那么PSC设置72，ARR设置20K即可
+这时，CRR的范围是500~2500，我们可以根据这个公式来算角度需要的CCR值
+\(CCR = \left({\alpha\over180\degree}\cdot2000\right) + 500\)
+然后去把那个按钮判断的模块偷过来就行了</p>
+
+<h4 id="驱动电机">驱动电机</h4>
+<p>先确定正反转，从而确定每个口的输出电频
+速度就直接是PSC = 720 ARR = 100下的CRR了，要多少速度CRR设多少</p>
+
+  </div><a class="u-url" href="/2025/09/16/STM32-4.2-TIM%E8%BE%93%E5%87%BA%E6%AF%94%E8%BE%83.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

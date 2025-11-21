@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>STM32 - GPIO的初始化和使用 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="STM32 - GPIO的初始化和使用" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="#嵌入式 GPIO初始化 Somehow代码的第一个执行代码都是要开启时钟" />
+<meta property="og:description" content="#嵌入式 GPIO初始化 Somehow代码的第一个执行代码都是要开启时钟" />
+<link rel="canonical" href="http://localhost:4000/2025/09/16/STM32-1.1-GPIO%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E4%BD%BF%E7%94%A8.html" />
+<meta property="og:url" content="http://localhost:4000/2025/09/16/STM32-1.1-GPIO%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E4%BD%BF%E7%94%A8.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="STM32 - GPIO的初始化和使用" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-16T00:00:00+08:00","datePublished":"2025-09-16T00:00:00+08:00","description":"#嵌入式 GPIO初始化 Somehow代码的第一个执行代码都是要开启时钟","headline":"STM32 - GPIO的初始化和使用","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/09/16/STM32-1.1-GPIO%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E4%BD%BF%E7%94%A8.html"},"url":"http://localhost:4000/2025/09/16/STM32-1.1-GPIO%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E4%BD%BF%E7%94%A8.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">STM32 - GPIO的初始化和使用</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-09-16T00:00:00+08:00" itemprop="datePublished">Sep 16, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>#嵌入式</p>
+<h1 id="gpio初始化">GPIO初始化</h1>
+<p>Somehow代码的第一个执行代码都是要<strong>开启时钟</strong></p>
+
+<blockquote>
+  <p>[!tip] 问题已解决
+[[STM32 - 4 TIM中断概述#RCC时钟树及其框图]]</p>
+</blockquote>
+
+<p>这里我们LED接入的是GPIOA的PA0端口</p>
+
+<pre><code class="language-C">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA , ENABLE);
+</code></pre>
+
+<p>然后就是初始化GPIOA</p>
+
+<pre><code class="language-C">	GPIO_InitTypeDef GPIO_InitStructure；
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP; 
+</code></pre>
+
+<p>OutPP就是推挽输出了</p>
+
+<pre><code class="language-C">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0；
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz；
+	GPIO_Init(GPIOA , &amp;GPIO_InitStructure)；
+</code></pre>
+
+<p>这样就初始化好了
+<strong>这里拓展一下输出模式</strong></p>
+
+<ul>
+  <li>GPIO_Mode_AIN = 0x0 模拟输入</li>
+  <li>GPIO_Mode_IN_FLOATING 浮空输入</li>
+  <li>GPIO_Mode_IPD = 0x28 下拉输入</li>
+  <li>GPIO_Mode_IPU = 0x48 上拉输入</li>
+  <li>GPIO_Mode_Out_OD = 0x14 开漏输出</li>
+  <li>GPIO_Mode_Out_PP = 0x10 推挽输出</li>
+  <li>GPIO_Mode_AF_OD = 0x1C 复用开漏输出</li>
+  <li>GPIO_Mode_AF_PP = 0x18 复用开漏输出</li>
+</ul>
+
+<h1 id="gpio相关库函数">GPIO相关库函数</h1>
+<h3 id="gpio写入函数">GPIO写入函数</h3>
+
+<pre><code class="language-C">	GPIO_SetBits(GPIO_TypeDef* GPIOx , uint16_t GPIO_Pin)
+	GPIO_ResetBits(GPIO_TypeDef* GPIOx , uint16_t GPIO_Pin)
+</code></pre>
+
+<p>这里前面一个参数写GPIOx，后一个写端口号，Set就是高电平，Reset就是低电平</p>
+
+<pre><code class="language-C">	GPIO_WriteBit(GPIO_TypeDef* GPIOx , unit16_t GPIO_Pin , Bit_RESET / Bit_SET)
+</code></pre>
+
+<p>这里的Bit_RESET和Bit_SET是宏定义，定义的是BitAction类型变量
+所以也可以填(BitAction)0和(BitAction)1
+功能和上面的一样，就是加了个参数 , Bit_RESET就是低电平，Bit_SET就是高电平</p>
+
+<h4 id="更多关于gpio的函数">更多关于GPIO的函数</h4>
+<pre><code class="language-C">	GPIO_PinLockConfig(GPIOx , Pin)
+</code></pre>
+<p>这个函数的功能是锁定某个引脚的配置</p>
+
+<pre><code class="language-C">	GPIO_PinRemapConfig(GPIO_Remap,Newstate);
+</code></pre>
+<p>这个用于引脚重映射，第一个参数是重映射的方式，第二个是新的状态</p>
+
+<h1 id="延迟函数">延迟函数</h1>
+<p>当然，这里面可没有Sleep，Sleep是window.h的东西，这里我们可不是对窗口进行操作！
+我们需要引入Delay.h / Delay.c</p>
+
+<pre><code class="language-C">	#include "Delay.h"
+
+	Delay_us(uint32_t us)；
+	Delay_ms(uint32_t ms)；
+	Delay_s(uint32_t s)；
+</code></pre>
+
+<p>顾名思义，微秒毫秒和秒，具体是通过计时器实现的，下面是函数的代码</p>
+
+<pre><code class="language-C">	SysTick-&gt;LOAD = 72 * xus //设置计时器重装值
+	SysTick-&gt;VAL = 0x00 //清空计时器
+	SysTick-&gt;CTRL = 0x00000005 //设置HCLK源，启动
+	while(!(SysTick-&gt;CTRL &amp; 0x00010000)); //等待计时结束
+	SysTick-&gt;CTRL = 0x00000004; //关闭计时器
+</code></pre>
+
+<h1 id="led流水灯">LED流水灯</h1>
+<p>任意用一下两个指令就可以同时初始化多个端口</p>
+
+<pre><code class="language-C">	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 | ...；
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_All；
+</code></pre>
+
+<p>接下来就是While循环内的写入部分了，这里我们用Write</p>
+
+<pre><code class="language-C">	GPIO_Write(GPIOA, 0x0001); // 0000 0000 0000 0001 AP1高电平
+</code></pre>
+
+<p>当然，因为只取低16位，所以这里的十六进制只有四位就够了</p>
+
+<pre><code class="language-C">	GPIO_Write(GPIOA, 0x0002); // 0000 0000 0000 0010 AP2高电平
+	GPIO_Write(GPIOA, 0x0004); // 0000 0000 0000 0100 AP3高电平
+	...
+</code></pre>
+
+<h1 id="蜂鸣器">蜂鸣器</h1>
+<p>蜂鸣器发出的声音和振荡的频率有关，所以你只需要改Delay_ms里的值就行了</p>
+
+
+  </div><a class="u-url" href="/2025/09/16/STM32-1.1-GPIO%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E4%BD%BF%E7%94%A8.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

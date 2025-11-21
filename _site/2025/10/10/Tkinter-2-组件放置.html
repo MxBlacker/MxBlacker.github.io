@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tkinter - 组件放置 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Tkinter - 组件放置" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="组件放置 Widget Placement 配置好组件后需要放置，否则不会显示，但是先明确一下势力范围的概念 [!attention] 你可以直接Label_1 = Label().place(...) 势力范围 / 拓展范围 在你决定将组件放在哪个side之后，势力范围就决定了，这里我们以top举例" />
+<meta property="og:description" content="组件放置 Widget Placement 配置好组件后需要放置，否则不会显示，但是先明确一下势力范围的概念 [!attention] 你可以直接Label_1 = Label().place(...) 势力范围 / 拓展范围 在你决定将组件放在哪个side之后，势力范围就决定了，这里我们以top举例" />
+<link rel="canonical" href="http://localhost:4000/2025/10/10/Tkinter-2-%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE.html" />
+<meta property="og:url" content="http://localhost:4000/2025/10/10/Tkinter-2-%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-10T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tkinter - 组件放置" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-10T00:00:00+08:00","datePublished":"2025-10-10T00:00:00+08:00","description":"组件放置 Widget Placement 配置好组件后需要放置，否则不会显示，但是先明确一下势力范围的概念 [!attention] 你可以直接Label_1 = Label().place(...) 势力范围 / 拓展范围 在你决定将组件放在哪个side之后，势力范围就决定了，这里我们以top举例","headline":"Tkinter - 组件放置","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/10/10/Tkinter-2-%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE.html"},"url":"http://localhost:4000/2025/10/10/Tkinter-2-%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Tkinter - 组件放置</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-10-10T00:00:00+08:00" itemprop="datePublished">Oct 10, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="组件放置--widget-placement">组件放置  Widget Placement</h1>
+<p>配置好组件后需要放置，否则不会显示，但是先明确一下<strong>势力范围的概念</strong></p>
+<blockquote>
+  <p>[!attention] 你可以直接<code class="language-plaintext highlighter-rouge">Label_1 = Label().place(...)</code></p>
+  <h6 id="势力范围--拓展范围">势力范围 / 拓展范围</h6>
+  <p>在你决定将组件放在哪个side之后，势力范围就决定了，这里我们以top举例</p>
+</blockquote>
+
+<p>![[Tkinter 势力范围与拓展范围.png]]</p>
+
+<p>如果你不把expand打开，那么上面的作用效果仅局限于<strong>势力范围</strong>内，填充也就只能<strong>填充 fill</strong>一小部分屏幕，打开之后才能<strong>填充 fill</strong>全屏</p>
+
+<h4 id="pack-相对放置--填充布局">pack 相对放置 / 填充布局</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lable_1</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="n">side</span> <span class="o">=</span> <span class="sh">'</span><span class="s">...</span><span class="sh">'</span> <span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="sh">'</span><span class="s">...</span><span class="sh">'</span> <span class="p">,</span> <span class="n">padx</span> <span class="o">/</span> <span class="n">pady</span> <span class="p">,</span> <span class="n">ipadx</span> <span class="o">/</span> <span class="n">ipady</span> <span class="p">,</span> <span class="n">anchor</span> <span class="p">,</span> <span class="n">expand</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>side</strong> : ‘left , right , top , bottom’ 决定组件停靠的方向，默认为top</li>
+  <li><strong>fill</strong> : ‘x , y , both , none’ 是否填充。不同于图片的填充拉伸，这里的意思是类似于背景之类的可填重项的填充</li>
+  <li><strong>padx / pady</strong> : 组件与<strong>临近组件</strong>或<strong>窗口边界</strong>的距离（如果这里没有组件就是里窗口边界，有就是临近组件），<strong>否则每个标签都是紧贴在一起的</strong>
+    <ul>
+      <li>支持<strong>元组</strong>指定每一个<strong>间隔像素数</strong></li>
+    </ul>
+  </li>
+  <li><strong>ipadx / ipady</strong> : 组件内，组件文件跟组件边界间的距离
+    <ul>
+      <li>支持<strong>元组</strong>指定每一个<strong>间隔像素数</strong></li>
+    </ul>
+  </li>
+  <li><strong>anchor</strong> : “n , nw , ne , s , nw , ne , center” 默认居中显示</li>
+  <li><strong>expand</strong> : 决定组件的“<strong>势力范围</strong>”是否扩大到“<strong>扩展范围</strong>” (见下)</li>
+</ul>
+
+<blockquote>
+  <p>[!attention] 组件的放置会自适应
+如果组建的作用范围冲突了，<strong>后放置的组件</strong>会自动为<strong>先放置的组件</strong>让道，不会造成遮挡</p>
+  <h4 id="place-绝对放置--自定义布局">place 绝对放置 / 自定义布局</h4>
+  <p>给一个绝对的坐标位置，左上角为$(0,0)$</p>
+  <pre><code class="language-Python">label_1.place(x=value , y=value) #不超过窗口范围即可
+</code></pre>
+</blockquote>
+
+<h4 id="grid-网格放置--表格布局">grid 网格放置 / 表格布局</h4>
+<p>类似于excel表格，你也可以在HTML里见到类似的布局</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Label_1</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="n">row</span> <span class="o">=</span> <span class="n">value</span> <span class="p">,</span> <span class="n">column</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>[!attention] 它也符合填充原则，如果<strong>row</strong>和<strong>column</strong>前有空的位置，就会自动移到空的位置去</p>
+</blockquote>
+
+
+  </div><a class="u-url" href="/2025/10/10/Tkinter-2-%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

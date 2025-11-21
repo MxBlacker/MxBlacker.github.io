@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>STM32 - EXTI的初始化和具体使用 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="STM32 - EXTI的初始化和具体使用" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="#嵌入式 比如传感器这类硬件，STM32总不能24小时去看他有没有接通 所以EXTI检测到上升沿的时候再读取数据是最佳的选择！" />
+<meta property="og:description" content="#嵌入式 比如传感器这类硬件，STM32总不能24小时去看他有没有接通 所以EXTI检测到上升沿的时候再读取数据是最佳的选择！" />
+<link rel="canonical" href="http://localhost:4000/2025/09/16/STM32-3.1-EXTI%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8.html" />
+<meta property="og:url" content="http://localhost:4000/2025/09/16/STM32-3.1-EXTI%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="STM32 - EXTI的初始化和具体使用" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-16T00:00:00+08:00","datePublished":"2025-09-16T00:00:00+08:00","description":"#嵌入式 比如传感器这类硬件，STM32总不能24小时去看他有没有接通 所以EXTI检测到上升沿的时候再读取数据是最佳的选择！","headline":"STM32 - EXTI的初始化和具体使用","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/09/16/STM32-3.1-EXTI%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8.html"},"url":"http://localhost:4000/2025/09/16/STM32-3.1-EXTI%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">STM32 - EXTI的初始化和具体使用</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-09-16T00:00:00+08:00" itemprop="datePublished">Sep 16, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>#嵌入式 
+比如传感器这类硬件，STM32总不能24小时去看他有没有接通
+<strong>所以EXTI检测到上升沿的时候再读取数据是最佳的选择！</strong></p>
+
+<h1 id="gpio---afio---exti---nvic的初始化">GPIO -&gt; AFIO -&gt; EXTI -&gt; NVIC的初始化</h1>
+<p><strong>基本思路</strong></p>
+<ol>
+  <li>依旧是配置RCC和GPIO，并选择<strong>输入模式</strong></li>
+  <li>配置AFIO</li>
+  <li>配置EXTI，选择中断触发方式和响应方式</li>
+  <li>配置NVIC，配置优先级</li>
+  <li>CPU接收到中断信号，根据中断号，去<strong>中断向量表</strong>找函数名，执行中断函数</li>
+</ol>
+
+<h4 id="rcc时钟配置">RCC时钟配置</h4>
+<pre><code class="language-C">RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+</code></pre>
+
+<h4 id="afio时钟配置">AFIO时钟配置</h4>
+<pre><code class="language-C">	RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+</code></pre>
+<p>EXTI和NVIC的时钟一般是常开的，不需要手动打开</p>
+
+<h4 id="gpio配置">GPIO配置</h4>
+<pre><code class="language-C">	我自己写了一个超级函数，直接用
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+</code></pre>
+<p>模式建议为浮空，上拉，下拉</p>
+
+<h2 id="afio相关库函数及其配置">AFIO相关库函数及其配置</h2>
+<p><strong>先介绍一些相关的库函数</strong></p>
+
+<pre><code class="language-C">	GPIO_AFIODeInit(void);
+</code></pre>
+<p>这个函数用于复位AFIO</p>
+
+<pre><code class="language-C">	GPIO_EXTILineConfig(GPIO_PortSource , GPIO_PinSource);
+</code></pre>
+<p>这个函数用于配置AFIO，来选择我们想要进行中断判断的引脚</p>
+<h3 id="接下来是afio初始化代码流程">接下来是AFIO初始化代码流程</h3>
+
+<pre><code class="language-C">	GPIO_EXTILineConfig(GPIO_PortSourceB,GPIO_PinSource14);
+</code></pre>
+<p>也就是我们选择了GPIOB的PB14的</p>
+
+<h2 id="exti相关库函数及其配置">EXTI相关库函数及其配置</h2>
+<p><strong>先介绍一些相关的库函数</strong></p>
+
+<pre><code class="language-C">	EXTI_DeInit(void);
+</code></pre>
+<p>这个就是复位EXTI</p>
+
+<pre><code class="language-C">	EXTI_Init(EXTI_InitStructure);
+</code></pre>
+<p>这个就是初始化EXTI，和GPIO一样要建一个结构体</p>
+
+<pre><code class="language-C">	EXTI_StructInit(EXIT_InitStructure);
+</code></pre>
+<p>懒人函数，可以给”<strong>给上一个函数用的结构体</strong>“赋一个<strong>初始值</strong></p>
+
+<pre><code class="language-C">	EXTI_GenerateSWIInterupt(EXTI_Line);
+</code></pre>
+<p>软件触发外部中断，用这个就可以让EXTI_Line触发一次外部中断</p>
+
+<pre><code class="language-C">	EXTI_GetFlagStatus(EXTI_Line);
+</code></pre>
+<p>一些事件发生时会在寄存器置一个<strong>标志位 Flag</strong>，这个函数就是看指定的标志位是否为1
+Of course，这些事件包括中断事件，所以对应线路的寄存器会有一位置1</p>
+
+<pre><code class="language-C">	EXTI_ClearFlag(EXTI_Line);
+</code></pre>
+<p>清除标志位</p>
+
+<pre><code class="language-C">	EXTI_GetITStatus(EXTI_Line);
+</code></pre>
+<p>上面那两个是在正常函数( 主函数 )里访问标志位，这个就是在中断函数里访问</p>
+
+<pre><code class="language-C">	EXTI_ClearITPendingBit(EXTI_Line);
+</code></pre>
+
+<h3 id="接下来是exti初始化代码流程">接下来是EXTI初始化代码流程</h3>
+
+<pre><code class="language-C">	EXTI_InitTypeDef EXTI_InitStructure;
+	EXTI_InitStructure.EXTI_Line = EXTI_Line14; //PB14
+	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+	EXTI_Init(&amp;EXTI_InitStructure);
+</code></pre>
+
+<h2 id="nvic相关库函数及配置">NVIC相关库函数及配置</h2>
+<p><strong>先介绍一些相关的库函数</strong></p>
+
+<pre><code class="language-C">	NVIC_PriorityGroupConfig(NVIC_PriorityGroup)
+</code></pre>
+<p>这个是用于中断分组的，实际上是去配置那个寄存器，我们在[[STM32 - 3 外部中断概述及EXTI中断概述]]里面提到过</p>
+
+<pre><code class="language-C">	NVIC_Init(NVIC_InitStructure);
+</code></pre>
+<p>和GPIO一样</p>
+
+<pre><code class="language-C">	NVIC_SetVectorTable(NVIC_VectTab , Offset);
+</code></pre>
+<p>设置向量表，当然这里我们无需配置</p>
+
+<h3 id="接下来是nvic初始化代码流程">接下来是NVIC初始化代码流程</h3>
+
+<pre><code class="language-C">	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+
+	NVIC_InitTypeDef NVIC_InitStructure;
+	NVIC_InitStrucutre.NVIC_IRQChannel = EXTI15_10_IRQn; //PB14
+	NVIC_InitStrucutre.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_InitStrucutre.NVIC_IRQChannelPreemptionPriority = 1;
+	NVIC_InitStrucutre.NVIC_IRQChannelSubPriority = 1;
+	NVIC_Init(&amp;NVIC_InitStrucutre);
+</code></pre>
+
+<p>如果有多个中断事件，就要考虑优先级了</p>
+
+<h1 id="中断函数的书写">中断函数的书写</h1>
+<p>STM32里<strong>中断函数</strong>名字都是固定的
+在<strong>startup_stm32f10x_md.s</strong>文件里定义了中断函数向量表，可以去那里查看对应的名字
+我们这里使用的EXTI15_10_IRQHandler(void);</p>
+
+<pre><code class="language-C">	void EXTI15_10_IRQHandler(void){
+	
+	if(EXTI_GetITStatus(EXTI_Line14) == RESET) //用于判定是不是指定的线路
+		return;
+
+	EXTI_ClearITPendingBit(EXTI_Line14); //别忘了清除标志位
+	...
+	}
+</code></pre>
+
+
+  </div><a class="u-url" href="/2025/09/16/STM32-3.1-EXTI%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

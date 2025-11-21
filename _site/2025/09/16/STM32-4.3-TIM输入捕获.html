@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>STM32 - TIM输入捕获 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="STM32 - TIM输入捕获" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="#嵌入式 输入捕获 IC Input Capture 输入捕获模式下，当通道输入引脚出现指定电平跳变时，当前CNT的值将被锁存到CCR中，可用于测量PWM波形的频率、占空比、脉冲间隔、电平持续时间等参数" />
+<meta property="og:description" content="#嵌入式 输入捕获 IC Input Capture 输入捕获模式下，当通道输入引脚出现指定电平跳变时，当前CNT的值将被锁存到CCR中，可用于测量PWM波形的频率、占空比、脉冲间隔、电平持续时间等参数" />
+<link rel="canonical" href="http://localhost:4000/2025/09/16/STM32-4.3-TIM%E8%BE%93%E5%85%A5%E6%8D%95%E8%8E%B7.html" />
+<meta property="og:url" content="http://localhost:4000/2025/09/16/STM32-4.3-TIM%E8%BE%93%E5%85%A5%E6%8D%95%E8%8E%B7.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="STM32 - TIM输入捕获" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-16T00:00:00+08:00","datePublished":"2025-09-16T00:00:00+08:00","description":"#嵌入式 输入捕获 IC Input Capture 输入捕获模式下，当通道输入引脚出现指定电平跳变时，当前CNT的值将被锁存到CCR中，可用于测量PWM波形的频率、占空比、脉冲间隔、电平持续时间等参数","headline":"STM32 - TIM输入捕获","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/09/16/STM32-4.3-TIM%E8%BE%93%E5%85%A5%E6%8D%95%E8%8E%B7.html"},"url":"http://localhost:4000/2025/09/16/STM32-4.3-TIM%E8%BE%93%E5%85%A5%E6%8D%95%E8%8E%B7.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">STM32 - TIM输入捕获</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-09-16T00:00:00+08:00" itemprop="datePublished">Sep 16, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>#嵌入式</p>
+<h1 id="输入捕获-ic-input-capture">输入捕获 IC Input Capture</h1>
+<p><strong>输入捕获</strong>模式下，当通道输入引脚<strong>出现指定电平跳变</strong>时，当前CNT的值将被锁存到CCR中，可用于测量PWM波形的频率、占空比、脉冲间隔、电平持续时间等参数</p>
+
+<p>每个高级定时器和通用定时器都拥有4个输入捕获通道</p>
+<ul>
+  <li>可配置为PWMI模式，同时<strong>测量频率</strong>和<strong>占空比</strong></li>
+  <li>可配合主从触发模式，实现硬件全自动测量</li>
+</ul>
+
+<p><strong>简单来说，输入捕获可以读取GPIO口的占空比和频率</strong>，和示波器功能差不多</p>
+
+<h4 id="和外部中断的区别">和外部中断的区别</h4>
+<p>IC和EXTI都会在<strong>出现指定电平跳变</strong>时发生动作，但是<strong>EXTI</strong>是向CPU申请中断，<strong>IC</strong>是将<strong>CNT</strong>的值锁存在<strong>CCR</strong>中。</p>
+
+<blockquote>
+  <p>[!attention] CNT的值因为TIM中断一直存在，是一直在增加的</p>
+</blockquote>
+
+<h1 id="频率测量">频率测量</h1>
+<h4 id="测频法">测频法</h4>
+<p><strong>在闸门时间$T$内，对上升沿计次$N$</strong>，这个测得就是$T$时间内的平均值了，要求信号频率高
+\(f_x={N\over{T}}\)</p>
+<h4 id="测周法">测周法</h4>
+<p><strong>两个上升沿内，以标准频率$f_c$计次$N$</strong>，这个更加精确，要求信号频率低
+\(f_x={f_c\over{N}}\)
+<strong>输入捕获 IC</strong>就可以用于这种方法
+两次上升沿，每次<strong>锁一次CNT的值</strong>，两次的<strong>差值</strong>就是N，而<strong>标准频率</strong>就是$f_{cnt}$</p>
+<h5 id="中间频率">中间频率</h5>
+<p>显然这两个各有优劣，我们需要找一个分界点
+\({f_x}^2={fc\over{T}}\rightarrow{f_m=\sqrt{f_c\over{T}}}\)
+高于$f_m$的算<strong>高频</strong>，低于算<strong>低频</strong></p>
+
+<h1 id="ic框图">IC框图</h1>
+
+<p>![[STM32 TIM_IC框图.png]]</p>
+
+<ul>
+  <li><strong>滤波器</strong>的原理是在短时间内对<strong>模拟信号</strong>采样$N$次，如果均为低则输出低，均为高则输出高，可滤波</li>
+  <li>经过边沿检测器后输出<strong>TI1F</strong>信号，可以到CH2的路上去，<strong>TI2F</strong>的也可以到CH1的路上来，具体可以去看[[STM32 通用计时器.png]]</li>
+  <li><strong>主从模式控制器</strong>可以将信号映射到<strong>TGRO</strong>上，然后其他地方<strong>TRGI</strong>输入，从而实现某些操作，这里是实现CNT的清零操作，这样在第二个上升沿时，<strong>CNT</strong>锁入<strong>CCR</strong>后自动清零，方便计算</li>
+</ul>
+
+<h1 id="pwmi流程图">PWMI流程图</h1>
+<p>![[STM32 PWMI流程图.png]]</p>
+
+<p>我们说了<strong>PWMI</strong>可以测占空比，所以这里分了一路出去专门测<strong>下降沿</strong>，这样就可以测了。
+上半部分和正常的测频率一样，但是是先读取CNT到CCR再<strong>从模式触发Reset</strong></p>
+
+<h1 id="ic初始化配置">IC初始化配置</h1>
+
+<ol>
+  <li>时钟开启，TIM开启，GPIO输入模式，上拉或者浮空</li>
+  <li>时基单元配置</li>
+  <li>配置<strong>输入捕获单元</strong></li>
+  <li>选择<strong>从模式触发源</strong></li>
+  <li>选择<strong>触发后的操作</strong></li>
+  <li>开始定时器</li>
+</ol>
+
+<h4 id="基本函数介绍">基本函数介绍</h4>
+<pre><code class="language-C">//OC有四个函数分别控制四个通道，而IC的初始化则都共用一个函数，初始化结构体里有可以选择的
+TIM_ICInit(TIMx , TIM_ICInitStruct);
+
+TIM_ICStructInit(&amp;TIM_ICInitStruct);
+
+TIM_SelectInputTrigger(TIMx , TIM_InputTriggerSource); //选择从模式触发源
+
+TIM_SelectOutputTrigger(TIMx , TIM_TRGOSource); //主模式输出的触发源
+
+TIM_SelectSlaveMode(TIMx , TIM_SlaveMode); //从模式选择
+
+TIM_SetICxPrescaler(TIMx , TIM_ICPSC); //配置分频器，结构体也能配置
+
+TIM_GetCapturex(TIMx); //获得CCR里锁的值
+</code></pre>
+
+<h4 id="配置">配置</h4>
+<pre><code class="language-C">RCC_APB1PeriphClockCmd(PCC_APB1Periph_TIM2 , ENABLE);
+RCC_APB2PeriphClockCmd(PCC_APB2Periph_GPIOA , ENABLE);
+
+AutoInitGPIO(...);
+TIM2_Init(65536,72);
+
+TIM_ICInitTypeDef TIM_ICInitStructure;
+TIM_ICInitStructure.TIM_Channel = TIM_Channel_1; //1~4
+TIM_ICInitStructure.TIM_ICFilter = 0xF;//滤波器 0x0~0xF
+TIM_ICInitStructure.TIM_Polarity = TIM_ICPolarity_Rising;//_Falling  , _BothEdge
+TIM_ICInitStructure.TIM_ICPrescaler = TIM_ICPSC_DIV1; //分频器 1 2 4 8 
+TIM_ICInitStructure.TIM_ICSelection = TIM_ICSelection_DirectTI; //直连通道 , IndirectTI交叉通道，就是跑到CH2去了
+TIM_ICInit(TIM2 , &amp;TIM_ICInitStructure);
+
+TIM_SelectInputTrigger(TIM2 , TIM_TS_TI1FP1);
+TIM_SelectSlaveMode(TIM2 , TIM_SlaveMode_Reset); //配置从模式
+
+TIM_Cmd(TIM2 , ENABLE);
+</code></pre>
+
+<h4 id="频率计算">频率计算</h4>
+<p>配置完成后，只要读取CCR的值就可以计算了</p>
+
+<pre><code class="language-C">int fx = (72000000 / Prescaler) / (TIM_GetCapture1(TIM2) + 1);
+</code></pre>
+
+<p><strong>+1</strong>是为了去除正负1误差</p>
+<h4 id="占空比计算">占空比计算</h4>
+<p>这个时候需要两个路同时计一个口了，我们再定义一个</p>
+<pre><code class="language-C">TIM_ICInitStructure.TIM_Channel = TIM_Channel_2; //1~4
+TIM_ICInitStructure.TIM_ICFilter = 0xF;//滤波器 0x0~0xF
+TIM_ICInitStructure.TIM_Polarity = TIM_ICPolarity_Falling;//_Falling  , _BothEdge
+TIM_ICInitStructure.TIM_ICPrescaler = TIM_ICPSC_DIV1; //分频器 1 2 4 8 
+TIM_ICInitStructure.TIM_ICSelection = TIM_ICSelection_IndirectTI; //直连通道 , IndirectTI交叉通道，就是跑到CH2去了
+TIM_ICInit(TIM2 , &amp;TIM_ICInitStructure);
+</code></pre>
+
+<p>当然，你也可以直接用这个函数</p>
+
+<pre><code class="language-C">TIM_PWMIConfig(TIM3 , TIM_ICInitStructure); //这个Structure就是第一次配置的Structure，也就省去再次定义的代码了
+</code></pre>
+
+<p>这时，Capture1获得的是<strong>整个周期的CNT数</strong>，Capture2是<strong>从上升沿到下降沿的CNT数</strong>，即：</p>
+
+<pre><code class="language-C">int Duty = (TIM_GetCapture2(TIM2) + 1) / (TIM_GetCapture1(TIM2) + 1); 
+</code></pre>
+
+<p><strong>+1</strong>是为了去除正负1误差</p>
+
+  </div><a class="u-url" href="/2025/09/16/STM32-4.3-TIM%E8%BE%93%E5%85%A5%E6%8D%95%E8%8E%B7.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

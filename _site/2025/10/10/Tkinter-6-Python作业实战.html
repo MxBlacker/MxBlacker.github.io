@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tkinter - Python作业实战 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Tkinter - Python作业实战" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="2048游戏 这里先说一下2048的逻辑处理" />
+<meta property="og:description" content="2048游戏 这里先说一下2048的逻辑处理" />
+<link rel="canonical" href="http://localhost:4000/2025/10/10/Tkinter-6-Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98.html" />
+<meta property="og:url" content="http://localhost:4000/2025/10/10/Tkinter-6-Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-10T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tkinter - Python作业实战" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-10T00:00:00+08:00","datePublished":"2025-10-10T00:00:00+08:00","description":"2048游戏 这里先说一下2048的逻辑处理","headline":"Tkinter - Python作业实战","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/10/10/Tkinter-6-Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98.html"},"url":"http://localhost:4000/2025/10/10/Tkinter-6-Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Tkinter - Python作业实战</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-10-10T00:00:00+08:00" itemprop="datePublished">Oct 10, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="2048游戏">2048游戏</h2>
+<p>这里先说一下2048的逻辑处理</p>
+
+<blockquote>
+  <p>对于每一个格子，往<strong>dir</strong>方向移动时，如果该方向没有格子，<strong>则一直前进</strong>，<strong>直到遇见格子或者碰壁</strong>
+若情况为前者，这额外判断是否与当前格子相等，相等则合并
+注意，<strong>这里不需要管合并过后的格子是否需要继续前进</strong>，因为结果是必然的，一旦合并，其格子<strong>必将在之后的循环</strong>中被检测到，并继续移动</p>
+</blockquote>
+
+<p>我们的格子实质上使用<strong>设定好长宽和背景颜色的Label</strong>做成的，wasd用的<strong>keyboard</strong>模块进行判定
+最后，<strong>grid_value</strong>和<strong>cells</strong>分开来记录，前者是<strong>对游戏的实际模拟</strong>，后者是<strong>记录格子的位置</strong>，用于显示<strong>grid_value</strong></p>
+
+<h4 id="2048游戏格的绘制">2048游戏格的绘制</h4>
+<p>我们直接用一个列表去存<strong>每一个格子组件</strong>，毕竟列表啥都能存
+排列我们用<strong>grid</strong>，但请注意，这里的父级是<strong>grid_frame</strong>，我们专门创建了一块frame给到游戏格</p>
+<pre><code class="language-Python">        self.cells = []                         #格子，这里直接用Label
+        for i in range(4):
+            row = []
+            for j in range(4):
+                cell = tk.Label(
+                    self.grid_frame,
+                    text="",
+                    font=("Arial", 20, "bold"),
+                    width=4,
+                    height=2,
+                    relief="raised",
+                    borderwidth=3
+                )
+                cell.grid(row=i, column=j, padx=5, pady=5)
+                row.append(cell)
+            self.cells.append(row)
+</code></pre>
+
+<h4 id="移动判定--结束判定">移动判定 / 结束判定</h4>
+<p>其实这一块不关Tkinter什么事，但我还是放上来参考一下</p>
+
+<p>```Python    
+def move(self, direction):
+        moved = False                   #用于判断这次移动是否成功，到时候传到其他地方用于判断
+        if direction == “up”:
+            for j in range(4):
+                for i in range(1, 4):
+                    if self.grid[i][j] != 0:    #按顺序判断每一个格子
+                        row = i
+                        while row &gt; 0 and self.grid[row-1][j] == 0:         #空格子移动
+                            self.grid[row-1][j] = self.grid[row][j]
+                            self.grid[row][j] = 0
+                            row -= 1
+                            moved = True
+                        if row &gt; 0 and self.grid[row-1][j] == self.grid[row][j]:        #合并的情况
+                            self.grid[row-1][j] *= 2
+                            self.score += self.grid[row-1][j]
+                            self.grid[row][j] = 0
+                            moved = True
+           ……</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+其他三个方向的情况略了。
+- 可以看到循环的时候忽略了i = 0的情况，这是因为这些格子本身就在最上面，没有移动的必要
+- 移动完之后，将移动标记设为**True**，好**置一个标志位**，用于**提示更新界面**
+- 最后再来判断可不可以移动
+
+```Python
+    def is_game_over(self):
+        #这一部分是游戏结束的判断：分两块 -&gt; 一是无空格子，二是无可合并相邻数字
+        for i in range(4):
+            for j in range(4):
+                if self.grid[i][j] == 0:
+                    return False
+
+        for i in range(4):
+            for j in range(4):
+                if j &lt; 3 and self.grid[i][j] == self.grid[i][j+1]:
+                    return False
+                if i &lt; 3 and self.grid[i][j] == self.grid[i+1][j]:
+                    return False
+
+        return True
+</code></pre></div></div>
+
+<h4 id="重新开始">重新开始</h4>
+<p>重新开始的初始化是比较好理解的，重点要学习的是下面<strong>Game Over</strong>框的去除</p>
+
+<pre><code class="language-Python">    def restart_game(self):
+        self.grid = [[0 for _ in range(4)] for _ in range(4)]
+        self.score = 0
+        self.add_new_tile()
+        self.update_grid()
+
+        for widget in self.window.winfo_children():
+            if isinstance(widget, tk.Label) and widget.cget("text") == "Game Over!":
+                widget.destroy()
+</code></pre>
+
+<ul>
+  <li><strong>winfo_children</strong>：这个方法可以知道当前父窗口下的子组件有哪些，输出一个列表</li>
+  <li><strong>cget</strong>：<strong>获取这个组件的信息</strong>，这里我们获取了”text”，用于判断是否是GameOver</li>
+  <li><strong>destroy</strong>：同样的，组件也可以用于destroy</li>
+</ul>
+
+<h2 id="计算器-calculator">计算器 Calculator</h2>
+<p>这一个的主要问题在于我自己给我自己设计的挑战——像windows计算器一样显示流程</p>
+<h4 id="基本功能实现">基本功能实现</h4>
+<p>这里的显示框我们用一个<strong>输入框 Entry</strong>来代替，<strong>result_var</strong>就是它绑定的变量。</p>
+<ul>
+  <li><strong>cur_input</strong>代表这一轮数字输入的值</li>
+  <li><strong>previous_input</strong>的作用在于计算，等下我们深入解析一下Calculate函数就知道什么用了</li>
+  <li><strong>Operator</strong>用于记录运算符</li>
+</ul>
+
+<pre><code class="language-Python">        self.current_input = ""
+        self.result_var = tk.StringVar()
+        self.result_var.set("0")
+        self.operator = ""
+        self.previous_input = ""
+        self.new_input = True
+</code></pre>
+
+<p>输入数字有四种情况：</p>
+<ul>
+  <li>当前不在一个运算中，输入的数字的算式的开头 (此时cur_input = ‘0’)</li>
+  <li>点完运算符，已经显示一个结果了，接着输入新的数字 (此时cur_input = ‘上一轮计算结果’)</li>
+  <li>还在当前轮的数字输入</li>
+</ul>
+
+<p>首先，我们要判断使用者点了哪个按钮，<strong>按钮排版我们不再赘述</strong></p>
+<pre><code class="language-Python">	if value.isdigit() or value == '.':
+            self.input_number(value)
+            self.flow_var.set(self.operate_flow + self.current_input)
+
+        elif value in ['+', '-', '×', '÷']:
+            self.operate_flow += self.current_input
+            self.operate_flow += value
+            self.input_operator(value)
+            self.flow_var.set(self.operate_flow)
+
+        elif value in ['√','x²']:
+            self.instant_operator(value)
+
+        elif value == '=':
+            self.calculate()
+            self.operate_flow = ''
+            self.flow_var.set(self.current_input)
+            return
+
+        elif value == 'C':
+            self.clear()
+
+        elif value == '←':
+            self.backspace()
+            self.flow_var.set(self.operate_flow + self.current_input)
+
+        elif value == '±':
+            self.negate()
+
+        elif value == 'e':
+            self.e()
+            self.flow_var.set(self.operate_flow + self.current_input)
+
+        elif value == 'π':
+            self.pi()
+            self.flow_var.set(self.operate_flow + self.current_input)
+</code></pre>
+
+<p>第一个if判断是否是数字，是的话就会去判断现在是什么状况
+这里的<strong>new_input</strong>为布尔变量，用于判断这时候该不该清除current_input里的数字</p>
+
+<p>显然，在输入了一个数字后，无论前面是什么情况，之后都应该是<strong>情况三</strong>，所以<strong>new_input</strong>理所当然为False，直到触发前两个情况的条件</p>
+
+<pre><code class="language-Python">    def input_number(self, num):
+        if self.new_input:
+            self.current_input = num
+            self.new_input = False
+
+        else:
+            # 防止输入多个小数点
+            if num == '.' and '.' in self.current_input:
+                return
+
+            self.current_input += num
+        self.result_var.set(self.current_input)
+</code></pre>
+
+<p>运算符成立的条件是<strong>cur_input</strong>里有实际合法的值，者可以用<strong>new_input == False</strong>来判断
+我们注意到，计算器在你输入下一个运算符之前，都会显示你当前轮的输入。按下后才会显示上一轮和上上轮的运算结果，所以这里我们需要一个<strong>prev_input</strong>来记录上上轮的结果。</p>
+
+<blockquote>
+  <p>[!attention] <strong>current_input</strong>在你点下运算符后已经成为上一轮输入，直到你</p>
+</blockquote>
+
+<pre><code class="language-Python">    def input_operator(self, op):                       #输入计算符
+        if self.current_input:
+            if self.operator and not self.new_input:
+                self.calculate()
+
+            self.previous_input = self.current_input
+            self.operator = op
+            self.new_input = True
+</code></pre>
+
+<p>下面给出运算函数
+计算完成后，当前显示的应该是<strong>result</strong>，但是注意这里属于情况二，所以<strong>new_input</strong>要设为True</p>
+
+<pre><code class="language-Python">            prev = float(self.previous_input)
+            curr = float(self.current_input)
+            if self.operator == '+':
+                result = prev + curr
+            elif self.operator == '-':
+                result = prev - curr
+            elif self.operator == '×':
+                result = prev * curr
+            elif self.operator == '÷':
+                if curr == 0:
+                    messagebox.showerror("错误", "除数不能为零！")
+                    self.clear()
+                    return
+                result = prev / curr
+
+            if result == int(result): #处理精度，否则整数后面会跟一个.0
+                result = int(result)
+
+            self.result_var.set(str(result))
+            self.current_input = str(result)
+            self.operator = ""
+            self.previous_input = ""
+            self.new_input = True
+</code></pre>
+
+<h4 id="新增功能-即时运算符">新增功能 即时运算符</h4>
+<p>这个还是很好理解的，<strong>new_input</strong>我故意设置为<strong>False</strong>的，正常应该是<strong>True</strong></p>
+<pre><code class="language-Python">    def sqrt(self):
+        self.current_input = str(f"{math.pi:.7f}")  #保留七位小数
+        self.result_var.set(self.current_input)
+        self.new_input = False
+</code></pre>
+
+<h4 id="计算流显示-calculate-flow">计算流显示 Calculate flow</h4>
+<p>你会发现我上面写的识别符号的代码里有很多带有<strong>flow</strong>的变量，那就是专门用于显示计算全过程的。只需要识别你每一次的输入的合法性，然后加到一个专门的字符串上就行了。
+这里引入<strong>纯运算输入 Raw Input</strong>，按键里我设置为<strong>Pr</strong>，点一下会变红</p>
+
+<pre><code class="language-Python">        if value == 'Pr':
+            self.mode = 'Normal_cal' if self.mode == 'Pure' else 'Pure'
+
+            for widget in self.button_frame.winfo_children():
+                if isinstance(widget, tk.Button) and widget.cget("text") == "Pr":
+                    if self.mode == 'Normal_cal':
+                        widget.config(bg = '#F0F0F0')
+                    else:
+                        widget.config(bg = 'red')
+                        
+            self.clear()
+            return
+
+        if self.mode == 'Pure':
+            if value == '=':
+                result = eval(self.operate_flow)
+                self.current_input = result
+                self.result_var.set(result)
+                self.operate_flow = ''
+                self.flow_var.set(self.operate_flow)
+
+            elif value == '←':
+                self.operate_flow = self.operate_flow[:-1]
+
+            elif value == '×':
+                self.operate_flow += '*'
+                
+            elif value == '÷':
+                self.operate_flow += '/'
+
+            else:
+                self.operate_flow += value
+                self.flow_var.set(self.operate_flow)
+
+            return
+</code></pre>
+
+<p>这一串就是专门用来纯输入的，最终输出的结果会是按照加减乘除的优先级运算的结果，因为使用了<strong>eval</strong>，指的注意的一点是颜色的改变，和上面2048识别GameOver的方法如出一辙。</p>
+
+<h2 id="图片4x4华容道">图片4x4华容道</h2>
+<p>梦回Win7！这个代码量也出奇的少，只有165行，还包括了许多注释
+这个游戏的原理是，在点击一个块后，如果这个块四周有空白块，他就会移动到这个块去。说是移动，实际上可以理解为<strong>和空白块交换</strong>。</p>
+
+<h4 id="鼠标点击事件绑定">鼠标点击事件绑定</h4>
+<pre><code class="language-Python">        self.canvas.bind("&lt;Button-1&gt;", self.on_click)
+</code></pre>
+
+<p>这里的鼠标判定相当麻烦，你只能判定鼠标点击了画布，并获取鼠标的具体位置，也就是说，具体点了哪一块是根据鼠标的位置去判定的！</p>
+
+<pre><code class="language-Python">    def on_click(self, event):  #鼠标事件
+        col = event.x // (self.tile_size + self.margin)
+        row = event.y // (self.tile_size + self.margin)
+
+        #检查点击是否在有效范围内
+        if 0 &lt;= row &lt; self.grid_size and 0 &lt;= col &lt; self.grid_size:
+        
+            #检查点击的方块是否与空白块相邻
+            if self.is_adjacent((row, col), self.empty_pos):
+            
+                #交换方块
+                self.swap_tiles((row, col), self.empty_pos)
+                self.empty_pos = (row, col)
+                self.draw_board()
+
+                #检查是否完成
+                if self.is_solved():
+                    messagebox.showinfo("Congrats", "！！有点强！！")
+</code></pre>
+
+<h4 id="版面存储--获胜判断--打乱">版面存储 / 获胜判断 / 打乱</h4>
+<p>这里我采用了一维数组进行存储</p>
+<pre><code class="language-Python">    def init_game(self): #初始化游戏板
+        self.board = []
+        for i in range(self.grid_size * self.grid_size - 1):
+            self.board.append(i + 1)
+        self.board.append(0)  #0表示空白块
+        self.empty_pos = (self.grid_size-1, self.grid_size-1)
+        self.draw_board()
+</code></pre>
+
+<p>要判断是否获胜很简单，只需要检查索引对不对的上就行了</p>
+
+<pre><code class="language-Python">    def is_solved(self): #检查拼图是否完成
+        for i in range(self.grid_size * self.grid_size - 1):
+            if self.board[i] != i + 1:
+                return False
+                
+        return self.board[-1] == 0  #最后一块应该是空白
+</code></pre>
+
+<p>打乱的思路比较有趣，为了确保有解性，我们可以进行倒推</p>
+
+<pre><code class="language-Python">    def shuffle(self):
+        '''
+        这里有一个很有趣的思路，我们操作的对象实际上是空白格！因为要确保有解，所以只能靠一点点移动来打乱，这时候如果操作和空白格相邻的图片格会显得非常麻烦
+        但是换个思考角度，操作实质上是格子的交换，我们也可以把目光聚焦在空白格上，这样就完美解决了问题
+        '''
+
+        moves = 100
+        directions = [(0, -1), (0, 1), (-1, 0), (1, 0)] # 上下左右四个方向
+        for i in range(moves):
+            dx, dy = random.choice(directions)
+            new_row, new_col = self.empty_pos[0] + dx, self.empty_pos[1] + dy
+            if 0 &lt;= new_row &lt; self.grid_size and 0 &lt;= new_col &lt; self.grid_size:
+                self.swap_tiles(self.empty_pos, (new_row, new_col))
+                self.empty_pos = (new_row, new_col)
+</code></pre>
+
+<h4 id="图片分割">图片分割</h4>
+<p>嗯嗯，这里用到了<strong>Pillow</strong>模块，所以以后有机会再讲讲</p>
+<pre><code class="language-Python">    def load_and_split_image(self):
+        try:
+            image_path = "miku.jpg" #我并没有考虑图片不存在的情况，要是出问题了，自己来这里改一下路径
+            #加载并调整图片大小
+            original_image = Image.open(image_path)
+            image_size = self.grid_size * self.tile_size
+            resized_image = original_image.resize((image_size, image_size), Image.Resampling.LANCZOS)
+
+            #分割图片
+            self.tile_images = []
+            for row in range(self.grid_size):
+                for col in range(self.grid_size):
+                #确认需要裁剪的四个边界
+                    left = col * self.tile_size
+                    upper = row * self.tile_size
+                    right = left + self.tile_size
+                    lower = upper + self.tile_size
+                    
+                    tile_image = resized_image.crop((left, upper, right, lower))
+                    self.tile_images.append(ImageTk.PhotoImage(tile_image))
+
+        except Exception as e:
+            print(f"加载图片失败: {e}")
+            self.create_color_tiles()
+</code></pre>
+
+  </div><a class="u-url" href="/2025/10/10/Tkinter-6-Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

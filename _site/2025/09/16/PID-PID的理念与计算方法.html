@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>STM32 - PID的理念与计算方法 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="STM32 - PID的理念与计算方法" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="#嵌入式 Proportional Integral Differential PID全称Proportional Integral Differential，即用这个三个值，比例，积分，微分来控制每一个值稳定在一个量" />
+<meta property="og:description" content="#嵌入式 Proportional Integral Differential PID全称Proportional Integral Differential，即用这个三个值，比例，积分，微分来控制每一个值稳定在一个量" />
+<link rel="canonical" href="http://localhost:4000/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html" />
+<meta property="og:url" content="http://localhost:4000/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-09-16T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="STM32 - PID的理念与计算方法" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-16T00:00:00+08:00","datePublished":"2025-09-16T00:00:00+08:00","description":"#嵌入式 Proportional Integral Differential PID全称Proportional Integral Differential，即用这个三个值，比例，积分，微分来控制每一个值稳定在一个量","headline":"STM32 - PID的理念与计算方法","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html"},"url":"http://localhost:4000/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">STM32 - PID的理念与计算方法</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-09-16T00:00:00+08:00" itemprop="datePublished">Sep 16, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>#嵌入式</p>
+<h2 id="proportional-integral-differential">Proportional Integral Differential</h2>
+<p><strong>PID</strong>全称<strong>Proportional Integral Differential</strong>，即用这个三个值，<strong>比例，积分，微分</strong>来控制每一个值稳定在一个量</p>
+
+<blockquote>
+  <p>[!attention] 需要明确的是
+你所的是<strong>控制一个量免受外部干扰</strong>！以下这几个就算为干扰</p>
+  <ol>
+    <li>水缸里一开始没有水</li>
+    <li>你挖走了一勺水</li>
+    <li>水持续露出</li>
+  </ol>
+</blockquote>
+
+<p><strong>那么，有些人可能会问，这个PID究竟为什么存在？我都知道目标值了，那我直接把这个值设定为目标值不就好了？</strong>
+这就说明你根本上的错误理解了这个算法的作用！我们要做的是将值<strong>稳定</strong>在一个目标值。</p>
+
+<h4 id="例1---asc第二轮">例1 - ASC第二轮</h4>
+<p>就拿<strong>车轮转速</strong>举例，假设你要CCR在500，那么你一直把CCR设定在500的话，你给他施加阻力，它依然以500的转速在转，显然，此时有
+\(F_{实际}=F_{输出} - F_{阻力}\)
+那么实际输出就不再是我们要求的CCR = 500了！</p>
+
+<p>PID要做的就是增大$F_{输出}$，来<strong>平衡阻力</strong>，是的$F_{实际}$稳定在一个值</p>
+
+<h4 id="例2---水缸控制">例2 - 水缸控制</h4>
+<p>PID还有一个作用是其<strong>效率高</strong>，能够<strong>快速控制一个值</strong>
+假设你有一个水缸，需要到达500的水位，如果你一直0.01的去加水，那么要加50000次才能到目标的地方。PID要做的就是加快这一过程，</p>
+
+<h2 id="参数具体说明和计算">参数具体说明和计算</h2>
+<p><strong>这里我们以小车为例这里我们以小车为例这里我们以小车为例</strong>
+先说明，我们最后输出的应该是一个$F_{实际}$，但我们能控制的是$F_{输出}$。关键在于怎么控制$F_{输出}$抵消$F_{阻力}$。显而易见的，我们可以这样去想象$F_{输出}$
+\(F_{输出} = F_{目标} + F_{阻力补偿}\)
+也就有了
+\(F_{实际} = F_{目标} +F_{阻力补偿}-F_{阻力}=F_{目标}\)
+而这里的$F_{阻力补偿}$就是我们需要去计算的东西
+这里，我们称$F_{实际}$与$F_{目标}$值的偏差为$error(t)或e(t)$，而$t$为当前的时间</p>
+
+<h3 id="比例控制-proportional">比例控制 Proportional</h3>
+<p>比例控制根据当前的偏差值进行调整，偏差越大，控制作用越强。</p>
+<ul>
+  <li>比例控制可以迅速反映偏差，但不能消除静差。</li>
+</ul>
+
+<p>计算公式如下
+\(P_{output}=K_pe(t)\)
+其中$K_p$是我们需要调试的参数</p>
+
+<h5 id="proportional-example-1">Proportional Example #1</h5>
+<p>假设我们现在依然有一个水缸，现在是没有水的，我们需要500的水，假设Kp是0.5，那么就有
+\(P_{output}=0.5\cdot{e(t)}=250\)
+下一个瞬间就有
+\(P_{output}=0.5\cdot{e(t)}=0.5\cdot(500-250)=125\)
+这样以此类推，就能达到500</p>
+
+<h5 id="问题">问题</h5>
+<p><strong>但是你会发现，这样似乎永远无法达到目标值</strong>
+\(一旦有F_{输出}=F_{阻力}，F_{实际}就将=0\)
+<strong>最后一点距离始终无法达到</strong>，我们称之为静差，这时候就需要引入一个累计量</p>
+
+<h3 id="积分控制-integral">积分控制 Integral</h3>
+<p>它不只看当前的误差，而是把<strong>过去所有时间的误差加起来（积分）</strong>。它专门解决P解决不了的“<strong>静差</strong>”问题。</p>
+
+<p>计算公式如下
+\(I_{output}=K_i\int^t_0e(t)dt\)
+他把过去每一个时间点的$e(t)$都加了起来，这样，如果我们长时间有一个静差$e_{static}(t)$，他也会累计，积分控制就会逐步的把输出提起来，直到$e(t)=0$</p>
+
+<ul>
+  <li><strong>缺陷：</strong> <strong>反应迟钝，容易“矫枉过正”</strong>。如果I太强，它会在达到目标后，因为惯性（历史误差太大）继续冲过头，导致水位过高，然后又要反向补偿，造成系统在目标值附近<strong>反复振荡</strong>。</li>
+</ul>
+
+<p>这似乎是无法避免的</p>
+
+<h3 id="微分控制-differential">微分控制 Differential</h3>
+<p>它不看误差有多大，而是看<strong>误差变化的速度（微分）</strong>。它的任务是<strong>刹车</strong>，防止系统冲过头。
+如果比例控制设置太大了，他会出手</p>
+
+<p>计算公式如下
+\(D_{output}=K_d{de(t)\over{dt}}\)
+显然，${de(t)\over{dt}}$是一个速度量</p>
+
+<ul>
+  <li>
+    <p><strong>效果：</strong> <strong>抑制振荡，提高稳定性</strong>。当水位快速上升接近目标时，D能敏锐地察觉到“上升速度太快了，马上就要冲过头了！”，于是它会在P和I还在使劲的时候，提前开始关小水龙头，起到缓冲和制动的作用。</p>
+  </li>
+  <li>
+    <p><strong>缺陷：</strong> <strong>对噪声敏感</strong>。如果水位测量有微小的波动或噪声，D会把这些“抖动”误认为是速度的剧烈变化，从而产生剧烈的控制动作，导致系统不稳定。所以D参数通常不能设得太大。</p>
+  </li>
+</ul>
+
+<h3 id="总结">总结</h3>
+<p>计算如下
+\(F_{output}=P_{output}+I_{output}+D_{output}\)</p>
+
+
+  </div><a class="u-url" href="/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

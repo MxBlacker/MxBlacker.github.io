@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tkinter - Canvas 画布 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Tkinter - Canvas 画布" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Python Tkinter 画布（Canvas）组件和 html5 中的画布一样，都是用来绘图的。您可以将图形，文本，小部件或框架放置在画布上。" />
+<meta property="og:description" content="Python Tkinter 画布（Canvas）组件和 html5 中的画布一样，都是用来绘图的。您可以将图形，文本，小部件或框架放置在画布上。" />
+<link rel="canonical" href="http://localhost:4000/2025/10/10/Tkinter-5-Canvas-%E7%94%BB%E5%B8%83.html" />
+<meta property="og:url" content="http://localhost:4000/2025/10/10/Tkinter-5-Canvas-%E7%94%BB%E5%B8%83.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-10T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tkinter - Canvas 画布" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-10-10T00:00:00+08:00","datePublished":"2025-10-10T00:00:00+08:00","description":"Python Tkinter 画布（Canvas）组件和 html5 中的画布一样，都是用来绘图的。您可以将图形，文本，小部件或框架放置在画布上。","headline":"Tkinter - Canvas 画布","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/10/10/Tkinter-5-Canvas-%E7%94%BB%E5%B8%83.html"},"url":"http://localhost:4000/2025/10/10/Tkinter-5-Canvas-%E7%94%BB%E5%B8%83.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Tkinter - Canvas 画布</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-10-10T00:00:00+08:00" itemprop="datePublished">Oct 10, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Python Tkinter 画布（Canvas）组件和 <strong>html5</strong> 中的画布一样，都是用来绘图的。您可以将图形，文本，小部件或框架放置在画布上。</p>
+
+<h2 id="画布-canvas-的定义">画布 Canvas 的定义</h2>
+
+<pre><code class="language-Python">Canvas_w = tk.Canvas( master , option-value ...)
+</code></pre>
+
+<p><strong>其option有以下选项</strong>：</p>
+<ul>
+  <li>bd : 边框宽度</li>
+  <li>bg : 背景色</li>
+  <li>confine : 默认为True , 画布不可滚动到可滑动区域外</li>
+  <li>cursor : 光标形状 ( arrow , circle , cross , plus )</li>
+  <li>height: 画布高度</li>
+  <li>highlightcolor : 高光色</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>relief : 见[[Tkinter - 1 基本操作、类继承关系与部分组件#标签组件 Label</td>
+          <td>Label的Relief]]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><strong>scrollregion</strong>：一个元组 tuple (w, n, e, s) ，定义了画布可滚动的最大区域，w 为左边，n 为头部，e 为右边，s 为底部</li>
+  <li><strong>width</strong>：画布在 X 坐标轴上的大小</li>
+</ul>
+
+<h2 id="类方法">类方法</h2>
+<pre><code class="language-Python">Canvas_w.create_rectangle( x0 , y0 , x1 , y1 , start = 0 , extent = ... , fill = 'color' )
+Canvas_w.create_arc( x0 , y0 , x1 , y1 , start = 0 , extent = ... , fill = 'color' )
+Canvas_w.create_line(x0 , y0 , x1 , y1 , ... , xn , yn , options = '...')
+Canvas_w.create_oval(x0, y0, x1, y1, options = '...')
+Canvas_w.create_polygon(x0, y0, x1, y1,...xn, yn, options = '...')
+Canvas_w.create_text(x0, y0, text = '...' , font = ('...' , x))
+
+image = tk.PhotoImage(file = 'path')
+Canvas_w.create_image(x0 , y0 , image = image)
+</code></pre>
+
+<p>这里的坐标似乎可以用元组表示</p>
+<ul>
+  <li><strong>create_rectangle</strong>：给定左上角和右下角的点</li>
+  <li><strong>create_arc</strong>：创建扇形。注意，<strong>这里的圆弧是椭圆圆弧，坐标依旧是矩形坐标</strong>，且圆弧是围着椭圆中心从十二点方向开始转的。<strong>角度为弧度制</strong>。（同pygame）</li>
+  <li><strong>create_line</strong>：画线，option可以是color和width…</li>
+  <li><strong>create_oval</strong>：画椭圆，$x_0 , y_0 , x_1 , y_1$ 代表一个矩形，椭圆被框定在其中</li>
+  <li><strong>create_text</strong>：直接画文本</li>
+  <li><strong>create_image</strong>：顾名思义</li>
+</ul>
+
+<h2 id="事件">事件</h2>
+<p>点击画板发生的事情和触发的函数，这里event的实参是”&lt;Button-1&gt;”</p>
+<pre><code class="language-Python"> def on_click(event):
+	 mouse_x = event.x
+	 mouse_y = event.y 
+
+ self.canvas.bind("&lt;Button-1&gt;", on_click)
+</code></pre>
+
+  </div><a class="u-url" href="/2025/10/10/Tkinter-5-Canvas-%E7%94%BB%E5%B8%83.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:sweetwheatbread@gmail.com">sweetwheatbread@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
