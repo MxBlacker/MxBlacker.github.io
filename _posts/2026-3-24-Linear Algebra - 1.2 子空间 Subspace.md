@@ -8,7 +8,7 @@ title: LA - 1.2 笋子空间
 
 ## 子空间的和 sum of subspaces
 和涵数相加类似，我们假设有两个子空间分别为 $\mathcal{U}=\{(x_1,y_1,z_1,\cdots)\}$ 和 $\mathcal{W}=\{(x_2,y_2,z_2,\cdots)\}$，那么
-$$\mathcal{U}+\mathcal{W}=\{{x_1+x_2,y_1+y_2,z_1+z_2,\cdots}\}$$
+$$\mathcal{U}+\mathcal{W}=\{\ {x_1+x_2,y_1+y_2,z_1+z_2,\cdots}\}$$
 一个比较容易理解的推论是，**子空间的和是最小的包含指定子空间的子空间**，我们称其为**最小的包含子空间 smallest containing subspace**。这类似于集合论里的**给定两个某个集的子集，最小的包含这两个子集的子集是这两个子集的和**。这个结论可以记为：
 $$span(\mathcal{V}_1\cup\cdots\cup\mathcal{V}_2)=\mathcal{V}_1+\cdots+\mathcal{V}_m$$
 维度公式为：
