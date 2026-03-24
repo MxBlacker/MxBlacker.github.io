@@ -4,11 +4,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>STM32 - PID的理念与计算方法 | 麦香包の超平坦世界</title>
-<meta name="generator" content="Jekyll v4.4.1" />
+<meta name="generator" content="Jekyll v3.10.0" />
 <meta property="og:title" content="STM32 - PID的理念与计算方法" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="#嵌入式 Proportional Integral Differential PID全称Proportional Integral Differential，即用这个三个值，比例，积分，微分来控制每一个值稳定在一个量" />
-<meta property="og:description" content="#嵌入式 Proportional Integral Differential PID全称Proportional Integral Differential，即用这个三个值，比例，积分，微分来控制每一个值稳定在一个量" />
+<meta name="description" content="Proportional Integral Differential PID全称Proportional Integral Differential，即用这个三个值，比例，积分，微分来控制每一个值稳定在一个量" />
+<meta property="og:description" content="Proportional Integral Differential PID全称Proportional Integral Differential，即用这个三个值，比例，积分，微分来控制每一个值稳定在一个量" />
 <link rel="canonical" href="http://localhost:4000/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html" />
 <meta property="og:url" content="http://localhost:4000/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html" />
 <meta property="og:site_name" content="麦香包の超平坦世界" />
@@ -17,9 +17,22 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="STM32 - PID的理念与计算方法" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-16T00:00:00+08:00","datePublished":"2025-09-16T00:00:00+08:00","description":"#嵌入式 Proportional Integral Differential PID全称Proportional Integral Differential，即用这个三个值，比例，积分，微分来控制每一个值稳定在一个量","headline":"STM32 - PID的理念与计算方法","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html"},"url":"http://localhost:4000/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-16T00:00:00+08:00","datePublished":"2025-09-16T00:00:00+08:00","description":"Proportional Integral Differential PID全称Proportional Integral Differential，即用这个三个值，比例，积分，微分来控制每一个值稳定在一个量","headline":"STM32 - PID的理念与计算方法","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html"},"url":"http://localhost:4000/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
 <body><header class="site-header" role="banner">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
@@ -47,8 +60,7 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>#嵌入式</p>
-<h2 id="proportional-integral-differential">Proportional Integral Differential</h2>
+    <h2 id="proportional-integral-differential">Proportional Integral Differential</h2>
 <p><strong>PID</strong>全称<strong>Proportional Integral Differential</strong>，即用这个三个值，<strong>比例，积分，微分</strong>来控制每一个值稳定在一个量</p>
 
 <blockquote>
@@ -62,7 +74,7 @@
 </blockquote>
 
 <p><strong>那么，有些人可能会问，这个PID究竟为什么存在？我都知道目标值了，那我直接把这个值设定为目标值不就好了？</strong>
-这就说明你根本上的错误理解了这个算法的作用！我们要做的是将值<strong>稳定</strong>在一个目标值。</p>
+这就说明你根本上的错误理解了这个算法的作用！我们要做的是将值<strong>稳定</strong>在一个目标值。<strong>也就是抵消阻力</strong>。</p>
 
 <h4 id="例1---asc第二轮">例1 - ASC第二轮</h4>
 <p>就拿<strong>车轮转速</strong>举例，假设你要CCR在500，那么你一直把CCR设定在500的话，你给他施加阻力，它依然以500的转速在转，显然，此时有
@@ -138,7 +150,8 @@
 
 <h3 id="总结">总结</h3>
 <p>计算如下
-\(F_{output}=P_{output}+I_{output}+D_{output}\)</p>
+\(F_{output}=P_{output}+I_{output}+D_{output}\)
+调参时，你首先需要调 $P$，它是将值控制在目标的主力。之后调整 $D$，它的作用是做一个阻尼，使得值不会在目标周围来回跳动，波动逐渐变小。最后调整 $I$，消除最后一点误差。</p>
 
 
   </div><a class="u-url" href="/2025/09/16/PID-PID%E7%9A%84%E7%90%86%E5%BF%B5%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95.html" hidden></a>

@@ -1,1174 +1,737 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-11-21T12:14:06+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">麦香包の超平坦世界</title><subtitle></subtitle><entry><title type="html">幸会！</title><link href="http://localhost:4000/jekyll/update/2025/11/20/WELCOME.html" rel="alternate" type="text/html" title="幸会！" /><published>2025-11-20T21:28:14+08:00</published><updated>2025-11-20T21:28:14+08:00</updated><id>http://localhost:4000/jekyll/update/2025/11/20/WELCOME</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/11/20/WELCOME.html"><![CDATA[<h1 id="欢迎来到麦香包的超平坦世界">欢迎来到麦香包的超平坦世界！</h1>
-<p>这是使用Jekyll搭建的静态网站，专门上传麦香包的笔记。</p>
-<ul>
-  <li>用Jekyll很大一部分原因是因为懒，赫赫。</li>
-  <li>然后就是Jekyll能够直接识别markdown文件，这就很好，所以它能很好的构建一个静态网站，显然我传笔记是不需要动态网站的。</li>
-</ul>
-
-<p><strong>对于进一步的图片和文档链接处理，我近期可能不会去完善，因为事情比较多。</strong></p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[欢迎来到麦香包的超平坦世界！ 这是使用Jekyll搭建的静态网站，专门上传麦香包的笔记。 用Jekyll很大一部分原因是因为懒，赫赫。 然后就是Jekyll能够直接识别markdown文件，这就很好，所以它能很好的构建一个静态网站，显然我传笔记是不需要动态网站的。]]></summary></entry><entry><title type="html">Tkinter - GUI设计概述</title><link href="http://localhost:4000/2025/10/10/Tkinter-0-GUI%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0.html" rel="alternate" type="text/html" title="Tkinter - GUI设计概述" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%200%20GUI%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-0-GUI%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0.html"><![CDATA[<p>#tkinter
-<strong>GUI</strong> 全程 Graphic User Interface
-<strong>Tkinter</strong>作为Python请儿子，是内置的GUI开发模块，也是最简单，最方便的开发模块，可以快速上手</p>
-
-<p>想要更加高级的，可以用PySide或者PyQt</p>
-
-<p>[[Tkinter - 1 基本操作、类继承关系与部分组件]]</p>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[#tkinter GUI 全程 Graphic User Interface Tkinter作为Python请儿子，是内置的GUI开发模块，也是最简单，最方便的开发模块，可以快速上手]]></summary></entry><entry><title type="html">Tkinter - Python作业实战</title><link href="http://localhost:4000/2025/10/10/Tkinter-6-Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98.html" rel="alternate" type="text/html" title="Tkinter - Python作业实战" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%206%20Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-6-Python%E4%BD%9C%E4%B8%9A%E5%AE%9E%E6%88%98.html"><![CDATA[<h2 id="2048游戏">2048游戏</h2>
-<p>这里先说一下2048的逻辑处理</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-03-24T22:27:02+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">麦香包の超平坦世界</title><subtitle></subtitle><entry><title type="html">LA - 3.3 不如两个一起吃</title><link href="http://localhost:4000/2026/01/15/Linear-Algebra-3.3-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8A%A0%E6%B3%95-%E6%95%B0%E4%B9%98%E5%92%8C%E4%B9%98%E6%B3%95.html" rel="alternate" type="text/html" title="LA - 3.3 不如两个一起吃" /><published>2026-01-15T00:00:00+08:00</published><updated>2026-01-15T00:00:00+08:00</updated><id>http://localhost:4000/2026/01/15/Linear%20Algebra%20-%203.3%20%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8A%A0%E6%B3%95%E3%80%81%E6%95%B0%E4%B9%98%E5%92%8C%E4%B9%98%E6%B3%95</id><content type="html" xml:base="http://localhost:4000/2026/01/15/Linear-Algebra-3.3-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8A%A0%E6%B3%95-%E6%95%B0%E4%B9%98%E5%92%8C%E4%B9%98%E6%B3%95.html"><![CDATA[<h2 id="矩阵的加法和数乘">矩阵的加法和数乘</h2>
+<p>我们也说了 $T$ 所属的也是一个向量空间，他也满足加法和数乘。这里我们可以讨论一下这两个操作的几何意义。</p>
 
 <blockquote>
-  <p>对于每一个格子，往<strong>dir</strong>方向移动时，如果该方向没有格子，<strong>则一直前进</strong>，<strong>直到遇见格子或者碰壁</strong>
-若情况为前者，这额外判断是否与当前格子相等，相等则合并
-注意，<strong>这里不需要管合并过后的格子是否需要继续前进</strong>，因为结果是必然的，一旦合并，其格子<strong>必将在之后的循环</strong>中被检测到，并继续移动</p>
+  <p>一个矩阵可以表示的变换有以下几种：</p>
+  <ul>
+    <li><strong>旋转 rotation</strong> \(R(\theta) = \begin{pmatrix}
+\cos\theta &amp; -\sin\theta \\
+\sin\theta &amp; \ \ \cos\theta
+\end{pmatrix}\)</li>
+    <li><strong>拉伸 stretch</strong>\(S = \begin{pmatrix}
+s_x &amp; 0 \\
+0 &amp; s_y
+\end{pmatrix}\)</li>
+    <li><strong>剪切 shear</strong> \(H_x(k) = \begin{pmatrix}
+1 &amp; k \\
+0 &amp; 1
+\end{pmatrix}\)</li>
+  </ul>
 </blockquote>
 
-<p>我们的格子实质上使用<strong>设定好长宽和背景颜色的Label</strong>做成的，wasd用的<strong>keyboard</strong>模块进行判定
-最后，<strong>grid_value</strong>和<strong>cells</strong>分开来记录，前者是<strong>对游戏的实际模拟</strong>，后者是<strong>记录格子的位置</strong>，用于显示<strong>grid_value</strong></p>
-
-<h4 id="2048游戏格的绘制">2048游戏格的绘制</h4>
-<p>我们直接用一个列表去存<strong>每一个格子组件</strong>，毕竟列表啥都能存
-排列我们用<strong>grid</strong>，但请注意，这里的父级是<strong>grid_frame</strong>，我们专门创建了一块frame给到游戏格</p>
-<pre><code class="language-Python">        self.cells = []                         #格子，这里直接用Label
-        for i in range(4):
-            row = []
-            for j in range(4):
-                cell = tk.Label(
-                    self.grid_frame,
-                    text="",
-                    font=("Arial", 20, "bold"),
-                    width=4,
-                    height=2,
-                    relief="raised",
-                    borderwidth=3
-                )
-                cell.grid(row=i, column=j, padx=5, pady=5)
-                row.append(cell)
-            self.cells.append(row)
-</code></pre>
-
-<h4 id="移动判定--结束判定">移动判定 / 结束判定</h4>
-<p>其实这一块不关Tkinter什么事，但我还是放上来参考一下</p>
-
-<p>```Python    
-def move(self, direction):
-        moved = False                   #用于判断这次移动是否成功，到时候传到其他地方用于判断
-        if direction == “up”:
-            for j in range(4):
-                for i in range(1, 4):
-                    if self.grid[i][j] != 0:    #按顺序判断每一个格子
-                        row = i
-                        while row &gt; 0 and self.grid[row-1][j] == 0:         #空格子移动
-                            self.grid[row-1][j] = self.grid[row][j]
-                            self.grid[row][j] = 0
-                            row -= 1
-                            moved = True
-                        if row &gt; 0 and self.grid[row-1][j] == self.grid[row][j]:        #合并的情况
-                            self.grid[row-1][j] *= 2
-                            self.score += self.grid[row-1][j]
-                            self.grid[row][j] = 0
-                            moved = True
-           ……</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-其他三个方向的情况略了。
-- 可以看到循环的时候忽略了i = 0的情况，这是因为这些格子本身就在最上面，没有移动的必要
-- 移动完之后，将移动标记设为**True**，好**置一个标志位**，用于**提示更新界面**
-- 最后再来判断可不可以移动
-
-```Python
-    def is_game_over(self):
-        #这一部分是游戏结束的判断：分两块 -&gt; 一是无空格子，二是无可合并相邻数字
-        for i in range(4):
-            for j in range(4):
-                if self.grid[i][j] == 0:
-                    return False
-
-        for i in range(4):
-            for j in range(4):
-                if j &lt; 3 and self.grid[i][j] == self.grid[i][j+1]:
-                    return False
-                if i &lt; 3 and self.grid[i][j] == self.grid[i+1][j]:
-                    return False
-
-        return True
-</code></pre></div></div>
-
-<h4 id="重新开始">重新开始</h4>
-<p>重新开始的初始化是比较好理解的，重点要学习的是下面<strong>Game Over</strong>框的去除</p>
-
-<pre><code class="language-Python">    def restart_game(self):
-        self.grid = [[0 for _ in range(4)] for _ in range(4)]
-        self.score = 0
-        self.add_new_tile()
-        self.update_grid()
-
-        for widget in self.window.winfo_children():
-            if isinstance(widget, tk.Label) and widget.cget("text") == "Game Over!":
-                widget.destroy()
-</code></pre>
-
+<p>我们首先假设变换前的 $V$ 的基为我们熟知的 $x$ 和 $y$ 轴。理解了矩阵列向量的意思后，我们就可以解读每一种操作了：</p>
 <ul>
-  <li><strong>winfo_children</strong>：这个方法可以知道当前父窗口下的子组件有哪些，输出一个列表</li>
-  <li><strong>cget</strong>：<strong>获取这个组件的信息</strong>，这里我们获取了”text”，用于判断是否是GameOver</li>
-  <li><strong>destroy</strong>：同样的，组件也可以用于destroy</li>
+  <li><strong>旋转</strong>所做的是将 $x$ 轴的 $(1,0)$ 移到 $(\cos{\theta},\sin{\theta})$ 处，$y$ 轴的 $(0,1)$ 相位差为 $\frac{2}{\pi}$ 的地方</li>
+  <li><strong>剪切</strong>实际上是保持 $x$ 不变，将 $y$ 轴的 $(0,1)$ 拉到 $(1,k)$ 的位置，原来直角坐标系变成了<strong>斜角坐标系</strong>了。</li>
 </ul>
 
-<h2 id="计算器-calculator">计算器 Calculator</h2>
-<p>这一个的主要问题在于我自己给我自己设计的挑战——像windows计算器一样显示流程</p>
-<h4 id="基本功能实现">基本功能实现</h4>
-<p>这里的显示框我们用一个<strong>输入框 Entry</strong>来代替，<strong>result_var</strong>就是它绑定的变量。</p>
-<ul>
-  <li><strong>cur_input</strong>代表这一轮数字输入的值</li>
-  <li><strong>previous_input</strong>的作用在于计算，等下我们深入解析一下Calculate函数就知道什么用了</li>
-  <li><strong>Operator</strong>用于记录运算符</li>
-</ul>
-
-<pre><code class="language-Python">        self.current_input = ""
-        self.result_var = tk.StringVar()
-        self.result_var.set("0")
-        self.operator = ""
-        self.previous_input = ""
-        self.new_input = True
-</code></pre>
-
-<p>输入数字有四种情况：</p>
-<ul>
-  <li>当前不在一个运算中，输入的数字的算式的开头 (此时cur_input = ‘0’)</li>
-  <li>点完运算符，已经显示一个结果了，接着输入新的数字 (此时cur_input = ‘上一轮计算结果’)</li>
-  <li>还在当前轮的数字输入</li>
-</ul>
-
-<p>首先，我们要判断使用者点了哪个按钮，<strong>按钮排版我们不再赘述</strong></p>
-<pre><code class="language-Python">	if value.isdigit() or value == '.':
-            self.input_number(value)
-            self.flow_var.set(self.operate_flow + self.current_input)
-
-        elif value in ['+', '-', '×', '÷']:
-            self.operate_flow += self.current_input
-            self.operate_flow += value
-            self.input_operator(value)
-            self.flow_var.set(self.operate_flow)
-
-        elif value in ['√','x²']:
-            self.instant_operator(value)
-
-        elif value == '=':
-            self.calculate()
-            self.operate_flow = ''
-            self.flow_var.set(self.current_input)
-            return
-
-        elif value == 'C':
-            self.clear()
-
-        elif value == '←':
-            self.backspace()
-            self.flow_var.set(self.operate_flow + self.current_input)
-
-        elif value == '±':
-            self.negate()
-
-        elif value == 'e':
-            self.e()
-            self.flow_var.set(self.operate_flow + self.current_input)
-
-        elif value == 'π':
-            self.pi()
-            self.flow_var.set(self.operate_flow + self.current_input)
-</code></pre>
-
-<p>第一个if判断是否是数字，是的话就会去判断现在是什么状况
-这里的<strong>new_input</strong>为布尔变量，用于判断这时候该不该清除current_input里的数字</p>
-
-<p>显然，在输入了一个数字后，无论前面是什么情况，之后都应该是<strong>情况三</strong>，所以<strong>new_input</strong>理所当然为False，直到触发前两个情况的条件</p>
-
-<pre><code class="language-Python">    def input_number(self, num):
-        if self.new_input:
-            self.current_input = num
-            self.new_input = False
-
-        else:
-            # 防止输入多个小数点
-            if num == '.' and '.' in self.current_input:
-                return
-
-            self.current_input += num
-        self.result_var.set(self.current_input)
-</code></pre>
-
-<p>运算符成立的条件是<strong>cur_input</strong>里有实际合法的值，者可以用<strong>new_input == False</strong>来判断
-我们注意到，计算器在你输入下一个运算符之前，都会显示你当前轮的输入。按下后才会显示上一轮和上上轮的运算结果，所以这里我们需要一个<strong>prev_input</strong>来记录上上轮的结果。</p>
+<p>加法操作实际上相当于将两种变换做叠加，但是要注意的是这个<strong>相乘</strong>不一样，之后我们会进一步解释。而数乘相当于拉伸，这个我们进一步解析一下：</p>
 
 <blockquote>
-  <p>[!attention] <strong>current_input</strong>在你点下运算符后已经成为上一轮输入，直到你</p>
+  <p>[!tip] 
+在我们之后了解到矩阵的<strong>零元</strong>为 $E$ 或 $I$ 之后，我们可以将 $\lambda A$ 写为：
+\(\lambda A=\lambda I A\)
+也就是先做 $\lambda$ 倍的拉伸变换，再进行 $A$ 变换。</p>
 </blockquote>
 
-<pre><code class="language-Python">    def input_operator(self, op):                       #输入计算符
-        if self.current_input:
-            if self.operator and not self.new_input:
-                self.calculate()
-
-            self.previous_input = self.current_input
-            self.operator = op
-            self.new_input = True
-</code></pre>
-
-<p>下面给出运算函数
-计算完成后，当前显示的应该是<strong>result</strong>，但是注意这里属于情况二，所以<strong>new_input</strong>要设为True</p>
-
-<pre><code class="language-Python">            prev = float(self.previous_input)
-            curr = float(self.current_input)
-            if self.operator == '+':
-                result = prev + curr
-            elif self.operator == '-':
-                result = prev - curr
-            elif self.operator == '×':
-                result = prev * curr
-            elif self.operator == '÷':
-                if curr == 0:
-                    messagebox.showerror("错误", "除数不能为零！")
-                    self.clear()
-                    return
-                result = prev / curr
-
-            if result == int(result): #处理精度，否则整数后面会跟一个.0
-                result = int(result)
-
-            self.result_var.set(str(result))
-            self.current_input = str(result)
-            self.operator = ""
-            self.previous_input = ""
-            self.new_input = True
-</code></pre>
-
-<h4 id="新增功能-即时运算符">新增功能 即时运算符</h4>
-<p>这个还是很好理解的，<strong>new_input</strong>我故意设置为<strong>False</strong>的，正常应该是<strong>True</strong></p>
-<pre><code class="language-Python">    def sqrt(self):
-        self.current_input = str(f"{math.pi:.7f}")  #保留七位小数
-        self.result_var.set(self.current_input)
-        self.new_input = False
-</code></pre>
-
-<h4 id="计算流显示-calculate-flow">计算流显示 Calculate flow</h4>
-<p>你会发现我上面写的识别符号的代码里有很多带有<strong>flow</strong>的变量，那就是专门用于显示计算全过程的。只需要识别你每一次的输入的合法性，然后加到一个专门的字符串上就行了。
-这里引入<strong>纯运算输入 Raw Input</strong>，按键里我设置为<strong>Pr</strong>，点一下会变红</p>
-
-<pre><code class="language-Python">        if value == 'Pr':
-            self.mode = 'Normal_cal' if self.mode == 'Pure' else 'Pure'
-
-            for widget in self.button_frame.winfo_children():
-                if isinstance(widget, tk.Button) and widget.cget("text") == "Pr":
-                    if self.mode == 'Normal_cal':
-                        widget.config(bg = '#F0F0F0')
-                    else:
-                        widget.config(bg = 'red')
-                        
-            self.clear()
-            return
-
-        if self.mode == 'Pure':
-            if value == '=':
-                result = eval(self.operate_flow)
-                self.current_input = result
-                self.result_var.set(result)
-                self.operate_flow = ''
-                self.flow_var.set(self.operate_flow)
-
-            elif value == '←':
-                self.operate_flow = self.operate_flow[:-1]
-
-            elif value == '×':
-                self.operate_flow += '*'
-                
-            elif value == '÷':
-                self.operate_flow += '/'
-
-            else:
-                self.operate_flow += value
-                self.flow_var.set(self.operate_flow)
-
-            return
-</code></pre>
-
-<p>这一串就是专门用来纯输入的，最终输出的结果会是按照加减乘除的优先级运算的结果，因为使用了<strong>eval</strong>，指的注意的一点是颜色的改变，和上面2048识别GameOver的方法如出一辙。</p>
-
-<h2 id="图片4x4华容道">图片4x4华容道</h2>
-<p>梦回Win7！这个代码量也出奇的少，只有165行，还包括了许多注释
-这个游戏的原理是，在点击一个块后，如果这个块四周有空白块，他就会移动到这个块去。说是移动，实际上可以理解为<strong>和空白块交换</strong>。</p>
-
-<h4 id="鼠标点击事件绑定">鼠标点击事件绑定</h4>
-<pre><code class="language-Python">        self.canvas.bind("&lt;Button-1&gt;", self.on_click)
-</code></pre>
-
-<p>这里的鼠标判定相当麻烦，你只能判定鼠标点击了画布，并获取鼠标的具体位置，也就是说，具体点了哪一块是根据鼠标的位置去判定的！</p>
-
-<pre><code class="language-Python">    def on_click(self, event):  #鼠标事件
-        col = event.x // (self.tile_size + self.margin)
-        row = event.y // (self.tile_size + self.margin)
-
-        #检查点击是否在有效范围内
-        if 0 &lt;= row &lt; self.grid_size and 0 &lt;= col &lt; self.grid_size:
-        
-            #检查点击的方块是否与空白块相邻
-            if self.is_adjacent((row, col), self.empty_pos):
-            
-                #交换方块
-                self.swap_tiles((row, col), self.empty_pos)
-                self.empty_pos = (row, col)
-                self.draw_board()
-
-                #检查是否完成
-                if self.is_solved():
-                    messagebox.showinfo("Congrats", "！！有点强！！")
-</code></pre>
-
-<h4 id="版面存储--获胜判断--打乱">版面存储 / 获胜判断 / 打乱</h4>
-<p>这里我采用了一维数组进行存储</p>
-<pre><code class="language-Python">    def init_game(self): #初始化游戏板
-        self.board = []
-        for i in range(self.grid_size * self.grid_size - 1):
-            self.board.append(i + 1)
-        self.board.append(0)  #0表示空白块
-        self.empty_pos = (self.grid_size-1, self.grid_size-1)
-        self.draw_board()
-</code></pre>
-
-<p>要判断是否获胜很简单，只需要检查索引对不对的上就行了</p>
-
-<pre><code class="language-Python">    def is_solved(self): #检查拼图是否完成
-        for i in range(self.grid_size * self.grid_size - 1):
-            if self.board[i] != i + 1:
-                return False
-                
-        return self.board[-1] == 0  #最后一块应该是空白
-</code></pre>
-
-<p>打乱的思路比较有趣，为了确保有解性，我们可以进行倒推</p>
-
-<pre><code class="language-Python">    def shuffle(self):
-        '''
-        这里有一个很有趣的思路，我们操作的对象实际上是空白格！因为要确保有解，所以只能靠一点点移动来打乱，这时候如果操作和空白格相邻的图片格会显得非常麻烦
-        但是换个思考角度，操作实质上是格子的交换，我们也可以把目光聚焦在空白格上，这样就完美解决了问题
-        '''
-
-        moves = 100
-        directions = [(0, -1), (0, 1), (-1, 0), (1, 0)] # 上下左右四个方向
-        for i in range(moves):
-            dx, dy = random.choice(directions)
-            new_row, new_col = self.empty_pos[0] + dx, self.empty_pos[1] + dy
-            if 0 &lt;= new_row &lt; self.grid_size and 0 &lt;= new_col &lt; self.grid_size:
-                self.swap_tiles(self.empty_pos, (new_row, new_col))
-                self.empty_pos = (new_row, new_col)
-</code></pre>
-
-<h4 id="图片分割">图片分割</h4>
-<p>嗯嗯，这里用到了<strong>Pillow</strong>模块，所以以后有机会再讲讲</p>
-<pre><code class="language-Python">    def load_and_split_image(self):
-        try:
-            image_path = "miku.jpg" #我并没有考虑图片不存在的情况，要是出问题了，自己来这里改一下路径
-            #加载并调整图片大小
-            original_image = Image.open(image_path)
-            image_size = self.grid_size * self.tile_size
-            resized_image = original_image.resize((image_size, image_size), Image.Resampling.LANCZOS)
-
-            #分割图片
-            self.tile_images = []
-            for row in range(self.grid_size):
-                for col in range(self.grid_size):
-                #确认需要裁剪的四个边界
-                    left = col * self.tile_size
-                    upper = row * self.tile_size
-                    right = left + self.tile_size
-                    lower = upper + self.tile_size
-                    
-                    tile_image = resized_image.crop((left, upper, right, lower))
-                    self.tile_images.append(ImageTk.PhotoImage(tile_image))
-
-        except Exception as e:
-            print(f"加载图片失败: {e}")
-            self.create_color_tiles()
-</code></pre>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[2048游戏 这里先说一下2048的逻辑处理]]></summary></entry><entry><title type="html">Tkinter - Canvas 画布</title><link href="http://localhost:4000/2025/10/10/Tkinter-5-Canvas-%E7%94%BB%E5%B8%83.html" rel="alternate" type="text/html" title="Tkinter - Canvas 画布" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%205%20Canvas%20%E7%94%BB%E5%B8%83</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-5-Canvas-%E7%94%BB%E5%B8%83.html"><![CDATA[<p>Python Tkinter 画布（Canvas）组件和 <strong>html5</strong> 中的画布一样，都是用来绘图的。您可以将图形，文本，小部件或框架放置在画布上。</p>
-
-<h2 id="画布-canvas-的定义">画布 Canvas 的定义</h2>
-
-<pre><code class="language-Python">Canvas_w = tk.Canvas( master , option-value ...)
-</code></pre>
-
-<p><strong>其option有以下选项</strong>：</p>
-<ul>
-  <li>bd : 边框宽度</li>
-  <li>bg : 背景色</li>
-  <li>confine : 默认为True , 画布不可滚动到可滑动区域外</li>
-  <li>cursor : 光标形状 ( arrow , circle , cross , plus )</li>
-  <li>height: 画布高度</li>
-  <li>highlightcolor : 高光色</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>relief : 见[[Tkinter - 1 基本操作、类继承关系与部分组件#标签组件 Label</td>
-          <td>Label的Relief]]</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li><strong>scrollregion</strong>：一个元组 tuple (w, n, e, s) ，定义了画布可滚动的最大区域，w 为左边，n 为头部，e 为右边，s 为底部</li>
-  <li><strong>width</strong>：画布在 X 坐标轴上的大小</li>
-</ul>
-
-<h2 id="类方法">类方法</h2>
-<pre><code class="language-Python">Canvas_w.create_rectangle( x0 , y0 , x1 , y1 , start = 0 , extent = ... , fill = 'color' )
-Canvas_w.create_arc( x0 , y0 , x1 , y1 , start = 0 , extent = ... , fill = 'color' )
-Canvas_w.create_line(x0 , y0 , x1 , y1 , ... , xn , yn , options = '...')
-Canvas_w.create_oval(x0, y0, x1, y1, options = '...')
-Canvas_w.create_polygon(x0, y0, x1, y1,...xn, yn, options = '...')
-Canvas_w.create_text(x0, y0, text = '...' , font = ('...' , x))
-
-image = tk.PhotoImage(file = 'path')
-Canvas_w.create_image(x0 , y0 , image = image)
-</code></pre>
-
-<p>这里的坐标似乎可以用元组表示</p>
-<ul>
-  <li><strong>create_rectangle</strong>：给定左上角和右下角的点</li>
-  <li><strong>create_arc</strong>：创建扇形。注意，<strong>这里的圆弧是椭圆圆弧，坐标依旧是矩形坐标</strong>，且圆弧是围着椭圆中心从十二点方向开始转的。<strong>角度为弧度制</strong>。（同pygame）</li>
-  <li><strong>create_line</strong>：画线，option可以是color和width…</li>
-  <li><strong>create_oval</strong>：画椭圆，$x_0 , y_0 , x_1 , y_1$ 代表一个矩形，椭圆被框定在其中</li>
-  <li><strong>create_text</strong>：直接画文本</li>
-  <li><strong>create_image</strong>：顾名思义</li>
-</ul>
-
-<h2 id="事件">事件</h2>
-<p>点击画板发生的事情和触发的函数，这里event的实参是”&lt;Button-1&gt;”</p>
-<pre><code class="language-Python"> def on_click(event):
-	 mouse_x = event.x
-	 mouse_y = event.y 
-
- self.canvas.bind("&lt;Button-1&gt;", on_click)
-</code></pre>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[Python Tkinter 画布（Canvas）组件和 html5 中的画布一样，都是用来绘图的。您可以将图形，文本，小部件或框架放置在画布上。]]></summary></entry><entry><title type="html">Tkinter - 更多组件，更多操作和更多窗口</title><link href="http://localhost:4000/2025/10/10/Tkinter-4-%E6%9B%B4%E5%A4%9A%E7%BB%84%E4%BB%B6-%E6%9B%B4%E5%A4%9A%E6%93%8D%E4%BD%9C%E5%92%8C%E6%9B%B4%E5%A4%9A%E7%AA%97%E5%8F%A3.html" rel="alternate" type="text/html" title="Tkinter - 更多组件，更多操作和更多窗口" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%204%20%E6%9B%B4%E5%A4%9A%E7%BB%84%E4%BB%B6%EF%BC%8C%E6%9B%B4%E5%A4%9A%E6%93%8D%E4%BD%9C%E5%92%8C%E6%9B%B4%E5%A4%9A%E7%AA%97%E5%8F%A3</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-4-%E6%9B%B4%E5%A4%9A%E7%BB%84%E4%BB%B6-%E6%9B%B4%E5%A4%9A%E6%93%8D%E4%BD%9C%E5%92%8C%E6%9B%B4%E5%A4%9A%E7%AA%97%E5%8F%A3.html"><![CDATA[<h2 id="tk窗口进阶配置">Tk窗口进阶配置</h2>
-<h4 id="configure--config">configure / config</h4>
-<p>设置方法如下，有多种不同参数</p>
-<pre><code class="language-Python">root.configure(bg='color' , ...)
-</code></pre>
-
-<p><strong>这允许你动态的修改已经设定好的值</strong></p>
-
-<h4 id="attributes">attributes</h4>
-<p>设置方法如下，有多种不同参数</p>
-<pre><code class="language-Python">root.attributes('-alpha',value)
-</code></pre>
-
-<ul>
-  <li><strong>-alpha</strong> 不透明度</li>
-  <li><strong>-topmost</strong> 是否指定 (True / False )</li>
-  <li><strong>-transparentcolor</strong> 后面跟#RGB的十六进制码，由于tkinter读颜色只支持6为，透明度的码不读，所以专门搞了一个属性来指定一个颜色，设定为透明色</li>
-</ul>
-
-<h4 id="protocol">protocol</h4>
-<p>顾名思义，协议指的是你对窗口进行一些特定操作时发送的协议，这里举一个点击<strong>x</strong>的例子</p>
-
-<pre><code class="language-Python">root.protocol('WM_DELETE_WINDOW',function_name)
-</code></pre>
-
-<p>这个函数默认为<code class="language-plaintext highlighter-rouge">root.destroy</code>，即销毁程序，当然你也可以弹出一个确认窗口</p>
-
-<h6 id="例1-确认关闭窗口">例1 确认关闭窗口</h6>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_destroy</span><span class="p">():</span>
-	<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebox</span><span class="p">.</span><span class="nf">askokcancel</span><span class="p">(</span><span class="sh">'</span><span class="s">是否关闭</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">确认关闭吗</span><span class="sh">'</span><span class="p">)</span>
-	<span class="k">if</span> <span class="n">d1</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
-		<span class="n">root</span><span class="p">.</span><span class="nf">destroy</span><span class="p">()</span>
-	<span class="k">else</span><span class="p">:</span>
-		<span class="k">pass</span>
-<span class="n">root</span><span class="p">.</span><span class="nf">protocol</span><span class="p">(</span><span class="sh">'</span><span class="s">WM_DELETE_WINDOW</span><span class="sh">'</span><span class="p">,</span><span class="n">check_destroy</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="顶层窗口-toplevel">顶层窗口 Toplevel</h2>
-<p>官方叫法叫顶层窗口，实际上就是<strong>嵌套菜单</strong>，即在根窗口打开的子级窗口</p>
-<ul>
-  <li>它的用法和属性和<strong>Tk</strong>一样，只不过名字换成了<strong>Toplevel</strong></li>
-  <li>要在<strong>Toplevel</strong>里添加组件，只需要将组件里的<strong>第一个值</strong>改成<strong>Toplevel</strong>的名字就行了</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">root_window</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Tk</span><span class="p">()</span>
-<span class="k">def</span> <span class="nf">sign_up</span><span class="p">():</span>
-	<span class="n">sub_window</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Toplevel</span><span class="p">()</span>
-	<span class="n">sub_window</span><span class="p">.</span><span class="nf">resizeable</span><span class="p">(</span><span class="bp">True</span><span class="p">,</span><span class="bp">True</span><span class="p">)</span>
-	
-	<span class="n">Sub_window_label_1</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Label</span><span class="p">(</span><span class="n">sub_window</span> <span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="sh">'</span><span class="s">...</span><span class="sh">'</span><span class="p">)</span>
-	<span class="bp">...</span>
-	
-<span class="n">button_sign_up</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Button</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="sh">'</span><span class="s">注册</span><span class="sh">'</span> <span class="p">,</span> <span class="n">command</span> <span class="o">=</span> <span class="n">sign_up</span><span class="p">).</span><span class="nf">place</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-</code></pre></div></div>
+<h4 id="矩阵的加法">矩阵的加法</h4>
+<p>行列式的加法要求除某一行外其他行都相等。但矩阵的加法非常直观，就是对应位相加。这里不做赘述
+\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} + \begin{bmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{bmatrix} = \begin{bmatrix} 6 &amp; 8 \\ 10 &amp; 12 \end{bmatrix}\)</p>
+<h4 id="矩阵的数乘">矩阵的数乘</h4>
+<p>行列式的数乘会在某一行统一乘一个数。<strong>而矩阵的数乘是为所有数字都乘</strong>，这就是为什么 $|kA|=k^n|A|$
+\(3 \times \begin{bmatrix} 2 &amp; -1 \\ 0 &amp; 5 \end{bmatrix} = \begin{bmatrix} 6 &amp; -3 \\ 0 &amp; 15 \end{bmatrix}\)</p>
+<h2 id="矩阵的乘法-matrix-multiplication">矩阵的乘法 Matrix Multiplication</h2>
+<p>我们先来定义一个符号</p>
 
 <blockquote>
-  <p>[!attention] 在弹出顶层窗口之后，焦点一般不在这个窗口上，这时候需要使用</p>
-  <pre><code class="language-Python">sub_window.focus_set()
-</code></pre>
-  <p>来设置焦点（按自然语言来说，这是倒装语句）</p>
+  <p>[!definition] $F^{m,n}$
+$F^{m,n}$ 表示所有元素属于 $F$ 的 $m\times n$ 的矩阵，则有
+\(dim\ F^{m,n}=mn\)
+要验证这个结论，我们直接规定它的标准基，其中每一个基是 $m\times n$ 个位置中只有一个位置是 $1$ ，其余都是 $0$ 的矩阵，显然这有 $mn$ 个。</p>
 </blockquote>
 
-<h2 id="单选框-radiobutton">单选框 radiobutton</h2>
-<p><strong>单选框</strong>是圆形的，也需要一个变量来读取</p>
-
-<pre><code class="language-Python">s2 = tk.StringVar()
-tk.Radiobutton(window , text = '1' , variable = s2 , value = 'value_1')
-tk.Radiobutton(window , text = '2' , variable = s2 , value = 'value_2')
-
-s2.set('value_1')
-</code></pre>
-
-<p>上面一段程序就是默认选取value_1的<strong>两个互斥的单选框</strong>，和HTML较为相像</p>
-
-<h2 id="多选框-checkbutton">多选框 checkbutton</h2>
-<p><strong>多选框 / 复选框</strong>是方形的，非常形象，这里的check就像check清单一样，有一项打一个勾</p>
-
-<pre><code class="language-Python">intvar_1 = tk.IntVar()
-intvar_2 = tk.IntVar()
-tk.Checkbutton(window , text = '1' , variable = intvar_1 , onvalue = 1 , off_value = -1)
-tk.Checkbutton(window , text = '2' , variable = intvar_2 , onvalue = 2 , off_value = -2)
-</code></pre>
-
-<p>因为onvalue和offvalue的同时存在，<strong>Checkbutton不能将绑定对象设定为同一个变量</strong></p>
-
-<h2 id="下拉列表">下拉列表</h2>
-<p>下拉列表规定了你可以选择哪些选项，但是其实质还是一个输入框</p>
-<pre><code class="language-Python">#没有tk.
-s3 = tk.StringVar()
-Combobox_1 = Combobox(window , textvariable = s3 , values = ['1','2','3'] , state = "readonly")
-
-Combobox_1.current(index)
-</code></pre>
-
-<p>记得把模式调为只读，否则它的作用和输入框差不多</p>
-<ul>
-  <li><strong>current</strong>：默认的值，index是后面列表里的index</li>
-</ul>
-
-<h2 id="菜单-menu">菜单 Menu</h2>
-<p>菜单需要与窗口<strong>双向绑定</strong></p>
-<ul>
-  <li>若<strong>菜单长度超出窗口大小</strong>，则会另起一行，类似于<strong>表格布局 grid</strong></li>
-</ul>
+<p>现在给定几个空间 $U,V,W$ 和两个变换 $S:V\to W$ 和 $T:U\to V$，$ST$ 也就代表一个 $U\to W$ 的变换。现在我们希望矩阵的乘法能满足 $\mathcal{M}(ST)=\mathcal{M}(S)\mathcal{M}(T)$，这就需要我们去<strong>定义一个矩阵乘法</strong>的规则去满足这个性质。</p>
 
 <blockquote>
-  <p>[!attention] 在创建了第一级菜单之后，如果想要继续创建<strong>下拉菜单</strong>，则需要菜单的嵌套</p>
+  <p>[!quote] 推理
+假设 $\mathcal{M}(S)=A,\mathcal{M}(T)=B$，那么对于 $1\leq k\leq p$ 我们有：
+\((ST)u_k=S(\sum^n_{r=1}B_{r,k}v_r)\)
+这相当于先计算了 $Tu_k$，同时由于向量空间满足分配律，所以可以把 $S$ 乘进去
+\(=\sum^n_{r=1}B_{r,k}Sv_r\)
+再次计算，就有
+\(=\sum_{j=1}^m \left( \sum_{r=1}^n A_{j,r} B_{r,k} \right) w_j\)
+注意到这实际上是 $\mathcal{M}(ST)$ 的矩阵计算形式，他要求里面的 $j$ 行 $k$ 列为：
+\((ST)_{j,k}=\sum^n_{r=1}A_{j,r}B_{r,,k}\)
+我们就这样定义了矩阵的乘法</p>
 </blockquote>
 
-<pre><code class="language-Python">Root_Menu = tk.Menu(root) #双向绑定
-Root_Menu.add_cascade(label = '下拉选项' , tear-off = False , menu = Sub_Menu) #双向绑定
+<p>下面我们就不再次定义了，我们来一些浅显的理解。</p>
 
-Sub_Menu = tk.Menu(Root_Menu) #双向绑定
-Sub_Menu.add_cascade(label = 'plus one' , command = ...)
-Sub_Menu.add_radiobutton(label = '')
+<p>观察上面的乘法式子，你会发现他和我们高中学到的 <strong>点乘</strong> 形式非常像。实际上，你要取的是第一个矩阵的<strong>第 i 行</strong>去<strong>点乘</strong>第二个矩阵的<strong>第 j 列</strong>。这就要求<strong>第一个矩阵的行</strong>和<strong>第二个矩阵的列</strong>数值上一样，体现在映射上，这个数值实际上是过渡空间 $V$ 的维度 $dim\ V$。这个方式运算方式我们可以这样表示：
+\((AB)_{j,k}=A_{j,·}·B_{·,k}\)
+这里的 $A_{j,·}$ 表示第 $j$ 行的行向量，$A_{·,k}$ 表示第 $k$ 列的列向量</p>
 
-root.config(menu = Root_Menu) #双向绑定
-</code></pre>
-
+<p>这里我们就不去深究它数值上的的几何意义了，但是我们还是要把矩阵乘法和加法所带来的几何上的变化的不同区分一下。</p>
 <ul>
-  <li><strong>add_cascade</strong>：顾名思义，添加级联，也就是<strong>下拉栏显示的名称</strong></li>
-  <li><strong>config</strong>：双向绑定</li>
-  <li><strong>tear-off</strong>：早期窗口是可以和主窗口分离开了，这里就关闭这个功能里</li>
+  <li><strong>对于乘法来说</strong>：两个变换相乘相当于按顺序对 $\vec{v}$ 进行两次变换，注意，这里的变换<strong>顺序</strong>很重要，这和 $AB\neq BA$ 是一个道理。</li>
+  <li><strong>对于加法而言</strong>：你可以把他拆分为 $(A+B)\vec{v}=A\vec{v}+B{\vec{v}}$ ，即两个变换后的变量的<strong>加和</strong>，纯粹的去理解变换的叠加是不可行的。</li>
 </ul>
 
-<h2 id="列表框">列表框</h2>
-<p>这个列表其实很简单，就是每一行显示一个字符串</p>
-<pre><code class="language-Python">ListBox_1 = tk.Listbox(window , width = ... , height = ...)
+<p>回想我们之前对 [[Linear Algebra - 3.2 矩阵 Matrics#对线性方程组的几何意义的补充|线性方程组几何意义的补充]] 中对<strong>未知数矩阵意义的理解</strong>，我们不难发现，如果有一个 $A$ 是一个 $m\times n$ 的矩阵，$\vec{b}$ 是一个 $n$ 维列向量，则有
+\(A\vec{b}=b_1A_{·,1}+\cdots+b_nA_{·,n}\)</p>
 
-ListBox_1.insert(END , '追加内容')
-ListBox_1.delete(startpos , endpos) #如果只有一个值就是那个索引上的值
-ListBox_1.get(startpos , endpos) #如果只有一个值就是那个索引上的值
-</code></pre>
-
-<ul>
-  <li><strong>insert</strong>：插入内容，END表示添加到<strong>列表尾部</strong></li>
-</ul>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[Tk窗口进阶配置 configure / config 设置方法如下，有多种不同参数 root.configure(bg='color' , ...)]]></summary></entry><entry><title type="html">Tkinter - OOP化的GUI界面设计</title><link href="http://localhost:4000/2025/10/10/Tkinter-3-OOP%E5%8C%96%E7%9A%84GUI%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1.html" rel="alternate" type="text/html" title="Tkinter - OOP化的GUI界面设计" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%203%20OOP%E5%8C%96%E7%9A%84GUI%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-3-OOP%E5%8C%96%E7%9A%84GUI%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1.html"><![CDATA[<p>#tkinter</p>
-<h2 id="application---frame类">Application &lt;- Frame类</h2>
-<p>一般我们通过<strong>Application</strong>类来组织整个GUI，它继承了<strong>Frame</strong>类
-<strong>Frame</strong>类是一个容器组件，可以容纳更多的组件，也就是说，此时<strong>Application</strong>类似于我们自定义的一个组件</p>
-
-<p>在创建窗口后，我们创建的<strong>Application</strong>此时就相当于一个容器，能够容纳其他组建</p>
-
-<h4 id="实例-1">实例 #1</h4>
-<p>这里以官方HELLOWORLD为例</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">tkinter</span> <span class="k">as</span> <span class="n">tk</span>
-
-<span class="k">class</span> <span class="nc">Application</span><span class="p">(</span><span class="n">tk</span><span class="p">.</span><span class="n">Frame</span><span class="p">):</span><span class="c1">#创建了一个Application类
-</span>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">master</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span> <span class="c1">#声明
-</span>        <span class="nf">super</span><span class="p">().</span><span class="nf">__init__</span><span class="p">(</span><span class="n">master</span><span class="p">)</span><span class="c1">#继承了父类的信息，并传master的参数，这里的master是master_window
-</span>        <span class="n">self</span><span class="p">.</span><span class="n">master</span> <span class="o">=</span> <span class="n">master</span>
-        <span class="n">self</span><span class="p">.</span><span class="nf">pack</span><span class="p">()</span> <span class="c1">#继承父类
-</span>        <span class="n">self</span><span class="p">.</span><span class="nf">create_widgets</span><span class="p">()</span><span class="c1">#创建基本布局，具体在下main定义了
-</span>		
-    <span class="k">def</span> <span class="nf">create_widgets</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">hi_there</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Button</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="c1">#这里的hi_there实例就是一个Button类型了
-</span>        <span class="n">self</span><span class="p">.</span><span class="n">hi_there</span><span class="p">[</span><span class="sh">"</span><span class="s">text</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Hello World</span><span class="se">\n</span><span class="s">(click me)</span><span class="sh">"</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">hi_there</span><span class="p">[</span><span class="sh">"</span><span class="s">command</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">say_hi</span> <span class="c1">#调用
-</span>        <span class="n">self</span><span class="p">.</span><span class="n">hi_there</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="sh">"</span><span class="s">top</span><span class="sh">"</span><span class="p">)</span>
-
-        <span class="n">self</span><span class="p">.</span><span class="n">quit</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Button</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sh">"</span><span class="s">QUIT</span><span class="sh">"</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="sh">"</span><span class="s">red</span><span class="sh">"</span><span class="p">,</span>
-                              <span class="n">command</span><span class="o">=</span><span class="n">self</span><span class="p">.</span><span class="n">master</span><span class="p">.</span><span class="n">destroy</span><span class="p">)</span>
-        <span class="n">self</span><span class="p">.</span><span class="n">quit</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="sh">"</span><span class="s">bottom</span><span class="sh">"</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">say_hi</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
-        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">hi there, everyone!</span><span class="sh">"</span><span class="p">)</span>
-
-<span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Tk</span><span class="p">()</span><span class="c1">#根窗口
-</span><span class="n">app</span> <span class="o">=</span> <span class="nc">Application</span><span class="p">(</span><span class="n">master</span><span class="o">=</span><span class="n">root</span><span class="p">)</span>
-<span class="n">app</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
-</code></pre></div></div>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[#tkinter Application &lt;- Frame类 一般我们通过Application类来组织整个GUI，它继承了Frame类 Frame类是一个容器组件，可以容纳更多的组件，也就是说，此时Application类似于我们自定义的一个组件]]></summary></entry><entry><title type="html">Tkinter - 组件放置</title><link href="http://localhost:4000/2025/10/10/Tkinter-2-%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE.html" rel="alternate" type="text/html" title="Tkinter - 组件放置" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%202%20%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-2-%E7%BB%84%E4%BB%B6%E6%94%BE%E7%BD%AE.html"><![CDATA[<h1 id="组件放置--widget-placement">组件放置  Widget Placement</h1>
-<p>配置好组件后需要放置，否则不会显示，但是先明确一下<strong>势力范围的概念</strong></p>
 <blockquote>
-  <p>[!attention] 你可以直接<code class="language-plaintext highlighter-rouge">Label_1 = Label().place(...)</code></p>
-  <h6 id="势力范围--拓展范围">势力范围 / 拓展范围</h6>
-  <p>在你决定将组件放在哪个side之后，势力范围就决定了，这里我们以top举例</p>
+  <p>[!example]
+\(\begin{pmatrix}1 &amp; 2 \\3 &amp; 4 \\5 &amp; 6\end{pmatrix}\begin{pmatrix}5 \\1\end{pmatrix}=\begin{pmatrix}7\\19 \\31\end{pmatrix}= 5\begin{pmatrix}1 \\3 \\5\end{pmatrix}+1\begin{pmatrix}2 \\4 \\6\end{pmatrix}\)
+这个就是我们上面说的几何意义。</p>
 </blockquote>
 
-<p>![[Tkinter 势力范围与拓展范围.png]]</p>
-
-<p>如果你不把expand打开，那么上面的作用效果仅局限于<strong>势力范围</strong>内，填充也就只能<strong>填充 fill</strong>一小部分屏幕，打开之后才能<strong>填充 fill</strong>全屏</p>
-
-<h4 id="pack-相对放置--填充布局">pack 相对放置 / 填充布局</h4>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">lable_1</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="n">side</span> <span class="o">=</span> <span class="sh">'</span><span class="s">...</span><span class="sh">'</span> <span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="sh">'</span><span class="s">...</span><span class="sh">'</span> <span class="p">,</span> <span class="n">padx</span> <span class="o">/</span> <span class="n">pady</span> <span class="p">,</span> <span class="n">ipadx</span> <span class="o">/</span> <span class="n">ipady</span> <span class="p">,</span> <span class="n">anchor</span> <span class="p">,</span> <span class="n">expand</span><span class="p">)</span>
-</code></pre></div></div>
-
-<ul>
-  <li><strong>side</strong> : ‘left , right , top , bottom’ 决定组件停靠的方向，默认为top</li>
-  <li><strong>fill</strong> : ‘x , y , both , none’ 是否填充。不同于图片的填充拉伸，这里的意思是类似于背景之类的可填重项的填充</li>
-  <li><strong>padx / pady</strong> : 组件与<strong>临近组件</strong>或<strong>窗口边界</strong>的距离（如果这里没有组件就是里窗口边界，有就是临近组件），<strong>否则每个标签都是紧贴在一起的</strong>
-    <ul>
-      <li>支持<strong>元组</strong>指定每一个<strong>间隔像素数</strong></li>
-    </ul>
-  </li>
-  <li><strong>ipadx / ipady</strong> : 组件内，组件文件跟组件边界间的距离
-    <ul>
-      <li>支持<strong>元组</strong>指定每一个<strong>间隔像素数</strong></li>
-    </ul>
-  </li>
-  <li><strong>anchor</strong> : “n , nw , ne , s , nw , ne , center” 默认居中显示</li>
-  <li><strong>expand</strong> : 决定组件的“<strong>势力范围</strong>”是否扩大到“<strong>扩展范围</strong>” (见下)</li>
-</ul>
+<h2 id="列向量行向量与矩阵乘法的关系">列向量、行向量与矩阵乘法的关系</h2>
+<p>我们知道矩阵可以分为<strong>列向量和行向量</strong>，但实际上这和矩阵乘法有这不可分割的关系。</p>
 
 <blockquote>
-  <p>[!attention] 组件的放置会自适应
-如果组建的作用范围冲突了，<strong>后放置的组件</strong>会自动为<strong>先放置的组件</strong>让道，不会造成遮挡</p>
-  <h4 id="place-绝对放置--自定义布局">place 绝对放置 / 自定义布局</h4>
-  <p>给一个绝对的坐标位置，左上角为$(0,0)$</p>
-  <pre><code class="language-Python">label_1.place(x=value , y=value) #不超过窗口范围即可
-</code></pre>
+  <p>[!tip] 假设 $C$ 是 $m\times c$ 的矩阵，$R$ 是 $c\times n$ 的矩阵</p>
+  <ul>
+    <li>$CR$ 的列向量 $\vec{a}_k$ 是 $C$ 中列向量的<strong>线性组合</strong>，而<strong>每一个向量的系数</strong>是 $R$ 中的第 $k$ 列。</li>
+    <li>$CR$ 的行向量 $\vec{a}_j$ 是 $R$ 中行向量的<strong>线性组合</strong>，而<strong>每一个向量的系数</strong>是 $C$ 中的第 $j$ 行。</li>
+  </ul>
+
+  <p>具体验证可以看上面给的 Example</p>
 </blockquote>
 
-<h4 id="grid-网格放置--表格布局">grid 网格放置 / 表格布局</h4>
-<p>类似于excel表格，你也可以在HTML里见到类似的布局</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Label_1</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="n">row</span> <span class="o">=</span> <span class="n">value</span> <span class="p">,</span> <span class="n">column</span> <span class="o">=</span> <span class="n">value</span><span class="p">)</span>
-</code></pre></div></div>
-
-<blockquote>
-  <p>[!attention] 它也符合填充原则，如果<strong>row</strong>和<strong>column</strong>前有空的位置，就会自动移到空的位置去</p>
-</blockquote>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[组件放置 Widget Placement 配置好组件后需要放置，否则不会显示，但是先明确一下势力范围的概念 [!attention] 你可以直接Label_1 = Label().place(...) 势力范围 / 拓展范围 在你决定将组件放在哪个side之后，势力范围就决定了，这里我们以top举例]]></summary></entry><entry><title type="html">Tkinter - 基本操作、类继承关系与部分组件</title><link href="http://localhost:4000/2025/10/10/Tkinter-1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E4%B8%8E%E9%83%A8%E5%88%86%E7%BB%84%E4%BB%B6.html" rel="alternate" type="text/html" title="Tkinter - 基本操作、类继承关系与部分组件" /><published>2025-10-10T00:00:00+08:00</published><updated>2025-10-10T00:00:00+08:00</updated><id>http://localhost:4000/2025/10/10/Tkinter%20-%201%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E3%80%81%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E4%B8%8E%E9%83%A8%E5%88%86%E7%BB%84%E4%BB%B6</id><content type="html" xml:base="http://localhost:4000/2025/10/10/Tkinter-1-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C-%E7%B1%BB%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E4%B8%8E%E9%83%A8%E5%88%86%E7%BB%84%E4%BB%B6.html"><![CDATA[<p>#tkinter</p>
-<h2 id="头文件-header">头文件 Header</h2>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">tkinter</span> <span class="k">as</span> <span class="n">tk</span>
-</code></pre></div></div>
-
-<h1 id="tkinter类继承关系">Tkinter类继承关系</h1>
-<p>这边给到一个tkinter类的继承关系图</p>
-
-<p>![[Tkinter 组件类继承图.png]]</p>
-
+<p>到了这一点，我们就可以谈论他们在线性方程组背景下具体的几何意义了</p>
 <ul>
-  <li><strong>Tk</strong>同时属于<strong>Wm</strong>与<strong>Misc</strong>类</li>
-  <li><strong>Toplevel</strong> 顶级窗口，永远置于最顶层</li>
-  <li><strong>Wm</strong> 负责窗口间的通信</li>
-  <li><strong>Misc</strong> 杂项，所有组件的根父类</li>
-  <li><strong>Pack / Place / Grid</strong> 布局管理器，<strong>所继承的东西</strong>的布局都要用这些东西</li>
-</ul>
+  <li><strong>行向量</strong>相当于 $n$ 维空间中的一条直线或者一个面，或者更多。以行向量的视角来看，我们是去求这些空间的交集。</li>
+  <li><strong>列向量</strong>相当于 $m$ 个 $n$ 维基底，未知数矩阵 $x$ 实际上就是<strong>线性组合的系数</strong>。</li>
+</ul>]]></content><author><name></name></author><category term="Linear" /><summary type="html"><![CDATA[矩阵的加法和数乘 我们也说了 $T$ 所属的也是一个向量空间，他也满足加法和数乘。这里我们可以讨论一下这两个操作的几何意义。]]></summary></entry><entry><title type="html">LA - 3 XXXX，变身</title><link href="http://localhost:4000/2026/01/07/Linear-Algebra-3-%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2-linear-transformation.html" rel="alternate" type="text/html" title="LA - 3 XXXX，变身" /><published>2026-01-07T00:00:00+08:00</published><updated>2026-01-07T00:00:00+08:00</updated><id>http://localhost:4000/2026/01/07/Linear%20Algebra%20-%203%20%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2%20linear%20transformation</id><content type="html" xml:base="http://localhost:4000/2026/01/07/Linear-Algebra-3-%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2-linear-transformation.html"><![CDATA[<p>接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 <strong>#6 线性空间与线性变换</strong>，这里对应的是<strong>基变换与坐标变换</strong>。</p>
+<h2 id="线性变换-linear-transformation">线性变换 Linear Transformation</h2>
+<p><strong>线性变换 linear transformation</strong>和<strong>线性映射 linear map</strong>实际上是一个东西，我们这里还是用前者好了。</p>
 
-<h4 id="值的修改">值的修改</h4>
-<p><strong>Object</strong>都支持__getitem__和__setitem__的做法！(.config()应该也都有)
-这样就可以修改Object里面有关的值了</p>
+<p>将一个向量空间映射为另一个向量空间，并且保持了原来向量空间的结构的函数称为是向量空间上的同台映射，或线性映射。在变换过程中，我们保持<strong>结构不变</strong>，也就是保持加法和数乘的方法不变。这也就说明<strong>先运算再变换</strong>等同于<strong>先变换再运算</strong>。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">object</span><span class="p">[</span><span class="sh">'</span><span class="s">item</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="sh">'</span><span class="s">value</span><span class="sh">'</span>
-<span class="nb">object</span><span class="p">.</span><span class="nf">config</span><span class="p">(...)</span>
-</code></pre></div></div>
-
-<h1 id="窗口-window">窗口 window</h1>
-<p>窗口作为一个对象存在，我们用 <strong>Tk()</strong> 来创建</p>
 <blockquote>
-  <p>[!attention] 一个对象 (Object) 定义时，函数首字母均为大写
-```python
-window = tk.Tk();
-window.title(‘window’) #窗口定义
-window.resizeable(True,True)
-window.geometry(‘200x100’) #用x代表*，这表示界面尺寸，（长，宽）
-window.iconbitmap(‘…/.ico’)</p>
+  <p>[!definition] $linear\ transformation$
+线性映射是一个从 $V$ 到 $W$  的函数 $T:V\to W$
+加法性质：
+\(\forall u,v\in V,T(u+v)=Tu+Tv\)
+同质性：
+\(\forall \lambda \in F,\forall v\in V,T(\lambda v)=\lambda(Tv)\)
+从 $V$ 到 $W$ 的<strong>线性映射集</strong>记作 $\mathcal{L}(V,W)$，这也构成了一个向量空间，只不过里面存的全是<strong>函数算子</strong>。
+特别的，我们规定 $\mathcal{L}(V,V)=\mathcal{L}(V)$</p>
 </blockquote>
 
-<p>window.configure(bg = “…”)
-window.attributes(‘-alpha’ , 0.9)
-…</p>
-
-<p>window.mainloop() #循环
-#window.destroy()</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- **Tk** : 创建窗口对象
-- **title** 窗口名称
-- **resizeable** 是否可以调整窗口大小
-- **geometry** 给定一个string，里面包含了窗口大小和窗口位置
-	- "*width*x*height*±*distance_from_left*±*distance_from_ceiling*"
-	- 四个参数分别为**窗口宽度**，**窗口高度**，**距屏幕左边的宽**，**距离屏幕顶部的高**
-	- 如果输入值为**None**，则会返回此刻的四个数值
-- **iconbitmap** 图标
-
-- **configure** 里面可以设置基本设置 更多请见[[Tkinter - 4 更多组件，更多操作和更多窗口]]
-- **attributes** 里面可以设置属性 更多请见[[Tkinter - 4 更多组件，更多操作和更多窗口]]
-	- **-alpha** 不透明度
-	- **-topmost** 是否指定 (True / False)
-
-- **mainloop** 主循环
-
-- **destroy** 破坏程序，即退出
-
-# 组件
-**组件的概念需要搞清楚**，它相当于一个封装好的模块，你可以直接创建一个组件对象，然后放到屏幕上去
-
-## 标签组件 Label
-标签作为一个**组件**存在，我们用 **Label()** 来创建，实际上是用来显示文本的hh
-```python
-label_1 = tk.Label(window , text = 'Hello World' , bg='green' , font = ('Arial' , 12) , width = 15 , height = 2);
-</code></pre></div></div>
+<p>我们说了 $\mathcal{L}(V,W)$ 也是一个单位空间，那么肯定也就会有他的<strong>单位元算子 (identity operator)</strong>，这里我们将他记作 $E$，即<strong>单位矩阵</strong>，其实更多时候我们会记作 $I$ for $Identity$。但是同济教材上写的是 $E$ ，为应付考试，我们还是先用 $E$，来表示单位矩阵。它满足
+\(Ev=v\)
+更准确地，$E\in \mathcal{L}(V)$</p>
 
 <ul>
-  <li><strong>window</strong>：该组件属于的窗口</li>
-  <li><strong>text</strong>：该组件显示的文本</li>
-  <li><strong>background / bg (option参数)</strong>：该组件的背景
-    <ul>
-      <li>相应的还有foreground / fg</li>
-    </ul>
-  </li>
-  <li><strong>font (option参数)</strong>：字体，字号</li>
-  <li><strong>width (option参数)</strong>：标签字符宽度（以字符为单位，下同）</li>
-  <li><strong>height (option参数)</strong>：标签字符高读</li>
-  <li><strong>relief</strong>：边框样式
-    <ul>
-      <li>
-        <ol>
-          <li><strong>FLAT</strong>：平坦的边框，没有任何效果。</li>
-        </ol>
-      </li>
-      <li>
-        <ol>
-          <li><strong>RAISED</strong>：凸起的边框，给人一种立体感。</li>
-        </ol>
-      </li>
-      <li>
-        <ol>
-          <li><strong>SUNKEN</strong>：凹陷的边框，呈现出凹下去的效果。</li>
-        </ol>
-      </li>
-      <li>
-        <ol>
-          <li><strong>GROOVE</strong>：凹槽边框，具有凹槽的视觉效果。</li>
-        </ol>
-      </li>
-      <li>
-        <ol>
-          <li><strong>RIDGE</strong>：脊状边框，类似于凸起的边框，但更为复杂。</li>
-        </ol>
-      </li>
-    </ul>
-  </li>
+  <li>再举个例子，$0$ 也可以是一个<strong>映射算子</strong>，不过是将所有东西映射到 $0$ 维
+\(0v=0\)</li>
 </ul>
 
-<h2 id="按钮组件--button">按钮组件  Button</h2>
-<p>按钮作为一个<strong>组件</strong>存在，我们用 <strong>Botton()</strong> 来创建，用于创建一个按钮</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">button_1</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Botton</span><span class="p">(</span><span class="n">window</span> <span class="p">,</span> <span class="n">text</span> <span class="o">=</span> <span class="sh">'</span><span class="s">Switch window size</span><span class="sh">'</span> <span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">15</span> <span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">2</span> <span class="p">,</span> <span class="n">command</span> <span class="o">=</span> <span class="n">function_name</span><span class="p">)</span>
-</code></pre></div></div>
-
+<p>[[Linear Algebra - 1.EX 算子 operator|微分算子 differentiation]] 其实也属于是这一个空间，只不过是一个<strong>多项式到多项式空间的映射</strong>，即$D\in \mathcal{L}(\mathcal{P}(R))$，也就会有
+\(Dp=p'\)</p>
 <ul>
-  <li><strong>window</strong>：该组件属于的窗口</li>
-  <li>(option参数略)</li>
-  <li><strong>command</strong> : 与一个函数绑定，作为点击按钮后执行的函数
-    <ul>
-      <li>也可以通过<code class="language-plaintext highlighter-rouge">button_1.bind(function_name)</code>来绑定</li>
-    </ul>
-  </li>
+  <li>回忆一下我们提到的<strong>结构一致</strong>，就可以很轻松的得到
+\((f+g)'=f'+g'\ 和\ (\lambda f)'=\lambda f'\)</li>
 </ul>
 
-<h2 id="输入框组件-entry--字符串变量-stringvar--整数变量-intvar">输入框组件 Entry / 字符串变量 StringVar / 整数变量 IntVar</h2>
-<p>输入款作为一个<strong>组件</strong>存在，我们用 <strong>Entry()</strong> 来创建，用于创建一个输入框
-字符串变量与Entry搭配使用，用于读取Entry的值</p>
+<p><strong>定积分算子</strong>则是一个多项式到数的映射 $\int\in\mathcal{L}(\mathcal{P}(\mathbb{R}),\mathbb{R})$</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s1</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">StringVar</span><span class="p">()</span>
-<span class="n">tk</span><span class="p">.</span><span class="nc">Entry</span><span class="p">(</span><span class="n">root</span> <span class="p">,</span> <span class="o">**</span><span class="n">option</span> <span class="p">,</span> <span class="n">textvariable</span> <span class="o">=</span> <span class="n">s1</span> <span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="sh">''</span><span class="p">).</span><span class="nf">place</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="c1">#s1.set('请输入文本')
-#s1.get()
-</span></code></pre></div></div>
+<p>我们再引入一个一个符号 $\circ$ ，它代表<strong>函数的复合 (function composition)</strong>，我们依旧把它看作一个算子，叫<strong>复合算子</strong>好了，它与一个函数 $g$ 绑定，满足
+\((Tf)(x)=f(g(x))\)
+当然，我们一般写成这样
+\((f\circ g)(x)=f(g(x))\)
+也就是将 $\circ$ 后的作为 $\circ$ 前的输入。</p>
 
-<ul>
-  <li><strong>textvariable</strong>：传参到的地方，需要专门对应<strong>Stringvar</strong>类型</li>
-  <li><strong>state</strong>：默认为空，可以是<strong>readonly (只读)</strong>、<strong>dis / disabled  (禁用)</strong></li>
-  <li><strong>.set方式</strong>：对于<strong>Stringvar</strong>来说，此时他就代表了<strong>Entry</strong>里的内容，所以对<strong>s1的设置</strong>相当于对<strong>Entry里文本</strong>的设置</li>
-  <li><strong>.get方式</strong>：返回一个字符串类型的数据，即目前<strong>所绑定的Entry</strong>里的值</li>
-</ul>
-
-<p><strong>整数变量</strong>相对于字符串变量，在填入的时候需要多加一个<strong>onvalue / offvalue</strong>的值，表示返回的<strong>int值大小</strong>
-当然，<strong>Entry</strong>肯定干不了这事，后面提到的[[Tkinter - 4 更多组件，更多操作和更多窗口#单选框 radiobutton|单选框和复选框]]可以做到</p>
-
-<pre><code class="language-Python">intvar_1 = tk.IntVar()
-intvar_2 = tk.IntVar()
-tk.Radiobutton(window , text = '1' , variable = intvar_1 , onvalue = 1 , off_value = -1)
-tk.Radiobutton(window , text = '2' , variable = intvar_2 , onvalue = 2 , off_value = -2)
-</code></pre>
+<p>有趣的是，$cos$ 这种算子并不是一个线性映射，因为 $\cos2x\neq2\cos x$
+同样的，平方算子也不是一个线性映射，<strong>加法</strong>和<strong>乘法</strong>都不满足</p>
 
 <blockquote>
-  <p>[!attention] 一定要注意，输入值的获取需要用<code class="language-plaintext highlighter-rouge">.get</code>方法</p>
+  <p>[!tip] 验证是否为线性映射
+一样，你只需要看看在映射前后满不满足<strong>数乘一致</strong>和<strong>加法一致</strong>就行了</p>
 </blockquote>
 
-<h1 id="信息框">信息框</h1>
-<p><strong>信息框 MessageBox</strong>即弹窗信息，通过不同方法可以发送不同类型的弹窗，具体见下</p>
+<blockquote>
+  <p>[!quote] $linear\ map\ lemma$ 基变换
+假如 $v_1,\cdots,v_n$ 是 $n$ 维空间 $V$ 的基，$w_1,\cdots,w_n$ 是 $n$ 维空间 $W$ 的基，那么必定存在一个线性映射 $T\in \mathcal{L}(V,W)$ 使得
+\(Tv_k=w_k\)</p>
+</blockquote>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">tkinter</span> <span class="kn">import</span> <span class="n">messagebox</span>
-<span class="c1">#你当然可以直接tkinter.messagebox
-</span>
-<span class="n">messagebox</span><span class="p">.</span><span class="nf">showinfo</span><span class="p">(</span><span class="sh">'</span><span class="s">TITLE_INFO</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
-<span class="n">messagebox</span><span class="p">.</span><span class="nf">showwarning</span><span class="p">(</span><span class="sh">'</span><span class="s">TITLE_WARNING</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
-<span class="n">messagebox</span><span class="p">.</span><span class="nf">showerror</span><span class="p">(</span><span class="sh">'</span><span class="s">TITLE_ERROR</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
-<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebox</span><span class="p">.</span><span class="nf">askquestion</span><span class="p">(</span><span class="sh">'</span><span class="s">YES_OR_NO</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
-<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebox</span><span class="p">.</span><span class="nf">askokcancel</span><span class="p">(</span><span class="sh">'</span><span class="s">OK_OR_CANCEL</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
-<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebox</span><span class="p">.</span><span class="nf">askretrycancel</span><span class="p">(</span><span class="sh">'</span><span class="s">RETRY_OR_CANCEL</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
-<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebox</span><span class="p">.</span><span class="nf">askyesno</span><span class="p">(</span><span class="sh">'</span><span class="s">YES_OR_NO</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
-<span class="n">d1</span> <span class="o">=</span> <span class="n">messagebpx</span><span class="p">.</span><span class="nf">askyesnocancel</span><span class="p">(</span><span class="sh">'</span><span class="s">YES_NO_OR_CANCEL</span><span class="sh">'</span> <span class="p">,</span> <span class="sh">'</span><span class="s">TEXT</span><span class="sh">'</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>一些方法可以有多个参数</p>
+<p>这种<strong>映射算子</strong>，对于向量来说，在我们日常做题中一般有两种形式：<strong>数乘</strong>和<strong>矩阵</strong>。</p>
 <ul>
-  <li><strong>title</strong> 标题</li>
-  <li><strong>text</strong> 信息</li>
-  <li><strong>icon</strong> 设置窗口图标 ( INFO、ERROR、 QUESTION、WARNING )</li>
-  <li><strong>default</strong> 设置默认按钮布局</li>
-  <li><strong>parent</strong> 关闭窗口后焦点返回到指定窗口，这里填的就是<strong>对象名</strong></li>
+  <li>前者在几何上表现为将向量延长 $\lambda$ 倍数。</li>
+  <li>后者我们之后会提到，他有更深刻的几何解释。我们先把他理解为一种简单的空间变换操作，例如旋转，剪切，拉伸。</li>
 </ul>
 
-<p>部分函数有返回值，基本就是True和False，看着办</p>
+<h2 id="mathcallvw-中的代数运算">$\mathcal{L}(V,W)$ 中的代数运算</h2>
+<blockquote>
+  <p>[!definition] $\mathcal{L}(V,W)$ 中的运算
+对于 $S,T\in \mathcal{L}(V,W)$，有
+\((S+T)(v)=Sv+Tv\ and\ (\lambda T)(v)=\lambda(Tv)\)
+另外，我们额外定义了线性映射的乘法法则。
+对于 $S\in \mathcal{L}(V,W)$ 和 $T\in \mathcal{L}(U,V)$，有
+\((ST)(v)=S(T(v))\)
+你也可以理解为，
+\(ST=S\circ T\)</p>
 
-<h1 id="option-参数">**OPTION 参数</h1>
-<p>函数定义是给到了**option参数，定义方法见[[Python 6 函数#可变关键字参数]]
-以下列出常用的<strong>option</strong>参数</p>
+</blockquote>
+
+<p>我们仍然拿<strong>数乘</strong>和<strong>矩阵</strong>来举例：</p>
+<ul>
+  <li>数乘来看，延长 $\lambda_1$ 倍后再延长 $\lambda_2$ 倍，当然等同于延长 $\lambda_1\lambda_2$ 倍数。</li>
+  <li>从矩阵变换来看，等式右边这相当于连续进行<strong>两次变换</strong>，左边则是将这两个变换先合二为一，再进行一次变换。当需要注意的是，需要保持乘法顺序。</li>
+</ul>
+
+<blockquote>
+  <p>[!quote] 代数性质
+结合律：这要求 $T_1$ 映射到 $T_2$ 的空间，$T_2$ 映射到 $T_3$ 的空间
+\((T_1T_2)T_3=T_1(T_2T_3)\)
+单位元：这里的 $T\in \mathcal{L}(V,W)$，第一个 $E$ 是 $V$ 中的单位元而第二个是 $W$ 中的
+\(TE=ET\)
+分配律：当 $T_1,T_2\in\mathcal{L}(U,V)$ 和 $S_1,S_2\in\mathcal{L}(V,W)$ 
+\((S_1+S_2)T=S_1T+S_2T\ and\ S(T_1+T_2)=S(T_1+ST_2)\)</p>
+</blockquote>
+
+<p>在学矩阵乘法的时候，一个很强的疑问是为什么要分<strong>左乘和右乘</strong>，这里就给出了解答——<strong>映射关系</strong>不允许！对于一个向量，如果要从 $W$ 到 $U$，都需要经过一个中间 $V$ 的过程，如果换过来了，比如
+本来应该是 $STv$ ，现在换为 $TSv$ ，那么就要先计算 $Sv$，可是 $S$ 的映射并不是从 $v$ 所在的空间开始的，这就不成立了！</p>
+
+<blockquote>
+  <p>[!quote] 线性映射将 $0$ 映射到 $0$，即恒有 $T(0)=0$</p>
+</blockquote>
+
+<h2 id="与线性方程组的种种">与线性方程组的种种</h2>
+<p>一般的，建立在 $F$ 上的向量空间 $V$ 的线性变换 $T:\mathbb{F}^n\to\mathbb{F}^m$ 有如下形式：
+\(T(x_1, \dots, x_n) = \left( \sum_{k=1}^n A_{1,k} x_k, \; \dots, \; \sum_{k=1}^n A_{m,k} x_k \right)\)
+其中 $A_{(j,i)}$ 是由 $T$ 所对应的一个矩阵 $A$ 决定的。是的，这实际上就是 [[Linear Algebra - 5.1 齐次线性方程组 Linear equation|线性方程组]]。但是为什么要这样算呢？</p>
 
 <table>
-  <thead>
-    <tr>
-      <th>参数</th>
-      <th>说明</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td>anchor</td>
-      <td>如果空间大于所需时，控制消息的位置，默认是CENTER</td>
-    </tr>
-    <tr>
-      <td>aspect</td>
-      <td>控件宽度与高度比，默认是150%</td>
-    </tr>
-    <tr>
-      <td>bd</td>
-      <td>边界宽度，默认是两个像素</td>
-    </tr>
-    <tr>
-      <td>background或者bg</td>
-      <td>背景色彩</td>
-    </tr>
-    <tr>
-      <td>bitmap</td>
-      <td>使用默认位图当做Message内容</td>
-    </tr>
-    <tr>
-      <td>cursor</td>
-      <td>当鼠标光标移至按钮上时的形状</td>
-    </tr>
-    <tr>
-      <td>foreground 或者 fg</td>
-      <td>前景色彩，即字体颜色</td>
-    </tr>
-    <tr>
-      <td>font</td>
-      <td>字形、字形样式与大小</td>
-    </tr>
-    <tr>
-      <td>heigth</td>
-      <td>高，单位是字符高</td>
-    </tr>
-    <tr>
-      <td>image</td>
-      <td>Message 以图像方式呈现</td>
-    </tr>
-    <tr>
-      <td>justify</td>
-      <td>当有多行文字时，最后一行文字的对齐方式  <br />取值为LEFT/CENTER/RIGHT(靠左/居中/靠右)  <br />默认是居中对齐</td>
-    </tr>
-    <tr>
-      <td>padx/pady</td>
-      <td>Message 文字与边框的间距，单位是像素</td>
-    </tr>
-    <tr>
-      <td>relief</td>
-      <td>可由此控制文字外框  <br />默认是relief=FLAT</td>
-    </tr>
-    <tr>
-      <td>text</td>
-      <td>Message 内容，如果有”\n”则可以输入当行文字</td>
-    </tr>
-    <tr>
-      <td>textvariable</td>
-      <td>文字变量</td>
-    </tr>
-    <tr>
-      <td>underline</td>
-      <td>可以设置第几个文字有下划线，从0开始算起  <br />默认是-1，表示无下划线</td>
-    </tr>
-    <tr>
-      <td>width</td>
-      <td>宽，单位是字符宽</td>
-    </tr>
-    <tr>
-      <td>wraplength</td>
-      <td>文本在多少宽度后换行，单位是像素</td>
+      <td>我们在讲 [[Linear Algebra - 3.1 零空间、值域与变换基本定理#单射/满射 injectivity/surjection</td>
+      <td>单射和满射]] 的时候摸到了一点这个的皮毛，就是说你在做变换的时候，变换后的每一个值其实都是变换前值的 <strong>线性组合</strong>。仔细体会一下当时的原话</td>
     </tr>
   </tbody>
 </table>
 
-<p>[[Tkinter - 3 OOP化的GUI界面设计]]</p>]]></content><author><name></name></author><category term="python" /><summary type="html"><![CDATA[#tkinter 头文件 Header import tkinter as tk]]></summary></entry><entry><title type="html">STM32 - TIM中断概述</title><link href="http://localhost:4000/2025/09/16/STM32-4-TIM%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0.html" rel="alternate" type="text/html" title="STM32 - TIM中断概述" /><published>2025-09-16T00:00:00+08:00</published><updated>2025-09-16T00:00:00+08:00</updated><id>http://localhost:4000/2025/09/16/STM32%20-%204%20TIM%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0</id><content type="html" xml:base="http://localhost:4000/2025/09/16/STM32-4-TIM%E4%B8%AD%E6%96%AD%E6%A6%82%E8%BF%B0.html"><![CDATA[<p>#嵌入式</p>
-<h1 id="tim-timer">TIM Timer</h1>
-<ul>
-  <li><strong>定时器</strong>可以对输入的时钟计数，并在达到设定值时触发中断
-  例如$72MHz$每秒输入$72M$次，每输入一次，内部的Counter就会++
-  而我设定为Counter到达$72K$的时候，触发一次中断，这样一秒就会触发1000次中断
-  也就是一次中断的间隔为$1ms$
-  即:
-\(计时长度 = {1 \over {输入频率 \over 触发阈值}}s = {触发阈值 \over 输入频率}s\)</li>
-  <li><strong>定时器</strong>具备定时中断功能，还能<strong>选择输入的时钟源</strong>，<strong>输入捕获</strong>，<strong>输出比较</strong>，<strong>编码器接口</strong>，<strong>主从触发模式</strong>等等</li>
-  <li>定时器分为<strong>基本定时器</strong>，<strong>通用定时器</strong>，<strong>高级定时器</strong></li>
-</ul>
-
-<p>TIM1，TIM8被规定位<strong>高级计时器</strong>
-TIM6，TIM7被规定为<strong>基本定时器</strong>
-TIM2~TIM5被规定为<strong>通用计时器</strong></p>
-
-<p>我们用的STM32有的资源是<strong>TIM1~TIM4</strong></p>
-
 <blockquote>
-  <p>[!attention]
-高级定时器对速度有一定要求，所以总线连接在<strong>APB2</strong>上
-通用计时器和基本定时器，则连接在<strong>APB1</strong>上，初始化时需要注意</p>
+  <p>一旦你要将低维映射到高维，那么<strong>多出来的维度就需要低维的量来决定</strong>，这就导致了肯定有无法表示的向量。</p>
 </blockquote>
 
-<h2 id="时基单元">时基单元</h2>
+<p>这个<strong>决定</strong>的数学意思就是<strong>线性组合</strong>，实际上，不只是对多出来的向量，<strong>变换后的每一个都是变换前向量的每一个元素的线性组合的结果</strong>。</p>
+
+<h2 id="究竟什么是线性">究竟什么是“线性”</h2>
+<p>其实很简单，<strong>线性</strong>的本质是 <strong>保持向量加法与数乘运算</strong>，几何上表现为 <strong>保持原点不动、直线仍为直线、网格均匀变形</strong>。</p>
+
+<blockquote>
+  <p>[!definition] 线性 $linear$
+一个映射（函数） $T:V→W$（其中 $V,W$ 是向量空间）称为<strong>线性的</strong>，当且仅当它同时满足：</p>
+  <ul>
+    <li>可加性：
+\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}), \quad \forall \mathbf{u},\mathbf{v} \in V\)</li>
+    <li>齐次性：
+\(T(c\mathbf{v}) = c\)</li>
+  </ul>
+
+  <p>上面两条可以合并为一条：
+\(T(c_1\mathbf{v}_1 + c_2\mathbf{v}_2) = c_1\)</p>
+</blockquote>]]></content><author><name></name></author><category term="Linear" /><summary type="html"><![CDATA[接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 #6 线性空间与线性变换，这里对应的是基变换与坐标变换。 线性变换 Linear Transformation 线性变换 linear transformation和线性映射 linear map实际上是一个东西，我们这里还是用前者好了。]]></summary></entry><entry><title type="html">LA - ♂哲学理解</title><link href="http://localhost:4000/2026/01/07/Linear-Algebra-%E5%93%B2%E5%AD%A6%E7%90%86%E8%A7%A3.html" rel="alternate" type="text/html" title="LA - ♂哲学理解" /><published>2026-01-07T00:00:00+08:00</published><updated>2026-01-07T00:00:00+08:00</updated><id>http://localhost:4000/2026/01/07/Linear%20Algebra%20-%20%E5%93%B2%E5%AD%A6%E7%90%86%E8%A7%A3</id><content type="html" xml:base="http://localhost:4000/2026/01/07/Linear-Algebra-%E5%93%B2%E5%AD%A6%E7%90%86%E8%A7%A3.html"><![CDATA[<h2 id="摘要">摘要</h2>
+<p>本文作为线性代数课程的思政作业，主要从以下三个方面展开：我对线性代数与<strong>马克思主义哲学</strong>相结合的理解、在线性代数课程中的收获，以及对数学本质的若干思考。同时也借此机会尝试使用 $\LaTeX$ 进行排版。</p>
+
+<h2 id="线性代数与马克思主义哲学的结合">线性代数与马克思主义哲学的结合</h2>
+<p>同济大学《线性代数》教材从实际问题出发，首先回顾了我们已经熟知的方程组概念，并提出具体问题——如何求解一个线性方程组？由此引入了行列式作为解决问题的工具。这一编排与<strong>马克思主义哲学</strong>中“理论来源于实践，新概念的引入总有其实际需要和意义”的观点不谋而合。</p>
+
+<p>在讲解行列式计算时，教材从二阶行列式入手，逐步过渡到三阶行列式，最后推广到高阶情形。这种由简到繁的呈现方式，体现了<strong>马克思主义哲学</strong>中 <strong>“从特殊到一般”</strong> 的认识规律，也符合唯物辩证法关于事物普遍联系的观点。</p>
+
+<p>在行列式计算中，我们遇到了上三角行列式和下三角行列式。在掌握后者计算方法的基础上，通过推导和变换，可以将下三角行列式转化为上三角行列式来处理。进而，对于一般形式的行列式，我们也尝试将其化为三角形式进行计算。这种 <strong>“从特殊行列式的计算推广到一般行列式，并建立一般与特殊之间联系”</strong> 的过程，生动体现了 <strong>“事物由内部不同要素构成，且这些要素之间存在着相互联系”</strong> 的辩证思想。</p>
+
+<p>引入矩阵概念时，我最初对它与行列式的区别感到困惑。教材中首先对两者进行了辨析，这正体现了唯物辩证法的基本观点：认识事物既要看到其相互区别的一面，也要看到其相互联系的一面。</p>
+
+<p>又如矩阵的秩，在代数上它定义为矩阵经初等行变换后阶梯形矩阵的非零行行数；而在后续学习向量组理论后，我们理解到其几何意义——它代表该矩阵列向量组所张成空间的维数。通过普遍联系的视角，将向量组理论与秩的概念相结合，从而透过形式把握本质，实现 <strong>“形变质不变”</strong> 的认识深化。同时，向量组的观点也体现了<strong>整体与部分的辩证关系</strong>。</p>
+
+<h2 id="数学的形而上学性我个人的思考">数学的形而上学性：我个人的思考</h2>
+<p>在我的认知中，数学常被视为具有形而上学特质。在西方哲学传统里，“形而上学”（Metaphysics）研究“存在本身”“实体”“第一因”等超越经验的领域，其典型特征是用孤立、静止、片面的观点看待世界，认为事物是彼此孤立、永恒不变的；即使有变化，也只是数量的增减或场所的变更，且变化原因外在于事物自身。这听起来像是一种相当负面的评价，但<strong>马克思主义哲学</strong>教导我们要以辩证的视角看待事物。我并非哲学专业，对“Metaphysics”一词的理解也较为浅显，仅能将其拆解为“Meta”和“Physics”，理解为“物理之上”或“本源之学”。</p>
+
+<p>《易经》有云：“形而上者谓之道，形而下者谓之器。”形而上者指超越具体形器的抽象本质，形而下者则指日常经验中的具体器物。从小学到高中，我常感到数学在现实生活中的直接应用似乎有限——<strong>具体计算多由机械工具代劳，而高深数学思想在日常生活中也难以直接施展</strong>。学习期间也常听到周围人调侃：“数学没什么用，难道将来工作中还要给领导解方程吗？”放眼社会，东方文化中确有注重“经验主义”的倾向，这与马克思主义哲学“理论来源于实践”的观点相契合。因此我们在学习时往往倾向于从实际出发，关注概念的实际用途，更重视其方法论意义。</p>
+
+<p>但这种经验导向的思维与数学本身的形而上学气质存在一定冲突。同济版《线性代数》教材在教学过程中给我较强的 <strong>“功利感”</strong>，似乎专为应试而设计。尽管它试图联系实际，但在我看来效果并不理想，因为方程组这一切入点对于经历过高中阶段各种复杂数学训练（且大多与方程组无关）的我们来说，难以引起足够共鸣。由于缺乏解方程组的实际需求，我们便不易理解线性代数的真正意义。况且线性代数的用途远不止解方程组，它有着深刻的几何内涵，广泛应用于物理学、计算机科学、拓扑学、群论等诸多领域。但对于刚入大学的一年级学生——<strong>尤其像我们这样大一未开设大学物理的专业</strong>——更难以体会线性代数的<strong>重要性和实际价值</strong>。上述因素共同导致我们在学习过程中常感困惑。</p>
+
+<p>教材中关于特征值的部分便是一例。第 120 页对其实际意义的说明仅为 <strong>“在工程技术中可归结为求方阵特征值和特征向量的问题”</strong>，这很容易让读者感到疑惑。以我个人为例，当时便产生一系列疑问：特征值究竟是什么？为什么要这样计算？它到底有什么用处？为什么它能解决工程问题？而这些问题的答案却被淹没在紧随其后的形式化定义和大段证明之中。</p>
+
+<p>为了弄清这些问题，我专门观看了 <strong>3Blue1Brown</strong> 的系列视频，初步了解后又研读了<strong>Sheldon Axler</strong> 的 <strong>《线性代数应该这样学》</strong>（尽管只有英文版，仍坚持读完）。这才对特征值有了些许属于自己的理解：特征向量在几何上代表变换前后方向保持不变的向量。如果变换是刚性旋转（如正交矩阵所表示的变换），那么特征向量张成的直线便是旋转轴。这一认识与我之前所学的“四元数表示三维旋转”知识联系了起来。而这些直观背景恰恰是教材所欠缺的，我认为这是教材的不足之处。</p>
+
+<p>不过，马克思主义认为数学并非纯粹的“形而上学”。感到数学“更接近形而上学”是很自然的，因为数学的抽象性、确定性和非经验性，确实容易让人联想到传统形而上学的研究对象。马克思主义恰恰要打破这种印象，主张数学根植于物质实践，其有效性正源于它对现实世界的高度提炼，而非因为它描述了某个超验世界。马克思主义对数学的基本看法是：数学起源于实践，是现实的反映而非超验实在；其发展受社会实践与生产力推动；数学的工具性与真理性统一于实践。</p>
+
+<p>最后，让我们回归线性代数本身：作为工具，它提供精确的推理与预测，帮助改造世界。虽然它不可避免地带有形而上学色彩，但马克思主义拒绝将二者割裂，认为数学的“形而上学面貌”仅是其高度抽象性的表象，强调其抽象内容仍来源于现实，其真理性最终由实践检验</p>]]></content><author><name></name></author><category term="Linear" /><summary type="html"><![CDATA[摘要 本文作为线性代数课程的思政作业，主要从以下三个方面展开：我对线性代数与马克思主义哲学相结合的理解、在线性代数课程中的收获，以及对数学本质的若干思考。同时也借此机会尝试使用 $\LaTeX$ 进行排版。]]></summary></entry><entry><title type="html">LA - 3.2 你想要蓝药丸还是红药丸</title><link href="http://localhost:4000/2026/01/07/Linear-Algebra-3.2-%E7%9F%A9%E9%98%B5-Matrics.html" rel="alternate" type="text/html" title="LA - 3.2 你想要蓝药丸还是红药丸" /><published>2026-01-07T00:00:00+08:00</published><updated>2026-01-07T00:00:00+08:00</updated><id>http://localhost:4000/2026/01/07/Linear%20Algebra%20-%203.2%20%E7%9F%A9%E9%98%B5%20Matrics</id><content type="html" xml:base="http://localhost:4000/2026/01/07/Linear-Algebra-3.2-%E7%9F%A9%E9%98%B5-Matrics.html"><![CDATA[<p>接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 <strong>#6 线性空间与线性变换</strong>，这里对应的是<strong>线性变换的矩阵表示法</strong>。</p>
+<h2 id="矩阵来表示的线性变换">矩阵来表示的线性变换</h2>
+<blockquote>
+  <p>[!definition] $matrix$ $A_{j,k}$
+矩阵是一个 $m$ 行 $n$ 列的元素阵列，记为：
+\(A = \begin{pmatrix}
+A_{1,1} &amp; \cdots &amp; A_{1,n}\\
+\vdots &amp; &amp; \vdots\\
+A_{m,1} &amp; \cdots &amp; A_{m,n}
+\end{pmatrix}\)
+其中 $A_{j,k}$ 代表第 $j$ 行第 $k$ 列的元素</p>
+</blockquote>
+
+<p>一个线性变换 $T: V \to W$ 本身是抽象的，但一旦我们给 $V$ 和 $W$ 选择具体的<strong>基</strong>，就可以用<strong>矩阵</strong>这种具体的数字表格来表示它。简单来说，矩阵的作用是 <strong>输入一个向量在 V 的基下的坐标，输出它在 W 的基下的坐标</strong>。</p>
+
+<blockquote>
+  <p>[!definition] 矩阵表示的线性变换 $\mathcal{M}(T)$
+假设 $T\in\mathcal{L}(V,W)$ 并且 $\vec{v}<em>1,\dots,\vec{v}_n$ 是 $V$ 的一组基，$\vec{w}_1,\dots,\vec{w}_m$ 是 $W$ 的一组基。
+我们定义矩阵 $\mathcal{M}(T)$ 的第 $k$ 列，是 $T(v_k)$ 在 $W$ 的基 ${w_1, \dots, w_m}$ 下的坐标。
+\(T(\vec{v}_k) = A_{1,k} \vec{w}_1 + \cdots + A_{m,k} \vec{w}_m\)
+这里的系数 $A</em>{1,k}, A_{2,k}, \dots, A_{m,k}$ 就构成了 $\mathcal{M}(T)$ 的第 $k$ 列</p>
+</blockquote>
+
+<p>上面我们输入了一个 $v_k$ ，$T$ 将他从 $n$ 维变换到了 $m$ 维，此时我们已经规定了 $m$ 维的基底 $w_1,\dots,w_m$，所以 $T(v_k)$ 一定可以被 $w_1,\dots,w_m$ <strong>唯一的线性表示</strong>。这也说明了 $A_{j,k}$ 的唯一性。
+我们可以把矩阵的每一行对应上一个 $w_j$ ，列对应上一个 $v_k$，这样里面的每一列的元素都表示了
+\(T(\vec{v}_k) = A_{1,k} \vec{w}_1 + \cdots + A_{m,k} \vec{w}_m\)</p>
+
+<blockquote>
+  <p>[!danger] 我们日常做题的时候，一般会选取<strong>标准基</strong>！
+我们挑选的两个基一个是 $V$ 空间的，也就是输入空间的，一个是输出空间 $W$，此时，我们一般会将两个空间的基都选为<strong>标准基</strong>：
+\(\left({\left(\displaylines{1\\0\\\vdots\\0\\0}\right)},{\left(\displaylines{0\\1\\\vdots\\0\\0}\right)},\cdots,{\left(\displaylines{0\\0\\\vdots\\1\\0}\right)},{\left(\displaylines{0\\0\\\vdots\\0\\1}\right)}\right)\)
+也就是一个 <strong>对角单位矩阵</strong>。
+这样的话，如果我们要就不需要去专门把每一个 $A_{i,j}$ 算出来了，我们来看一下上面的式子
+\(T(\vec{v}_k) = A_{1,k} \vec{w}_1 + \cdots + A_{m,k} \vec{w}_m\)
+如果 $\vec{w}$ 选为标准基，那么就只有一位是 $1$，其他都是 $0$，也就是说
+\(T(\vec{v}_k)=\left(\displaylines{A_{1,k}\\\vdots\\A_{m,k}}\right)\) 
+这个式子的意思就是，在通过 $T$ 变换将 $V$ 的基 $\vec{v}_k$ 变换到 $W$ 后，它的坐标就是这个。我们也就会在矩阵里填入这个数。</p>
+
+  <p>这也引申出了一个更深刻的几何意义：
+当矩阵作为线性变换的时候，它实际上是将 $V$ 中的标准基 $v_k$ 拉伸到了这个矩阵第 $k$ 列向量的位置。<strong>矩阵 $A$ 的第 $k$ 列就是输入空间的标准基向量 $e_k$​ 被映射到的输出向量（用标准坐标表示）。</strong></p>
+
+</blockquote>
+
+<p>同时，这也说明了 $\mathcal{M}(T)$ 的构建需要至少<strong>两个空间的两个基底</strong>，才能表示出来。所以这个表示方法也可以写为 $\mathcal{M}(T,(v_1,\dots,v_n),(w_1,\dots,w_m))$</p>
+
+<p>这样，在定义完成之后，我们要想通过 $\mathcal{M}(T)$ 来计算一个变换，就可以这样用矩阵的乘法来计算了。</p>
+
+<blockquote>
+  <p>[!example] 用矩阵来表示函数空间中的<strong>求导映射算子</strong>
+假设求导算子 $\frac{d}{dx}\in \mathcal{L}(\mathcal{P}_3(\mathbb{R}),\mathcal{P}_2(\mathbb{R}))$，因为我们规定了 $(x^n)’=nx^{n-1}$ ，也规定了输入空间的输出空间的基均为 $(1,x,x^2,\dots,x^m)$，则矩阵为：
+\(\mathcal{M}(D) = \begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 3
+\end{pmatrix}\)
+我们以这个为例子来分析一下:</p>
+  <ul>
+    <li>对于 $\mathcal{P}_3(\mathbb{R})$ 的第一个基向量 $1$，把他映射到了 $0$ 上，这是一个降维操作</li>
+    <li>对于 $\mathcal{P}_3(\mathbb{R})$ 的第二个基向量 $x$，把他映射到了 $(1,0,\cdots)$ 上，也就是 $\mathcal{P}_2(\mathbb{R})$ 的第一个基向量——<strong>常数项</strong>上，这符合我们对求导的认知！</li>
+    <li>后面不多赘述，就是多了个指数项</li>
+  </ul>
+</blockquote>
+
+<h2 id="线性方程组在向量表示下的几何意义">线性方程组在向量表示下的几何意义</h2>
+<p>我们提到了，线性方程组其实可以理解为被赋予了意义的向量组，那么我们不妨去探索一下它作为向量组时的几何意义。回忆一下 [[Linear Algebra - 5.1 齐次线性方程组 Linear equation|线性方程组]] 的内容：</p>
+
+<blockquote>
+  <p>一个方程组表示为，如果你竖行的来看，他其实就是 $n$ 个向量<strong>数乘后相加</strong>，$x_k$ 就是这个数
+\(\begin{cases}
+A_{1,1} x_1+\cdots+A_{1,n} x_n = 0 \\
+\quad \vdots \\
+A_{m,1} x_1+\cdots+A_{m,n} x_n = 0
+\end{cases}\)</p>
+</blockquote>
+
+<p>实际上齐次线性方程组是在问——存不存在一个 <strong>n元数字组</strong>（当然，你也可以把他叫成向量）使得：
+\(x_1\vec{v_1}+\cdots+x_n\vec{v_n}=(0,\cdots,0)^T\in\mathbb{F}^m\)
+你会发现，如果把 $\vec{v}_k$ 全部都打开，这个式子其实就和上面的式子等价了：
+\(x_1{\left(\displaylines{A_{1,1}\\\vdots\\A_{1,m}}\right)}+\cdots+x_n{\left(\displaylines{A_{1,n}\\\vdots\\A_{m,n}}\right)}=(0,\cdots,0)^T\in\mathbb{F}^m\)
+回忆一下我们之前将 [[Linear Algebra - 2 张成、线性相关与线性独立|线性无关]] 时候的公式，这实际上在看这 $n$ 个 $m$ 维向量是否 <strong>线性无关</strong>，也就是说。显然，要线性方程组有非零解，也就是 $x_1,\dots,x_n\neq0$ ，则要求这些向量 <strong>线性相关</strong>。即：</p>
 <ul>
-  <li>我们STM32采用的时<strong>16位时基单元</strong>，最大可以实现$59.65s$的定时
-  其中包含<strong>计数器 ( Counter ) , 预分频器 ( Prescaler ) , 自动重装寄存器 ( Auto Reload Register ARR )</strong>，他们构成了最基础的时基单元，可以完成最基础的计时功能</li>
+  <li><strong>齐次方程组有非零解 ⇔ 列向量组线性相关</strong></li>
+  <li><strong>齐次方程组只有零解 ⇔ 列向量组线性无关</strong> 
+在学习了矩阵之后，我们就理解了这些<strong>列向量</strong>的几何意义——在 $W$ 的标准基视角下，$V$ 的标准基的坐标。其过程可以缩减为下图：
+\(\underbrace{e_k}_{\text{V的标准基向量}} \quad \xrightarrow{T}\underbrace{T(e_k)}_{\text{W中的向量}} \quad \xrightarrow{在W标准基下取坐标}\underbrace{A_{j,k}}_{\text{A的第k列}}\)</li>
 </ul>
 
-<h4 id="预分频器-prescaler">预分频器 Prescaler</h4>
-<p>用于接受经过<strong>触发控制器</strong>后的时钟信号，他会将这种<strong>方波型号</strong>分频，可以理解为将信号的周期除以x</p>
-<ul>
-  <li>加入预分频器存的是1，那么输入什么就输出什么</li>
-  <li>加入预分频器存的是n，那么一秒输入$72MHz$，他就输出${72 \over n}MHz$</li>
-</ul>
+<table>
+  <tbody>
+    <tr>
+      <td>这样，[[Linear Algebra - 5.1 齐次线性方程组 Linear equation#齐次线性方程组的推论</td>
+      <td>齐次线性方程组的推论]] 就有了另一个直观的解释，这我们之前在 [[Linear Algebra - 2 张成、线性相关与线性独立#线性无关与相关的推论</td>
+      <td>线性独立的推论]] 里提到了。</td>
+    </tr>
+  </tbody>
+</table>
 
-<h4 id="计数器-counter">计数器 Counter</h4>
-<p>用于接受来自预分频器的信号，来一次计数器就加一
-同时你也可以配置其计数模式（基本计时器没有这个功能）</p>
-<ul>
-  <li>向上计数，从0开始计</li>
-  <li>向下计数，从阈值开始计</li>
-  <li>中央对其，先向上，后向下，一个周期变个方向</li>
-</ul>
+<blockquote>
+  <p>[!tip] 推论
+特别的，$n+1$ 个向量的 $n$ 维向量组必线性相关。</p>
+</blockquote>
 
-<h4 id="自动重装寄存器-arr">自动重装寄存器 ARR</h4>
-<p>检测计数器的数值和自己存的数值，即<strong>触发阈值</strong>，一旦达到阈值，就<strong>触发中断</strong>，并清空Counter</p>
+<p>这也就是我们所说的 $n&gt;m$ 了。
+对于另一个推论，我说 <strong>可能无解</strong> 的意思是，他对基底的要求比较苛刻。我们之后再来补充</p>]]></content><author><name></name></author><category term="Linear" /><summary type="html"><![CDATA[接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 #6 线性空间与线性变换，这里对应的是线性变换的矩阵表示法。 矩阵来表示的线性变换 [!definition] $matrix$ $A_{j,k}$ 矩阵是一个 $m$ 行 $n$ 列的元素阵列，记为： \(A = \begin{pmatrix} A_{1,1} &amp; \cdots &amp; A_{1,n}\\ \vdots &amp; &amp; \vdots\\ A_{m,1} &amp; \cdots &amp; A_{m,n} \end{pmatrix}\) 其中 $A_{j,k}$ 代表第 $j$ 行第 $k$ 列的元素]]></summary></entry><entry><title type="html">LA - 3.1 Nullscape?Nullspace!</title><link href="http://localhost:4000/2026/01/07/Linear-Algebra-3.1-%E9%9B%B6%E7%A9%BA%E9%97%B4-%E5%80%BC%E5%9F%9F%E4%B8%8E%E5%8F%98%E6%8D%A2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html" rel="alternate" type="text/html" title="LA - 3.1 Nullscape?Nullspace!" /><published>2026-01-07T00:00:00+08:00</published><updated>2026-01-07T00:00:00+08:00</updated><id>http://localhost:4000/2026/01/07/Linear%20Algebra%20-%203.1%20%E9%9B%B6%E7%A9%BA%E9%97%B4%E3%80%81%E5%80%BC%E5%9F%9F%E4%B8%8E%E5%8F%98%E6%8D%A2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86</id><content type="html" xml:base="http://localhost:4000/2026/01/07/Linear-Algebra-3.1-%E9%9B%B6%E7%A9%BA%E9%97%B4-%E5%80%BC%E5%9F%9F%E4%B8%8E%E5%8F%98%E6%8D%A2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html"><![CDATA[<h2 id="零空间-null-spaces">零空间 Null Spaces</h2>
+<blockquote>
+  <p>[!definition] $null\ space$ 零空间
+对于 $T\in\mathcal{L}(V,W)$，$T$ 的零空间被记为 $null\ T$，它表示 $V$ 中所有被 $T$ 映射到 $W$ 后成为零向量的向量：
+\(ker\ T\ or\ null\ T=\{v\in V:Tv=0\}\)</p>
+</blockquote>
 
-<p>每一个都是16位的寄存器，而默认输入频率位72MHz
-所以:
-\(\left(2^{16} \over \left({7.2\cdot10^6 \over 2^{16}}\right)\right)s \approx 59.65s\)</p>
+<p>换一种说法，<strong>零空间 null space</strong>也被称为<strong>核 kernel</strong>。上面这个说法或许拗口，我们从几何上来理解。</p>
 
-<h2 id="基本定时器及其框图分析">基本定时器及其框图分析</h2>
-<p>基本定时器就只有单纯的计时并发送中断的功能，但其他定时器是建立在其基础上的
-![[STM32 基本定时器框图.png]]</p>
+<blockquote>
+  <p>[!example] 几何理解
+我们知道一个变换 $T$ 可以让一个空间 $V$ 降维，比如 $V$ 是三维空间，那么它就会被压缩成二维，甚至一维空间。下面我们以压缩到一维空间为例，这时空间<strong>塌缩 collapse</strong>成一个过 $0$ 点的线，那么容易想象，有一个二维平面上的所有点都塌缩到了 $0$ 点，也就是过 $0$ 点且垂直于这条线的平面。记这个塌缩变换为 $T$，则这个二维平面就是我们所说的 $null\ T$ 或者 $ker\ T$。</p>
 
-<ul>
-  <li>基本定时器只能读RCC的TIMxCLK，也就是那个<strong>72MHz的时钟</strong></li>
-  <li>经过<strong>触发控制器</strong>来到<strong>预分频器</strong>，分频后的信号来到CNT，达到阈值后输出<strong>UI（Update Interrupt）</strong>，通往NVIC排队</li>
-</ul>
+  <p>相应的，如果空间塌缩成二维，则是一个一维空间作为 $ker\ T$。
+当然，这也意味着 $ker\ T$ 是 $V$ 的子空间</p>
+</blockquote>
 
-<p>下面那个U是更新事件，暂时不管</p>
+<p>你会觉得 $T\vec{x}=0$ 非常眼熟，这其实就是我们解<strong>齐次线性方程组</strong>时候干的事情，之后在讲的时候我们会进一步解释零空间在这个语境下的意思。</p>
 
-<ul>
-  <li><strong>TRGO ( Trigger Out ) 触发输出</strong>这里是通过定时器来触发DAC专门做的口，本来需要定时器触发中断，然后再在中断函数里触发DAC，但是太麻烦了，而且会频繁中断主程序，所以专门做了这个口</li>
-</ul>
+<h2 id="单射满射-injectivitysurjection">单射/满射 injectivity/surjection</h2>
+<blockquote>
+  <p>[!definition] $injective$ 单射
+我们说 $T:V\to W$ 是单射当且仅当 
+\(Tu=Tv \Rightarrow u=v\)
+另一种简单的说法是，每一个<strong>输入</strong>对应一个唯一的<strong>输出</strong>，而每一种<strong>输出</strong>都对应唯一的输入，用函数来说，就是不存在 $f(x_1)=y=f(x_2)$，所有数都是一一对应的。</p>
+</blockquote>
 
-<h2 id="通用定时器及其框图分析">通用定时器及其框图分析</h2>
-<p>通用计时器能<strong>选择输入的时钟源</strong>，<strong>输入捕获</strong>，<strong>输出比较</strong>，<strong>编码器接口</strong>，<strong>主从触发模式</strong>等等
-![[STM32 通用计时器.png]]</p>
+<p>我们用几何来理解，一旦 $ker\ T$ 有维度，那也就意味着有无数个向量 $v\in ker\ T$ 能够满足 $Tv=0$ ，这不满足<strong>单射</strong>的条件！ 这个结论的另一个形式是，如果一个映射算子 $T:V\to W$，其中 $dim\ V &gt; dim\ W$，那么 $T$ <strong>一定不是一个单射</strong>。</p>
 
-<ul>
-  <li>中间偏上的部分依然是<strong>时基单元</strong></li>
-  <li>
-    <p>上半部分实现的功能是<strong>内外时钟源选择</strong>和<strong>主从触发模式</strong></p>
+<p>顺便的，我们来拓展一下<strong>满射 surjection</strong>和<strong>双射 bijection</strong>，这里我们就直接给出<strong>值域 range</strong>的定义了
+\(range\ T=\{Tv:v\in V\}\)
+同样的，很好理解，如果 $T\in\mathcal{L}(V,W)$ ，那么 $range\ T$ 是 $W$ 的子空间</p>
 
-    <p><strong>内部时钟</strong>已经说了，是RCC的72MHz的
-  <strong>外部时钟</strong>有</p>
-    <ul>
-      <li><strong>外部时钟模式2</strong> : TIMx_ETR ( External ) / _CH1~CH4 好像是PA0~PA4的复用功能</li>
-      <li><strong>外部时钟模式1</strong> : TRGI ( Trigger in ) 触发输入，可以将另一个时钟调为更新事件输出，将事件<strong>映射</strong>到TRGO上( 这就是主模式输出的功能 )，然后将当前时钟作为TRGI输入，这样就可以时钟套时钟，达到延长计时的效果，这我们称之为<strong>级联</strong>。
-  ETR时钟的信号好像也能走这一路，只不过如果走这一条路会占用TRGI通道。TIMx_CH1的上升沿下降沿也可以作为输入。TIMx_CH1，TIMx_CH2的引脚也可以作为输入。</li>
-    </ul>
-  </li>
-  <li>右下是<strong>输出比较</strong>电路，四个通道对应四个引脚，可以输出PWM波形
-    <ul>
-      <li><strong>捕获/比较寄存器</strong>，<strong>CCR ( Capture / Compare Register )</strong>，具体用法见[[STM32 - 4.2 TIM输出比较]]</li>
-    </ul>
-  </li>
-  <li>左下时<strong>输入捕获</strong>电路，可以读取方波的频率</li>
-  <li>中下时输入输出时共用的寄存器</li>
-</ul>
+<blockquote>
+  <p>[!definition] $surjection$ 满射
+如果 $T:V\to W$ 满足
+\(range\ T=W\)
+那么我们说 $T$ 是 $V$ 到 $W$ 的满射</p>
+</blockquote>
 
-<h2 id="高级定时器及其框图分析">高级定时器及其框图分析</h2>
-<p>不多赘述，就加了一个重复次数计数器，就是可以实现每隔几个周期再中断一次
-新增了死区生成电路，输出比较可以输出互补的方波了</p>
+<blockquote>
+  <p>[!definition] $bijection$ 双射
+如果 $T:V\to W$ 同时满足 <strong>单射</strong> 和 <strong>满射</strong> 的条件，那么我们就称 $T$ 是一个 $V$ 到 $W$ 的双射。这种情况下 $V$ 和 $W$ 中的每一个元素都会有一个一一相互对应的关系。</p>
+</blockquote>
 
-<h1 id="定时中断流程图">定时中断流程图</h1>
+<p>和上面的结论相对应的，如果有一个映射算子 $T:V\to W$，其中 $dim\ V &lt; dim\ W$，那么 $T$ <strong>一定不是一个满射</strong>。</p>
 
-<p>![[STM32 定时中断流程图.png]]</p>
+<p>这个我讲一下我对维度的理解哦，我们对高维的理解有一个简单的方式，就是将三维空间的每一个点理解为一个<strong>实体</strong>，这个<strong>实体</strong>自身又拥有 $n$ 个属性，其中 $n=dim V-3$，也就是说，一个四维相当于在三维中的每一个点中，又存入了一条信息，这个信息表现为一个线，也就是又一个<strong>一维空间</strong>。显然，低维空间的一个点不可能<strong>线性的</strong>去对应一个高维的线上的每一个点，这是不对称的。</p>
 
-<h1 id="预分频器时序">预分频器时序</h1>
+<p>再进一步解释一下，一旦你要将低维映射到高维，那么<strong>多出来的维度就需要低维的量来决定</strong>，这就导致了肯定有无法表示的向量。</p>
 
-<p><strong>CK_PSC</strong>是输入频率
-<strong>CK_EN</strong>是预分频器的开启状态
-<strong>CK_CNT</strong>是预分频器输出频率</p>
+<h2 id="线性变换基本定理-fundamental-theorem-of-linear-maps">线性变换基本定理 Fundamental Theorem of Linear Maps</h2>
+<p>从名字你都可以看得出来这个定理有<strong>多重要</strong>。</p>
 
-<p>![[STM32 预分频器时序.png]]</p>
+<blockquote>
+  <p>[!definition] $fundamental\ theorem\ of\ linear\ transformation$ 线性变换基本定理 
+假设 $V$ 是一个有限维度的向量空间且 $T\in\mathcal{L}(V,W)$，那么就会有
+\(dim\ V=dim\ null\ T+dim\ range\ T\)
+这个也被称为<strong>秩—零化度定理</strong>（Rank–Nullity Theorem）</p>
+</blockquote>
 
-<p>由此可以看见，在周期中间改变寄存器里的分频值，其作用效果会在下一个周期启用</p>
+<p>这个结论有一个非常美妙的几何解释，这个我们会在后面专开一节讲解。我们先用代数的方法来证明。</p>
 
-<h1 id="计数器时序">计数器时序</h1>
+<blockquote>
+  <p>[!quote] 线性变换基本定理的证明
+我们先取 $null\ T$ 的一组基底 $u_1,\cdots,u_m$，由 [[Linear Algebra - 2.1 基底 Bases#基扩张定理|基扩张定理]] 可知，我们可以扩 $n$ 个与它们线性无关的向量 $v_1,\cdots,v_n\in V$ ，是的新的向量组成为 $V$ 的一个基
+\(span(u_1,\cdots,u_m,v_1,\cdots,v_n)=V\)
+也就有 $dim\ V=n+m$，现在我们只需要证明 $dim\ range\ T=n$ 即可。
+假设 $v\in V$ ，那么很容易得到
+\(v=a_1u_1+\cdots+a_mu_m+b_1v_1+\cdots+b_nv_n\)
+两边同乘 $T$，前面 $m$ 个因为零空间的定义，都成 $0$ 了，所以有
+\(Tv=b_1Tv_1+\cdots+b_nTv_n\)
+由定义，我们知道 $Tv$ 就是 $range\ T$，所以
+\(Tv_1,\cdots,Tv_n\)
+就是 $range\ T$ 的基底。也就是说 $dim\ range\ T=n$。</p>
+</blockquote>
 
-<p>![[STM32 计数器时序图.png]]</p>
+<h2 id="总结一下">总结一下</h2>
+<p>我们来理一下现在提到的几个概念：</p>
 
-<p>有一个APRE参数</p>
-<ul>
-  <li>APRE = 1时，若阈值在周期中被改变，则其作用效果会在下一周期启用</li>
-  <li>APRE = 0时，若阈值在周期中被改变，则其作用效果立即生效</li>
-</ul>
+<blockquote>
+  <p>[!tip] $range\ T$
+它也称为 <strong>像空间（image）</strong> 或 <strong>列空间（当 $T$ 用矩阵表示时）</strong>。
+它的维数称为 <strong>秩（rank）</strong>。我们一般用 $r$ 表示。在 $T$ 是矩阵的时候有
+\(dim(range\ T)=rank(T)\)
+在之后我们会了解到 $r$ 实际上有着更深刻的意思。</p>
+</blockquote>
 
-<h1 id="rcc时钟树及其框图">RCC时钟树及其框图</h1>
-<p>外设都接在被称为<strong>总线</strong>的东西上，例如（AHB，APB1，APB2）
-不同外设接在不同<strong>总线</strong>上，而像GPIO，ADC这种大部分都接在<strong>APB2</strong>上，<strong>APB2是高速外设总线</strong>!</p>
+<blockquote>
+  <p>[!tip] $ker\ T=null\ T$
+零空间在<strong>线性方程组</strong>里实际上代表<strong>解空间</strong>，几何上是<strong>输入中“被压缩到零”的自由度</strong>，也就是<strong>信息损失掉的维度</strong>。</p>
+</blockquote>]]></content><author><name></name></author><category term="Linear" /><summary type="html"><![CDATA[零空间 Null Spaces [!definition] $null\ space$ 零空间 对于 $T\in\mathcal{L}(V,W)$，$T$ 的零空间被记为 $null\ T$，它表示 $V$ 中所有被 $T$ 映射到 $W$ 后成为零向量的向量： \(ker\ T\ or\ null\ T=\{v\in V:Tv=0\}\)]]></summary></entry><entry><title type="html">LA - 2.2 我们需要更深入一些</title><link href="http://localhost:4000/2026/01/06/Linear-Algebra-2.2-%E7%BB%B4%E5%BA%A6-Dimension.html" rel="alternate" type="text/html" title="LA - 2.2 我们需要更深入一些" /><published>2026-01-06T00:00:00+08:00</published><updated>2026-01-06T00:00:00+08:00</updated><id>http://localhost:4000/2026/01/06/Linear%20Algebra%20-%202.2%20%E7%BB%B4%E5%BA%A6%20Dimension</id><content type="html" xml:base="http://localhost:4000/2026/01/06/Linear-Algebra-2.2-%E7%BB%B4%E5%BA%A6-Dimension.html"><![CDATA[<p>一个空间 $V$ 虽然可以有不同基，但是每个基的长度都是一样的！我们便定义这个长度 $n$ 为这个空间的<strong>维度 dimension</strong>。</p>
 
-<p>而在使用外设前，我们需要<strong>启动这条总线的时钟</strong>
-<strong>所有的数字电路</strong>（包括GPIO控制器）都需要一个<strong>时钟信号来同步工作</strong>。没有时钟，电路就无法执行任何操作，就像没有了心跳。</p>
+<table>
+  <tbody>
+    <tr>
+      <td>这也非常符合我们的直观直觉，毕竟我们也就在<strong>三维空间</strong>中，[[Linear Algebra - 2.1 基底 Bases</td>
+      <td>上节]] 我们说了，三维空间的标准基长度也正好是 $3$，所以我们所在的空间就是三维的！</td>
+    </tr>
+  </tbody>
+</table>
 
-<p><strong>时钟是所有外设运行的基础</strong>，所以它总是最先需要配置好的东西
-在主函数之前，还会执行一个<strong>SystemInit</strong>函数，这个函数就是用来配置时钟树的</p>
+<blockquote>
+  <p>[!definition] $dimension\ dim\ V$ 
+一个<strong>有限维度空间的维度</strong>等同于它的任意<strong>基</strong>的长度，表示方法为
+\(dim(V)\)
+非常简单的一个推论我也直接写这里了，就是对 $V$ 的任意子空间 $U$ 总有
+\(dim\ U\leq dim\ V\)
+同样的，$V$ 中每一个长度为 $dim\ V$ 的线性无关组都是 $V$ 的基底</p>
+</blockquote>
 
-<p>![[STM32 RCC时钟树.png]]</p>
+<p>我们在 [[Linear Algebra - 1.2 子空间 Subspace|子空间]] 里提到过子空间和的维度计算公式，这里再列一遍：
+\(\dim(V_1+V_2) = \dim V_1 + \dim V_2 - \dim(V_1 \cap V_2)\)</p>
 
-<ul>
-  <li>左边是用来生成72MHz的，有<strong>四个振荡源</strong>，分别为
-    <ul>
-      <li>内部8MHz高速RC振荡器</li>
-      <li>外部4-16MHz高速石英晶体振荡器，即晶振
-  以上这两个是用来<strong>提供系统时钟</strong>的，<strong>AHB，APBx</strong>都源于这两个</li>
-      <li>外部32.768KHz低速晶振，<strong>一般给RTC提供时钟</strong></li>
-      <li>内部40KHz低速RC振荡器，<strong>给看门狗用的</strong>
-<strong>8MHz</strong>被PLL倍环9倍后就成了<strong>72MHz</strong></li>
-    </ul>
-  </li>
-  <li>
-    <p>CSS ( Clock Security System ) 用于检测时钟是否失效，防止程序卡死，这在高级定时器的死区电路那一块也有体现</p>
-  </li>
-  <li>
-    <p>通往<strong>APB1</strong>的线原先是经过预分频器（默认为2）变为<strong>36MHz</strong>，但是其支路指明了操作，又<strong>翻倍回去</strong>了，所以时钟依旧是<strong>72MHz</strong>，通向TIMXCLK</p>
-  </li>
-  <li>
-    <p><strong>APB2</strong>预分频器默认为1，故就是72MHz</p>
-  </li>
-  <li>可以看见APBx每一个与门下面都有一个<strong>外设时钟使能</strong>，这就是我们写<strong>RCC_APBxPeriphClockCmd</strong>作用的地方，由此也可见<strong>Cmd</strong>的意思就是<strong>使能 ( Command )</strong></li>
-</ul>
+<p>其实这个概念和集合论有许多相似之处，我们来进行以下比较：</p>
 
-<p>[[STM32 - 4.1 TIM中断的初始化和使用]]
-[[STM32 - 4.2 TIM输出比较]]
-[[STM32 - 4.1 EX 非阻塞式电路]]
-[[STM32 - 4.3 TIM输入捕获]]
-[[STM32 - 4.4 TIM编码器接口]]
-[[STM32 - 5 USART串口协议]]</p>]]></content><author><name></name></author><category term="#嵌入式" /><summary type="html"><![CDATA[#嵌入式 TIM Timer 定时器可以对输入的时钟计数，并在达到设定值时触发中断 例如$72MHz$每秒输入$72M$次，每输入一次，内部的Counter就会++ 而我设定为Counter到达$72K$的时候，触发一次中断，这样一秒就会触发1000次中断 也就是一次中断的间隔为$1ms$ 即: \(计时长度 = {1 \over {输入频率 \over 触发阈值}}s = {触发阈值 \over 输入频率}s\) 定时器具备定时中断功能，还能选择输入的时钟源，输入捕获，输出比较，编码器接口，主从触发模式等等 定时器分为基本定时器，通用定时器，高级定时器]]></summary></entry><entry><title type="html">STM32 - EX 非阻塞式电路</title><link href="http://localhost:4000/2025/09/16/STM32-4.1-EX-%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%BC%8F%E7%94%B5%E8%B7%AF.html" rel="alternate" type="text/html" title="STM32 - EX 非阻塞式电路" /><published>2025-09-16T00:00:00+08:00</published><updated>2025-09-16T00:00:00+08:00</updated><id>http://localhost:4000/2025/09/16/STM32%20-%204.1%20EX%20%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%BC%8F%E7%94%B5%E8%B7%AF</id><content type="html" xml:base="http://localhost:4000/2025/09/16/STM32-4.1-EX-%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%BC%8F%E7%94%B5%E8%B7%AF.html"><![CDATA[<p>#嵌入式</p>
-<h1 id="非阻塞式电路">非阻塞式电路</h1>
-<p>在按钮的检测中，我们尝试了用EXTI来检测按钮是否按下，但效果极差，而且为了消抖而Delay的20ms会导致整个系统的阻塞，我们急需一个<strong>非阻塞式电路</strong>！</p>
+<table>
+  <thead>
+    <tr>
+      <th>$sets$</th>
+      <th>$vector\ spaces$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$S$ 是一个有限集</td>
+      <td>$V$ 是一个有限空间</td>
+    </tr>
+    <tr>
+      <td>$S_1\cup S_2$ 是最小的包含 $S_1,S_2$ 的子集</td>
+      <td>$V_1+ V_2$ 是最小的包含 $V_1,V_2$ 的子空间</td>
+    </tr>
+    <tr>
+      <td>$#(S_1\cup S_2)=#S_1+#S_2-#(S_1\cap S_2)$</td>
+      <td>$\dim(V_1+V_2) = \dim V_1 + \dim V_2 - \dim(V_1 \cap V_2)$</td>
+    </tr>
+    <tr>
+      <td>若$#(S_1\cup \cdots \cup S_m)=#S_1+\cdots+#S_m$，则表示这些集合是<strong>不相交 disjoint</strong>的集合</td>
+      <td>若$\dim(V_1+\cdots+V_m) = \dim V_1 +\cdots+ \dim V_2m$，则表示 $V_1+\cdots+V_m$ 是直加</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name></name></author><category term="Linear" /><summary type="html"><![CDATA[一个空间 $V$ 虽然可以有不同基，但是每个基的长度都是一样的！我们便定义这个长度 $n$ 为这个空间的维度 dimension。]]></summary></entry><entry><title type="html">LA - 2.1 let the “base” kick</title><link href="http://localhost:4000/2026/01/06/Linear-Algebra-2.1-%E5%9F%BA%E5%BA%95-Bases.html" rel="alternate" type="text/html" title="LA - 2.1 let the “base” kick" /><published>2026-01-06T00:00:00+08:00</published><updated>2026-01-06T00:00:00+08:00</updated><id>http://localhost:4000/2026/01/06/Linear%20Algebra%20-%202.1%20%E5%9F%BA%E5%BA%95%20Bases</id><content type="html" xml:base="http://localhost:4000/2026/01/06/Linear-Algebra-2.1-%E5%9F%BA%E5%BA%95-Bases.html"><![CDATA[<p>上一节我们讨论了 <strong>线性无关</strong> 和 <strong>生成组</strong>。基底就是同时满足这两个条件的向量组。</p>
 
-<p><strong>非阻塞式电路</strong>，也就是任意一个电路不会影响整体的运行，全程畅通无阻</p>
+<blockquote>
+  <p>[!definition] $basis$
+$V$ 的<strong>基</strong>是指一个线性无关，且张成 $V$ 的向量组。</p>
+</blockquote>
 
-<p>回想Hyp家园，为了时刻检测玩家的数值，我们运用了一个中毒循环，每秒检测一次
-这里我们用到的是TIM中断，这样也可以每<strong>隔一段时间就检测一次</strong></p>
+<p>这和我们高中理解的<strong>基底</strong>几乎一模一样。对于一个空间直角坐标系，其标准基为 $(\hat{i},\hat{j},\hat{k})$，也就是 $(1,0,0),(0,1,0),(0,0,1)$ 。</p>
 
-<p>同时，<strong>用TIM来消除按钮的抖动</strong>，也是非常好的选择，这样就避免了Delay造成的阻塞</p>
+<blockquote>
+  <p>[!quote] 基的特性
+当且仅当 $V$ 中的每一个变量可以被某个<strong>线性无关组</strong>以唯一方式表示的时候，我们称这这个组为 $V$ 的<strong>基</strong>。</p>
+</blockquote>
 
-<h2 id="定时中断函数的基本格式">定时中断函数的基本格式</h2>
+<h2 id="基扩张定理">基扩张定理</h2>
+<p>有一个浅显的推论是，对于 $V$ 中的任意一个线性无关组 $S$，都可以通过加入 $m$ 个新向量，拓展为一个 $V$ 的基。和前面学到的 [[Linear Algebra - 1.2 子空间 Subspace#直和 $ oplus$|直和]] 结合，我们得到如下的推论。</p>
 
-<pre><code class="language-C">void TIM2_IRQHandler(void){
-	if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
-    {
-		LED_flow();
-		button_check();
-        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-    }
-}
+<blockquote>
+  <p>[!quote] 每一个 $V$ 的子空间都可以是一个直和为 $V$ 的等式的一部分
+假设 $U$ 是 $V$ 的子空间，那么一定存在一个子空间 $W$ 使得
+\(V = U\oplus W\)</p>
+</blockquote>]]></content><author><name></name></author><category term="Linear" /><summary type="html"><![CDATA[上一节我们讨论了 线性无关 和 生成组。基底就是同时满足这两个条件的向量组。]]></summary></entry><entry><title type="html">LA - 线性代数の概述与些许感悟</title><link href="http://localhost:4000/2026/01/04/Linear-Algebra-0-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E3%81%AE%E6%A6%82%E8%BF%B0%E4%B8%8E%E4%BA%9B%E8%AE%B8%E6%84%9F%E6%82%9F.html" rel="alternate" type="text/html" title="LA - 线性代数の概述与些许感悟" /><published>2026-01-04T00:00:00+08:00</published><updated>2026-01-04T00:00:00+08:00</updated><id>http://localhost:4000/2026/01/04/Linear%20Algebra%20-%200%20%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E3%81%AE%E6%A6%82%E8%BF%B0%E4%B8%8E%E4%BA%9B%E8%AE%B8%E6%84%9F%E6%82%9F</id><content type="html" xml:base="http://localhost:4000/2026/01/04/Linear-Algebra-0-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E3%81%AE%E6%A6%82%E8%BF%B0%E4%B8%8E%E4%BA%9B%E8%AE%B8%E6%84%9F%E6%82%9F.html"><![CDATA[<p>现在我们学校在教的是同济大学的线代教材，我相信很多同学是听的云里雾里的，包括我。线性代数的概念似乎都是全新的，完全无法理解它们想要表达什么，要怎么做，能干什么。但我想说，我们更多的是去学习它的思考方法。数学本身就是一种看世界的方法，学习也不过是认识世界、形成自己的、学习他人的哲学的过程。</p>
+
+<p>或许我以后会有改观，但就现在而言，我认为把 <strong>线性代数 Linear Algebra</strong> 和 <strong>空间 Spaces</strong> 分开来教简直是最错误的决定（甚至不教空间的任何东西），这也就是同济大学的线代教材在干的事情，所以我是相当讨厌这个教材的。高数就另当别论了，那个并不注重与理解，毕竟容易理解，更多的是你积累的方法论够不够。</p>
+
+<p>前天看了 <a href="https://www.bilibili.com/video/BV11CikBSE5A">Pikachu345</a> 的视频，我一直觉得说的很有道理，目前教育体系的很大一个问题是就是太注重应试而非本质上的理解，也就是过度追求与 <strong>怎么做</strong> 的过程而非 <strong>为什么</strong>。这显然是有害的，因为你没有办法变通，你需要靠大量的积累和刷题去获得各种方法论从而解决问题，但是一旦直到 <strong>为什么</strong> 你对方法论也就无师自通了。</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>另外，我之前是比较抗拒在电脑上记数学方面的笔记的，但是现在想象好像也没什么不妥，很大一部分原因是当时笔记的记录的体系不够成熟。详见 [[数学概念的定义</td>
+      <td>数学废稿]]，那一块知识点非常难以消化，导致我对记笔记本身都产生了厌恶。还有一个排斥的原因是当时认为obsidian的自由度不够高，现在看来只是当时的技术不够成熟罢了。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>这里将线性代数会从 <a href="https://www.bilibili.com/video/BV1ib411t7YR">Essence of Linear Algebra - 3Blue1Brown</a> 和 <a href="[Linear Algebra Done Right](https://linear.axler.net/LADR4e.pdf)">Linear Algebra Done Right - Sheldon Axler</a> 两篇文献来讲述线性代数，但主要是跟随后者的脚步来记录的。接下来我会一点一点捋顺线性代数中的基本知识点和其代表的<strong>几何意义</strong>，<strong>实际用途</strong>，以及我觉得非常重要的——<strong>为什么这么命名</strong>。</p>]]></content><author><name></name></author><category term="Linear" /><summary type="html"><![CDATA[现在我们学校在教的是同济大学的线代教材，我相信很多同学是听的云里雾里的，包括我。线性代数的概念似乎都是全新的，完全无法理解它们想要表达什么，要怎么做，能干什么。但我想说，我们更多的是去学习它的思考方法。数学本身就是一种看世界的方法，学习也不过是认识世界、形成自己的、学习他人的哲学的过程。]]></summary></entry><entry><title type="html">LA - 2 spannnnnnnn、相关与无关</title><link href="http://localhost:4000/2026/01/04/Linear-Algebra-2-%E5%BC%A0%E6%88%90-%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B.html" rel="alternate" type="text/html" title="LA - 2 spannnnnnnn、相关与无关" /><published>2026-01-04T00:00:00+08:00</published><updated>2026-01-04T00:00:00+08:00</updated><id>http://localhost:4000/2026/01/04/Linear%20Algebra%20-%202%20%E5%BC%A0%E6%88%90%E3%80%81%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B</id><content type="html" xml:base="http://localhost:4000/2026/01/04/Linear-Algebra-2-%E5%BC%A0%E6%88%90-%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B.html"><![CDATA[<p>接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 <strong>#6 线性空间与线性变换</strong>，这里对应的是<strong>维数、基与坐标</strong>。线性代数一般不做无限空间的研究，我们研究的一般是<strong>有限维度的向量空间 finite-dimensional vector space</strong></p>
+<h2 id="线性组合和张成-linear-combination--span">线性组合和张成 Linear Combination &amp; Span</h2>
+<blockquote>
+  <p>[!definition] $Linear\ Combination$
+对于一个<strong>向量组 list of vectors</strong> $v_1,\cdots,v_m$，和 $a_1,\cdots,a_m\in F$，线性组合表示为
+\(a_1v_1+\cdots+a_mv_m\)
+这会最终返回一个同维的向量</p>
+</blockquote>
+
+<blockquote>
+  <p>[!definition] $Span/Spans$
+一个<strong>向量组</strong>所有可能的线性组合所返回的向量组成的集合，被称为<strong>该向量组张成(span)的集</strong>
+\(span(v_1,\cdots,v_m)=\{a_1v_1+\cdots+a_mv_m:a_1,\cdots,a_m\in F\}\)
+如果这个集和某个空间 $V$ 相等，那么我们就说<strong>该向量组张成(spans)空间 V</strong>
+\(span(v_1,\cdots,v_m)=V\)</p>
+</blockquote>
+
+<p>几何上，这很容易理解，把一个<strong>向量组</strong>里面的几个向量看作是箭头，这几个箭头“张开来”所形成的空间就是<strong>张成的空间</strong>。另外一个容易理解的推论是<strong>张成的空间就是最小的“包含子空间”</strong>。</p>
+
+<p>我们把张成这一个空间的向量组称为<strong>生成组</strong>。</p>
+
+<h2 id="有限维度的向量空间-finite-dimensional-vector-space">有限维度的向量空间 finite-dimensional vector space</h2>
+<blockquote>
+  <p>[!definition] $finite-dimensional\ vector\ space$
+如果一个<strong>向量空间</strong>能被一个一些<strong>向量组</strong>张成，那么这个向量空间就被称为<strong>有限维度的向量空间</strong></p>
+</blockquote>
+
+<p>接下来我们将视角转向函数空间，这几乎被排在同济大学教材的相当后面的部分，就是多项式定理那一块。我们已经对多项式 $\mathcal{P}(F)$ 很熟悉了，这里我们再来明确以下定义</p>
+
+<blockquote>
+  <p>[!definition] $polynomial\ \mathcal{P}(\mathbb{F})$
+对于一个函数 $\mathcal{p}:\mathbb{F}\to \mathbb{F}$ 和 $a_0,\cdots,a_m\in \mathbb{F}$ ，$z\in \mathbb{F}$ 若其形式可以写为
+\(\mathcal{p}(z)=a_0+a_1z+a_2z^2+\cdots+a_mz^m\)
+则将其称为 $\mathbb{F}$ <strong>中带系数的多项式</strong>，而 $\mathcal{P}(\mathbb{F})$ 就表示所有这样存在的多项式的集。显然，$\mathcal{P}(\mathbb{F})$ 是 $\mathbb{F}^\mathbb{F}$ 的子集。</p>
+
+</blockquote>
+
+<p>当然，还有一个可能相对陌生一点名词 <strong>度 degree</strong>，一个多项式的<strong>度</strong>就是这个多项式的<strong>最高次数</strong>，也被称为这个<strong>多项式的次数</strong>。如果一个多项式在向量空间里代表 $0$，那么我们规定它的<strong>度</strong>为 $-\infty$。</p>
+
+<blockquote>
+  <p>[!definition] 接上
+我们再给定一个非负整数 $m$ 用于代表 $\mathcal{P}(\mathbb{F})$ 中的多项式的最高次数。当然，最高次系数依然可以为 $0$。这样我们记这个集为 $\mathcal{P}_m(F)=span(1,z,\cdots,z^m)$。</p>
+</blockquote>
+
+<p>不过，$\mathcal{P}(F)$ 实际上是一个<strong>无限维度的向量空间</strong>，记其中多项式的次数为 $m$，则你总能找到一个 $z^{m+1}$ 不被包含在多项式内，所以没有任何一个列表可以展开为 $\mathcal{P}(F)$，但 $\mathcal{P}_m(F)$ 可以。</p>
+
+<h2 id="线性独立与相关-linear-independencedependence">线性独立与相关 Linear Independence/dependence</h2>
+<p>别看我这里说的是<strong>独立</strong>，其实他就是<strong>线性无关 Linear Independence</strong>，不过英文里做描述时一般说<strong>Linearly Independent/dependent</strong>。</p>
+
+<p>假设我们现在有一个向量组 $v_1,\cdots,v_m\in V$ 且 $v\in span(v_1,\cdots,v_m)$ ，那么 $v$ 可以表示为向量组的线性组合，即
+\(v=a_1v_1+\cdots+a_mv_m\)
+根据 <strong>直和</strong> 的定义，我们来看看这个变量的表示形式是否唯一，证法我们在 [[证明题 - 唯一性证明]] 里提到了，用反证法。我们假设有另外一组数字 $c_1,\cdots,c_m\in F$ 满足
+\(v=c_1v_1+\cdots+c_mv_m\)
+那么这两个式子相减就有
+\(0=(a_1-c_1)v_1+\cdots+(a_m-c_m)v_m\)</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>我们先前在将 [[Linear Algebra - 1.2 子空间 Subspace#直和 $ oplus$</td>
+      <td>直和]] 的时候提到了一点，就是如果要验证一系列空间是否符合直和的条件，那么就是看 $0$ 在这些子空间的<strong>和空间</strong>内看看 $0$ 有没有两种表示形式。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>如果这里表示 $0$ 的方式只有将所有的系数变为 $0$ ，也就是
+\((a_1-c_1)=0,\cdots,(a_m-c_m)=0\)
+那么我们就称这个向量组<strong>线性无关</strong>。</p>
+
+<blockquote>
+  <p>[!definition] $linearly\ independent$
+如果对于一个向量组 $v_1,\cdots,v_m\in V$ 唯一让他们线性组合为 $0$ 的方式是将所有系数定为 $0$ ，那么称它们为<strong>线性无关 linearly independent</strong>的。
+特殊的，空集也是线性无关的
+这同时也等价于 $v\in span(v_1,\cdots,v_m)$ 有且只有一种由 $v_1,\cdots,v_m$ 线性组合的表示方式。</p>
+</blockquote>
+
+<p>同样的，我们可以得到<strong>线性相关</strong>的定义</p>
+
+<blockquote>
+  <p>[!definition] $linearly\ dependent$
+如果对于一个向量组 $v_1,\cdots,v_m\in V$ 让他们线性组合为 $0$ 的方式不一定需要所有系数定为 $0$ ，那么称它们为<strong>线性相关 linearly dependent</strong>的。</p>
+</blockquote>
+
+<p>几何上的理解是，如果一个向量组中的某些向量就能张成一个空间表示剩下的向量，就说明这个向量组是<strong>线性相关</strong>的。反之，如果每一个向量都为原来的空间<strong>增添了一个新维度</strong>，那么就说这个向量组<strong>线性无关</strong>。我们下面还会再提及。</p>
+
+<h2 id="线性无关与相关的推论">线性无关与相关的推论</h2>
+<p>这里我们应用一下同济教材上的推论，并对其进行进一步的解释。</p>
+
+<blockquote>
+  <p>[!tip] 推论
+(1) 若一个向量组 $v_1,\cdots,v_m$ <strong>线性相关</strong>，那么加上一个新的向量 $v_{m+1}$ 后的向量组依然<strong>线性相关</strong>。特别的，$n + 1$ 个 $n$ 维向量一定线性相关。
+(2) 若一个向量组 $v_1,\cdots,v_m$ <strong>线性无关</strong>，那么去掉一个向量 $v_{k}$ 后的向量组依然<strong>线性无关</strong>。
+(3) 若一个向量组 $v_1,\cdots,v_m$ <strong>线性无关</strong>，而  $v_1,\cdots,v_m,b$  <strong>线性相关</strong>，则说明 $b$ 一定能被 $v_1,\cdots,v_m$ 这个向量组线性组合出来，且表示形式唯一。</p>
+</blockquote>
+
+<p>我来对上面的三个推论进一步解释一下：</p>
+<ol>
+  <li>在加上 $a_{m+1}$ 后，这个向量组里面的<strong>最大无关组</strong>^[1]只会变大，不会变小，所以依旧可以表示所有其他的量。</li>
+  <li>已经明确了 $m$ 个基底的 $\mathbb{R}^m$ ，去掉一个基底后会变成 $\mathbb{R}^{m-1}$</li>
+  <li>“最极端的情况”即为每一个向量均为基底，均为这个空间提供了一个维度，若 $m&gt;n$ ，则必有一个向量不为基底，即<strong>线性相关</strong></li>
+</ol>
+
+<h4 id="线性相关引理-linear-dependence-lemma">线性相关引理 Linear dependence lemma</h4>
+<p><strong>推论 (1)</strong> 和 <strong>LADR</strong> 提到的 <strong>Linear dependence lemma</strong> 说的实际上是一件事</p>
+
+<blockquote>
+  <p>[!tip]  $linear\ dependence\ lemma$
+假设 $v_1,\cdots,v_m \in V$ ，那么一定存在一个 $v_k$，满足
+\(v_k\in span(v_1,\cdots,v_{k-1})\)
+也就是说这个 $v_k$ 对于这个向量组张成的空间实际上“没啥贡献”，是“冗余的”。当我这么说时，我的意思是它不会提供一个“未知的新维度”。所以你如果将 $v_k$ 去掉，剩下的 $k-1$ 个向量仍然满足
+\(span(v_1,\cdots,v_{k-1})=span(v_1,\cdots,v_{k})\)</p>
+</blockquote>
+
+<p>具体要怎么取验证一个向量组是否<strong>线性相关</strong>，你可以一点一点把 $k$ 从 $1$ 开始取，一直到 $m$。</p>
+
+<blockquote>
+  <p>[!tip] 推论
+在同一个 $V$ 中，任取两个向量组：</p>
+  <ul>
+    <li>一个任意的线性无关组 $S={v_1,\cdots,v_m}$</li>
+    <li>一个生成组 (spanning list) $L={w_1,\cdots,w_n}$ ，任何一个 $V$ 中的向量都能表示为它们的线性组合</li>
+  </ul>
+
+  <p>定理给到一定有 $n \geq m$
+进一步，在学习了 [[Linear Algebra - 2.1 基底 Bases|基底]] 之后，它可以佐证 [[Linear Algebra - 2.1 基底 Bases#基扩展定理|基扩张定理]]</p>
+</blockquote>
+
+<blockquote>
+  <p>[!proof] 另类证明
+因为如果 $m&gt;n$，那么你就有一个矛盾：
+用 $S$ 可以依次“表示”或“替换” $L$ 中的向量，如果 $m&gt;n$，那么在替换过程中，$L$ 的前 $n$ 个向量会消耗完 $S$ 的所有“独立方向”，这样第 $m$ 个向量就会与前面的线性相关，违反了 $L$ 线性无关的条件。</p>
+</blockquote>
+
+<h4 id="替换定理">替换定理</h4>
+<p><strong>LADR</strong> 给到了一个有趣的证法，用到了<strong>替换定理</strong></p>
+
+<blockquote>
+  <p>[!proof] 替换定理
+我们把 $v_1$ 拿出来加入到 $w_1,\cdots,w_n$ 去，这样这个组，根据定义 (空间内任意向量能够被生成组唯一表示)，一定线性相关。新的组表示为
+\(v_1,w_1,\cdots,w_n\)
+不妨把 $v_1$ 放到最前面，依据<strong>线性相关引理</strong>，$k$ 取 $1$ 时，$v_1$肯定线性无关。也就说明后面的 $n$ 个 $w_i$ 肯定有一个是<strong>冗余</strong>的，可以被剔除。
+就这样重复 $m$ 次，直到把所有 $v_i$ 压入 $L$ 中，你会发现，$m$ 一定会小于 $n$，因为一旦大于，$S$ 就无法满足线性无关的条件。</p>
+</blockquote>]]></content><author><name></name></author><category term="Linear" /><summary type="html"><![CDATA[接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 #6 线性空间与线性变换，这里对应的是维数、基与坐标。线性代数一般不做无限空间的研究，我们研究的一般是有限维度的向量空间 finite-dimensional vector space 线性组合和张成 Linear Combination &amp; Span [!definition] $Linear\ Combination$ 对于一个向量组 list of vectors $v_1,\cdots,v_m$，和 $a_1,\cdots,a_m\in F$，线性组合表示为 \(a_1v_1+\cdots+a_mv_m\) 这会最终返回一个同维的向量]]></summary></entry><entry><title type="html">LA - 1.EX 算子</title><link href="http://localhost:4000/2026/01/04/Linear-Algebra-1.EX-%E7%AE%97%E5%AD%90-operator.html" rel="alternate" type="text/html" title="LA - 1.EX 算子" /><published>2026-01-04T00:00:00+08:00</published><updated>2026-01-04T00:00:00+08:00</updated><id>http://localhost:4000/2026/01/04/Linear%20Algebra%20-%201.EX%20%E7%AE%97%E5%AD%90%20operator</id><content type="html" xml:base="http://localhost:4000/2026/01/04/Linear-Algebra-1.EX-%E7%AE%97%E5%AD%90-operator.html"><![CDATA[<h2 id="算子-operator">算子 Operator</h2>
+<blockquote>
+  <p>[!definition] $Operator$
+<strong>算子 Operator</strong> 是一个 [[Linear Algebra - 1.1 向量空间 Vector Spaces|函数空间]] 到函数空间上的<strong>映射</strong> $O：X→X$。算子可以推广到任何空间。
+广义上来说，算子可以是<strong>对任何函数进行某项操作</strong>的算子，这里的<strong>任何函数</strong>或许和 [[Lambda - 0 概述|Lambda演算]] 很想。不过我们把他按照一些正常的数学概念理解就行了。</p>
+</blockquote>
+
+<p>比如最常见的算子 $+,-,\times,\div$ 这些都是<strong>二元运算符</strong>，用计算机语言来理解，可以写为</p>
+
+<pre><code class="language-C">add(1, 2) = 3
+div(4, 2) = 2
 </code></pre>
 
-<p>一定要记得清除标志位！</p>
+<table>
+  <tbody>
+    <tr>
+      <td>或者一些<strong>一元运算符</strong> $\sqrt{\ \ }$  $</td>
+      <td>\ \</td>
+      <td>$ ，用计算机语言来理解，可以写为</td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="led函数示例">LED函数示例</h2>
-
-<pre><code class="language-C">void LED_flow(){
-	
-	LED_counter++;
-	
-	short speed_tier = get_value(MENU_LED,0);
-	short dir = get_value(MENU_LED,1);
-	
-	int speed = 500;
-	switch(speed_tier){
-		case 0:
-			speed = 500;
-			break;
-		case 1:
-			speed = 1000;
-			break;
-		case 2:
-			speed = 200;
-			break;
-	}
-	
-	if(LED_counter &gt;= speed){
-		LED_counter = 0;
-		
-		if(dir == 0) LED_lit_pin = (LED_lit_pin + 1) % 4;
-		else LED_lit_pin = ((LED_lit_pin - 1) + 4) % 4;
-		
-		reset_LED();
-		switch(LED_lit_pin){
-			case 0:
-				GPIO_ResetBits(GPIOB,GPIO_Pin_12);
-				break;
-			case 1:
-				GPIO_ResetBits(GPIOB,GPIO_Pin_13);
-				break;
-			case 2:
-				GPIO_ResetBits(GPIOB,GPIO_Pin_14);
-				break;			
-			case 3:
-				GPIO_ResetBits(GPIOB,GPIO_Pin_15);
-				break;
-		}
-		
-	}
-}
+<pre><code class="language-C">sqrt(4) = 2
+abs(-2) = 2
 </code></pre>
 
-<p>可以看到，这里我们用的是<code class="language-plaintext highlighter-rouge">LED_Counter</code>来计时，中断函数是1ms触发一次，这里的Counter也是1ms加1，这样就可以分别计时了</p>]]></content><author><name></name></author><category term="#嵌入式" /><summary type="html"><![CDATA[#嵌入式 非阻塞式电路 在按钮的检测中，我们尝试了用EXTI来检测按钮是否按下，但效果极差，而且为了消抖而Delay的20ms会导致整个系统的阻塞，我们急需一个非阻塞式电路！]]></summary></entry></feed>
+<table>
+  <tbody>
+    <tr>
+      <td>而对于函数 $f$ ，它们输入的就不是一个属于 $\mathbb{F}$ 的数了，而是一个<strong>集</strong>，这个和我们说的 [[Linear Algebra - 1.1 向量空间 Vector Spaces</td>
+      <td>函数空间]] 不谋而合。</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre><code class="language-C">y = function(x)
+</code></pre>
+
+<p>我们输入一个 <strong>定义域 domain</strong> 内的数，他会返回一个 <strong>值域 range</strong> 内的数。
+当然，这里的 $x$ 应当是一个<strong>数集</strong>。</p>
+
+<p><strong>微分算子</strong> $\frac{d}{dx}$ 输入的则是一个函数 $f$，又返回一个函数 $g$。很多人，包括我，在刚学高数的时候，都会有疑问。就是为什么二阶导要写成 $\frac{d^2y}{dx^2}$ 而不是 $\frac{d^2y}{d^2x}$，实际上，你把 $\frac{d}{dx}$ 理解为一个特殊的函数——<strong>算子</strong>之后就好理解很多。它实际上等价于 
+\(\frac{d\frac{dy}{dx}}{dx}\)
+更好理解的，我们可以这样写
+\(\displaylines{
+D=\frac{d}{dx}\\
+D(f)=\frac{d}{dx}(f)\\
+D^2(f)=D(D(f))=\frac{d^2}{dx^2}=(\frac{d}{dx})^2
+}\)
+这样就好理解多了。</p>]]></content><author><name></name></author><category term="Linear" /><summary type="html"><![CDATA[算子 Operator [!definition] $Operator$ 算子 Operator 是一个 [[Linear Algebra - 1.1 向量空间 Vector Spaces|函数空间]] 到函数空间上的映射 $O：X→X$。算子可以推广到任何空间。 广义上来说，算子可以是对任何函数进行某项操作的算子，这里的任何函数或许和 [[Lambda - 0 概述|Lambda演算]] 很想。不过我们把他按照一些正常的数学概念理解就行了。]]></summary></entry></feed>

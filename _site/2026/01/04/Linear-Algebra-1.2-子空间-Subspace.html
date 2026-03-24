@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>LA - 1.2 笋子空间 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="LA - 1.2 笋子空间" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="这个很好理解，如果 $U$ 也是一个向量空间，且 $U$ 是 $V$ 的子集，那么 $U$ 就是 $V$ 的子空间。几何上来说，对于一个三维的坐标系，其中的一个二维平面就可以认为是一个子空间。需要注意一下的是 $V$ 本身也是 $V$ 的子空间。" />
+<meta property="og:description" content="这个很好理解，如果 $U$ 也是一个向量空间，且 $U$ 是 $V$ 的子集，那么 $U$ 就是 $V$ 的子空间。几何上来说，对于一个三维的坐标系，其中的一个二维平面就可以认为是一个子空间。需要注意一下的是 $V$ 本身也是 $V$ 的子空间。" />
+<link rel="canonical" href="http://localhost:4000/2026/01/04/Linear-Algebra-1.2-%E5%AD%90%E7%A9%BA%E9%97%B4-Subspace.html" />
+<meta property="og:url" content="http://localhost:4000/2026/01/04/Linear-Algebra-1.2-%E5%AD%90%E7%A9%BA%E9%97%B4-Subspace.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-04T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LA - 1.2 笋子空间" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-04T00:00:00+08:00","datePublished":"2026-01-04T00:00:00+08:00","description":"这个很好理解，如果 $U$ 也是一个向量空间，且 $U$ 是 $V$ 的子集，那么 $U$ 就是 $V$ 的子空间。几何上来说，对于一个三维的坐标系，其中的一个二维平面就可以认为是一个子空间。需要注意一下的是 $V$ 本身也是 $V$ 的子空间。","headline":"LA - 1.2 笋子空间","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2026/01/04/Linear-Algebra-1.2-%E5%AD%90%E7%A9%BA%E9%97%B4-Subspace.html"},"url":"http://localhost:4000/2026/01/04/Linear-Algebra-1.2-%E5%AD%90%E7%A9%BA%E9%97%B4-Subspace.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LA - 1.2 笋子空间</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-01-04T00:00:00+08:00" itemprop="datePublished">Jan 4, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>这个很好理解，如果 $U$ 也是一个向量空间，且 $U$ 是 $V$ 的子集，那么 $U$ 就是 $V$ 的子空间。几何上来说，对于一个<strong>三维的坐标系</strong>，其中的一个<strong>二维平面</strong>就可以认为是一个子空间。需要注意一下的是 $V$ 本身也是 $V$ 的子空间。</p>
+
+<h2 id="子空间的和-sum-of-subspaces">子空间的和 sum of subspaces</h2>
+<p>和涵数相加类似，我们假设有两个子空间分别为 $\mathcal{U}={(x_1,y_1,z_1,\cdots)}$ 和 $\mathcal{W}={(x_2,y_2,z_2,\cdots)}$，那么
+\(\mathcal{U}+\mathcal{W}=\{\ {x_1+x_2,y_1+y_2,z_1+z_2,\cdots}\}\)
+一个比较容易理解的推论是，<strong>子空间的和是最小的包含指定子空间的子空间</strong>，我们称其为<strong>最小的包含子空间 smallest containing subspace</strong>。这类似于集合论里的<strong>给定两个某个集的子集，最小的包含这两个子集的子集是这两个子集的和</strong>。这个结论可以记为：
+\(span(\mathcal{V}_1\cup\cdots\cup\mathcal{V}_2)=\mathcal{V}_1+\cdots+\mathcal{V}_m\)
+维度公式为：
+\(\dim(V_1+V_2) = \dim V_1 + \dim V_2 - \dim(V_1 \cap V_2)\)</p>
+<h2 id="直和-oplus">直和 $\oplus$</h2>
+<blockquote>
+  <p>[!definition] $direct\ sum\ \oplus$
+$\mathcal{W}_i$ 为向量空间 $V$ 的子空间，若 $\mathcal{W}_1+\cdots+\mathcal{W}_k=\mathcal{V}$ 且 $\mathcal{W}_1,\cdots,\mathcal{W}_k$ 相互独立，则称 $V$ 是子空间 $\mathcal{W}_1,\cdots,\mathcal{W}_k$ 的<strong>直和 direct sum</strong>，记为：
+\(\mathcal{V}=\mathcal{W}_1\oplus\cdots\oplus\mathcal{W}_k\)
+你会发现这和上面大的直接相加似乎差不多，但是直和要求<strong>每个向量的表示唯一</strong>，更接近的意思是两个空间<strong>正交</strong>，虽然说独立不保正交。所以说，不相互独立的空间就不能和直和搭配使用。
+\(\mathcal{V}_i\cap\mathcal{V}_j=\{0\}\)
+其维度公式为：
+\(dim(\mathcal{V}_i+\mathcal{V}_j)=dim\mathcal{V}_i+dim\mathcal{V}_j\)</p>
+
+</blockquote>
+
+<p>进一步解释一下上面的意思，每一个子空间内我们取一个向量 $v_k$ ，那么和子空间的向量就可以表示为 $\Sigma v_k$，这也是我们上面说的子空间相加的定义。<strong>直和</strong>要求 $\Sigma v_k$ 只有一种表示形式，此时每个空间所挑选的 $v_k$ 是固定的。
+一个比较方便的验证方法是，对于一个直和出来的空间，其表示 $0$ 的方法当且仅当所有 $v_k$ 为 $0$。</p>
+
+<blockquote>
+  <p>[!tips] 异或 $⊕$
+我们注意到 $⊕$ 其实也有异或的意思，这和<strong>直和</strong>其实有比较微妙的联系。
+我们在讲 [[Linear Algebra - 1 向量与空间#域 Field|数域]] 的时候提到了一个最小的域，即 ${0,1}$，其中 $1+1=0$，这描述的就是<strong>异或运算</strong>！其中乘法表示为<strong>逻辑AND</strong>。
+这就是<strong>逻辑电路</strong>这门课需要学习的，其具体定义如下：
+\(A \oplus B = (A \land \neg B) \lor (\neg A \land B)\)</p>
+
+  <p>在抽象代数的视角下，两者都是模2整数域 $\mathbb{F}_2$ 上的向量空间运算的表示。
+更一般的，在<strong>阿贝尔群</strong>理论中，群的运算通常用 $\oplus$ 和 $+$ 表示，线性代数中的直和概念就是阿贝尔群直和中的特里。群论相关的我们以后有机会再学。</p>
+</blockquote>
+
+
+  </div><a class="u-url" href="/2026/01/04/Linear-Algebra-1.2-%E5%AD%90%E7%A9%BA%E9%97%B4-Subspace.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

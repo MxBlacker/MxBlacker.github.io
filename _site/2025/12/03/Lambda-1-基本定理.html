@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lambda - 基本运算 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Lambda - 基本运算" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="变量 Variable 代表一个输入值，即实参 (arguments) 形如 $x,y,z$" />
+<meta property="og:description" content="变量 Variable 代表一个输入值，即实参 (arguments) 形如 $x,y,z$" />
+<link rel="canonical" href="http://localhost:4000/2025/12/03/Lambda-1-%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html" />
+<meta property="og:url" content="http://localhost:4000/2025/12/03/Lambda-1-%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-03T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lambda - 基本运算" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-12-03T00:00:00+08:00","datePublished":"2025-12-03T00:00:00+08:00","description":"变量 Variable 代表一个输入值，即实参 (arguments) 形如 $x,y,z$","headline":"Lambda - 基本运算","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/12/03/Lambda-1-%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html"},"url":"http://localhost:4000/2025/12/03/Lambda-1-%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Lambda - 基本运算</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-12-03T00:00:00+08:00" itemprop="datePublished">Dec 3, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h4 id="变量-variable"><strong><em>变量 Variable</em></strong></h4>
+<p>代表一个<strong>输入值</strong>，即<strong>实参 (arguments)</strong></p>
+<ul>
+  <li>形如 $x,y,z$</li>
+</ul>
+
+<h4 id="抽象-abstraction"><strong><em>抽象 Abstraction</em></strong></h4>
+<p>相当于定义一个函数，并规定<strong>输入量</strong>，其本身就代表一个函数</p>
+<ul>
+  <li>形如 $\lambda{x}.M$ ，其中 $\lambda$ 是一个函数定义符，它代表一个函数定义的起点</li>
+  <li>$M$ 即为函数体，而 $x$ 即为<strong>形参 (parameters)</strong></li>
+  <li>$M$ 即为返回的值</li>
+</ul>
+
+<h4 id="应用-application"><strong><em>应用 Application</em></strong></h4>
+<p>相当于对<strong>函数的调用</strong>，其本身输出一个变量</p>
+<ul>
+  <li>形如 $(M N)$，表示将 $M$ 应用于 $N$ ，即 $N \rightarrow M$</li>
+  <li>当然，这个括号不是必须的，总之就是后者应用于前者</li>
+</ul>
+
+<blockquote>
+  <p>[!attention] 
+你需要搞清楚的是，以上三种东西其实都可以作为一个函数存在，即<strong>自然数也被定义为了函数、自然数也是有参数和返回值的函数</strong>，在Lambda演算中，<strong>所有东西都必须是函数</strong>。
+当然，我们这里说的“函数”也并非lambda演算的内容，这是为了方便理解所引入的概念
+数学语言里描述的种种东西，在lambda演算中都有自己的表达方式，但首先，让我们了解它的基本运算规则</p>
+</blockquote>
+
+<h2 id="β归约-beta-reduction">β归约 $\beta\ reduction$</h2>
+<p>这个过程其实相当好理解，我们有了<strong>形参 parameters</strong>和<strong>实参 arguments</strong>，那么就完全可以把<strong>实参带入到形参的位置</strong>，这就是<strong><em>β-规约 (β-reduction)</em></strong>。比如下面这个例子
+\(\lambda x.(xb)E\)
+注意到这个和上面的Application的模板一样，即$M=\lambda x.(xb)$ $N=E$
+β规约后，我们得到了
+\(\lambda x.(xb)E\rightarrow_\beta Eb\)
+$λ$的存在就指定了$N$应该替换的部分，在这个例子里，是$\lambda x.$指定了形参$x$。所以你就将$N$，这里是$E$，代入进去，并去掉函数的定义部分</p>
+
+<p>另外，当一个式子被β规约到无法继续规约了，我们称其为<strong><em>β标准型 β Normal Form</em></strong></p>
+
+<h2 id="多参数输入--柯里化-currying">多参数输入 / 柯里化 Currying</h2>
+<p>可见，Application这个模板里只允许<strong>一个形参的定义</strong>和<strong>一个实参的传入</strong>，那么多参数的传入就需要嵌套了
+\((\lambda x.(\lambda y.x)Y)X\)
+上面这个演算所实现的功能是输入两个值，只返回前者，在这里为$X$。我们进行两次β规约，则有
+\(\displaylines{
+(\lambda y.X)Y\\
+X
+}\)
+这个过程被我们称作<strong><em>柯里化 Currying</em></strong>。我们之后就直接在 $\lambda$ 和 $.$ 中允许多个变量的存在，以方便观看和阅读</p>
+
+<h2 id="η等价-eta-equivalence">η等价 $\eta-equivalence$</h2>
+<p>这个是视频里没有讲的，我是通过问AI才问出来的</p>
+
+<blockquote>
+  <p>定义:
+如果一个函数$F$对任意一个输入$x$都有$F\ x=G\ x$，那么可以认为$F$与$G$是等价的，写作
+\(F =_{\eta}G\)</p>
+</blockquote>
+
+<p>例如函数 $F:=λx.M x$，对于任意参数$y$都有$F y=(λx.M x) y→<em>β​M y$
+所以我们说$F =</em>{\eta}M$
+也就是说，形如上面这种的基本都可以把$x$省略掉</p>
+
+<p>这也很大程度解释了[[2025-12-20-Lambda - 3 自然数定义#幂运算]]中我的疑惑</p>
+
+<p>[[2025-12-20-Lambda - 2 逻辑符号定义]]</p>
+
+
+  </div><a class="u-url" href="/2025/12/03/Lambda-1-%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>LA - 2 spannnnnnnn、相关与无关 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="LA - 2 spannnnnnnn、相关与无关" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 #6 线性空间与线性变换，这里对应的是维数、基与坐标。线性代数一般不做无限空间的研究，我们研究的一般是有限维度的向量空间 finite-dimensional vector space 线性组合和张成 Linear Combination &amp; Span [!definition] $Linear\ Combination$ 对于一个向量组 list of vectors $v_1,\cdots,v_m$，和 $a_1,\cdots,a_m\in F$，线性组合表示为 \(a_1v_1+\cdots+a_mv_m\) 这会最终返回一个同维的向量" />
+<meta property="og:description" content="接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 #6 线性空间与线性变换，这里对应的是维数、基与坐标。线性代数一般不做无限空间的研究，我们研究的一般是有限维度的向量空间 finite-dimensional vector space 线性组合和张成 Linear Combination &amp; Span [!definition] $Linear\ Combination$ 对于一个向量组 list of vectors $v_1,\cdots,v_m$，和 $a_1,\cdots,a_m\in F$，线性组合表示为 \(a_1v_1+\cdots+a_mv_m\) 这会最终返回一个同维的向量" />
+<link rel="canonical" href="http://localhost:4000/2026/01/04/Linear-Algebra-2-%E5%BC%A0%E6%88%90-%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B.html" />
+<meta property="og:url" content="http://localhost:4000/2026/01/04/Linear-Algebra-2-%E5%BC%A0%E6%88%90-%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-04T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LA - 2 spannnnnnnn、相关与无关" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-04T00:00:00+08:00","datePublished":"2026-01-04T00:00:00+08:00","description":"接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 #6 线性空间与线性变换，这里对应的是维数、基与坐标。线性代数一般不做无限空间的研究，我们研究的一般是有限维度的向量空间 finite-dimensional vector space 线性组合和张成 Linear Combination &amp; Span [!definition] $Linear\\ Combination$ 对于一个向量组 list of vectors $v_1,\\cdots,v_m$，和 $a_1,\\cdots,a_m\\in F$，线性组合表示为 \\(a_1v_1+\\cdots+a_mv_m\\) 这会最终返回一个同维的向量","headline":"LA - 2 spannnnnnnn、相关与无关","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2026/01/04/Linear-Algebra-2-%E5%BC%A0%E6%88%90-%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B.html"},"url":"http://localhost:4000/2026/01/04/Linear-Algebra-2-%E5%BC%A0%E6%88%90-%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LA - 2 spannnnnnnn、相关与无关</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-01-04T00:00:00+08:00" itemprop="datePublished">Jan 4, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 <strong>#6 线性空间与线性变换</strong>，这里对应的是<strong>维数、基与坐标</strong>。线性代数一般不做无限空间的研究，我们研究的一般是<strong>有限维度的向量空间 finite-dimensional vector space</strong></p>
+<h2 id="线性组合和张成-linear-combination--span">线性组合和张成 Linear Combination &amp; Span</h2>
+<blockquote>
+  <p>[!definition] $Linear\ Combination$
+对于一个<strong>向量组 list of vectors</strong> $v_1,\cdots,v_m$，和 $a_1,\cdots,a_m\in F$，线性组合表示为
+\(a_1v_1+\cdots+a_mv_m\)
+这会最终返回一个同维的向量</p>
+</blockquote>
+
+<blockquote>
+  <p>[!definition] $Span/Spans$
+一个<strong>向量组</strong>所有可能的线性组合所返回的向量组成的集合，被称为<strong>该向量组张成(span)的集</strong>
+\(span(v_1,\cdots,v_m)=\{a_1v_1+\cdots+a_mv_m:a_1,\cdots,a_m\in F\}\)
+如果这个集和某个空间 $V$ 相等，那么我们就说<strong>该向量组张成(spans)空间 V</strong>
+\(span(v_1,\cdots,v_m)=V\)</p>
+</blockquote>
+
+<p>几何上，这很容易理解，把一个<strong>向量组</strong>里面的几个向量看作是箭头，这几个箭头“张开来”所形成的空间就是<strong>张成的空间</strong>。另外一个容易理解的推论是<strong>张成的空间就是最小的“包含子空间”</strong>。</p>
+
+<p>我们把张成这一个空间的向量组称为<strong>生成组</strong>。</p>
+
+<h2 id="有限维度的向量空间-finite-dimensional-vector-space">有限维度的向量空间 finite-dimensional vector space</h2>
+<blockquote>
+  <p>[!definition] $finite-dimensional\ vector\ space$
+如果一个<strong>向量空间</strong>能被一个一些<strong>向量组</strong>张成，那么这个向量空间就被称为<strong>有限维度的向量空间</strong></p>
+</blockquote>
+
+<p>接下来我们将视角转向函数空间，这几乎被排在同济大学教材的相当后面的部分，就是多项式定理那一块。我们已经对多项式 $\mathcal{P}(F)$ 很熟悉了，这里我们再来明确以下定义</p>
+
+<blockquote>
+  <p>[!definition] $polynomial\ \mathcal{P}(\mathbb{F})$
+对于一个函数 $\mathcal{p}:\mathbb{F}\to \mathbb{F}$ 和 $a_0,\cdots,a_m\in \mathbb{F}$ ，$z\in \mathbb{F}$ 若其形式可以写为
+\(\mathcal{p}(z)=a_0+a_1z+a_2z^2+\cdots+a_mz^m\)
+则将其称为 $\mathbb{F}$ <strong>中带系数的多项式</strong>，而 $\mathcal{P}(\mathbb{F})$ 就表示所有这样存在的多项式的集。显然，$\mathcal{P}(\mathbb{F})$ 是 $\mathbb{F}^\mathbb{F}$ 的子集。</p>
+
+</blockquote>
+
+<p>当然，还有一个可能相对陌生一点名词 <strong>度 degree</strong>，一个多项式的<strong>度</strong>就是这个多项式的<strong>最高次数</strong>，也被称为这个<strong>多项式的次数</strong>。如果一个多项式在向量空间里代表 $0$，那么我们规定它的<strong>度</strong>为 $-\infty$。</p>
+
+<blockquote>
+  <p>[!definition] 接上
+我们再给定一个非负整数 $m$ 用于代表 $\mathcal{P}(\mathbb{F})$ 中的多项式的最高次数。当然，最高次系数依然可以为 $0$。这样我们记这个集为 $\mathcal{P}_m(F)=span(1,z,\cdots,z^m)$。</p>
+</blockquote>
+
+<p>不过，$\mathcal{P}(F)$ 实际上是一个<strong>无限维度的向量空间</strong>，记其中多项式的次数为 $m$，则你总能找到一个 $z^{m+1}$ 不被包含在多项式内，所以没有任何一个列表可以展开为 $\mathcal{P}(F)$，但 $\mathcal{P}_m(F)$ 可以。</p>
+
+<h2 id="线性独立与相关-linear-independencedependence">线性独立与相关 Linear Independence/dependence</h2>
+<p>别看我这里说的是<strong>独立</strong>，其实他就是<strong>线性无关 Linear Independence</strong>，不过英文里做描述时一般说<strong>Linearly Independent/dependent</strong>。</p>
+
+<p>假设我们现在有一个向量组 $v_1,\cdots,v_m\in V$ 且 $v\in span(v_1,\cdots,v_m)$ ，那么 $v$ 可以表示为向量组的线性组合，即
+\(v=a_1v_1+\cdots+a_mv_m\)
+根据 <strong>直和</strong> 的定义，我们来看看这个变量的表示形式是否唯一，证法我们在 [[证明题 - 唯一性证明]] 里提到了，用反证法。我们假设有另外一组数字 $c_1,\cdots,c_m\in F$ 满足
+\(v=c_1v_1+\cdots+c_mv_m\)
+那么这两个式子相减就有
+\(0=(a_1-c_1)v_1+\cdots+(a_m-c_m)v_m\)</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>我们先前在将 [[Linear Algebra - 1.2 子空间 Subspace#直和 $ oplus$</td>
+      <td>直和]] 的时候提到了一点，就是如果要验证一系列空间是否符合直和的条件，那么就是看 $0$ 在这些子空间的<strong>和空间</strong>内看看 $0$ 有没有两种表示形式。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>如果这里表示 $0$ 的方式只有将所有的系数变为 $0$ ，也就是
+\((a_1-c_1)=0,\cdots,(a_m-c_m)=0\)
+那么我们就称这个向量组<strong>线性无关</strong>。</p>
+
+<blockquote>
+  <p>[!definition] $linearly\ independent$
+如果对于一个向量组 $v_1,\cdots,v_m\in V$ 唯一让他们线性组合为 $0$ 的方式是将所有系数定为 $0$ ，那么称它们为<strong>线性无关 linearly independent</strong>的。
+特殊的，空集也是线性无关的
+这同时也等价于 $v\in span(v_1,\cdots,v_m)$ 有且只有一种由 $v_1,\cdots,v_m$ 线性组合的表示方式。</p>
+</blockquote>
+
+<p>同样的，我们可以得到<strong>线性相关</strong>的定义</p>
+
+<blockquote>
+  <p>[!definition] $linearly\ dependent$
+如果对于一个向量组 $v_1,\cdots,v_m\in V$ 让他们线性组合为 $0$ 的方式不一定需要所有系数定为 $0$ ，那么称它们为<strong>线性相关 linearly dependent</strong>的。</p>
+</blockquote>
+
+<p>几何上的理解是，如果一个向量组中的某些向量就能张成一个空间表示剩下的向量，就说明这个向量组是<strong>线性相关</strong>的。反之，如果每一个向量都为原来的空间<strong>增添了一个新维度</strong>，那么就说这个向量组<strong>线性无关</strong>。我们下面还会再提及。</p>
+
+<h2 id="线性无关与相关的推论">线性无关与相关的推论</h2>
+<p>这里我们应用一下同济教材上的推论，并对其进行进一步的解释。</p>
+
+<blockquote>
+  <p>[!tip] 推论
+(1) 若一个向量组 $v_1,\cdots,v_m$ <strong>线性相关</strong>，那么加上一个新的向量 $v_{m+1}$ 后的向量组依然<strong>线性相关</strong>。特别的，$n + 1$ 个 $n$ 维向量一定线性相关。
+(2) 若一个向量组 $v_1,\cdots,v_m$ <strong>线性无关</strong>，那么去掉一个向量 $v_{k}$ 后的向量组依然<strong>线性无关</strong>。
+(3) 若一个向量组 $v_1,\cdots,v_m$ <strong>线性无关</strong>，而  $v_1,\cdots,v_m,b$  <strong>线性相关</strong>，则说明 $b$ 一定能被 $v_1,\cdots,v_m$ 这个向量组线性组合出来，且表示形式唯一。</p>
+</blockquote>
+
+<p>我来对上面的三个推论进一步解释一下：</p>
+<ol>
+  <li>在加上 $a_{m+1}$ 后，这个向量组里面的<strong>最大无关组</strong>^[1]只会变大，不会变小，所以依旧可以表示所有其他的量。</li>
+  <li>已经明确了 $m$ 个基底的 $\mathbb{R}^m$ ，去掉一个基底后会变成 $\mathbb{R}^{m-1}$</li>
+  <li>“最极端的情况”即为每一个向量均为基底，均为这个空间提供了一个维度，若 $m&gt;n$ ，则必有一个向量不为基底，即<strong>线性相关</strong></li>
+</ol>
+
+<h4 id="线性相关引理-linear-dependence-lemma">线性相关引理 Linear dependence lemma</h4>
+<p><strong>推论 (1)</strong> 和 <strong>LADR</strong> 提到的 <strong>Linear dependence lemma</strong> 说的实际上是一件事</p>
+
+<blockquote>
+  <p>[!tip]  $linear\ dependence\ lemma$
+假设 $v_1,\cdots,v_m \in V$ ，那么一定存在一个 $v_k$，满足
+\(v_k\in span(v_1,\cdots,v_{k-1})\)
+也就是说这个 $v_k$ 对于这个向量组张成的空间实际上“没啥贡献”，是“冗余的”。当我这么说时，我的意思是它不会提供一个“未知的新维度”。所以你如果将 $v_k$ 去掉，剩下的 $k-1$ 个向量仍然满足
+\(span(v_1,\cdots,v_{k-1})=span(v_1,\cdots,v_{k})\)</p>
+</blockquote>
+
+<p>具体要怎么取验证一个向量组是否<strong>线性相关</strong>，你可以一点一点把 $k$ 从 $1$ 开始取，一直到 $m$。</p>
+
+<blockquote>
+  <p>[!tip] 推论
+在同一个 $V$ 中，任取两个向量组：</p>
+  <ul>
+    <li>一个任意的线性无关组 $S={v_1,\cdots,v_m}$</li>
+    <li>一个生成组 (spanning list) $L={w_1,\cdots,w_n}$ ，任何一个 $V$ 中的向量都能表示为它们的线性组合</li>
+  </ul>
+
+  <p>定理给到一定有 $n \geq m$
+进一步，在学习了 [[Linear Algebra - 2.1 基底 Bases|基底]] 之后，它可以佐证 [[Linear Algebra - 2.1 基底 Bases#基扩展定理|基扩张定理]]</p>
+</blockquote>
+
+<blockquote>
+  <p>[!proof] 另类证明
+因为如果 $m&gt;n$，那么你就有一个矛盾：
+用 $S$ 可以依次“表示”或“替换” $L$ 中的向量，如果 $m&gt;n$，那么在替换过程中，$L$ 的前 $n$ 个向量会消耗完 $S$ 的所有“独立方向”，这样第 $m$ 个向量就会与前面的线性相关，违反了 $L$ 线性无关的条件。</p>
+</blockquote>
+
+<h4 id="替换定理">替换定理</h4>
+<p><strong>LADR</strong> 给到了一个有趣的证法，用到了<strong>替换定理</strong></p>
+
+<blockquote>
+  <p>[!proof] 替换定理
+我们把 $v_1$ 拿出来加入到 $w_1,\cdots,w_n$ 去，这样这个组，根据定义 (空间内任意向量能够被生成组唯一表示)，一定线性相关。新的组表示为
+\(v_1,w_1,\cdots,w_n\)
+不妨把 $v_1$ 放到最前面，依据<strong>线性相关引理</strong>，$k$ 取 $1$ 时，$v_1$肯定线性无关。也就说明后面的 $n$ 个 $w_i$ 肯定有一个是<strong>冗余</strong>的，可以被剔除。
+就这样重复 $m$ 次，直到把所有 $v_i$ 压入 $L$ 中，你会发现，$m$ 一定会小于 $n$，因为一旦大于，$S$ 就无法满足线性无关的条件。</p>
+</blockquote>
+
+
+  </div><a class="u-url" href="/2026/01/04/Linear-Algebra-2-%E5%BC%A0%E6%88%90-%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%8B%AC%E7%AB%8B.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>LA - 1 向量与空间 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="LA - 1 向量与空间" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="下面我们讨论的实际上是同济大学教材的最后一章的内容，也就是 #6 线性空间与线性变换，这里对应的是线性空间的定义与性质。 实空间与复空间 $R,C$ 我们可以先把向量理解为一个复平面上的向量。这里我们引入 $R^n$ 和 $C^n$，其中 $R$ 就是我们熟知的实数数域，$C$ 则是复数数域，前者定义需要用到 [[Lambda - 3 自然数定义#皮亚诺公理 Peano Axioms|Peano Axioms]] 我们这里不做赘述，后者则是在前者的基础上定义的：" />
+<meta property="og:description" content="下面我们讨论的实际上是同济大学教材的最后一章的内容，也就是 #6 线性空间与线性变换，这里对应的是线性空间的定义与性质。 实空间与复空间 $R,C$ 我们可以先把向量理解为一个复平面上的向量。这里我们引入 $R^n$ 和 $C^n$，其中 $R$ 就是我们熟知的实数数域，$C$ 则是复数数域，前者定义需要用到 [[Lambda - 3 自然数定义#皮亚诺公理 Peano Axioms|Peano Axioms]] 我们这里不做赘述，后者则是在前者的基础上定义的：" />
+<link rel="canonical" href="http://localhost:4000/2026/01/04/Linear-Algebra-1-%E5%90%91%E9%87%8F%E4%B8%8E%E7%A9%BA%E9%97%B4.html" />
+<meta property="og:url" content="http://localhost:4000/2026/01/04/Linear-Algebra-1-%E5%90%91%E9%87%8F%E4%B8%8E%E7%A9%BA%E9%97%B4.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-04T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LA - 1 向量与空间" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-04T00:00:00+08:00","datePublished":"2026-01-04T00:00:00+08:00","description":"下面我们讨论的实际上是同济大学教材的最后一章的内容，也就是 #6 线性空间与线性变换，这里对应的是线性空间的定义与性质。 实空间与复空间 $R,C$ 我们可以先把向量理解为一个复平面上的向量。这里我们引入 $R^n$ 和 $C^n$，其中 $R$ 就是我们熟知的实数数域，$C$ 则是复数数域，前者定义需要用到 [[Lambda - 3 自然数定义#皮亚诺公理 Peano Axioms|Peano Axioms]] 我们这里不做赘述，后者则是在前者的基础上定义的：","headline":"LA - 1 向量与空间","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2026/01/04/Linear-Algebra-1-%E5%90%91%E9%87%8F%E4%B8%8E%E7%A9%BA%E9%97%B4.html"},"url":"http://localhost:4000/2026/01/04/Linear-Algebra-1-%E5%90%91%E9%87%8F%E4%B8%8E%E7%A9%BA%E9%97%B4.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LA - 1 向量与空间</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-01-04T00:00:00+08:00" itemprop="datePublished">Jan 4, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>下面我们讨论的实际上是同济大学教材的最后一章的内容，也就是 <strong>#6 线性空间与线性变换</strong>，这里对应的是<strong>线性空间的定义与性质</strong>。</p>
+<h2 id="实空间与复空间-rc">实空间与复空间 $R,C$</h2>
+<p>我们可以先把向量理解为一个复平面上的向量。这里我们引入 $R^n$ 和 $C^n$，其中 $R$ 就是我们熟知的<strong>实数数域</strong>，$C$ 则是<strong>复数数域</strong>，前者定义需要用到 [[Lambda - 3 自然数定义#皮亚诺公理 Peano Axioms|Peano Axioms]] 我们这里不做赘述，后者则是在前者的基础上定义的：</p>
+
+<blockquote>
+  <p>[!definition] 复数 $C$
+\(C=\left\{a+bi : a,b\in R\right\}\)</p>
+</blockquote>
+
+<p>如果 $b$ 恒为 $0$，则显然此时的子集和 $R$ 一致，所以我们认为 $R$ 是 $C$ 的子集。方便起见，我们给 $R$ 和 $C$ 这两个集一个统一的名字 $F$ for $Fields$ ，即<strong>域</strong>。下面的 $F$ 就可以被视为 $R$ 或者 $C$ 中的任意一个。</p>
+
+<blockquote>
+  <p>[!attention] 复数也是一维的！
+一个很常见的误区是认为<strong>复数</strong>是一个<strong>二维的数</strong>，但其实复数所处的空间是一维的，复平面只是为了方便我们理解才造出来的一个升维后的空间。这也才会有实空间 $R$ 和复空间 $C$。</p>
+</blockquote>
+
+<h2 id="高维空间-fn">高维空间 $F^n$</h2>
+<p>我们所熟知的二维和三维空间可以简单的表示为 $R^2$ 和 $R^3$，定义为：
+\(R^3=\{(x,y,z):x,y,z\in R\}\)
+为了推广到高维空间，我们首先定义什么是 $列 / 组$</p>
+
+<blockquote>
+  <p>[!Definition] $list$</p>
+  <ul>
+    <li>假设 $n$ 是一个<strong>有限</strong>的非负整数，一个 $list$ 就是 $n$ 个有序排列的元素所组成的合集</li>
+    <li>当且仅当两个 $list$ 有相同长度，相同元素以相同顺序排列时，两个 $list$ 相等</li>
+  </ul>
+</blockquote>
+
+<p>当然，我们更多情况下叫它 $组$，即 $n-tuple$。同时，和python一样，我们允许<strong>空列</strong>的存在，这样可以预防一些例外的存在。</p>
+
+<blockquote>
+  <p>[!attention] 区别 $集 set$ 和 $组 list$
+和python里的概念一样，$list$ 是需要特定顺序的，而 $set$ 则是无序的</p>
+</blockquote>
+
+<p>接下来，让我们将 $n$ 固定下来，下面我们都将把 $n$ 视作一个固定的有限正整数。</p>
+
+<blockquote>
+  <p>[!definition] $F^n$
+$F^n$ 是所有元素为 $F$ 中元素的 $n$ 元组
+\(F^n=\{(x_1,\cdots,x_n):x_k\in F\ for\ k=1,\cdots,n\}\)</p>
+</blockquote>
+
+<p>这样的话，$C^4$ 就可以理解为 ${(z_1.z_2,z_3,z_4):z_1,z_2,z_3,z_4\in C}$
+当然，四维以上的空间我们就不能做可视化操作了，毕竟低维永远无法真正理解高维。</p>
+
+<p>$F^n$ 中的加法法则需要对位相加减，即$(x_1,\cdots,x_n)+(y_1,\cdots,y_n)=(x_1+y_1,\cdots,x_n+y_n)$
+下面为了避免重复写这些括号，我们直接用 $x$ 和 $y$ 代替一个 $n$ 元组。$0$ 为 $(0,\cdots,0)$。</p>
+
+<h2 id="向量-vector">向量 vector</h2>
+<p>和我们的理解一样，一个 $n$ 维向量需要一个 $n$ 元组来表示。<strong>线性代数</strong>之所以为<strong>代数</strong>，就是因为我们所能理解的空间只能是 $R^3$，更高维度的虽然无法被几何上表示，但是代数规则依然是可行的。</p>
+
+<p>值得一提的是，向量不一定需要被表示为<strong>一个可以随意移动的箭头</strong>，我们这么做只是为了方便理解。向量实际上可以是任何东西，只要它身上的某些数字可以满足属于 $F^n$，且符合向量空间的运算规则。这也就是为啥我们学高数的时候也会需要用到<strong>线性无关</strong>之类的概念，因为函数空间也是一个线性的空间。</p>
+
+<p>很多概念其实在高中我们都理解，甚至刻入DNA了，这里就不做过多赘述。接下来我们讲一下<strong>数乘Scaler Multiplication</strong></p>
+
+<blockquote>
+  <p>[!definition] $Scaler\ Multiplication$</p>
+  <ul>
+    <li>对于一个Scaler $\lambda$ 来说，它与一个向量的乘法表示为：\(\lambda(x_1,...x_n)=(\lambda x_1,\cdots,\lambda x_n)\)这里之所以不对Scaler进行翻译，是因为我认为它在英文里有更好的双关意，一方面是它的代数意义，也就是<strong>数</strong>。另一方面则是几何上的，它等同于将一个向量伸缩 $\lambda$ 倍</li>
+  </ul>
+</blockquote>
+
+<table>
+  <tbody>
+    <tr>
+      <td>这个其实我们在讲 [[四元数 - 1 单位球体降维和旋转的表示#四维旋转的理解</td>
+      <td>四元数]] 的时候有提到过这个概念</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="域-field">域 Field</h2>
+<p><strong>域</strong>其实是一个抽象代数领域的名词，但是我觉得还是相当有必要了解的。这里就提一点基础的。
+<strong>域</strong>可以有很多，可以是<strong>二进制域</strong>、<strong>p进数</strong>、<strong>四元数</strong>，但它们都具有一些共同点</p>
+
+<blockquote>
+  <ul>
+    <li>都包含至少两个被称为 $0$ 和 $1$ 的数，以满足公理体系 ($F_2={0,1}$就是最小的域，其中 $1+1=0$)</li>
+    <li>定义了加法 $+$ 和 $\cdot$ 运算</li>
+    <li>满足常见的运算性质，如<strong>结合律 Associative Property</strong>、<strong>交换律 Communtative Property</strong>、<strong>分配律 Distributive Property</strong>、<strong>逆元运算</strong>等</li>
+  </ul>
+</blockquote>
+
+<p>依旧需要注意，上面和下面提到的 $0$ 和 $1$ 都不是 $R$ 意义上的 $0$ 和 $1$ ，而是一种代数指代。下面的 $*$ 也是一种运算上的指代。
+下面列一下它们满足的公理</p>
+
+<blockquote>
+  <ul>
+    <li><strong>运算封闭性 Closure (群论1)</strong> \(\forall a,b\in F,a * b\in F\)</li>
+    <li><strong>运算结合律 Associativity (群论2)</strong>\(\forall a,b,c\in F,(a * b)* c=a * (b * c)\)</li>
+    <li><strong>单位元 / 中性元存在 Neutral (群论3)</strong>：
+      <ul>
+        <li><strong>单位元</strong>又称<strong>零元</strong>或<strong>幺元</strong>。在一个集合中，对于某种运算 $*$，如果对于任何的集合元素 $a$，和元素 $e$ 运算，得到还是集合元素 $a$ 本身，则称 $e$ 为这个运算下的单位元。</li>
+        <li>加法：\(\exists0\in F,\forall a\in F,a+0=a\)</li>
+        <li>乘法：\(\exists1\in F,\forall a\in F,a\cdot1=a\)</li>
+      </ul>
+    </li>
+    <li><strong>逆元存在 Reverse (群论4)</strong>：
+      <ul>
+        <li>在一个集合中，对于某种运算 $*$，如果任意两个元素的运算结果等于<strong>单位元</strong>，则称这两个元素<strong>互为逆元</strong>。</li>
+        <li>加法：\(\forall a\in F,a\neq0,\exists(-a)\in F,a+(-a)=0\)</li>
+        <li>乘法：\(\forall a\in F,a\neq0,\exists a^{-1}\in F,a\cdot a^{-1}=1\)</li>
+      </ul>
+    </li>
+    <li><strong>运算交换律 (阿贝尔群满足的条件)</strong> \(\forall a,b\in F,a*b=b*a\)</li>
+    <li>分配律 \(\forall a,b,c\in F,a\cdot(b+c)=a\cdot b+a\cdot c\)在交换乘法下，<strong>右分配律</strong>自动成立</li>
+  </ul>
+</blockquote>
+
+
+  </div><a class="u-url" href="/2026/01/04/Linear-Algebra-1-%E5%90%91%E9%87%8F%E4%B8%8E%E7%A9%BA%E9%97%B4.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

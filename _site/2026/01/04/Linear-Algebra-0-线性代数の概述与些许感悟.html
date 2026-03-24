@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>LA - 线性代数の概述与些许感悟 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="LA - 线性代数の概述与些许感悟" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="现在我们学校在教的是同济大学的线代教材，我相信很多同学是听的云里雾里的，包括我。线性代数的概念似乎都是全新的，完全无法理解它们想要表达什么，要怎么做，能干什么。但我想说，我们更多的是去学习它的思考方法。数学本身就是一种看世界的方法，学习也不过是认识世界、形成自己的、学习他人的哲学的过程。" />
+<meta property="og:description" content="现在我们学校在教的是同济大学的线代教材，我相信很多同学是听的云里雾里的，包括我。线性代数的概念似乎都是全新的，完全无法理解它们想要表达什么，要怎么做，能干什么。但我想说，我们更多的是去学习它的思考方法。数学本身就是一种看世界的方法，学习也不过是认识世界、形成自己的、学习他人的哲学的过程。" />
+<link rel="canonical" href="http://localhost:4000/2026/01/04/Linear-Algebra-0-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E3%81%AE%E6%A6%82%E8%BF%B0%E4%B8%8E%E4%BA%9B%E8%AE%B8%E6%84%9F%E6%82%9F.html" />
+<meta property="og:url" content="http://localhost:4000/2026/01/04/Linear-Algebra-0-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E3%81%AE%E6%A6%82%E8%BF%B0%E4%B8%8E%E4%BA%9B%E8%AE%B8%E6%84%9F%E6%82%9F.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-04T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LA - 线性代数の概述与些许感悟" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-04T00:00:00+08:00","datePublished":"2026-01-04T00:00:00+08:00","description":"现在我们学校在教的是同济大学的线代教材，我相信很多同学是听的云里雾里的，包括我。线性代数的概念似乎都是全新的，完全无法理解它们想要表达什么，要怎么做，能干什么。但我想说，我们更多的是去学习它的思考方法。数学本身就是一种看世界的方法，学习也不过是认识世界、形成自己的、学习他人的哲学的过程。","headline":"LA - 线性代数の概述与些许感悟","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2026/01/04/Linear-Algebra-0-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E3%81%AE%E6%A6%82%E8%BF%B0%E4%B8%8E%E4%BA%9B%E8%AE%B8%E6%84%9F%E6%82%9F.html"},"url":"http://localhost:4000/2026/01/04/Linear-Algebra-0-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E3%81%AE%E6%A6%82%E8%BF%B0%E4%B8%8E%E4%BA%9B%E8%AE%B8%E6%84%9F%E6%82%9F.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LA - 线性代数の概述与些许感悟</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-01-04T00:00:00+08:00" itemprop="datePublished">Jan 4, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>现在我们学校在教的是同济大学的线代教材，我相信很多同学是听的云里雾里的，包括我。线性代数的概念似乎都是全新的，完全无法理解它们想要表达什么，要怎么做，能干什么。但我想说，我们更多的是去学习它的思考方法。数学本身就是一种看世界的方法，学习也不过是认识世界、形成自己的、学习他人的哲学的过程。</p>
+
+<p>或许我以后会有改观，但就现在而言，我认为把 <strong>线性代数 Linear Algebra</strong> 和 <strong>空间 Spaces</strong> 分开来教简直是最错误的决定（甚至不教空间的任何东西），这也就是同济大学的线代教材在干的事情，所以我是相当讨厌这个教材的。高数就另当别论了，那个并不注重与理解，毕竟容易理解，更多的是你积累的方法论够不够。</p>
+
+<p>前天看了 <a href="https://www.bilibili.com/video/BV11CikBSE5A">Pikachu345</a> 的视频，我一直觉得说的很有道理，目前教育体系的很大一个问题是就是太注重应试而非本质上的理解，也就是过度追求与 <strong>怎么做</strong> 的过程而非 <strong>为什么</strong>。这显然是有害的，因为你没有办法变通，你需要靠大量的积累和刷题去获得各种方法论从而解决问题，但是一旦直到 <strong>为什么</strong> 你对方法论也就无师自通了。</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>另外，我之前是比较抗拒在电脑上记数学方面的笔记的，但是现在想象好像也没什么不妥，很大一部分原因是当时笔记的记录的体系不够成熟。详见 [[数学概念的定义</td>
+      <td>数学废稿]]，那一块知识点非常难以消化，导致我对记笔记本身都产生了厌恶。还有一个排斥的原因是当时认为obsidian的自由度不够高，现在看来只是当时的技术不够成熟罢了。</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>这里将线性代数会从 <a href="https://www.bilibili.com/video/BV1ib411t7YR">Essence of Linear Algebra - 3Blue1Brown</a> 和 <a href="[Linear Algebra Done Right](https://linear.axler.net/LADR4e.pdf)">Linear Algebra Done Right - Sheldon Axler</a> 两篇文献来讲述线性代数，但主要是跟随后者的脚步来记录的。接下来我会一点一点捋顺线性代数中的基本知识点和其代表的<strong>几何意义</strong>，<strong>实际用途</strong>，以及我觉得非常重要的——<strong>为什么这么命名</strong>。</p>
+
+  </div><a class="u-url" href="/2026/01/04/Linear-Algebra-0-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E3%81%AE%E6%A6%82%E8%BF%B0%E4%B8%8E%E4%BA%9B%E8%AE%B8%E6%84%9F%E6%82%9F.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

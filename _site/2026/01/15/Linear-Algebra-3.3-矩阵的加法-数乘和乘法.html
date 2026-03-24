@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>LA - 3.3 不如两个一起吃 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="LA - 3.3 不如两个一起吃" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="矩阵的加法和数乘 我们也说了 $T$ 所属的也是一个向量空间，他也满足加法和数乘。这里我们可以讨论一下这两个操作的几何意义。" />
+<meta property="og:description" content="矩阵的加法和数乘 我们也说了 $T$ 所属的也是一个向量空间，他也满足加法和数乘。这里我们可以讨论一下这两个操作的几何意义。" />
+<link rel="canonical" href="http://localhost:4000/2026/01/15/Linear-Algebra-3.3-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8A%A0%E6%B3%95-%E6%95%B0%E4%B9%98%E5%92%8C%E4%B9%98%E6%B3%95.html" />
+<meta property="og:url" content="http://localhost:4000/2026/01/15/Linear-Algebra-3.3-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8A%A0%E6%B3%95-%E6%95%B0%E4%B9%98%E5%92%8C%E4%B9%98%E6%B3%95.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-15T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LA - 3.3 不如两个一起吃" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-15T00:00:00+08:00","datePublished":"2026-01-15T00:00:00+08:00","description":"矩阵的加法和数乘 我们也说了 $T$ 所属的也是一个向量空间，他也满足加法和数乘。这里我们可以讨论一下这两个操作的几何意义。","headline":"LA - 3.3 不如两个一起吃","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2026/01/15/Linear-Algebra-3.3-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8A%A0%E6%B3%95-%E6%95%B0%E4%B9%98%E5%92%8C%E4%B9%98%E6%B3%95.html"},"url":"http://localhost:4000/2026/01/15/Linear-Algebra-3.3-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8A%A0%E6%B3%95-%E6%95%B0%E4%B9%98%E5%92%8C%E4%B9%98%E6%B3%95.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LA - 3.3 不如两个一起吃</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-01-15T00:00:00+08:00" itemprop="datePublished">Jan 15, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="矩阵的加法和数乘">矩阵的加法和数乘</h2>
+<p>我们也说了 $T$ 所属的也是一个向量空间，他也满足加法和数乘。这里我们可以讨论一下这两个操作的几何意义。</p>
+
+<blockquote>
+  <p>一个矩阵可以表示的变换有以下几种：</p>
+  <ul>
+    <li><strong>旋转 rotation</strong> \(R(\theta) = \begin{pmatrix}
+\cos\theta &amp; -\sin\theta \\
+\sin\theta &amp; \ \ \cos\theta
+\end{pmatrix}\)</li>
+    <li><strong>拉伸 stretch</strong>\(S = \begin{pmatrix}
+s_x &amp; 0 \\
+0 &amp; s_y
+\end{pmatrix}\)</li>
+    <li><strong>剪切 shear</strong> \(H_x(k) = \begin{pmatrix}
+1 &amp; k \\
+0 &amp; 1
+\end{pmatrix}\)</li>
+  </ul>
+</blockquote>
+
+<p>我们首先假设变换前的 $V$ 的基为我们熟知的 $x$ 和 $y$ 轴。理解了矩阵列向量的意思后，我们就可以解读每一种操作了：</p>
+<ul>
+  <li><strong>旋转</strong>所做的是将 $x$ 轴的 $(1,0)$ 移到 $(\cos{\theta},\sin{\theta})$ 处，$y$ 轴的 $(0,1)$ 相位差为 $\frac{2}{\pi}$ 的地方</li>
+  <li><strong>剪切</strong>实际上是保持 $x$ 不变，将 $y$ 轴的 $(0,1)$ 拉到 $(1,k)$ 的位置，原来直角坐标系变成了<strong>斜角坐标系</strong>了。</li>
+</ul>
+
+<p>加法操作实际上相当于将两种变换做叠加，但是要注意的是这个<strong>相乘</strong>不一样，之后我们会进一步解释。而数乘相当于拉伸，这个我们进一步解析一下：</p>
+
+<blockquote>
+  <p>[!tip] 
+在我们之后了解到矩阵的<strong>零元</strong>为 $E$ 或 $I$ 之后，我们可以将 $\lambda A$ 写为：
+\(\lambda A=\lambda I A\)
+也就是先做 $\lambda$ 倍的拉伸变换，再进行 $A$ 变换。</p>
+</blockquote>
+
+<h4 id="矩阵的加法">矩阵的加法</h4>
+<p>行列式的加法要求除某一行外其他行都相等。但矩阵的加法非常直观，就是对应位相加。这里不做赘述
+\(\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix} + \begin{bmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{bmatrix} = \begin{bmatrix} 6 &amp; 8 \\ 10 &amp; 12 \end{bmatrix}\)</p>
+<h4 id="矩阵的数乘">矩阵的数乘</h4>
+<p>行列式的数乘会在某一行统一乘一个数。<strong>而矩阵的数乘是为所有数字都乘</strong>，这就是为什么 $|kA|=k^n|A|$
+\(3 \times \begin{bmatrix} 2 &amp; -1 \\ 0 &amp; 5 \end{bmatrix} = \begin{bmatrix} 6 &amp; -3 \\ 0 &amp; 15 \end{bmatrix}\)</p>
+<h2 id="矩阵的乘法-matrix-multiplication">矩阵的乘法 Matrix Multiplication</h2>
+<p>我们先来定义一个符号</p>
+
+<blockquote>
+  <p>[!definition] $F^{m,n}$
+$F^{m,n}$ 表示所有元素属于 $F$ 的 $m\times n$ 的矩阵，则有
+\(dim\ F^{m,n}=mn\)
+要验证这个结论，我们直接规定它的标准基，其中每一个基是 $m\times n$ 个位置中只有一个位置是 $1$ ，其余都是 $0$ 的矩阵，显然这有 $mn$ 个。</p>
+</blockquote>
+
+<p>现在给定几个空间 $U,V,W$ 和两个变换 $S:V\to W$ 和 $T:U\to V$，$ST$ 也就代表一个 $U\to W$ 的变换。现在我们希望矩阵的乘法能满足 $\mathcal{M}(ST)=\mathcal{M}(S)\mathcal{M}(T)$，这就需要我们去<strong>定义一个矩阵乘法</strong>的规则去满足这个性质。</p>
+
+<blockquote>
+  <p>[!quote] 推理
+假设 $\mathcal{M}(S)=A,\mathcal{M}(T)=B$，那么对于 $1\leq k\leq p$ 我们有：
+\((ST)u_k=S(\sum^n_{r=1}B_{r,k}v_r)\)
+这相当于先计算了 $Tu_k$，同时由于向量空间满足分配律，所以可以把 $S$ 乘进去
+\(=\sum^n_{r=1}B_{r,k}Sv_r\)
+再次计算，就有
+\(=\sum_{j=1}^m \left( \sum_{r=1}^n A_{j,r} B_{r,k} \right) w_j\)
+注意到这实际上是 $\mathcal{M}(ST)$ 的矩阵计算形式，他要求里面的 $j$ 行 $k$ 列为：
+\((ST)_{j,k}=\sum^n_{r=1}A_{j,r}B_{r,,k}\)
+我们就这样定义了矩阵的乘法</p>
+</blockquote>
+
+<p>下面我们就不再次定义了，我们来一些浅显的理解。</p>
+
+<p>观察上面的乘法式子，你会发现他和我们高中学到的 <strong>点乘</strong> 形式非常像。实际上，你要取的是第一个矩阵的<strong>第 i 行</strong>去<strong>点乘</strong>第二个矩阵的<strong>第 j 列</strong>。这就要求<strong>第一个矩阵的行</strong>和<strong>第二个矩阵的列</strong>数值上一样，体现在映射上，这个数值实际上是过渡空间 $V$ 的维度 $dim\ V$。这个方式运算方式我们可以这样表示：
+\((AB)_{j,k}=A_{j,·}·B_{·,k}\)
+这里的 $A_{j,·}$ 表示第 $j$ 行的行向量，$A_{·,k}$ 表示第 $k$ 列的列向量</p>
+
+<p>这里我们就不去深究它数值上的的几何意义了，但是我们还是要把矩阵乘法和加法所带来的几何上的变化的不同区分一下。</p>
+<ul>
+  <li><strong>对于乘法来说</strong>：两个变换相乘相当于按顺序对 $\vec{v}$ 进行两次变换，注意，这里的变换<strong>顺序</strong>很重要，这和 $AB\neq BA$ 是一个道理。</li>
+  <li><strong>对于加法而言</strong>：你可以把他拆分为 $(A+B)\vec{v}=A\vec{v}+B{\vec{v}}$ ，即两个变换后的变量的<strong>加和</strong>，纯粹的去理解变换的叠加是不可行的。</li>
+</ul>
+
+<p>回想我们之前对 [[Linear Algebra - 3.2 矩阵 Matrics#对线性方程组的几何意义的补充|线性方程组几何意义的补充]] 中对<strong>未知数矩阵意义的理解</strong>，我们不难发现，如果有一个 $A$ 是一个 $m\times n$ 的矩阵，$\vec{b}$ 是一个 $n$ 维列向量，则有
+\(A\vec{b}=b_1A_{·,1}+\cdots+b_nA_{·,n}\)</p>
+
+<blockquote>
+  <p>[!example]
+\(\begin{pmatrix}1 &amp; 2 \\3 &amp; 4 \\5 &amp; 6\end{pmatrix}\begin{pmatrix}5 \\1\end{pmatrix}=\begin{pmatrix}7\\19 \\31\end{pmatrix}= 5\begin{pmatrix}1 \\3 \\5\end{pmatrix}+1\begin{pmatrix}2 \\4 \\6\end{pmatrix}\)
+这个就是我们上面说的几何意义。</p>
+</blockquote>
+
+<h2 id="列向量行向量与矩阵乘法的关系">列向量、行向量与矩阵乘法的关系</h2>
+<p>我们知道矩阵可以分为<strong>列向量和行向量</strong>，但实际上这和矩阵乘法有这不可分割的关系。</p>
+
+<blockquote>
+  <p>[!tip] 假设 $C$ 是 $m\times c$ 的矩阵，$R$ 是 $c\times n$ 的矩阵</p>
+  <ul>
+    <li>$CR$ 的列向量 $\vec{a}_k$ 是 $C$ 中列向量的<strong>线性组合</strong>，而<strong>每一个向量的系数</strong>是 $R$ 中的第 $k$ 列。</li>
+    <li>$CR$ 的行向量 $\vec{a}_j$ 是 $R$ 中行向量的<strong>线性组合</strong>，而<strong>每一个向量的系数</strong>是 $C$ 中的第 $j$ 行。</li>
+  </ul>
+
+  <p>具体验证可以看上面给的 Example</p>
+</blockquote>
+
+<p>到了这一点，我们就可以谈论他们在线性方程组背景下具体的几何意义了</p>
+<ul>
+  <li><strong>行向量</strong>相当于 $n$ 维空间中的一条直线或者一个面，或者更多。以行向量的视角来看，我们是去求这些空间的交集。</li>
+  <li><strong>列向量</strong>相当于 $m$ 个 $n$ 维基底，未知数矩阵 $x$ 实际上就是<strong>线性组合的系数</strong>。</li>
+</ul>
+
+  </div><a class="u-url" href="/2026/01/15/Linear-Algebra-3.3-%E7%9F%A9%E9%98%B5%E7%9A%84%E5%8A%A0%E6%B3%95-%E6%95%B0%E4%B9%98%E5%92%8C%E4%B9%98%E6%B3%95.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

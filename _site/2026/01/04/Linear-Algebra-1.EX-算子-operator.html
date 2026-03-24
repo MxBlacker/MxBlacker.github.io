@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>LA - 1.EX 算子 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="LA - 1.EX 算子" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="算子 Operator [!definition] $Operator$ 算子 Operator 是一个 [[Linear Algebra - 1.1 向量空间 Vector Spaces|函数空间]] 到函数空间上的映射 $O：X→X$。算子可以推广到任何空间。 广义上来说，算子可以是对任何函数进行某项操作的算子，这里的任何函数或许和 [[Lambda - 0 概述|Lambda演算]] 很想。不过我们把他按照一些正常的数学概念理解就行了。" />
+<meta property="og:description" content="算子 Operator [!definition] $Operator$ 算子 Operator 是一个 [[Linear Algebra - 1.1 向量空间 Vector Spaces|函数空间]] 到函数空间上的映射 $O：X→X$。算子可以推广到任何空间。 广义上来说，算子可以是对任何函数进行某项操作的算子，这里的任何函数或许和 [[Lambda - 0 概述|Lambda演算]] 很想。不过我们把他按照一些正常的数学概念理解就行了。" />
+<link rel="canonical" href="http://localhost:4000/2026/01/04/Linear-Algebra-1.EX-%E7%AE%97%E5%AD%90-operator.html" />
+<meta property="og:url" content="http://localhost:4000/2026/01/04/Linear-Algebra-1.EX-%E7%AE%97%E5%AD%90-operator.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-04T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LA - 1.EX 算子" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-04T00:00:00+08:00","datePublished":"2026-01-04T00:00:00+08:00","description":"算子 Operator [!definition] $Operator$ 算子 Operator 是一个 [[Linear Algebra - 1.1 向量空间 Vector Spaces|函数空间]] 到函数空间上的映射 $O：X→X$。算子可以推广到任何空间。 广义上来说，算子可以是对任何函数进行某项操作的算子，这里的任何函数或许和 [[Lambda - 0 概述|Lambda演算]] 很想。不过我们把他按照一些正常的数学概念理解就行了。","headline":"LA - 1.EX 算子","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2026/01/04/Linear-Algebra-1.EX-%E7%AE%97%E5%AD%90-operator.html"},"url":"http://localhost:4000/2026/01/04/Linear-Algebra-1.EX-%E7%AE%97%E5%AD%90-operator.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LA - 1.EX 算子</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-01-04T00:00:00+08:00" itemprop="datePublished">Jan 4, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="算子-operator">算子 Operator</h2>
+<blockquote>
+  <p>[!definition] $Operator$
+<strong>算子 Operator</strong> 是一个 [[Linear Algebra - 1.1 向量空间 Vector Spaces|函数空间]] 到函数空间上的<strong>映射</strong> $O：X→X$。算子可以推广到任何空间。
+广义上来说，算子可以是<strong>对任何函数进行某项操作</strong>的算子，这里的<strong>任何函数</strong>或许和 [[Lambda - 0 概述|Lambda演算]] 很想。不过我们把他按照一些正常的数学概念理解就行了。</p>
+</blockquote>
+
+<p>比如最常见的算子 $+,-,\times,\div$ 这些都是<strong>二元运算符</strong>，用计算机语言来理解，可以写为</p>
+
+<pre><code class="language-C">add(1, 2) = 3
+div(4, 2) = 2
+</code></pre>
+
+<table>
+  <tbody>
+    <tr>
+      <td>或者一些<strong>一元运算符</strong> $\sqrt{\ \ }$  $</td>
+      <td>\ \</td>
+      <td>$ ，用计算机语言来理解，可以写为</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre><code class="language-C">sqrt(4) = 2
+abs(-2) = 2
+</code></pre>
+
+<table>
+  <tbody>
+    <tr>
+      <td>而对于函数 $f$ ，它们输入的就不是一个属于 $\mathbb{F}$ 的数了，而是一个<strong>集</strong>，这个和我们说的 [[Linear Algebra - 1.1 向量空间 Vector Spaces</td>
+      <td>函数空间]] 不谋而合。</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre><code class="language-C">y = function(x)
+</code></pre>
+
+<p>我们输入一个 <strong>定义域 domain</strong> 内的数，他会返回一个 <strong>值域 range</strong> 内的数。
+当然，这里的 $x$ 应当是一个<strong>数集</strong>。</p>
+
+<p><strong>微分算子</strong> $\frac{d}{dx}$ 输入的则是一个函数 $f$，又返回一个函数 $g$。很多人，包括我，在刚学高数的时候，都会有疑问。就是为什么二阶导要写成 $\frac{d^2y}{dx^2}$ 而不是 $\frac{d^2y}{d^2x}$，实际上，你把 $\frac{d}{dx}$ 理解为一个特殊的函数——<strong>算子</strong>之后就好理解很多。它实际上等价于 
+\(\frac{d\frac{dy}{dx}}{dx}\)
+更好理解的，我们可以这样写
+\(\displaylines{
+D=\frac{d}{dx}\\
+D(f)=\frac{d}{dx}(f)\\
+D^2(f)=D(D(f))=\frac{d^2}{dx^2}=(\frac{d}{dx})^2
+}\)
+这样就好理解多了。</p>
+
+
+  </div><a class="u-url" href="/2026/01/04/Linear-Algebra-1.EX-%E7%AE%97%E5%AD%90-operator.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

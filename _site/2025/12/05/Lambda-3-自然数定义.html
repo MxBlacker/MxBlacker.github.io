@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lambda - 自然数定义 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Lambda - 自然数定义" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="在定义自然数之前，我们要理解数学上的自然数是怎么定义的 皮亚诺公理 Peano Axioms 这个公理经常被营销号拿来作秀，即为什么$1+1=2$的问题" />
+<meta property="og:description" content="在定义自然数之前，我们要理解数学上的自然数是怎么定义的 皮亚诺公理 Peano Axioms 这个公理经常被营销号拿来作秀，即为什么$1+1=2$的问题" />
+<link rel="canonical" href="http://localhost:4000/2025/12/05/Lambda-3-%E8%87%AA%E7%84%B6%E6%95%B0%E5%AE%9A%E4%B9%89.html" />
+<meta property="og:url" content="http://localhost:4000/2025/12/05/Lambda-3-%E8%87%AA%E7%84%B6%E6%95%B0%E5%AE%9A%E4%B9%89.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-05T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lambda - 自然数定义" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-12-05T00:00:00+08:00","datePublished":"2025-12-05T00:00:00+08:00","description":"在定义自然数之前，我们要理解数学上的自然数是怎么定义的 皮亚诺公理 Peano Axioms 这个公理经常被营销号拿来作秀，即为什么$1+1=2$的问题","headline":"Lambda - 自然数定义","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/12/05/Lambda-3-%E8%87%AA%E7%84%B6%E6%95%B0%E5%AE%9A%E4%B9%89.html"},"url":"http://localhost:4000/2025/12/05/Lambda-3-%E8%87%AA%E7%84%B6%E6%95%B0%E5%AE%9A%E4%B9%89.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Lambda - 自然数定义</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-12-05T00:00:00+08:00" itemprop="datePublished">Dec 5, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>在定义自然数之前，我们要理解数学上的自然数是怎么定义的</p>
+<h5 id="皮亚诺公理-peano-axioms">皮亚诺公理 Peano Axioms</h5>
+<p>这个公理经常被营销号拿来作秀，即为什么$1+1=2$的问题</p>
+
+<blockquote>
+  <p><strong><em>皮亚诺公理体系 Peano Axioms</em></strong>针对于一个给定的三元组$(A,0,(.)^<em>)$
+其中的集合$A$是<strong>待检验的自然数集合</strong>，$0$是$A$中的一个<strong>元素</strong>，$(.)</em>$代表<strong>后计算符</strong>，表示$A\rightarrow{A}$的映射</p>
+  <ul>
+    <li>Axiom 1 : 0是自然数 ($0 \in A$)</li>
+    <li>Axiom 2 : 如果$n$是自然数，则它有一个<strong>后继</strong>$n^*$，且<strong>后继也为自然数</strong></li>
+    <li>Axiom 3 : 0不是任何自然数的后继 ($\forall n \in A\ :\ n^*\neq 0$)</li>
+    <li>Axiom 4 : $n\mapsto n^<em>$是单射 ($\forall n,m\in A:n\neq m \Rightarrow n^</em>\neq m^*$)</li>
+    <li>Axiom 5 : 对于命题$P$，若$P$对$0$成立，且$P$对$n$成立蕴涵$P$对$n^*$成立，则$P$对任意自然数皆成立</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>其中<strong>公理1,2</strong>确定了取自然数的方法</li>
+  <li><strong>公理3,4,5</strong>分别确保了“0前面无自然数”，“一个自然数后面只有唯一的一个自然数”，“没有孤岛，闭环存在”。</li>
+  <li>另外，仔细看，<strong>公理五</strong>其实类似于<strong>第一类数学归纳法</strong>，即对$0$成立 / 若$n$成立，则$n^*$也成立，则命题对所有自然数均成立</li>
+</ul>
+
+<h2 id="邱奇数-church-numeral">邱奇数 Church numeral</h2>
+<p>你会发现，你很难在Lambda演算的体系中去定义一个数字，所以这里我们引入<strong><em>邱奇数 Church Numeral</em></strong></p>
+
+<blockquote>
+  <p>我们假设$0$，即起点为$A$，后继函数为$f(n)$，也就有$0=0$，$1=f(0)$，$2=f(f(0))$……<br />
+当然，这里的$0$我们更应该理解为一个变量，即$x$
+我们可以规定$x$为$0$，此时的三元组即为$(A,x,f)$，那么自然数$n$就可以表示为
+\(n=f^n(x)\)</p>
+</blockquote>
+
+<blockquote>
+  <p>[!attention] 再次强调
+这些<strong>自然数</strong>实际上是<strong>函数</strong>！他们接收两个值，即表示$0$的$x$和后继函数$f$，即
+\(n\equiv(\lambda{fx}.(f^n\ x))\)
+所以<strong>自然数</strong>的作用实际上是将$f$应用于$x$n次!
+另外，先不要管$f^n$要如何表示，我们先利用<strong>自然数函数</strong>解决下面的问题</p>
+</blockquote>
+
+<h2 id="后继函数-succession-function">后继函数 Succession Function</h2>
+<p>这样就很轻松的定义了自然数——即一个<strong>后继函数 succession function</strong>$f$的调用次数
+但这也引出了一个新的问题——<strong>后继函数  succession function</strong>是什么呢？</p>
+
+<p>不妨类比一下现存的自然数体系，我们把后继运算符$()^*$具象化为一个函数$succ(n)$，既有
+\(succ(n)=n+1\)</p>
+
+<p>那么在Lambda演算中，我们定义的<strong>后继函数</strong>需要接受一个函数，并返回一个<strong>对这个函数运用了一次后继函数之后的函数</strong></p>
+
+<blockquote>
+  <ol>
+    <li>接收一个数字 $(\lambda n.(\ ))$</li>
+    <li>返回一个数字 $(\lambda n.(\lambda{fx}.\ )$</li>
+    <li>思考一下，我们返回的数字应当是n+1，所以有 $(\lambda n.(\lambda{fx}.(f\ (n\ f\ x)))$</li>
+  </ol>
+</blockquote>
+
+<p>这样，我们就得到了后继函数$succ(n)\equiv (\lambda n.(\lambda{fx}.(f\ (n\ f\ x)))$</p>
+
+<h2 id="后继类运算的定义">后继类运算的定义</h2>
+<blockquote>
+  <p>[!attention] 再次注意
+四则运算的结果也是<strong>自然数函数</strong>，所以它的返回理所应当的也应该是一个<strong>接收f和x的函数!</strong></p>
+</blockquote>
+
+<p>当我说<strong>后继</strong>，我指的是<strong>自然数不断增大</strong>的计算，这是非常好理解的，毕竟皮亚诺定理做的也是单射，即$x\mapsto x*$，但是并没有内置的<strong>前驱函数</strong>。这个我们在之后解决，先来解决好解决的后继问题</p>
+<h5 id="加法">加法</h5>
+<blockquote>
+  <ol>
+    <li>接收两个数字 $(\lambda mn. )$</li>
+    <li>思考，要计算$m+1$实际上等价于$succ(m)$，所以$m+n$等价于$succ^n(m)$</li>
+    <li>易知有 $(\lambda mn. (n\ succ\ m))$</li>
+    <li>进一步思考，我们意识到这等同于 $(\lambda mn. (m\ succ\ n))$，于是得到<strong>加法交换律</strong></li>
+  </ol>
+</blockquote>
+
+<p>所以加法的式子为
+\((\lambda mn. (n\ succ\ m))\)
+可以化简为
+\((\lambda{mn.}(\lambda{fx.(m\ f\ (n\ f\ x))}))\)</p>
+<blockquote>
+  <p>[!tip] 
+理解一下，$(n\ f\ x)$相当于$n$的定义，所以下一层就有$(m\ f\ n)$，即，将$f$应用于$n$ $m$次，也就有了$m+n$</p>
+</blockquote>
+
+<h5 id="乘法">乘法</h5>
+<p>有了加法，乘法也很好理解了
+\((\lambda mn. (\lambda fx.(m\ (n f)\ x)))\)
+就是m次将n次f应用于x，也就是m*n。现在我们对其进行<strong>柯里化和η等价</strong>，有
+\(\lambda mnf. (m\ (n f))\)</p>
+
+<h5 id="幂运算">幂运算</h5>
+<p>\(λmn.(λfx.((n\ m\ f)\ x))\)
+幂运算出人意料的简介，不过仔细思考，这是合理的</p>
+<ul>
+  <li><strong>自然数函数</strong>接收两个值，即$f$与$x$，这里$n$接收$m$和$f$。</li>
+  <li>光一次$m$应用于$f$即为$f^m$，那么$n$次的将$m$应用于$f$，即为$f^{m^n}$</li>
+</ul>
+
+<blockquote>
+  <p>[!danger] 关于<strong>η等价</strong>的注意事项
+之所以幂函数的$f$能被等价，而上面的乘法不能被等价，是因为$f$在这里是作为<strong>单独一个函数</strong>存在的，而乘法中的<strong>f和n</strong>被绑在了一起，作为一个<strong>全新函数</strong>出现</p>
+</blockquote>
+
+<h2 id="前驱类运算的定义--减法的定义">前驱类运算的定义 / 减法的定义</h2>
+<p>这里说的前驱类运算单指<strong>减法</strong>，除法更加棘手
+由于没有内置的前驱函数，我们需要手动定义一个。当然这并不像链表一样用一个下标访问前驱地址就行了。在这里，如果我们要“访问”前驱，就得重新模拟一遍加法的过程，直到当前数的前一个数。</p>
+
+<h5 id="前驱拓展">前驱拓展</h5>
+<p>要做到这一点，我们需要在计算时同时记录<strong>当前数</strong>和<strong>前一个数</strong>，由此，我们相当可以创建一个数据类型，即$pair$数对，如果需要其中的任何一个值，只需要使用选择器即可
+\(pair := (\lambda abz.(z\ a\ b))\)
+这里的$z$就是选择器，你需要“手动填入”的只是$a$和$b$，输入$TRUE$和$FALSE$即可，我们大可再定义两个函数$fst$和$snd$，这里的$p$就代表一个$pair$类型
+\(\displaylines{
+fst = \lambda p.(p\ TRUE)\\
+snd= \lambda p.(p\ FALSE)
+}\)</p>
+
+<p>接下来，我们要将数对作为新的<strong>基底</strong>去运算，即一个新的后继函数$\varphi(p)$，应当做到输入$(prev,curr)$返回$(prev+1,curr+1)$，即$(curr,curr+1)$
+\(\varphi:=\lambda p.(pair\ (snd\ p)\ (succ\ (snd\ p)))\)
+那么就会有，
+\((\varphi\ (pair\ 0\ 0)) = (0,1)\)
+因为“新的数对的前者”取的是“旧数对的后者”，所以0也就留了下来，这样，在$\varphi$对$(pair\ 0\ 0)$进行$n$次运算后，也就得到了$(n-1,n)$</p>
+
+<h5 id="前驱函数">前驱函数</h5>
+<p>不妨令前驱函数为$pred$，则有
+\(pred :=\lambda n. (fst\ (n\ \varphi\ (pair\ 0\ 0)))\)
+这样，我们就得到了减法函数，虽然无法得到负数
+\(\lambda mn.(n\ pred\ m)\)</p>
+
+
+  </div><a class="u-url" href="/2025/12/05/Lambda-3-%E8%87%AA%E7%84%B6%E6%95%B0%E5%AE%9A%E4%B9%89.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

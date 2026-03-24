@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>LA - 3.1 Nullscape?Nullspace! | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="LA - 3.1 Nullscape?Nullspace!" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="零空间 Null Spaces [!definition] $null\ space$ 零空间 对于 $T\in\mathcal{L}(V,W)$，$T$ 的零空间被记为 $null\ T$，它表示 $V$ 中所有被 $T$ 映射到 $W$ 后成为零向量的向量： \(ker\ T\ or\ null\ T=\{v\in V:Tv=0\}\)" />
+<meta property="og:description" content="零空间 Null Spaces [!definition] $null\ space$ 零空间 对于 $T\in\mathcal{L}(V,W)$，$T$ 的零空间被记为 $null\ T$，它表示 $V$ 中所有被 $T$ 映射到 $W$ 后成为零向量的向量： \(ker\ T\ or\ null\ T=\{v\in V:Tv=0\}\)" />
+<link rel="canonical" href="http://localhost:4000/2026/01/07/Linear-Algebra-3.1-%E9%9B%B6%E7%A9%BA%E9%97%B4-%E5%80%BC%E5%9F%9F%E4%B8%8E%E5%8F%98%E6%8D%A2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html" />
+<meta property="og:url" content="http://localhost:4000/2026/01/07/Linear-Algebra-3.1-%E9%9B%B6%E7%A9%BA%E9%97%B4-%E5%80%BC%E5%9F%9F%E4%B8%8E%E5%8F%98%E6%8D%A2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-07T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LA - 3.1 Nullscape?Nullspace!" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-07T00:00:00+08:00","datePublished":"2026-01-07T00:00:00+08:00","description":"零空间 Null Spaces [!definition] $null\\ space$ 零空间 对于 $T\\in\\mathcal{L}(V,W)$，$T$ 的零空间被记为 $null\\ T$，它表示 $V$ 中所有被 $T$ 映射到 $W$ 后成为零向量的向量： \\(ker\\ T\\ or\\ null\\ T=\\{v\\in V:Tv=0\\}\\)","headline":"LA - 3.1 Nullscape?Nullspace!","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2026/01/07/Linear-Algebra-3.1-%E9%9B%B6%E7%A9%BA%E9%97%B4-%E5%80%BC%E5%9F%9F%E4%B8%8E%E5%8F%98%E6%8D%A2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html"},"url":"http://localhost:4000/2026/01/07/Linear-Algebra-3.1-%E9%9B%B6%E7%A9%BA%E9%97%B4-%E5%80%BC%E5%9F%9F%E4%B8%8E%E5%8F%98%E6%8D%A2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LA - 3.1 Nullscape?Nullspace!</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-01-07T00:00:00+08:00" itemprop="datePublished">Jan 7, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="零空间-null-spaces">零空间 Null Spaces</h2>
+<blockquote>
+  <p>[!definition] $null\ space$ 零空间
+对于 $T\in\mathcal{L}(V,W)$，$T$ 的零空间被记为 $null\ T$，它表示 $V$ 中所有被 $T$ 映射到 $W$ 后成为零向量的向量：
+\(ker\ T\ or\ null\ T=\{v\in V:Tv=0\}\)</p>
+</blockquote>
+
+<p>换一种说法，<strong>零空间 null space</strong>也被称为<strong>核 kernel</strong>。上面这个说法或许拗口，我们从几何上来理解。</p>
+
+<blockquote>
+  <p>[!example] 几何理解
+我们知道一个变换 $T$ 可以让一个空间 $V$ 降维，比如 $V$ 是三维空间，那么它就会被压缩成二维，甚至一维空间。下面我们以压缩到一维空间为例，这时空间<strong>塌缩 collapse</strong>成一个过 $0$ 点的线，那么容易想象，有一个二维平面上的所有点都塌缩到了 $0$ 点，也就是过 $0$ 点且垂直于这条线的平面。记这个塌缩变换为 $T$，则这个二维平面就是我们所说的 $null\ T$ 或者 $ker\ T$。</p>
+
+  <p>相应的，如果空间塌缩成二维，则是一个一维空间作为 $ker\ T$。
+当然，这也意味着 $ker\ T$ 是 $V$ 的子空间</p>
+</blockquote>
+
+<p>你会觉得 $T\vec{x}=0$ 非常眼熟，这其实就是我们解<strong>齐次线性方程组</strong>时候干的事情，之后在讲的时候我们会进一步解释零空间在这个语境下的意思。</p>
+
+<h2 id="单射满射-injectivitysurjection">单射/满射 injectivity/surjection</h2>
+<blockquote>
+  <p>[!definition] $injective$ 单射
+我们说 $T:V\to W$ 是单射当且仅当 
+\(Tu=Tv \Rightarrow u=v\)
+另一种简单的说法是，每一个<strong>输入</strong>对应一个唯一的<strong>输出</strong>，而每一种<strong>输出</strong>都对应唯一的输入，用函数来说，就是不存在 $f(x_1)=y=f(x_2)$，所有数都是一一对应的。</p>
+</blockquote>
+
+<p>我们用几何来理解，一旦 $ker\ T$ 有维度，那也就意味着有无数个向量 $v\in ker\ T$ 能够满足 $Tv=0$ ，这不满足<strong>单射</strong>的条件！ 这个结论的另一个形式是，如果一个映射算子 $T:V\to W$，其中 $dim\ V &gt; dim\ W$，那么 $T$ <strong>一定不是一个单射</strong>。</p>
+
+<p>顺便的，我们来拓展一下<strong>满射 surjection</strong>和<strong>双射 bijection</strong>，这里我们就直接给出<strong>值域 range</strong>的定义了
+\(range\ T=\{Tv:v\in V\}\)
+同样的，很好理解，如果 $T\in\mathcal{L}(V,W)$ ，那么 $range\ T$ 是 $W$ 的子空间</p>
+
+<blockquote>
+  <p>[!definition] $surjection$ 满射
+如果 $T:V\to W$ 满足
+\(range\ T=W\)
+那么我们说 $T$ 是 $V$ 到 $W$ 的满射</p>
+</blockquote>
+
+<blockquote>
+  <p>[!definition] $bijection$ 双射
+如果 $T:V\to W$ 同时满足 <strong>单射</strong> 和 <strong>满射</strong> 的条件，那么我们就称 $T$ 是一个 $V$ 到 $W$ 的双射。这种情况下 $V$ 和 $W$ 中的每一个元素都会有一个一一相互对应的关系。</p>
+</blockquote>
+
+<p>和上面的结论相对应的，如果有一个映射算子 $T:V\to W$，其中 $dim\ V &lt; dim\ W$，那么 $T$ <strong>一定不是一个满射</strong>。</p>
+
+<p>这个我讲一下我对维度的理解哦，我们对高维的理解有一个简单的方式，就是将三维空间的每一个点理解为一个<strong>实体</strong>，这个<strong>实体</strong>自身又拥有 $n$ 个属性，其中 $n=dim V-3$，也就是说，一个四维相当于在三维中的每一个点中，又存入了一条信息，这个信息表现为一个线，也就是又一个<strong>一维空间</strong>。显然，低维空间的一个点不可能<strong>线性的</strong>去对应一个高维的线上的每一个点，这是不对称的。</p>
+
+<p>再进一步解释一下，一旦你要将低维映射到高维，那么<strong>多出来的维度就需要低维的量来决定</strong>，这就导致了肯定有无法表示的向量。</p>
+
+<h2 id="线性变换基本定理-fundamental-theorem-of-linear-maps">线性变换基本定理 Fundamental Theorem of Linear Maps</h2>
+<p>从名字你都可以看得出来这个定理有<strong>多重要</strong>。</p>
+
+<blockquote>
+  <p>[!definition] $fundamental\ theorem\ of\ linear\ transformation$ 线性变换基本定理 
+假设 $V$ 是一个有限维度的向量空间且 $T\in\mathcal{L}(V,W)$，那么就会有
+\(dim\ V=dim\ null\ T+dim\ range\ T\)
+这个也被称为<strong>秩—零化度定理</strong>（Rank–Nullity Theorem）</p>
+</blockquote>
+
+<p>这个结论有一个非常美妙的几何解释，这个我们会在后面专开一节讲解。我们先用代数的方法来证明。</p>
+
+<blockquote>
+  <p>[!quote] 线性变换基本定理的证明
+我们先取 $null\ T$ 的一组基底 $u_1,\cdots,u_m$，由 [[Linear Algebra - 2.1 基底 Bases#基扩张定理|基扩张定理]] 可知，我们可以扩 $n$ 个与它们线性无关的向量 $v_1,\cdots,v_n\in V$ ，是的新的向量组成为 $V$ 的一个基
+\(span(u_1,\cdots,u_m,v_1,\cdots,v_n)=V\)
+也就有 $dim\ V=n+m$，现在我们只需要证明 $dim\ range\ T=n$ 即可。
+假设 $v\in V$ ，那么很容易得到
+\(v=a_1u_1+\cdots+a_mu_m+b_1v_1+\cdots+b_nv_n\)
+两边同乘 $T$，前面 $m$ 个因为零空间的定义，都成 $0$ 了，所以有
+\(Tv=b_1Tv_1+\cdots+b_nTv_n\)
+由定义，我们知道 $Tv$ 就是 $range\ T$，所以
+\(Tv_1,\cdots,Tv_n\)
+就是 $range\ T$ 的基底。也就是说 $dim\ range\ T=n$。</p>
+</blockquote>
+
+<h2 id="总结一下">总结一下</h2>
+<p>我们来理一下现在提到的几个概念：</p>
+
+<blockquote>
+  <p>[!tip] $range\ T$
+它也称为 <strong>像空间（image）</strong> 或 <strong>列空间（当 $T$ 用矩阵表示时）</strong>。
+它的维数称为 <strong>秩（rank）</strong>。我们一般用 $r$ 表示。在 $T$ 是矩阵的时候有
+\(dim(range\ T)=rank(T)\)
+在之后我们会了解到 $r$ 实际上有着更深刻的意思。</p>
+</blockquote>
+
+<blockquote>
+  <p>[!tip] $ker\ T=null\ T$
+零空间在<strong>线性方程组</strong>里实际上代表<strong>解空间</strong>，几何上是<strong>输入中“被压缩到零”的自由度</strong>，也就是<strong>信息损失掉的维度</strong>。</p>
+</blockquote>
+
+
+  </div><a class="u-url" href="/2026/01/07/Linear-Algebra-3.1-%E9%9B%B6%E7%A9%BA%E9%97%B4-%E5%80%BC%E5%9F%9F%E4%B8%8E%E5%8F%98%E6%8D%A2%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

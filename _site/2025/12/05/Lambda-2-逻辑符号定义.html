@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lambda - 运算符定义 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Lambda - 运算符定义" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="布尔类型的定义 实际上，[[2025-12-20-Lambda - 1 基本定理#多参数输入 / 柯里化 Currying|柯里化]]中我们给到的式子就是TRUE的表达形式，我们这里再写一遍 \(\displaylines{ \lambda a b.a \equiv TRUE\ (1)\\ \lambda ab.b \equiv FALSE\ (2) }\) 可以实验一下，如果给 $(1)$ 传入 $V_1\ V_2$，则会返回 $V_1$ 其实不该说布尔“类型”，而是一个布尔函数，它本质上是一个选择器" />
+<meta property="og:description" content="布尔类型的定义 实际上，[[2025-12-20-Lambda - 1 基本定理#多参数输入 / 柯里化 Currying|柯里化]]中我们给到的式子就是TRUE的表达形式，我们这里再写一遍 \(\displaylines{ \lambda a b.a \equiv TRUE\ (1)\\ \lambda ab.b \equiv FALSE\ (2) }\) 可以实验一下，如果给 $(1)$ 传入 $V_1\ V_2$，则会返回 $V_1$ 其实不该说布尔“类型”，而是一个布尔函数，它本质上是一个选择器" />
+<link rel="canonical" href="http://localhost:4000/2025/12/05/Lambda-2-%E9%80%BB%E8%BE%91%E7%AC%A6%E5%8F%B7%E5%AE%9A%E4%B9%89.html" />
+<meta property="og:url" content="http://localhost:4000/2025/12/05/Lambda-2-%E9%80%BB%E8%BE%91%E7%AC%A6%E5%8F%B7%E5%AE%9A%E4%B9%89.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-05T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lambda - 运算符定义" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-12-05T00:00:00+08:00","datePublished":"2025-12-05T00:00:00+08:00","description":"布尔类型的定义 实际上，[[2025-12-20-Lambda - 1 基本定理#多参数输入 / 柯里化 Currying|柯里化]]中我们给到的式子就是TRUE的表达形式，我们这里再写一遍 \\(\\displaylines{ \\lambda a b.a \\equiv TRUE\\ (1)\\\\ \\lambda ab.b \\equiv FALSE\\ (2) }\\) 可以实验一下，如果给 $(1)$ 传入 $V_1\\ V_2$，则会返回 $V_1$ 其实不该说布尔“类型”，而是一个布尔函数，它本质上是一个选择器","headline":"Lambda - 运算符定义","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/12/05/Lambda-2-%E9%80%BB%E8%BE%91%E7%AC%A6%E5%8F%B7%E5%AE%9A%E4%B9%89.html"},"url":"http://localhost:4000/2025/12/05/Lambda-2-%E9%80%BB%E8%BE%91%E7%AC%A6%E5%8F%B7%E5%AE%9A%E4%B9%89.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Lambda - 运算符定义</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-12-05T00:00:00+08:00" itemprop="datePublished">Dec 5, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="布尔类型的定义">布尔类型的定义</h2>
+<p>实际上，[[2025-12-20-Lambda - 1 基本定理#多参数输入 / 柯里化 Currying|柯里化]]中我们给到的式子就是TRUE的表达形式，我们这里再写一遍
+\(\displaylines{
+\lambda a b.a \equiv TRUE\ (1)\\
+\lambda ab.b \equiv FALSE\ (2)
+}\)
+可以实验一下，如果给 $(1)$ 传入 $V_1\ V_2$，则会返回 $V_1$
+其实不该说布尔“类型”，而是一个<strong>布尔函数</strong>，它本质上是一个<strong>选择器</strong></p>
+
+<h2 id="if-else定义">if-else定义</h2>
+<blockquote>
+  <p>[!attention] 再次明确
+<strong>所有东西都是函数！包括输入和输出！</strong></p>
+</blockquote>
+
+<p>上文提到了$TRUE$和$FALSE$本质上是一个选择器</p>
+<ul>
+  <li>如果是$TRUE$，他会选择输入的两个值的前者</li>
+  <li>如果是$FALSE$，他会选择输入的两个值的后者</li>
+</ul>
+
+<p>由此，我们可以很轻易的用它来表示一个<strong>if-else</strong>函数
+\(\lambda X.(X\ A\ B)X\)
+这里的 $X$ 应当为 $TRUE$ 或者 $FALSE$，而 $A$ 和 $B$ 在 $X$ 输入后作为其两个参数输入，从而实现对 $A$ 或者 $B$ 的选择。其实现的功能伪代码如下</p>
+
+<pre><code class="language-plain">if X == TRUE:
+	select A
+if X == FALSE:
+	select B
+</code></pre>
+
+<h2 id="逻辑门定义">逻辑门定义</h2>
+<blockquote>
+  <p>[!tip] 
+$TRUE$ 和 $FALSE$ 的表达式我们上面已经知道了，之后就用英文字符串来代替了</p>
+</blockquote>
+
+<p><strong>非门</strong>实际上是最好想的，只需要把上文提到的 $A$ 和 $B$ 替换为 $FALSE$ 和 $TRUE$ 就行了
+\(\lambda X.(X\ FALSE\ TRUE)X\)</p>
+
+<p><strong>与门</strong>需要两个参数的输入，只有两个都为 $TRUE$ 才返回 $TRUE$，这里我们不妨一级一级去判定。
+假设输入的是 $xy$ ，我们先来判定 $x$ ，如果 $x$ 是 $FALSE$，那么返回 $FALSE$，如果 $x$ 不是，则再去判断 $y$，后面不做赘述。
+其实不难发现，这是一个if-else的嵌套，所以也可以很容易的写出
+\(\displaylines{
+(\lambda{xy}.(x\ (y\ TRUE\ FALSE)\ FALSE)\ x\ y)\\
+注意到y\Leftrightarrow(y\ TRUE\ FALSE)，原式可化简为：\\
+(\lambda{xy}.(x\ y\ FALSE)\ x\ y)
+}\)</p>
+
+<p><strong>或门</strong>同理可得
+\((\lambda{xy}.(x\ TRUE\ y)\ x\ y)\)</p>
+
+<h2 id="比较符定义">比较符定义</h2>
+<h5 id="零判断符-iszero">零判断符 $isZero$</h5>
+<p>$0$有一个性质，那就是其相当于$FALSE$，对于输入的两个<strong>函数</strong>，它会将前者执行于后者$0$次，也就是说，他会<strong>返回后者本身</strong>
+\(\lambda n.(n\ (\lambda x.FALSE)\ TRUE)\)
+这样以来，若$n=0$,则返回$TRUE$，否则$(λx.FALSE)$至少一次的应用于$TRUE$，即最终返回$FALSE$
+进一步解释一下，若$n\neq0$，这里$x$输入的实际上$TRUE$，但是由于这个函数不管$x$什么事，只返回$FALSE$，所以逻辑是自洽的。</p>
+
+<h5 id="小于等于-leq">小于等于 $leq$</h5>
+<blockquote>
+  <p>[!attention] 这需要[[2025-12-20-Lambda - 3 自然数定义#前驱类运算的定义 / 减法的定义|减法]]作为前提
+另外需要注意的是，在执行$(-\ m\ n)$时，若$m&lt;n$，那么其返回值依旧是$0$</p>
+</blockquote>
+
+<p>很好理解，两个数相减，若其差为$0$，则必满足$m\leq n$
+\(leq=\lambda{mn}.(isZero\ (-\ m\ n))\)</p>
+
+<h5 id="等于-eq">等于 eq</h5>
+<p>当且仅当$m\leq n$和$n\leq m$同时成立，满足$m=n$
+\(eq=\lambda mn.((AND\ (leq\ m\ n)\ (leq\ n\ m))\ TRUE\ FALSE)\)</p>
+
+<h5 id="小于--lt">小于  lt</h5>
+<p>即小于等于成立且等于不成立的情况
+\(lt=\lambda mn.(AND\ (leq\ m\ n)\ (not\ (eq\ m\ n)))\)</p>
+
+<h5 id="大于等于-geq">大于等于 geq</h5>
+<p>\(geq=\lambda mn.(not\ (lt\ m\ n))\)</p>
+
+<h5 id="大于-gt">大于 gt</h5>
+<p>\(gt = \lambda mn.(not\ (leq\ m\ n))\)</p>
+
+<p>[[2025-12-20-Lambda - 3 自然数定义]]</p>
+
+
+  </div><a class="u-url" href="/2025/12/05/Lambda-2-%E9%80%BB%E8%BE%91%E7%AC%A6%E5%8F%B7%E5%AE%9A%E4%B9%89.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

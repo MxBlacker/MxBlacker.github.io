@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>LA - 1.1 向量空间 | 麦香包の超平坦世界</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="LA - 1.1 向量空间" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="你会发现这节的标题和上节很像，但又不完全一样。诚然，向量空间 Vector Space 实际上是同济教材最后一个单元讲的，而且甚至是选修的部分。但是这里把它提到前面来讲，不仅是因为他能给我们更好的几何上的解释，而且它相较于枯燥的计算也更加有意思。" />
+<meta property="og:description" content="你会发现这节的标题和上节很像，但又不完全一样。诚然，向量空间 Vector Space 实际上是同济教材最后一个单元讲的，而且甚至是选修的部分。但是这里把它提到前面来讲，不仅是因为他能给我们更好的几何上的解释，而且它相较于枯燥的计算也更加有意思。" />
+<link rel="canonical" href="http://localhost:4000/2026/01/04/Linear-Algebra-1.1-%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-Vector-Spaces.html" />
+<meta property="og:url" content="http://localhost:4000/2026/01/04/Linear-Algebra-1.1-%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-Vector-Spaces.html" />
+<meta property="og:site_name" content="麦香包の超平坦世界" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-01-04T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="LA - 1.1 向量空间" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-01-04T00:00:00+08:00","datePublished":"2026-01-04T00:00:00+08:00","description":"你会发现这节的标题和上节很像，但又不完全一样。诚然，向量空间 Vector Space 实际上是同济教材最后一个单元讲的，而且甚至是选修的部分。但是这里把它提到前面来讲，不仅是因为他能给我们更好的几何上的解释，而且它相较于枯燥的计算也更加有意思。","headline":"LA - 1.1 向量空间","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2026/01/04/Linear-Algebra-1.1-%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-Vector-Spaces.html"},"url":"http://localhost:4000/2026/01/04/Linear-Algebra-1.1-%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-Vector-Spaces.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="麦香包の超平坦世界" /><!-- MathJax 3 -->
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">麦香包の超平坦世界</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">LA - 1.1 向量空间</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2026-01-04T00:00:00+08:00" itemprop="datePublished">Jan 4, 2026
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>你会发现这节的标题和上节很像，但又不完全一样。诚然，<strong>向量空间 Vector Space</strong> 实际上是同济教材最后一个单元讲的，而且甚至是选修的部分。但是这里把它提到前面来讲，不仅是因为他能给我们更好的几何上的解释，而且它相较于枯燥的计算也更加有意思。</p>
+
+<p>上一节我们讲了一个<strong>数域</strong>里面可以有许多关于<strong>加法和数乘</strong>美好的性质</p>
+<ul>
+  <li>运算交换律、运算结合律、数乘结合律 ($abx=a(bx)$)</li>
+  <li>每个加法都有一个逆元</li>
+  <li>加法和乘法之间由<strong>分配律</strong>联系着…</li>
+</ul>
+
+<h2 id="向量空间-vector-spaces">向量空间 Vector Spaces</h2>
+<blockquote>
+  <p>[!definition] $addition$
+\(\forall u,v\in V,u+v\in V\)</p>
+</blockquote>
+
+<blockquote>
+  <p>[!definition] $Scaler\ Multiplication$
+见 [[Linear Algebra - 1 向量与空间#向量 vector|Scaler Multiplication]]
+\(\forall \lambda\in F,\forall v\in V,\lambda v\in V\)</p>
+</blockquote>
+
+<p>那么我们不妨定义一个<strong>向量空间</strong>满足上面的这些性质</p>
+
+<blockquote>
+  <p>[!definition] $Vector\ Space$
+向量空间由一个向量集 $V$，标量域 $F$，加法，数乘组成，满足以下性质：</p>
+  <ul>
+    <li>Axiom1: 交换律\(\forall \vec{u},\vec{v} \in V,\vec{u}+\vec{v}=\vec{v}+\vec{u}\)</li>
+    <li>Axiom2,3: 结合律\(\forall \vec{u},\vec{v},\vec{w}\in V,\forall a,b\in F,(\vec{u}+\vec{v})+\vec{w}=\vec{u}+(\vec{v}+\vec{w})\ and\ (ab)\vec{v}=a(b\vec{v})\)</li>
+    <li>Axiom4: 加法单位元\(\exists 0\in V,\forall \vec{v}\in V,\vec{v}+0=\vec{v}\)</li>
+    <li>Axiom5: 加法逆元\(\forall \vec{v}\in V,\exists \vec{w}\in V,\vec{v}+\vec{w}=0\)</li>
+    <li>Axiom6: 乘法单位元\(\forall \vec{v}\in V,1\vec{v}=\vec{v}\)</li>
+    <li>Axiom7,8: 左乘/右乘分配律，这里不写了</li>
+  </ul>
+</blockquote>
+
+<p>有了上面的八条公理后，对于任意一个满足上面公理的集合，都可以被称为一个<strong>向量空间</strong>了！其实，基本上只要定义了加法和数乘就行。</p>
+
+<p>你可以把向量空间里的每一个<strong>元素</strong>想象为一个箭头或者点，但它们可能实际上并不代表这些东西！
+硬要说，向量空间本身也就是个集，只不过是加上了一些运算规则。</p>
+
+<blockquote>
+  <p>[!attention] 向量空间不是一个域
+向量空间是一个<strong>基于另一个给定的域</strong> (我们这里是 $F$) 的<strong>空间</strong>，回忆一下我们给到的 [[Linear Algebra - 1 向量与空间#域 Field|域的定义]] ，发现向量空间其实是<strong>没有定义向量间的乘法</strong>的，所以不能算作一个域。
+准确来说，一个向量空间应该表示为 \((V,F,+,\cdot)\)</p>
+</blockquote>
+
+<h4 id="元组表示法-tuple-notation">元组表示法 tuple notation</h4>
+<p>这里补充介绍一下一般数学结构的表示方法——<strong>元组表示法</strong>，具体怎么叫我不太清楚。
+其形式为：
+\((承载合集,运算1,运算2,\cdots,特殊元素)\)
+其中承载集合 (underlying set) 的定义为：</p>
+
+<blockquote>
+  <p>An <strong>underlying set</strong> refers to the foundational set of elements that form the basis of mathematical structures, such as a <strong>group</strong>, <strong>vector space</strong>, or <strong>topological space</strong>.</p>
+</blockquote>
+
+<ul>
+  <li>向量空间就可以表示为 $(V,F,+,\cdot)$ 或者 $(V,+_V,\cdot_F)$</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>在之前介绍 [[Lambda - 3 自然数定义#皮亚诺公理 Peano Axioms</td>
+          <td>Peano Axioms]] 的时候也有提到一个自然数的定义 $(A,0,(.)*)$</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>群的定义为 $(G,\cdot,e,^{-1})$ ，即集合，二元运算符，单位元，逆运算符
+***
+所以我们一般不直接说 $V$，而是说 基于 $F$ 的 $V$ ( vector space over $F$ )</li>
+  <li>例如 $R^n$ 就是一个基于 $R$ 的向量空间，虽然 $R^n$ 也有乘法规则吧，但是那只是锦上添花的事，它确实满足了一个向量空间的条件。$C^n$ 也是如此。</li>
+  <li>最简单的一个向量空间为 ${0}$，即 $V={0}$，这样无论你怎么搞都是 ${0}$</li>
+</ul>
+
+<h2 id="函数空间-function-space">函数空间 function space</h2>
+<p>函数空间其实有点涉及到<strong>泛函分析</strong>一块了，但是这里还是提一下。
+我们说了，向量其实可以是很多东西，当然这也包括函数。正常的实数空间 $\mathbb{R}^n$ 其实就是选定 $n$ 个正交的基底所张成的空间，那么一个函数空间就是用<strong>一系列基函数张成</strong>的空间，这么一个空间就由 $\mathbb{F}^\mathcal{S}$ 表示。就是我们接下来我们来定义一下 $\mathbb{F}^\mathcal{S}$ 的啥。</p>
+
+<blockquote>
+  <p>[!definition] $\mathbb{F}^\mathcal{S}$ 函数空间
+如果 $\mathcal{S}$ 是一个集合，那么 $\mathbb{F}^\mathcal{S}$ 代表一个函数集合能够将 $\mathcal{S}$ 中的每一个值映射到 $\mathbb{F}$ 的某一个值上。即：
+\(\mathbb{F}^S = \{ f \mid f: S \to \mathbb{F} \}.\)</p>
+</blockquote>
+
+<blockquote>
+  <p>[!example]
+假设 $\mathcal{S}$ 中的数为 ${s_1,\cdots,s_n}$ ，那么这个函数集合里的元素就可以是，比如说，$f$，它能做到 $f(s_1)=a_1, \cdots,f(s_n)=a_n$，其中 $a_1,\cdots,a_n\in F$；还可以是 $g$，使得 $g(s_1)=114514,\cdots,g(s_n)=1919810$ 。上面就是两个 $\mathcal{S}$ 到 $\mathbb{F}$ 的函数</p>
+
+  <p>由于上面提到的函数 $f$ 仅由 $n$ 个值决定，其他值可以完全抛弃不管，所以你完全可以把一个函数列为<strong>有序的实数对</strong>，例如 $g\leftrightarrow (114514,\cdots,1919810)$
+所以每一个函数就可以可以由 $(f(1),\cdots,f(n))$ 表示了，其中 $n$ 就是 $\mathcal{S}$ 的长度</p>
+</blockquote>
+
+<p>但是你要知道，大部分情况下我们处理的是<strong>无限集</strong>，也就是类似于 $\mathbb{R}^\mathbb{R}$，这就是我们日常生活中最常用的平面直角坐标系了，我们接触到的大部分函数都是属于这个集的。 $\mathbb{R}\to\mathbb{R}$，对于函数来说，就是输入一个实数，返回一个实数。当然，无限集和有限集的运算规则都还是一样的，唯一不同的不同就是项数。所以这里就不过多解释了。</p>
+
+<p>我们再举一个例子，$\mathbb{R}^{[0,1]}$，这时候像 $f(x)=x，f(x) = \sin(2\pi x)$ 之类的都可以是里面的函数，<strong>只不过 $x$ 的取值范围被限定要属于 $\mathcal{S}$</strong>，也就是这里的 $[0,1]$。</p>
+
+<p>简单来说，$S$ 相当于<strong>定义域 domain</strong>而 $F$ 相当于<strong>值域空间 codomain</strong></p>
+
+<blockquote>
+  <p>[!example] 接上面的提示
+这也就是说，对于一个有限集 $\mathcal{S}$ 来说，$R^\mathcal{S}$ 与 $R^n$ 同构。因为前后两者对于自己的 $n$ 个向量都可以随意取值。当然，这有更深刻的意义。
+可以将 $R^n$ 看作 $R^{{1,\cdots,n}}$ ，这样它里面的函数就表示为 $(f(1),\cdots,f(n))$ ，相当于 $R^n$ 中的每一个点。</p>
+</blockquote>
+
+<blockquote>
+  <p>[!definition] $\mathbb{F}^\mathcal{S}$ 函数空间的性质
+对于加法有：\(\forall f,g\in\mathbb{F}^\mathcal{S},(f+g)(x)=f(x)+g(x)\)
+对于数乘有：\(\forall\lambda\in F,\forall f\in \mathbb{F}^\mathcal{S},(\lambda f)(x)=\lambda f(x)\)
+定义一个单位元：函数 $0$，即输入一个 $x$，总是返回一个 $0$，且<strong>一个向量空间只有一个单位元</strong> \(0(x)=0\)
+定义一个逆元：<strong>一个向量空间每一个元素有且只有一个逆元</strong> \(\forall f\in \mathbb{F}^\mathcal{S},(-f)(x)=-f(x)\)</p>
+</blockquote>
+
+<p>这可以解释一个我们在学线代的时候的一个有趣现象，例如对任意矩阵 $A$ 有：
+\(A\cdot0=O\)
+这就说明一个向量<strong>数乘完之后应当还是一个向量</strong></p>
+
+
+  </div><a class="u-url" href="/2026/01/04/Linear-Algebra-1.1-%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-Vector-Spaces.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">麦香包の超平坦世界</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">麦香包の超平坦世界</li><li><a class="u-email" href="mailto:MxBlacker@163.com">MxBlacker@163.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/MxBlacker"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">MxBlacker</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
