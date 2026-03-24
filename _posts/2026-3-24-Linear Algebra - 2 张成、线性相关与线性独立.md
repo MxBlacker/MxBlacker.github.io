@@ -2,6 +2,7 @@
 date: 2026-01-04
 layout: post
 tag: Linear
+title: LA - 2 spannnnnnnn、相关与无关
 ---
 接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 **#6 线性空间与线性变换**，这里对应的是**维数、基与坐标**。线性代数一般不做无限空间的研究，我们研究的一般是**有限维度的向量空间 finite-dimensional vector space**
 ## 线性组合和张成 Linear Combination & Span

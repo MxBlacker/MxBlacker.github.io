@@ -2,6 +2,7 @@
 date: 2026-01-07
 layout: post
 tag: Linear
+title: LA - 3 XXXX，变身
 ---
 接下来我们讨论的实际上是同济大学教材的最后一章的内容，也就是 **#6 线性空间与线性变换**，这里对应的是**基变换与坐标变换**。
 ## 线性变换 Linear Transformation

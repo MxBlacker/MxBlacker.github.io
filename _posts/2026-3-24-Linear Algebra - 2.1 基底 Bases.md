@@ -2,6 +2,7 @@
 date: 2026-01-06
 layout: post
 tag: Linear
+title: LA - 2.1 let the "base" kick
 ---
 上一节我们讨论了 **线性无关** 和 **生成组**。基底就是同时满足这两个条件的向量组。
 

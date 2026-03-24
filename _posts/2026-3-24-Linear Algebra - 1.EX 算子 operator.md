@@ -2,6 +2,7 @@
 date: 2026-01-04
 layout: post
 tag: Linear
+title: LA - 1.EX 算子
 ---
 ## 算子 Operator
 >[!definition] $Operator$
